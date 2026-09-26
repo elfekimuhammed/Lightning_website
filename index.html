@@ -18,8 +18,8 @@
 <nav>
   <div class="wrap">
     <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#3FCB93"/><stop offset=".55" stop-color="#10A5A8"/><stop offset="1" stop-color="#1F87F0"/></linearGradient></defs><path fill="url(#lg)" d="M18.2 3.5 7.6 17.4c-.6.8 0 1.9 1 1.9h5.9l-1.6 8.3c-.2 1.1 1.2 1.7 1.9.8l10.6-13.9c.6-.8 0-1.9-1-1.9h-5.9l1.6-8.3c.2-1.1-1.2-1.7-1.9-.8Z"/></svg>Lightning</a>
-    <div class="links"><a href="#gap">Why Lightning</a><a href="#believe">What We Believe</a><a href="#how">How It Works</a><a href="#features">Features</a></div>
-    <a class="btn pri" href="#waitlist">Get Early Access</a>
+    <div class="links"><a href="#gap">Why Lightning</a><a href="#believe">What We Believe</a><a href="#how">How It Works</a><a href="#game">Wanna play?</a></div>
+    <a class="btn pri" href="survey.html">Take the survey</a>
   </div>
 </nav>
 
@@ -31,7 +31,7 @@
       <h1 style="margin-top:18px">Study Your Patterns.<br><em>Control Your Future.</em></h1>
       <p class="sub">Wealth Management Made Easy.</p>
       <p class="typed-s" style="margin-bottom:32px">Track your cash, bank accounts, THNDR shares and funds, gold, savings goals, budgets, money you hold for family and work expenses to claim, all in one place.</p>
-      <div class="ctas"><a class="btn pri" href="#waitlist">Get Early Access</a><a class="btn sec" href="#gap">Why Lightning</a></div>
+      <div class="ctas"><a class="btn pri" href="#game">Wanna play?</a><a class="btn sec" href="survey.html">Take the survey</a></div>
     </div>
     <div class="mock" aria-label="Example Overview screen">
       <div class="card m-main">
@@ -49,6 +49,23 @@
       </div>
     </div>
   </header>
+
+  <section id="game" class="freedom-section">
+    <div class="sec-h"><div class="eyebrow"><span class="tick"></span>Wanna play?</div><h2>How much could you cut from your expenses right now—and still live comfortably?</h2><p>Try a number. Keeping more of what you already earn can create the same monthly cash flow as a big balance sitting in the bank.</p></div>
+    <div class="freedom card">
+      <div class="freedom-input">
+        <label for="monthly-amount">I could comfortably cut about</label>
+        <div class="money-input"><span>EGP</span><input id="monthly-amount" inputmode="numeric" value="2000" aria-describedby="monthly-help"><b>from my monthly expenses</b></div>
+        <p id="monthly-help">Think of the spending you could reduce without making your life worse.</p>
+      </div>
+      <div class="freedom-result" aria-live="polite">
+        <span class="result-label">That is like having this much in the bank at 20%</span>
+        <strong><span id="freedom-number">120,000</span> <small>EGP</small></strong>
+        <p>You would keep <b id="monthly-income">2,000 EGP</b> more every month—without needing that capital first.</p>
+      </div>
+      <div class="freedom-note"><span>20%</span><p>An illustration only: monthly savings × 12 ÷ 20%. Real returns, taxes and fees vary. The point is that better spending patterns can build the same room in your month.</p></div>
+    </div>
+  </section>
 
   <section id="gap">
     <div class="sec-h"><div class="eyebrow"><span class="tick"></span>The Gap</div><h2>Your Money Lives in Five Places. Your Picture Should Live in One.</h2><p>In Egypt, wealth is spread out: a bank account or two, a broker app, cash at home, gold in a drawer, and money you're keeping for family. Every app sees one piece. Nobody sees the whole.</p></div>
@@ -122,25 +139,46 @@
     </div>
   </section>
 
-  <section id="waitlist">
-    <div class="card cta">
-      <h2>Start Seeing the Whole Picture</h2>
-      <p>Leave your email and we'll tell you when the first version is ready.</p>
-      <form id="wl">
-        <label for="email" style="position:absolute;left:-9999px">Email</label>
-        <input id="email" type="email" required placeholder="you@example.com" autocomplete="email">
-        <button class="btn pri" type="submit">Get Early Access</button>
-      </form>
-      <div class="ok" id="ok" hidden>Thanks. This is a draft page, so nothing was sent yet.</div>
-    </div>
+  <section class="card survey-callout">
+    <div><div class="eyebrow"><span class="tick"></span>Help shape Lightning</div><h2>Have a minute to help us build this better?</h2><p>Tell us what works, what doesn’t, and what you wish a finance app could do for you.</p></div>
+    <div class="survey-actions"><a class="btn pri" href="survey.html">Take the 3–5 minute survey</a><form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn sec" type="submit">Get early access</button></form><p class="form-status" id="signup-status" role="status"></p></div>
   </section>
+
 
   <footer><span>Lightning · Study Your Patterns. Control Your Future.</span><span>Draft · 2026-09-26</span></footer>
 </main>
 
 
 <script>
-document.getElementById('wl').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').hidden=false;});
+(() => {
+  const amount = document.getElementById('monthly-amount');
+  const target = document.getElementById('freedom-number');
+  const income = document.getElementById('monthly-income');
+  const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
+  function updateFreedom() {
+    const monthly = Math.max(0, Number(amount.value.replace(/[^0-9.]/g, '')) || 0);
+    const capitalEquivalent = monthly * 12 / .20;
+    target.textContent = format.format(capitalEquivalent);
+    income.textContent = `${format.format(monthly)} EGP`;
+  }
+  amount.addEventListener('input', updateFreedom); updateFreedom();
+
+  const signup = document.getElementById('email-signup');
+  const signupStatus = document.getElementById('signup-status');
+  signup.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!signup.reportValidity()) return;
+    const button = signup.querySelector('button[type="submit"]');
+    button.disabled = true; signupStatus.textContent = 'Sending…';
+    try {
+      signup.querySelector('[name="page_url"]').value = window.location.href;
+      await fetch(signup.dataset.endpoint, {method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(signup))});
+      signup.reset(); signupStatus.textContent = 'You’re on the list. We’ll be in touch.';
+    } catch (_) { signupStatus.textContent = 'We could not save your email. Please try again.'; }
+    finally { button.disabled = false; }
+  });
+
+})();
 </script>
 </body>
 </html>
