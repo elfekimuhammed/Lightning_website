@@ -15,7 +15,9 @@
 <nav><div class="wrap"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#3FCB93"/><stop offset=".55" stop-color="#10A5A8"/><stop offset="1" stop-color="#1F87F0"/></linearGradient></defs><path fill="url(#lg)" d="M18.2 3.5 7.6 17.4c-.6.8 0 1.9 1 1.9h5.9l-1.6 8.3c-.2 1.1 1.2 1.7 1.9.8l10.6-13.9c.6-.8 0-1.9-1-1.9h-5.9l1.6-8.3c.2-1.1-1.2-1.7-1.9-.8Z"/></svg>Lightning</a><a class="btn sec" href="index.html">Back to site</a></div></nav>
 <main class="wrap survey-page">
   <div class="sec-h"><div class="eyebrow"><span class="tick"></span>Help shape Lightning</div><h1>Tell us how you manage your money today.</h1><p>This survey takes around 3–5 minutes. Every question is optional—answer only what you want to share.</p></div>
-  <form id="finance-survey" class="survey card" data-endpoint="">
+  <form id="finance-survey" class="survey card" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+    <input type="hidden" name="form_type" value="survey">
+    <input type="hidden" name="page_url" value="">
     <div class="survey-intro"><b>Lightning — Personal Finance Survey</b><span>Your answers help us make Lightning more useful.</span></div>
     <fieldset><legend><span>1.</span> Do you currently track your personal finances?</legend><div class="options"><label><input type="radio" name="finance_tracking" value="Yes, regularly"> Yes, regularly</label><label><input type="radio" name="finance_tracking" value="Sometimes"> Sometimes</label><label><input type="radio" name="finance_tracking" value="I tried before but stopped"> I tried before but stopped</label><label><input type="radio" name="finance_tracking" value="No"> No</label></div></fieldset>
     <fieldset><legend><span>2.</span> If you track your finances, what do you mainly use?</legend><p class="hint">Select all that apply.</p><div class="options columns"><label><input type="checkbox" name="tracking_tools" value="Excel / Google Sheets"> Excel / Google Sheets</label><label><input type="checkbox" name="tracking_tools" value="Budgeting or finance app"> Budgeting or finance app</label><label><input type="checkbox" name="tracking_tools" value="Bank apps"> Bank apps</label><label><input type="checkbox" name="tracking_tools" value="Brokerage / investment apps"> Brokerage / investment apps</label><label><input type="checkbox" name="tracking_tools" value="Notes / paper"> Notes / paper</label><label><input type="checkbox" name="tracking_tools" value="Mostly in my head"> Mostly in my head</label><label><input type="checkbox" name="tracking_tools" value="I don't currently track"> I don't currently track</label><label><input type="checkbox" name="tracking_tools" value="Other"> Other</label></div></fieldset>
@@ -42,12 +44,11 @@
   survey.addEventListener('submit', async event => {
     event.preventDefault();
     const endpoint = survey.dataset.endpoint;
-    if (!endpoint) { status.textContent = 'This survey is ready; connect its form endpoint to collect responses.'; return; }
     const button = survey.querySelector('button[type="submit"]');
     button.disabled = true; status.textContent = 'Sending…';
     try {
-      const response = await fetch(endpoint, {method: 'POST', body: new FormData(survey), headers: {Accept: 'application/json'}});
-      if (!response.ok) throw new Error('Unable to send');
+      survey.querySelector('[name="page_url"]').value = window.location.href;
+      await fetch(endpoint, {method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(survey))});
       survey.reset(); status.textContent = 'Thank you — your answers have been received.';
     } catch (_) { status.textContent = 'We could not send your answers. Please try again.'; }
     finally { button.disabled = false; }
