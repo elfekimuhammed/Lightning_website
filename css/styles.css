@@ -252,3 +252,30 @@ body{font-weight:500}
 .m-two .card:first-child,.truths .card,.feat:nth-child(3n+2){background:var(--tint-growth)}
 .m-two .card:last-child,.step,.feat:nth-child(3n+1),.vc{background:var(--tint-steady)}
 input:focus-visible{outline:none;border-color:var(--mint);box-shadow:0 0 0 4px var(--mint-soft)}
+
+/* Freedom calculator + survey */
+.freedom-section{padding-top:30px}
+.freedom{display:grid;grid-template-columns:1.05fr 1fr;gap:0;overflow:hidden;padding:0;background:var(--tint-steady)}
+.freedom-input,.freedom-result{padding:38px}
+.freedom-input label{display:block;font:800 clamp(23px,2.8vw,32px)/1.18 var(--display);letter-spacing:-.03em;max-width:15ch}
+.money-input{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px;margin-top:24px;padding:10px 16px;border-radius:16px;background:var(--card);border:1px solid var(--card-line)}
+.money-input span,.money-input b{font:700 13px/1 var(--text);color:var(--muted)}
+.money-input b{grid-column:2;color:var(--ink2);padding-bottom:3px}
+.money-input input{grid-column:2;width:100%;height:auto;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;font:800 clamp(32px,4vw,48px)/1 var(--display);letter-spacing:-.04em;color:var(--ink)}
+.money-input input:focus-visible{box-shadow:none}
+.freedom-input>p{margin:12px 0 0;font-size:13px;color:var(--muted);max-width:36em}
+.freedom-result{background:var(--nile);color:#fff;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.freedom-result::after{content:"";position:absolute;right:-18%;bottom:-42%;width:90%;height:110%;background:radial-gradient(closest-side,rgba(20,168,116,.45),transparent)}
+.freedom-result>*{position:relative;z-index:1}.result-label{font:700 13px/1 var(--text);letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.68)}
+.freedom-result strong{display:block;margin:12px 0 10px;font:800 clamp(42px,5vw,64px)/1 var(--display);letter-spacing:-.05em}.freedom-result strong small{font:700 .28em/1 var(--text);letter-spacing:0;color:rgba(255,255,255,.7)}
+.freedom-result p{margin:0;color:rgba(255,255,255,.8);font-size:14px}.freedom-result p b{color:#7FF2B4}
+.freedom-note{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;padding:16px 38px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.freedom-note span{flex:0 0 auto;padding:3px 7px;border-radius:8px;background:var(--mint-soft);color:var(--mint-t);font:800 13px/1 var(--text)}.freedom-note p{margin:0}
+
+.survey{display:block;padding:0;overflow:hidden;background:var(--card)}
+.survey-intro{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:26px 32px;background:var(--nile);color:#fff}.survey-intro b{font:800 21px/1.2 var(--display);letter-spacing:-.02em}.survey-intro span{font-size:13px;color:rgba(255,255,255,.7)}
+.survey fieldset{margin:0;padding:27px 32px;border:0;border-bottom:1px solid var(--line)}.survey legend{padding:0;font:800 19px/1.35 var(--display);letter-spacing:-.018em}.survey legend span{color:var(--mint-t);margin-right:6px}.survey em{color:var(--rose);font-style:normal}.survey .hint{margin:5px 0 14px;color:var(--muted);font-size:13px}
+.options{display:grid;gap:9px}.options.columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px}.options.inline{display:flex;flex-wrap:wrap;gap:14px 26px}.options label{display:flex;align-items:flex-start;gap:9px;color:var(--ink2);font-size:15px;cursor:pointer}.options input{width:17px;height:17px;flex:none;margin:4px 0 0;accent-color:var(--mint)}.options input:disabled+*{opacity:.5}
+.survey textarea,.survey fieldset>input{display:block;width:min(620px,100%);min-height:48px;padding:12px 16px;border-radius:13px;border:1px solid var(--card-line);background:var(--card);color:var(--ink);font:500 15px/1.5 var(--text)}.survey textarea:focus-visible,.survey fieldset>input:focus-visible{outline:none;border-color:var(--mint);box-shadow:0 0 0 4px var(--mint-soft)}
+.confidence-grid{display:grid;grid-template-columns:minmax(160px,1fr) repeat(5,56px);align-items:center;gap:0;width:max-content;max-width:100%;border:1px solid var(--line);border-radius:14px;overflow:hidden}.confidence-grid>*{min-height:43px;display:grid;place-items:center;padding:8px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}.confidence-grid>*:nth-child(6n+1){justify-content:start;font-weight:700;color:var(--ink2)}.confidence-grid>*:nth-last-child(-n+6){border-bottom:0}.confidence-grid>*:nth-child(6n){border-right:0}.confidence-grid .grid-head{font:800 12px/1 var(--text);color:var(--muted);background:var(--mint-soft)}.confidence-grid input{width:17px;height:17px;accent-color:var(--mint)}
+.survey-submit{padding:28px 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--tint-growth)}.survey-submit .form-status{margin:0;color:var(--mint-t);font-weight:700;font-size:14px}.survey-submit .form-status:not(:empty)::before{content:"✓ ";}.survey-submit button:disabled{opacity:.65;cursor:wait}
+@media (max-width:760px){.freedom{grid-template-columns:1fr}.freedom-input,.freedom-result{padding:28px 24px}.freedom-note{padding:15px 24px}.survey-intro{display:grid;padding:24px}.survey fieldset{padding:24px}.options.columns{grid-template-columns:1fr}.confidence-grid{grid-template-columns:minmax(120px,1fr) repeat(5,42px);font-size:13px}.survey-submit{padding:24px}}
