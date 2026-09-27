@@ -4,14 +4,18 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for held money, and one deep Nile anchor per view. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. See [Brand guidelines](BRAND_GUIDELINES.md) for the complete color, typography, card, layout, and voice system.
 
 ## Structure
 
 ```
-index.html          the page
-css/styles.css      all styles (base + Meadow identity)
-assets/favicon.svg  the bolt icon
+index.html          Version A landing page
+version-b.html      Version B landing page
+survey.html         optional personal finance survey
+css/styles.css      shared styles
+css/version-b.css   Version B visual system
+assets/favicon.svg  bolt icon
+BRAND_GUIDELINES.md brand and component rules
 ```
 
 It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
@@ -30,14 +34,10 @@ Settings → Pages → Deploy from a branch → `main` / root.
 
 ## Collect survey responses
 
-GitHub Pages is static, so it cannot store survey answers or email addresses on its own. The survey is prepared to send every response to a form endpoint.
+GitHub Pages is static. The survey and both landing pages send responses to the configured Google Apps Script endpoint, which writes to Google Sheets. The survey posts `form_type=survey`; the email signup posts `form_type=signup`. The calculator runs in the browser.
 
-1. Create a form in a collector such as [Formspree](https://formspree.io/) and copy its endpoint URL.
-2. In `survey.html`, replace the empty value in `<form id="finance-survey" ... data-endpoint="">` with that URL.
-3. Publish the site. The collector will receive every answer, including the optional `email` field.
-
-The calculator runs entirely in the browser. Its target is calculated as monthly amount × 12 ÷ 20% (for example, 2,000 EGP/month = 120,000 EGP).
+The bank equivalent uses monthly amount × 12 ÷ 20% (for example, 2,000 EGP/month = 120,000 EGP). Version B also illustrates ten years of monthly deposits at a hypothetical 20% annual rate, compounded monthly.
 
 ## Status
 
-The calculator and survey are ready. Connect the survey endpoint above before collecting responses.
+The website, survey, and Google Sheets receiver are connected. When changing the receiver, update its URL in both landing pages and the survey page, then verify that a submission appears in the destination Sheet.

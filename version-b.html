@@ -11,8 +11,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/styles.css?v=20260927-5">
+<link rel="stylesheet" href="css/version-b.css?v=20260927-1">
 </head>
-<body>
+<body class="version-b-page">
 <nav>
   <div class="wrap">
     <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#3FCB93"/><stop offset=".55" stop-color="#10A5A8"/><stop offset="1" stop-color="#1F87F0"/></linearGradient></defs><path fill="url(#lg)" d="M18.2 3.5 7.6 17.4c-.6.8 0 1.9 1 1.9h5.9l-1.6 8.3c-.2 1.1 1.2 1.7 1.9.8l10.6-13.9c.6-.8 0-1.9-1-1.9h-5.9l1.6-8.3c.2-1.1-1.2-1.7-1.9-.8Z"/></svg>Lightning</a>
@@ -25,6 +26,8 @@
   <header class="b-hero">
     <h1>Study Your Patterns.<br><em>Control Your Future.</em></h1>
     <p>Wealth Management Made Easy.</p>
+    <p class="b-hero-lead">Small changes in how you spend are worth more than you think. See what yours are worth.</p>
+    <a class="btn pri b-hero-cta" href="#game">Try It with Your Number</a>
   </header>
 
   <section class="b-game" id="game">
@@ -32,24 +35,26 @@
     <div class="freedom card b-calculator">
       <div class="freedom-input">
         <label for="monthly-amount">How Much Could You Cut from Your Expenses Right Now and Still Live Comfortably?</label>
-        <div class="money-input"><span>EGP</span><input id="monthly-amount" inputmode="numeric" autocomplete="off" value="2000" placeholder="Enter amount" aria-describedby="monthly-help"><b>from my monthly expenses</b></div>
-        <p id="monthly-help">Think of the spending you could reduce without making your life worse.</p>
+        <div class="money-input"><span>EGP</span><input id="monthly-amount" inputmode="numeric" autocomplete="off" value="2,000" placeholder="Enter amount" aria-describedby="monthly-help"></div>
+        <div class="b-presets" role="group" aria-label="Quick monthly amounts"><button type="button" data-amount="500">500</button><button type="button" data-amount="1000">1,000</button><button type="button" data-amount="2000" aria-pressed="true">2,000</button><button type="button" data-amount="5000">5,000</button></div>
+        <p id="monthly-help">Think of the orders, subscriptions and small buys you wouldn’t miss.</p>
       </div>
       <div class="freedom-result" aria-live="polite">
-        <span class="result-label">That is like having this much in the bank at 20%</span>
+        <span class="result-label">That’s Worth the Same as Having</span>
         <strong><span id="freedom-number">120,000</span> <small>EGP</small></strong>
-        <p>You would keep <b id="monthly-income">2,000 EGP</b> more every month, without needing that capital first.</p>
+        <p>In the bank. At 20% a year, that sum pays about <b id="monthly-income">2,000 EGP</b> a month. Spending better gives you the same room, with no capital needed.</p>
+        <div class="b-result-details"><div><span>Kept Each Year</span><b id="yearly-savings">24,000 EGP</b></div><div><span>After 10 Years at 20%</span><b id="ten-year-value">752,191 EGP</b></div></div>
       </div>
-      <div class="freedom-note"><span>20%</span><p>An illustration only: monthly savings × 12 ÷ 20%. Real returns, taxes and fees vary. The point is that better spending patterns can build the same room in your month.</p></div>
     </div>
+    <p class="b-calculator-note">An illustration, not a forecast. The bank comparison uses monthly savings × 12 ÷ 20%. The ten year example assumes monthly deposits earning 20% annually with monthly compounding. Actual returns, inflation, taxes and fees vary.</p>
   </section>
 
   <section class="b-tracking">
     <div class="sec-h"><div class="eyebrow"><span class="tick"></span>Better visibility</div><h2>And Here Is What Lightning Can Do for You</h2><p>Lightning makes tracking the things that matter easy, so you can see your full financial picture before deciding what to do next.</p></div>
     <div class="b-tracking-grid">
-      <article class="card"><span class="b-icon">↓</span><h3>What comes in</h3><p>Salary and other income, all visible in one place.</p></article>
-      <article class="card"><span class="b-icon">↗</span><h3>What goes out</h3><p>Everyday spending, budgets and the patterns behind them.</p></article>
-      <article class="card"><span class="b-icon">◒</span><h3>What you own</h3><p>Cash, bank accounts, THNDR shares and funds, gold, savings goals, money held for family and work expenses to claim.</p></article>
+      <article class="card"><span class="b-icon">↓</span><h3>What Comes In</h3><p>Salary and other income, all visible in one place.</p></article>
+      <article class="card"><span class="b-icon">↗</span><h3>What Goes Out</h3><p>Everyday spending, budgets and the patterns behind them.</p></article>
+      <article class="card"><span class="b-icon">◒</span><h3>What You Own</h3><p>Cash, bank accounts, THNDR shares and funds, gold, savings goals, money held for family and work expenses to claim.</p></article>
     </div>
   </section>
 
@@ -96,7 +101,6 @@
     <div class="survey-actions"><a class="btn pri" href="survey.html">Take the 3–5 minute survey</a><form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn sec" type="submit">Get Early Access</button></form><p class="form-status" id="signup-status" role="status"></p></div>
   </section>
 
-  <footer><span>Lightning · Study Your Patterns. Control Your Future.</span></footer>
 </main>
 
 <script>
@@ -104,16 +108,25 @@
   const amount = document.getElementById('monthly-amount');
   const target = document.getElementById('freedom-number');
   const income = document.getElementById('monthly-income');
+  const yearly = document.getElementById('yearly-savings');
+  const tenYear = document.getElementById('ten-year-value');
+  const presets = document.querySelectorAll('.b-presets button');
   const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
   function updateFreedom() {
-    const digits = amount.value.replace(/[^0-9]/g, '');
-    if (!digits) { target.textContent = '—'; income.textContent = '—'; return; }
+    const digits = amount.value.replace(/[^0-9]/g, '').slice(0, 9);
+    presets.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.amount === digits)));
+    if (!digits) { amount.value = ''; target.textContent = '—'; income.textContent = '—'; yearly.textContent = '—'; tenYear.textContent = '—'; return; }
     const monthly = Number(digits);
     amount.value = format.format(monthly);
     target.textContent = format.format(monthly * 12 / .20);
     income.textContent = `${format.format(monthly)} EGP`;
+    yearly.textContent = `${format.format(monthly * 12)} EGP`;
+    const monthlyRate = .20 / 12;
+    const months = 120;
+    tenYear.textContent = `${format.format(monthly * (Math.pow(1 + monthlyRate, months) - 1) / monthlyRate)} EGP`;
   }
   amount.addEventListener('input', updateFreedom);
+  presets.forEach(button => button.addEventListener('click', () => { amount.value = button.dataset.amount; updateFreedom(); amount.focus(); }));
   updateFreedom();
 
   const signup = document.getElementById('email-signup');
