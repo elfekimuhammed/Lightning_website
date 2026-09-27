@@ -1,6 +1,7 @@
 /* Lightning Version B: the focused Meadow expression. */
 .version-b{--b-ink:#0D2233;--b-paper:#F8FCFA;--b-mint:#E3F6EC;--b-green:#0C9B63;--b-blue:#0959AB;--b-line:#DDE9E6}
 .version-b .b-hero{padding:76px 0 30px}
+.version-b .b-hero-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto 24px;color:var(--b-ink);font:800 21px/1 var(--display);letter-spacing:-.02em}.version-b .b-hero-brand svg{width:28px;height:28px;flex:none}
 .version-b .b-hero-lead{max-width:35em;margin:16px auto 0;color:var(--ink2);font:500 17px/1.65 var(--text);letter-spacing:0}
 .version-b .b-hero-cta{margin-top:25px}
 .version-b .b-game{padding-top:42px}
