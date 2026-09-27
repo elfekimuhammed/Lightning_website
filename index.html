@@ -141,11 +141,11 @@
 
   <section class="card survey-callout">
     <div><div class="eyebrow"><span class="tick"></span>Help shape Lightning</div><h2>Have a minute to help us build this better?</h2><p>Tell us what works, what doesn’t, and what you wish a finance app could do for you.</p></div>
-    <div class="survey-actions"><a class="btn pri" href="survey.html">Take the 3–5 minute survey</a><a class="btn sec" href="survey.html">Get early access</a></div>
+    <div class="survey-actions"><a class="btn pri" href="survey.html">Take the 3–5 minute survey</a><form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn sec" type="submit">Get Early Access</button></form><p class="form-status" id="signup-status" role="status"></p></div>
   </section>
 
 
-  <footer><span>Lightning · Study Your Patterns. Control Your Future.</span><span>Draft · 2026-09-26</span></footer>
+  <footer><span>Lightning · Study Your Patterns. Control Your Future.</span></footer>
 </main>
 
 
@@ -162,6 +162,21 @@
     income.textContent = `${format.format(monthly)} EGP`;
   }
   amount.addEventListener('input', updateFreedom); updateFreedom();
+
+  const signup = document.getElementById('email-signup');
+  const signupStatus = document.getElementById('signup-status');
+  signup.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!signup.reportValidity()) return;
+    const button = signup.querySelector('button[type="submit"]');
+    button.disabled = true; signupStatus.textContent = 'Sending…';
+    try {
+      signup.querySelector('[name="page_url"]').value = window.location.href;
+      await fetch(signup.dataset.endpoint, {method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(signup))});
+      signup.reset(); signupStatus.textContent = 'You’re on the list. We’ll be in touch.';
+    } catch (_) { signupStatus.textContent = 'We could not save your email. Please try again.'; }
+    finally { button.disabled = false; }
+  });
 
 })();
 </script>
