@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. See [Brand guidelines](BRAND_GUIDELINES.md) for the complete color, typography, card, layout, and voice system.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [visual brand guidelines](brand-guidelines.html) for the complete color, typography, card, layout, and voice system.
 
 ## Structure
 
@@ -15,7 +15,7 @@ survey.html         optional personal finance survey
 css/styles.css      shared styles
 css/version-b.css   Version B visual system
 assets/favicon.svg  bolt icon
-BRAND_GUIDELINES.md brand and component rules
+brand-guidelines.html visual brand and component guide
 ```
 
 It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
