@@ -34,15 +34,17 @@
 .version-b .b-truths .tn{background:#0A2442;color:#fff;width:42px;height:42px;box-shadow:0 8px 16px -10px rgba(10,36,66,.78)}
 .version-b .b-voices .vc{background:linear-gradient(155deg,#F6FAFE,#E5F0FA)}
 .version-b .b-gapgrid .gp:not(.hl){background:#F8FCFA}
-.version-b .b-gapgrid .gp.hl{background-color:#0A2442;background-image:radial-gradient(circle at 16% 18%,rgba(63,203,147,.35) 0 1px,transparent 1.5px),radial-gradient(circle at 82% 72%,rgba(31,135,240,.38) 0 1px,transparent 1.5px),linear-gradient(135deg,rgba(12,155,99,.42),transparent 48%),linear-gradient(145deg,#0A2442,#0C3158);background-size:13px 13px,17px 17px,100% 100%,100% 100%;--muted:rgba(255,255,255,.84);--azure:#7FF2B4}
-.version-b .b-gapgrid .gp.hl::after{display:block;right:-32%;bottom:-78%;width:115%;height:145%;background:radial-gradient(closest-side,rgba(31,135,240,.38),transparent)}
-.version-b .b-gapgrid .gp.hl::before{background:linear-gradient(90deg,#3FCB93,#22C3C0,#4FA3FA)}
+.version-b .b-gapgrid .gp.hl{background:var(--grad);--muted:rgba(255,255,255,.84);--azure:#fff}
+.version-b .b-gapgrid .gp.hl::after{display:none}
+.version-b .b-gapgrid .gp.hl::before{background:rgba(255,255,255,.4)}
 .version-b .survey-callout{background:linear-gradient(135deg,#E0F5E9,#D7ECF7);border:1px solid rgba(255,255,255,.92)}
 .version-b .survey-actions form{align-items:center}
 .version-b .survey-actions input{border:1px solid var(--b-line);background:#fff}
 .version-b .survey-actions button{background:var(--nile);color:#fff;border-color:var(--nile)}
 .version-b .survey-actions button:hover{background:var(--nile-2)}
-.version-b .b-budgeting .b-warning{margin-top:28px;padding:15px 18px;max-width:600px;border-left:4px solid var(--mint);border-radius:0 14px 14px 0;background:rgba(255,255,255,.42);color:var(--ink);font-weight:700}
+.version-b .b-budgeting h2,.version-b .b-budgeting h3{font-size:clamp(30px,4vw,42px);line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.version-b .b-budgeting h3{margin-top:7px;background:linear-gradient(90deg,#0B6DD6,#10A5A8 50%,#14A874);-webkit-background-clip:text;background-clip:text;color:transparent}
+.version-b .b-budgeting .b-warning{margin-top:20px;max-width:670px;color:var(--ink2);font-weight:500}
 .version-b .b-motto{padding:82px 24px 98px;text-align:center;color:var(--ink);font:800 clamp(30px,5vw,54px)/1.08 var(--display);letter-spacing:-.04em}.version-b .b-motto span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 @media (max-width:760px){.version-b .b-calculator{grid-template-columns:1fr}.version-b .b-calculator .freedom-input,.version-b .b-calculator .freedom-result{padding:28px 24px}.version-b .b-calculator .freedom-result{min-height:270px}}
 @media (max-width:480px){.version-b .b-hero{padding-top:58px}.version-b .b-calculator .freedom-result strong{font-size:clamp(40px,11vw,54px)}.version-b .survey-actions form{display:grid;grid-template-columns:1fr}.version-b .survey-actions input{width:100%}.version-b .b-motto{padding:64px 20px 78px}}
