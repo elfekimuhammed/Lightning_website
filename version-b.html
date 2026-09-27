@@ -28,17 +28,17 @@
   </header>
 
   <section class="b-game" id="game">
-    <div class="b-game-head"><div class="eyebrow"><span class="tick"></span>Wanna play?</div><h2>Let’s Play a Game</h2></div>
+    <div class="b-game-head"><div class="eyebrow"><span class="tick"></span>Wanna play?</div><h2>Wanna play a game?</h2></div>
     <div class="freedom card b-calculator">
       <div class="freedom-input">
         <label for="monthly-amount">How much could you cut from your expenses right now and still live comfortably?</label>
-        <div class="money-input"><span>EGP</span><input id="monthly-amount" inputmode="numeric" autocomplete="off" placeholder="Enter amount" aria-describedby="monthly-help"><b>from my monthly expenses</b></div>
+        <div class="money-input"><span>EGP</span><input id="monthly-amount" inputmode="numeric" autocomplete="off" value="2000" placeholder="Enter amount" aria-describedby="monthly-help"><b>from my monthly expenses</b></div>
         <p id="monthly-help">Think of the spending you could reduce without making your life worse.</p>
       </div>
       <div class="freedom-result" aria-live="polite">
         <span class="result-label">That is like having this much in the bank at 20%</span>
-        <strong><span id="freedom-number">—</span> <small>EGP</small></strong>
-        <p>You would keep <b id="monthly-income">—</b> more every month, without needing that capital first.</p>
+        <strong><span id="freedom-number">120,000</span> <small>EGP</small></strong>
+        <p>You would keep <b id="monthly-income">2,000 EGP</b> more every month, without needing that capital first.</p>
       </div>
       <div class="freedom-note"><span>20%</span><p>An illustration only: monthly savings × 12 ÷ 20%. Real returns, taxes and fees vary. The point is that better spending patterns can build the same room in your month.</p></div>
     </div>
@@ -110,6 +110,7 @@
     income.textContent = `${format.format(monthly)} EGP`;
   }
   amount.addEventListener('input', updateFreedom);
+  updateFreedom();
 })();
 </script>
 </body>
