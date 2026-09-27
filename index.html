@@ -12,13 +12,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=20260926-4">
+<link rel="stylesheet" href="css/styles.css?v=20260927-5">
 </head>
 <body>
 <nav>
   <div class="wrap">
     <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#3FCB93"/><stop offset=".55" stop-color="#10A5A8"/><stop offset="1" stop-color="#1F87F0"/></linearGradient></defs><path fill="url(#lg)" d="M18.2 3.5 7.6 17.4c-.6.8 0 1.9 1 1.9h5.9l-1.6 8.3c-.2 1.1 1.2 1.7 1.9.8l10.6-13.9c.6-.8 0-1.9-1-1.9h-5.9l1.6-8.3c.2-1.1-1.2-1.7-1.9-.8Z"/></svg>Lightning</a>
-    <div class="links"><a href="#gap">Why Lightning</a><a href="#believe">What We Believe</a><a href="#how">How It Works</a><a href="#game">Wanna play?</a></div>
+    <div class="version-links" aria-label="Landing page version"><a class="is-active" href="index.html">Version A</a><a href="version-b.html">Version B</a></div>
     <a class="btn pri" href="survey.html">Take the survey</a>
   </div>
 </nav>
@@ -141,7 +141,7 @@
 
   <section class="card survey-callout">
     <div><div class="eyebrow"><span class="tick"></span>Help shape Lightning</div><h2>Have a minute to help us build this better?</h2><p>Tell us what works, what doesn’t, and what you wish a finance app could do for you.</p></div>
-    <div class="survey-actions"><a class="btn pri" href="survey.html">Take the 3–5 minute survey</a><form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn sec" type="submit">Get early access</button></form><p class="form-status" id="signup-status" role="status"></p></div>
+    <div class="survey-actions"><a class="btn pri" href="survey.html">Take the 3–5 minute survey</a><a class="btn sec" href="survey.html">Get early access</a></div>
   </section>
 
 
@@ -162,21 +162,6 @@
     income.textContent = `${format.format(monthly)} EGP`;
   }
   amount.addEventListener('input', updateFreedom); updateFreedom();
-
-  const signup = document.getElementById('email-signup');
-  const signupStatus = document.getElementById('signup-status');
-  signup.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (!signup.reportValidity()) return;
-    const button = signup.querySelector('button[type="submit"]');
-    button.disabled = true; signupStatus.textContent = 'Sending…';
-    try {
-      signup.querySelector('[name="page_url"]').value = window.location.href;
-      await fetch(signup.dataset.endpoint, {method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(signup))});
-      signup.reset(); signupStatus.textContent = 'You’re on the list. We’ll be in touch.';
-    } catch (_) { signupStatus.textContent = 'We could not save your email. Please try again.'; }
-    finally { button.disabled = false; }
-  });
 
 })();
 </script>
