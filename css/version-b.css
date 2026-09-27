@@ -36,7 +36,7 @@
 .version-b .b-truths .tb p span{display:inline-block;margin-top:3px}
 .version-b .b-voices .vc{background:linear-gradient(155deg,#F6FAFE,#E5F0FA)}
 .version-b .b-gapgrid .gp:not(.hl){background:#F8FCFA}
-.version-b .b-gapgrid .gp.hl{background-color:#16B57A;background-image:radial-gradient(circle at 100% 100%,rgba(11,109,214,.96) 0%,rgba(11,109,214,.58) 19%,transparent 43%),linear-gradient(135deg,#2CCB91 0%,#18B77D 60%,#0CA87C 100%);--muted:rgba(255,255,255,.84);--azure:#fff}
+.version-b .b-gapgrid .gp.hl{background:linear-gradient(135deg,#0B8A68 0%,#0A8D81 58%,#0B72A1 100%);--muted:rgba(255,255,255,.84);--azure:#fff}
 .version-b .b-gapgrid .gp.hl::after{display:none}
 .version-b .b-gapgrid .gp.hl::before{background:rgba(255,255,255,.4)}
 .version-b .survey-callout{background:linear-gradient(135deg,#E0F5E9,#D7ECF7);border:1px solid rgba(255,255,255,.92)}
