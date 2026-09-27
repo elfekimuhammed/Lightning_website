@@ -80,7 +80,7 @@
       <p>You on a Friday when you are budgeting to reach financial freedom and you when you are stressed out at work ordering a vanilla shake to feel better are not the same person.</p>
       <p>You don’t save more by having better budgets, you save more by understanding your spending patterns and cutting out the unavoidable.</p>
       <p class="b-closing">Study your patterns, and create better habits.</p>
-      <p class="b-warning">Otherwise, your stressed-out self will undo the plan before Friday.</p>
+      <p class="b-warning">Or else your stressed out version will keep cursing you and your budget.</p>
     </div>
   </section>
 
@@ -111,13 +111,14 @@
   const income = document.getElementById('monthly-income');
   const presets = document.querySelectorAll('.b-presets button');
   const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
+  const formatCapital = value => value >= 1000000 ? format.format(value).replaceAll(',', '\u202F') : format.format(value);
   function updateFreedom() {
     const digits = amount.value.replace(/[^0-9]/g, '').slice(0, 9);
     presets.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.amount === digits)));
     if (!digits) { amount.value = ''; target.textContent = '—'; income.textContent = '—'; return; }
     const monthly = Number(digits);
     amount.value = format.format(monthly);
-    target.textContent = format.format(monthly * 12 / .20);
+    target.textContent = formatCapital(monthly * 12 / .20);
     income.textContent = `${format.format(monthly)} EGP`;
   }
   amount.addEventListener('input', updateFreedom);
