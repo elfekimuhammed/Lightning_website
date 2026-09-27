@@ -1,5 +1,5 @@
 /* Lightning Version B: the focused Meadow expression. */
-.version-b{--b-ink:#0D2233;--b-paper:#F8FCFA;--b-mint:#E3F6EC;--b-green:#087653;--b-blue:#0959AB;--b-line:#DDE9E6}
+.version-b{--b-ink:#0D2233;--b-paper:#F8FCFA;--b-mint:#E3F6EC;--b-green:#0C9B63;--b-blue:#0959AB;--b-line:#DDE9E6}
 .version-b .b-hero{padding:76px 0 30px}
 .version-b .b-hero-lead{max-width:35em;margin:16px auto 0;color:var(--ink2);font:500 17px/1.65 var(--text);letter-spacing:0}
 .version-b .b-hero-cta{margin-top:25px}
@@ -18,34 +18,34 @@
 .version-b .b-presets button[aria-pressed="true"]{border-color:var(--nile);background:var(--nile);color:#fff}
 .version-b .b-presets button:focus-visible{outline:3px solid var(--b-green);outline-offset:2px}
 .version-b .b-calculator .freedom-input>p{margin:17px 0 0;font-size:13px;line-height:1.55}
-.version-b .b-calculator .freedom-result{padding:40px;background:linear-gradient(128deg,#087653 0%,#087F91 51%,#0959AB 100%);color:#fff}
+.version-b .b-calculator .freedom-result{min-height:340px;padding:40px;background:linear-gradient(128deg,#0C9B63 0%,#0A9E96 51%,#0B6DD6 100%);color:#fff}
 .version-b .b-calculator .freedom-result::after{right:auto;left:-22%;top:-53%;bottom:auto;width:85%;height:112%;background:radial-gradient(closest-side,rgba(255,255,255,.14),transparent)}
 .version-b .b-calculator .result-label{color:rgba(255,255,255,.88);font-size:11px;letter-spacing:.075em}
 .version-b .b-calculator .freedom-result strong{margin:12px 0 9px;font-size:clamp(45px,5vw,64px);font-variant-numeric:tabular-nums}
 .version-b .b-calculator .freedom-result strong small{color:rgba(255,255,255,.85)}
 .version-b .b-calculator .freedom-result p{max-width:32em;color:rgba(255,255,255,.94);font-size:15px;line-height:1.55}
 .version-b .b-calculator .freedom-result p b{color:#fff}
-.version-b .b-result-details{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;padding-top:19px;border-top:1px solid rgba(255,255,255,.36)}
-.version-b .b-result-details span{display:block;color:rgba(255,255,255,.83);font:700 11px/1.35 var(--text);letter-spacing:.07em;text-transform:uppercase}
-.version-b .b-result-details b{display:block;margin-top:8px;color:#fff;font:800 clamp(20px,2.4vw,25px)/1.15 var(--display);letter-spacing:-.025em;font-variant-numeric:tabular-nums}
 .version-b .b-calculator-note{max-width:57em;margin:13px auto 0;text-align:center;color:var(--muted);font:500 12px/1.6 var(--text)}
 .version-b .b-tracking-grid article{border:1px solid rgba(255,255,255,.93)}
 .version-b .b-tracking-grid article:nth-child(1){background:linear-gradient(155deg,#F6FFFA,#D8F4E6)}
 .version-b .b-tracking-grid article:nth-child(2){background:linear-gradient(155deg,#F5FAFF,#DCECFD)}
 .version-b .b-tracking-grid article:nth-child(3){background:#F8FCFA}
 .version-b .b-truths li{background:#F8FCFA;border:1px solid rgba(255,255,255,.93)}
-.version-b .b-truths .tn{background:var(--nile);width:38px;height:38px}
+.version-b .b-truths .tn{background:#0A2442;color:#fff;width:42px;height:42px;box-shadow:0 8px 16px -10px rgba(10,36,66,.78)}
 .version-b .b-voices .vc{background:linear-gradient(155deg,#F6FAFE,#E5F0FA)}
 .version-b .b-gapgrid .gp:not(.hl){background:#F8FCFA}
-.version-b .b-gapgrid .gp.hl{background:linear-gradient(135deg,#087653 0%,#087F91 52%,#0959AB 100%);--muted:rgba(255,255,255,.88);--azure:#fff}
-.version-b .b-gapgrid .gp.hl::after{display:none}
+.version-b .b-gapgrid .gp.hl{background-color:#0A2442;background-image:radial-gradient(circle at 16% 18%,rgba(63,203,147,.35) 0 1px,transparent 1.5px),radial-gradient(circle at 82% 72%,rgba(31,135,240,.38) 0 1px,transparent 1.5px),linear-gradient(135deg,rgba(12,155,99,.42),transparent 48%),linear-gradient(145deg,#0A2442,#0C3158);background-size:13px 13px,17px 17px,100% 100%,100% 100%;--muted:rgba(255,255,255,.84);--azure:#7FF2B4}
+.version-b .b-gapgrid .gp.hl::after{display:block;right:-32%;bottom:-78%;width:115%;height:145%;background:radial-gradient(closest-side,rgba(31,135,240,.38),transparent)}
+.version-b .b-gapgrid .gp.hl::before{background:linear-gradient(90deg,#3FCB93,#22C3C0,#4FA3FA)}
 .version-b .survey-callout{background:linear-gradient(135deg,#E0F5E9,#D7ECF7);border:1px solid rgba(255,255,255,.92)}
 .version-b .survey-actions form{align-items:center}
 .version-b .survey-actions input{border:1px solid var(--b-line);background:#fff}
 .version-b .survey-actions button{background:var(--nile);color:#fff;border-color:var(--nile)}
 .version-b .survey-actions button:hover{background:var(--nile-2)}
-@media (max-width:760px){.version-b .b-calculator{grid-template-columns:1fr}.version-b .b-calculator .freedom-input,.version-b .b-calculator .freedom-result{padding:28px 24px}.version-b .b-result-details{gap:12px}}
-@media (max-width:480px){.version-b .b-hero{padding-top:58px}.version-b .b-result-details{grid-template-columns:1fr}.version-b .b-calculator .freedom-result strong{font-size:clamp(40px,11vw,54px)}.version-b .survey-actions form{display:grid;grid-template-columns:1fr}.version-b .survey-actions input{width:100%}}
+.version-b .b-budgeting .b-warning{margin-top:28px;padding:15px 18px;max-width:600px;border-left:4px solid var(--mint);border-radius:0 14px 14px 0;background:rgba(255,255,255,.42);color:var(--ink);font-weight:700}
+.version-b .b-motto{padding:82px 24px 98px;text-align:center;color:var(--ink);font:800 clamp(30px,5vw,54px)/1.08 var(--display);letter-spacing:-.04em}.version-b .b-motto span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (max-width:760px){.version-b .b-calculator{grid-template-columns:1fr}.version-b .b-calculator .freedom-input,.version-b .b-calculator .freedom-result{padding:28px 24px}.version-b .b-calculator .freedom-result{min-height:270px}}
+@media (max-width:480px){.version-b .b-hero{padding-top:58px}.version-b .b-calculator .freedom-result strong{font-size:clamp(40px,11vw,54px)}.version-b .survey-actions form{display:grid;grid-template-columns:1fr}.version-b .survey-actions input{width:100%}.version-b .b-motto{padding:64px 20px 78px}}
 @media (max-width:480px){
   .version-b-page nav .wrap{height:auto;min-height:100px;display:grid;grid-template-columns:auto 1fr;gap:9px 10px;padding-block:10px}
   .version-b-page nav .logo{white-space:nowrap}

@@ -43,10 +43,9 @@
         <span class="result-label">That’s Worth the Same as Having</span>
         <strong><span id="freedom-number">120,000</span> <small>EGP</small></strong>
         <p>In the bank. At 20% a year, that sum pays about <b id="monthly-income">2,000 EGP</b> a month. Spending better gives you the same room, with no capital needed.</p>
-        <div class="b-result-details"><div><span>Kept Each Year</span><b id="yearly-savings">24,000 EGP</b></div><div><span>After 10 Years at 20%</span><b id="ten-year-value">752,191 EGP</b></div></div>
       </div>
     </div>
-    <p class="b-calculator-note">An illustration, not a forecast. The bank comparison uses monthly savings × 12 ÷ 20%. The ten year example assumes monthly deposits earning 20% annually with monthly compounding. Actual returns, inflation, taxes and fees vary.</p>
+    <p class="b-calculator-note">An illustration, not a forecast. The bank comparison uses monthly savings × 12 ÷ 20%. Actual returns, inflation, taxes and fees vary.</p>
   </section>
 
   <section class="b-tracking">
@@ -59,7 +58,7 @@
   </section>
 
   <section class="b-beliefs" id="believe">
-    <div class="sec-h"><div class="eyebrow"><span class="tick"></span>What we believe</div><h2>What We Believe</h2><p>Three Truths About Building Wealth</p></div>
+    <div class="sec-h"><div class="eyebrow"><span class="tick"></span>What We Believe</div><h2>Three Truths About Building Wealth</h2></div>
     <ol class="truths b-truths">
       <li class="card"><span class="tn">1</span><div class="tb"><blockquote>Compounding Is the Key to Financial Freedom.</blockquote><p>Money that grows on its own growth does the heavy lifting.</p></div></li>
       <li class="card"><span class="tn">2</span><div class="tb"><blockquote>There’s Nothing to Compound Until You Save.</blockquote><p>Every pound you keep is a pound that can start working. Saving comes first; investing follows.</p></div></li>
@@ -81,6 +80,7 @@
       <p>You on a Friday when you are budgeting to reach financial freedom and you when you are stressed out at work ordering a vanilla shake to feel better are not the same person.</p>
       <p>You don’t save more by having better budgets, you save more by understanding your spending patterns and cutting out the unavoidable.</p>
       <p class="b-closing">Study your patterns, and create better habits.</p>
+      <p class="b-warning">Otherwise, your stressed-out self will undo the plan before Friday.</p>
     </div>
   </section>
 
@@ -100,6 +100,7 @@
     <div><div class="eyebrow"><span class="tick"></span>Help shape Lightning</div><h2>Have a minute to help us build this better?</h2><p>Tell us what works, what doesn’t, and what you wish a finance app could do for you.</p></div>
     <div class="survey-actions"><a class="btn pri" href="survey.html">Take the 3–5 minute survey</a><form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn sec" type="submit">Get Early Access</button></form><p class="form-status" id="signup-status" role="status"></p></div>
   </section>
+  <div class="b-motto" aria-label="Lightning motto">Study Your Patterns. <span>Control Your Future.</span></div>
 
 </main>
 
@@ -108,22 +109,16 @@
   const amount = document.getElementById('monthly-amount');
   const target = document.getElementById('freedom-number');
   const income = document.getElementById('monthly-income');
-  const yearly = document.getElementById('yearly-savings');
-  const tenYear = document.getElementById('ten-year-value');
   const presets = document.querySelectorAll('.b-presets button');
   const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
   function updateFreedom() {
     const digits = amount.value.replace(/[^0-9]/g, '').slice(0, 9);
     presets.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.amount === digits)));
-    if (!digits) { amount.value = ''; target.textContent = '—'; income.textContent = '—'; yearly.textContent = '—'; tenYear.textContent = '—'; return; }
+    if (!digits) { amount.value = ''; target.textContent = '—'; income.textContent = '—'; return; }
     const monthly = Number(digits);
     amount.value = format.format(monthly);
     target.textContent = format.format(monthly * 12 / .20);
     income.textContent = `${format.format(monthly)} EGP`;
-    yearly.textContent = `${format.format(monthly * 12)} EGP`;
-    const monthlyRate = .20 / 12;
-    const months = 120;
-    tenYear.textContent = `${format.format(monthly * (Math.pow(1 + monthlyRate, months) - 1) / monthlyRate)} EGP`;
   }
   amount.addEventListener('input', updateFreedom);
   presets.forEach(button => button.addEventListener('click', () => { amount.value = button.dataset.amount; updateFreedom(); amount.focus(); }));

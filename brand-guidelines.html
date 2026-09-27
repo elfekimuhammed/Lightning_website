@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#E3F6EC">
+<meta name="description" content="The Lightning brand system: voice, colors, typography, spacing, cards, controls and accessibility.">
+<title>Lightning · Brand Guidelines</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--ink:#0D2233;--ink2:#304A5C;--muted:#5C7483;--meadow:#14A874;--meadow-dark:#0B8A5F;--azure:#0B6DD6;--nile:#0A2442;--rose:#C93D72;--bg1:#E3F6EC;--bg3:#E1EEFB;--paper:#F8FCFA;--border:#DDE9E6;--focus:#DDF4E8;--display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:Manrope,"Segoe UI",system-ui,sans-serif;--focal:linear-gradient(135deg,#0C9B63 0%,#0A9E96 52%,#0B6DD6 100%)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(135deg,var(--bg1),#E6F4F1 50%,var(--bg3));color:var(--ink);font:500 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,blockquote{margin:0}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.035em;text-wrap:balance}
+button,input{font:inherit}
+button,a,input{outline-offset:3px}
+:focus-visible{outline:3px solid var(--meadow)}
+.wrap{width:min(1120px,100% - 48px);margin:auto}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(232,247,241,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(13,34,51,.08)}
+.topbar .wrap{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font:800 21px/1 var(--display)}
+.logo img{width:26px;height:26px}
+.topbar nav{display:flex;gap:20px;flex-wrap:wrap;color:var(--ink2);font-size:13px;font-weight:700}
+.topbar nav a:hover{color:var(--meadow-dark)}
+.eyebrow{display:flex;align-items:center;gap:9px;color:var(--muted);font:800 11px/1.2 var(--body);text-transform:uppercase;letter-spacing:.1em}
+.eyebrow::before{content:"";width:19px;height:4px;border-radius:99px;background:linear-gradient(90deg,var(--meadow),var(--azure))}
+.hero{padding:84px 0 70px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero h1{margin:19px 0 18px;font-size:clamp(54px,7vw,88px);line-height:1.01}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--meadow),#10A5A8,var(--azure));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{max-width:38em;color:var(--ink2);font-size:18px;line-height:1.65}
+.hero .meta{margin-top:24px;color:var(--muted);font-size:13px;font-weight:700}
+.hero-mark{min-height:330px;padding:36px;border-radius:28px;background:var(--focal);color:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 22px 42px -28px rgba(10,36,66,.65)}
+.hero-mark .bolt{font:800 84px/1 var(--display)}
+.hero-mark p{max-width:13ch;font:800 32px/1.15 var(--display);letter-spacing:-.03em}
+main>section{padding:64px 0;border-top:1px solid rgba(13,34,51,.08)}
+.section-head{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:28px}
+.section-head h2{font-size:clamp(32px,4vw,44px);line-height:1.1}
+.section-head p{max-width:43em;margin-top:10px;color:var(--ink2)}
+.panel{padding:28px;border:1px solid rgba(255,255,255,.94);border-radius:22px;background:rgba(255,255,255,.78);box-shadow:0 14px 34px -24px rgba(10,36,66,.42)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.principles h3{font-size:21px;margin-bottom:9px}
+.principles p{font-size:15px;color:var(--ink2)}
+.principles .panel:nth-child(2){background:#EAF8F0}.principles .panel:nth-child(3){background:#EAF3FD}
+.tokens{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.swatch{overflow:hidden;border-radius:18px;border:1px solid rgba(255,255,255,.95);background:var(--paper);box-shadow:0 10px 26px -24px rgba(10,36,66,.4)}
+.swatch-color{height:94px;background:var(--swatch)}
+.swatch-label{padding:14px 16px}.swatch-label b{display:block;font:800 15px/1.3 var(--display)}.swatch-label code{display:block;margin:4px 0;color:var(--muted);font:700 12px/1.4 var(--body)}.swatch-label span{font-size:12px;color:var(--ink2)}
+.gradient-showcase{margin-top:16px;padding:30px 32px;border-radius:22px;background:var(--focal);color:#fff;display:flex;justify-content:space-between;gap:30px;align-items:end}
+.gradient-showcase b{font:800 clamp(32px,5vw,56px)/1 var(--display);font-variant-numeric:tabular-nums}
+.gradient-showcase small{display:block;font:700 11px/1.4 var(--body);letter-spacing:.09em;text-transform:uppercase;opacity:.9;margin-bottom:10px}
+.gradient-showcase p{max-width:27em;font-size:14px}
+.note{margin-top:14px;color:var(--ink2);font-size:14px;max-width:75em}
+.type-specimens{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.type-specimen{min-height:184px}.type-specimen small{display:block;margin-bottom:16px;color:var(--muted);font:800 11px/1.2 var(--body);text-transform:uppercase;letter-spacing:.09em}.type-specimen p{color:var(--ink2)}
+.type-display{font:800 clamp(37px,5vw,62px)/1.03 var(--display);letter-spacing:-.04em}.type-section{font:800 clamp(30px,4vw,44px)/1.1 var(--display);letter-spacing:-.035em}.type-body{font:500 17px/1.65 var(--body)}.type-label{font:700 12px/1.4 var(--body);text-transform:uppercase;letter-spacing:.08em}
+.type-table,.tone-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.78);border-radius:18px;overflow:hidden}
+.type-table{margin-top:16px}.type-table th,.type-table td,.tone-table th,.tone-table td{padding:13px 16px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top;font-size:14px}.type-table th,.tone-table th{color:var(--muted);font:800 11px/1.3 var(--body);text-transform:uppercase;letter-spacing:.06em}.type-table tr:last-child td,.tone-table tr:last-child td{border-bottom:0}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sample{min-height:194px;display:flex;flex-direction:column}.sample small{display:block;margin-bottom:15px;color:var(--muted);font:800 11px/1.3 var(--body);text-transform:uppercase;letter-spacing:.09em}.sample h3{font-size:22px;line-height:1.2}.sample p{margin-top:10px;font-size:14px;color:var(--ink2)}
+.sample.focal{background:var(--focal);color:#fff;border:0}.sample.focal small,.sample.focal p{color:rgba(255,255,255,.9)}.sample.focal strong{margin-top:auto;font:800 36px/1 var(--display);font-variant-numeric:tabular-nums}
+.sample.interaction{background:var(--paper)}.sample.info{background:linear-gradient(155deg,#F6FFFA,#D8F4E6)}.sample.numbered{background:var(--paper)}.sample.quote{background:linear-gradient(155deg,#F6FAFE,#E5F0FA)}.sample.action{background:linear-gradient(135deg,#E0F5E9,#D7ECF7)}
+.badge{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--nile);color:#fff;font:800 16px/1 var(--display);margin-bottom:12px}
+.sample.quote blockquote{font:800 19px/1.3 var(--display);letter-spacing:-.02em}.sample.quote cite{margin-top:auto;padding-top:12px;font-size:12px;color:var(--muted);font-style:normal}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:1px solid transparent;border-radius:99px;font:700 15px/1 var(--body);cursor:default}.button.primary{background:var(--nile);color:#fff}.button.secondary{background:#fff;color:var(--ink);border-color:var(--border)}.button.chip{min-height:36px;padding:0 14px;background:#fff;border-color:var(--border);font-size:13px}.button.chip.selected{background:var(--nile);color:#fff;border-color:var(--nile)}
+.field-demo{display:flex;align-items:center;gap:10px;max-width:360px;min-height:70px;padding:10px 18px;background:#fff;border:1px solid var(--border);border-radius:18px}.field-demo span{font-size:13px;color:var(--muted);font-weight:700}.field-demo strong{font:800 40px/1 var(--display);font-variant-numeric:tabular-nums}
+.spec-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 32px;margin:0;padding-left:20px;color:var(--ink2)}.spec-list li{padding-left:3px}
+.quote-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.quote-strip blockquote{padding:22px;border-radius:18px;background:#EAF3FD;font:800 17px/1.3 var(--display)}.quote-strip cite{display:block;margin-top:18px;font:700 12px/1.4 var(--body);color:var(--muted);font-style:normal}
+.end{padding:46px 0 76px;color:var(--muted);font-size:13px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-mark{min-height:230px}.section-head{grid-template-columns:1fr;gap:8px}.tokens{grid-template-columns:repeat(3,1fr)}.card-grid{grid-template-columns:repeat(2,1fr)}.quote-strip{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1120px)}.topbar .wrap{align-items:flex-start;flex-direction:column;padding-block:14px}.topbar nav{gap:12px}.hero{padding:54px 0 48px}.hero-mark{min-height:200px}.hero-mark .bolt{font-size:60px}.hero-mark p{font-size:26px}main>section{padding:46px 0}.principles,.type-specimens,.card-grid,.spec-list{grid-template-columns:1fr}.tokens{grid-template-columns:repeat(2,1fr)}.gradient-showcase{display:block}.gradient-showcase p{margin-top:14px}.type-table,.tone-table{display:block;overflow-x:auto;white-space:nowrap}.type-specimen{min-height:130px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a class="logo" href="index.html"><img src="assets/favicon.svg" alt="">Lightning</a><nav aria-label="Brand guide sections"><a href="#idea">Idea</a><a href="#color">Color</a><a href="#type">Type</a><a href="#cards">Cards</a><a href="#voice">Voice</a><a href="#usage">Usage</a></nav></div></div>
+<main class="wrap">
+  <header class="hero"><div><div class="eyebrow">Meadow identity · Version 1 · September 2026</div><h1>Lightning<br><em>Brand Guidelines</em></h1><p class="lead">A clear, energetic and calm system for helping people in Egypt understand their money and build better habits.</p><p class="meta">Study Your Patterns. Control Your Future. · Wealth Management Made Easy.</p></div><div class="hero-mark"><div class="bolt" aria-hidden="true">↯</div><p>See clearly.<br>Move forward.</p></div></header>
+
+  <section id="idea"><div class="section-head"><div class="eyebrow">01 · Foundation</div><div><h2>The Brand Idea</h2><p>Meadow is a soft, welcoming environment with one vivid green to blue focal surface. Pale green signals growth, pale blue signals clarity, and deep Nile anchors actions.</p></div></div><div class="principles"><article class="panel"><h3>Show the Pattern</h3><p>Make money movement visible: what comes in, what goes out and what remains.</p></article><article class="panel"><h3>Make It Human</h3><p>Talk about decisions and habits without blame. Give the reader a practical next step.</p></article><article class="panel"><h3>Keep It Honest</h3><p>Label hypothetical returns clearly. Use examples to teach, never to promise an outcome.</p></article></div></section>
+
+  <section id="color"><div class="section-head"><div class="eyebrow">02 · Palette</div><div><h2>Color with a Purpose</h2><p>Ink does the reading, Meadow signals growth, Azure brings clarity, and one gradient card carries the key result.</p></div></div><div class="tokens">
+    <div class="swatch"><div class="swatch-color" style="--swatch:#0D2233"></div><div class="swatch-label"><b>Ink</b><code>#0D2233</code><span>Headlines and primary text</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#304A5C"></div><div class="swatch-label"><b>Secondary Ink</b><code>#304A5C</code><span>Body copy</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#5C7483"></div><div class="swatch-label"><b>Muted</b><code>#5C7483</code><span>Labels and hints</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#14A874"></div><div class="swatch-label"><b>Meadow</b><code>#14A874</code><span>Growth accent</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#0B8A5F"></div><div class="swatch-label"><b>Meadow Dark</b><code>#0B8A5F</code><span>Green on light surfaces</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#0B6DD6"></div><div class="swatch-label"><b>Azure</b><code>#0B6DD6</code><span>Clarity and held money</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#0A2442"></div><div class="swatch-label"><b>Nile</b><code>#0A2442</code><span>Primary actions</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#C93D72"></div><div class="swatch-label"><b>Rose</b><code>#C93D72</code><span>Overages and negatives</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#E3F6EC"></div><div class="swatch-label"><b>Page Start</b><code>#E3F6EC</code><span>Soft canvas</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#E1EEFB"></div><div class="swatch-label"><b>Page End</b><code>#E1EEFB</code><span>Soft canvas</span></div></div>
+    <div class="swatch"><div class="swatch-color" style="--swatch:#F8FCFA"></div><div class="swatch-label"><b>Card Paper</b><code>#F8FCFA</code><span>Neutral card surface</span></div></div>
+  </div><div class="gradient-showcase"><div><small>Focal gradient · #0C9B63 → #0A9E96 → #0B6DD6</small><b>120,000 EGP</b></div><p>Reserve this vivid surface for one prominent result or Lightning summary per view. Use white text on the approved darker stops.</p></div><p class="note">Green means growth or positive savings, blue means held money or clarity, and rose means an overage. Always pair color with words or numbers.</p></section>
+
+  <section id="type"><div class="section-head"><div class="eyebrow">03 · Typography</div><div><h2>Two Fonts, One Voice</h2><p>Bricolage Grotesque gives headlines and large figures character. Manrope makes explanations and controls easy to read.</p></div></div><div class="type-specimens"><div class="panel type-specimen"><small>Bricolage Grotesque · 800</small><div class="type-display">Control Your Future.</div></div><div class="panel type-specimen"><small>Bricolage Grotesque · 800</small><div class="type-section">What We Believe</div></div><div class="panel type-specimen"><small>Manrope · 500</small><p class="type-body">See what comes in, what goes out, and what stays. Better visibility helps you make better decisions.</p></div><div class="panel type-specimen"><small>Manrope · 700</small><div class="type-label">That’s Worth the Same as Having</div><p style="margin-top:15px">Use tabular numerals for financial values: 2,000 EGP.</p></div></div><table class="type-table"><thead><tr><th>Role</th><th>Desktop</th><th>Mobile</th><th>Weight / line height</th></tr></thead><tbody><tr><td>Hero</td><td>Up to 78 px</td><td>From 46 px</td><td>Bricolage 800 / 1.02</td></tr><tr><td>Section heading</td><td>42–48 px</td><td>30–34 px</td><td>Bricolage 800 / 1.08</td></tr><tr><td>Card heading</td><td>21–26 px</td><td>20–23 px</td><td>Bricolage 800 / 1.2</td></tr><tr><td>Result amount</td><td>Up to 64 px</td><td>40–54 px</td><td>Bricolage 800 / 1</td></tr><tr><td>Body</td><td>16–18 px</td><td>15–17 px</td><td>Manrope 500 / 1.6</td></tr><tr><td>UI label</td><td>11–14 px</td><td>11–14 px</td><td>Manrope 700 / 1.35</td></tr></tbody></table><p class="note">Use Title Case for headlines, uppercase for small eyebrow labels and sentence case for body text. Tighten large headings slightly; do not tighten body copy. Use Segoe UI and system sans serif as fallbacks.</p></section>
+
+  <section id="cards"><div class="section-head"><div class="eyebrow">04 · Components</div><div><h2>Card Hierarchy</h2><p>Each card has one job. Give calculations the strongest surface, explanations a quiet surface, and quotes room to breathe.</p></div></div><div class="card-grid"><article class="panel sample focal"><small>01 · Focal result</small><h3>Your Money, in Focus</h3><p>The biggest number on the page lives here.</p><strong>120,000 EGP</strong></article><article class="panel sample interaction"><small>02 · Interaction</small><h3>Enter an Amount</h3><p>Strong label, editable figure, clear focus ring and quick presets. Pair with the result card.</p></article><article class="panel sample info"><small>03 · Information</small><h3>What Comes In</h3><p>A concise title and one useful paragraph. Use pale green, pale blue or neutral paper.</p></article><article class="panel sample numbered"><small>04 · Numbered belief</small><div class="badge">1</div><h3>Compounding Matters</h3><p>Deep Nile badge, bold statement, short supporting copy.</p></article><article class="panel sample quote"><small>05 · Quote</small><blockquote>“Combining savings with compound interest works wonders.”</blockquote><cite>Warren Buffett</cite></article><article class="panel sample action"><small>06 · Call to action</small><h3>Help Shape Lightning</h3><p>One primary action and one optional alternative. Keep email and survey paths distinct.</p></article></div><p class="note">Use a 22 px container radius, 14–18 px grid gap and 24–40 px internal padding. Keep at least 16 px between headings and dense content. Avoid unrelated metrics inside quote cards.</p></section>
+
+  <section id="voice"><div class="section-head"><div class="eyebrow">05 · Language</div><div><h2>Voice and Tone</h2><p>Clear, encouraging, concrete, honest and local. Speak to the reader as “you.” Explain the money before asking for a decision.</p></div></div><table class="tone-table"><thead><tr><th>Quality</th><th>Do</th><th>Avoid</th></tr></thead><tbody><tr><td>Clear</td><td>“See what comes in, goes out and stays.”</td><td>Jargon without explanation.</td></tr><tr><td>Encouraging</td><td>“Small changes can make room in your month.”</td><td>Blame or guilt.</td></tr><tr><td>Concrete</td><td>“2,000 EGP a month is 24,000 EGP a year.”</td><td>Vague promises or guaranteed wealth.</td></tr><tr><td>Honest</td><td>Call the 20% calculation an illustration.</td><td>Presenting a hypothetical return as certain.</td></tr><tr><td>Local</td><td>Use EGP and familiar account examples.</td><td>Generic foreign banking language.</td></tr></tbody></table><div class="quote-strip"><blockquote>“Combining savings with compound interest works wonders.”<cite>Warren Buffett</cite></blockquote><blockquote>“The only way to be rich is to not spend money you have.”<cite>Morgan Housel</cite></blockquote><blockquote>“You do not rise to the level of your goals. You fall to the level of your systems.”<cite>James Clear</cite></blockquote></div><p class="note">These are the approved Version B quotes. Verify exact wording and attribution with original sources before using them in paid campaigns or printed material. Use humor lightly: “Wanna Play a Game?” fits; shame does not. Describe only features the product actually has.</p></section>
+
+  <section id="usage"><div class="section-head"><div class="eyebrow">06 · Rules</div><div><h2>Make It Work Everywhere</h2><p>Consistent controls, spacing, format and accessibility keep the system useful beyond the landing page.</p></div></div><div class="panel"><div class="field-demo"><span>EGP</span><strong>2,000</strong></div><div class="controls"><span class="button primary">Primary Action</span><span class="button secondary">Secondary Action</span><span class="button chip">1,000</span><span class="button chip selected">2,000</span></div><p class="note">Standard button height is 48 px; minimum touch target is 44 px. Use Nile for primary actions, white for secondary actions and a green focus ring on inputs. Selected presets use Nile and white.</p></div><ul class="spec-list" style="margin-top:24px"><li>Maximum content width: 1,120 px. Side padding: 24 px desktop, 16 px narrow mobile.</li><li>Section rhythm: about 72 px desktop and 48–56 px mobile. Card radius: 22 px; field radius: 16–18 px.</li><li>Format marketing figures with commas, EGP and no decimals. The calculator starts at 2,000 EGP.</li><li>Update bank equivalent, monthly amount, annual savings and ten year illustration together. Show an em dash for empty values.</li><li>Explain rate and compounding assumptions beside the illustration. Actual outcomes are never implied.</li><li>Keep normal text at WCAG AA contrast or better, preserve visible keyboard focus and do not rely on color alone.</li><li>Stack calculator panels and secondary metrics on narrow screens. Respect reduced motion settings.</li><li>Use the bolt in <code>assets/favicon.svg</code>. Prefer simple product diagrams to stock finance photos.</li><li>Place email signup feedback beside the field. Confirm Google Sheets storage when changing its endpoint; a completed <code>no-cors</code> request alone cannot prove it.</li></ul><p class="note">Version B applies these rules in <code>version-b.html</code> and <code>css/version-b.css</code>. Version A remains the comparison page. The survey uses separate styles and should adopt these tokens when it is redesigned.</p></section>
+  <div class="end">Lightning · Meadow identity · Brand Guidelines</div>
+</main>
+</body>
+</html>
