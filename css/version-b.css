@@ -6,9 +6,10 @@
 .version-b .b-hero-lead span{display:block;margin-top:3px}
 .version-b .b-hero-cta{margin-top:25px}
 .version-b .b-game{padding-top:42px}
-.version-b .b-game-intro{max-width:690px;margin-bottom:36px}
+.version-b .b-game-head{margin-bottom:34px}
+.version-b .b-game-intro{max-width:510px;margin-bottom:36px}
 .version-b .b-game-intro h2{font-size:clamp(32px,4.3vw,50px);line-height:1.1;font-weight:800}
-.version-b .b-game-intro p{max-width:44em;margin:16px 0 0;color:var(--ink2);font-size:17px;line-height:1.6}
+.version-b .b-game-intro p{margin:16px 0 0;color:var(--ink2);font-size:17px;line-height:1.6}
 .version-b .b-calculator{grid-template-columns:1fr 1fr;background:var(--b-paper);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 42px -29px rgba(10,36,66,.45)}
 .version-b .b-calculator .freedom-input{display:flex;flex-direction:column;justify-content:center;padding:38px 40px}
 .version-b .b-calculator .freedom-input label{max-width:21ch;font-size:clamp(21px,2.2vw,26px);line-height:1.17}
