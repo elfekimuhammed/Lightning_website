@@ -4,10 +4,9 @@
 .version-b .b-hero>svg{display:none}
 .version-b .b-hero-lead{max-width:35em;margin:16px auto 0;color:var(--ink2);font:500 17px/1.65 var(--text);letter-spacing:0}
 .version-b .b-hero-lead span{display:block;margin-top:3px}
-.version-b .b-hero-cta{margin-top:25px}
 .version-b .b-game{padding-top:42px}
 .version-b .b-game-head{margin-bottom:12px}
-.version-b .b-game-transition{max-width:42em;margin:0 auto 28px;text-align:center;color:var(--ink2);font-size:16px;line-height:1.55}
+.version-b .b-game-transition{display:block;width:100%;max-width:42em;margin:0 auto 28px;text-align:center;color:var(--ink2);font-size:16px;line-height:1.55}
 .version-b .b-calculator{grid-template-columns:1fr 1fr;background:var(--b-paper);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 42px -29px rgba(10,36,66,.45)}
 .version-b .b-calculator .freedom-input{display:flex;flex-direction:column;justify-content:center;padding:38px 40px}
 .version-b .b-calculator .freedom-input label{max-width:21ch;font-size:clamp(21px,2.2vw,26px);line-height:1.17}
