@@ -6,18 +6,15 @@
 .version-b .b-hero-lead span{display:block;margin-top:3px}
 .version-b .b-hero-cta{margin-top:25px}
 .version-b .b-game{padding-top:42px}
-.version-b .b-game-head{margin-bottom:34px}
-.version-b .b-game-intro{max-width:510px;margin-bottom:36px}
-.version-b .b-game-intro h2{font-size:clamp(32px,4.3vw,50px);line-height:1.1;font-weight:800}
-.version-b .b-game-intro p{margin:16px 0 0;color:var(--ink2);font-size:17px;line-height:1.6}
+.version-b .b-game-head{margin-bottom:12px}
+.version-b .b-game-transition{max-width:42em;margin:0 auto 28px;text-align:center;color:var(--ink2);font-size:16px;line-height:1.55}
 .version-b .b-calculator{grid-template-columns:1fr 1fr;background:var(--b-paper);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 42px -29px rgba(10,36,66,.45)}
 .version-b .b-calculator .freedom-input{display:flex;flex-direction:column;justify-content:center;padding:38px 40px}
 .version-b .b-calculator .freedom-input label{max-width:21ch;font-size:clamp(21px,2.2vw,26px);line-height:1.17}
-.version-b .b-calculator .money-input{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:6px 10px;margin-top:21px;padding:15px 18px;border:1px solid var(--b-line);border-radius:17px;background:#fff}
+.version-b .b-calculator .money-input{display:flex;align-items:baseline;gap:10px;margin-top:21px;padding:15px 18px;border:1px solid var(--b-line);border-radius:17px;background:#fff}
 .version-b .b-calculator .money-input:focus-within{border-color:var(--b-green);box-shadow:0 0 0 4px rgba(20,168,116,.15)}
 .version-b .b-calculator .money-input input{flex:1;min-width:0;width:100%;height:auto;grid-column:auto;padding:0;font-size:clamp(34px,4vw,46px);font-variant-numeric:tabular-nums}
 .version-b .b-calculator .money-input span{font-size:13px}
-.version-b .b-calculator .money-input b{grid-column:2;padding:0;color:var(--ink2);font-size:13px}
 .version-b .b-presets{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .version-b .b-presets button{min-height:35px;padding:0 14px;border:1px solid var(--b-line);border-radius:99px;background:#fff;color:var(--ink2);font:700 13px/1 var(--text);cursor:pointer}
 .version-b .b-presets button:hover{border-color:var(--b-green);color:var(--b-green)}
