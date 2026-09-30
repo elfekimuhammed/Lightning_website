@@ -65,7 +65,7 @@ The website, survey, and Google Sheets receiver are connected. When changing the
 
 ## Version C
 
-Version C keeps the Version B copy and structure and adds a live product tour, a How It Works page and a testimonial section.
+Version C tells the story in this order: hero, game, three truths, the budgeting story, “And That Is Lightning”, a live product tour, testimonials and signup. `how-it-works.html` walks through the app in six steps.
 
 - **App screenshots** in `assets/app/` are captured from the Lightning app running on a sample household (six months of salary, spending, budgets, THNDR holdings, gold, bills, a car loan and reserves, dated to 30 September 2026). They are 2000 × 1250 WebP files; keep that size when replacing one so the frames stay consistent.
 - **Testimonials** are placeholders. Replace the quote, name, initials and role in each `figure[data-placeholder="testimonial"]` in `version-c.html`, then remove the `data-placeholder` attribute.

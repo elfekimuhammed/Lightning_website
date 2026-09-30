@@ -88,7 +88,7 @@
       const panel = document.createElement('div');
       panel.className = 'tour-panel'; panel.setAttribute('role', 'tabpanel'); panel.id = `panel-${step.id}`;
       panel.setAttribute('aria-labelledby', tab.id);
-      panel.innerHTML = `<div class="tour-shot">${frame(step.img, step.label, step.alt || step.title, step.title)}</div><div class="tour-copy"><span class="step">${String(i + 1).padStart(2, '0')} / ${String(steps.length).padStart(2, '0')} · ${step.label}</span><h3>${step.title}</h3><p>${step.body}</p><ul>${step.points.map(p => `<li>${p}</li>`).join('')}</ul><a class="text-link" href="how-it-works.html">See the full workflow →</a></div>`;
+      panel.innerHTML = `<div class="tour-shot">${frame(step.img, step.label, step.alt || step.title, step.title)}</div><div class="tour-copy"><span class="step">${String(i + 1).padStart(2, '0')} / ${String(steps.length).padStart(2, '0')} · ${step.label}</span><h3>${step.title}</h3><p>${step.body}</p><ul>${step.points.map(p => `<li>${p}</li>`).join('')}</ul><a class="text-link" href="how-it-works.html">How it works, step by step →</a></div>`;
       stage.append(panel);
     });
     const tabs = [...tabList.children], panels = [...stage.children];
