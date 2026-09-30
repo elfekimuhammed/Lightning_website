@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Lightning · Wealth Management Made Easy</title>
+<meta name="description" content="Lightning shows your spending, savings, investments, gold and cash plans in one place, so you can study your patterns and control your future.">
+<meta name="theme-color" content="#E3F6EC">
+<link rel="icon" href="assets/favicon.svg?v=20260928-1" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/version-c.css?v=20260930-1">
+<link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
+<script src="js/ux-test.js?v=20260928-1" defer></script>
+</head>
+<body data-ux-version="UX-2026.09.30.03" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<div class="c-nav">
+  <div class="wrap">
+    <a class="logo" href="version-c.html"><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a>
+    <nav class="c-nav-links" aria-label="Main">
+      <a href="#demo">Product</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="#believe">Why Lightning</a>
+    </nav>
+    <div class="c-nav-end">
+      <div class="version-links" aria-label="Landing page version"><a href="index.html">A</a><a href="version-b.html">B</a><a class="is-active" href="version-c.html" aria-current="page">C</a></div>
+      <button class="ux-test-trigger" type="button" data-ux-open>Submit UX Test <span data-ux-count>0</span></button>
+      <a class="btn btn-primary" href="#join">Get Early Access</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="top">
+  <header class="c-hero">
+    <div class="eyebrow">Wealth Management Made Easy</div>
+    <h1>Study Your Patterns. <em class="grad-text">Control Your Future.</em></h1>
+    <p class="c-hero-tag">Small changes in how you spend are worth more than you think.</p>
+    <p class="c-hero-lead">Lightning brings your bank accounts, cash, THNDR portfolio, gold and plans into one honest picture, so you can see where your money goes and decide where it should go next.</p>
+    <div class="c-hero-actions">
+      <a class="btn btn-primary" href="#game">See What You Are Worth</a>
+      <a class="btn btn-secondary" href="how-it-works.html">How It Works <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="c-hero-shot">
+      <div class="c-chip c-chip-a" aria-hidden="true"><i>↯</i><div><small>Safe to spend</small><b>214,510<span>EGP</span></b></div></div>
+      <div class="c-chip c-chip-b blue" aria-hidden="true"><i>◒</i><div><small>Portfolio this month</small><b>+7,940<span>EGP</span></b></div></div>
+      <div class="frame">
+        <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div>
+        <button class="zoom" type="button" data-zoom="assets/app/overview.webp" data-caption="Overview: net worth, free cash and this month’s cash flow.">
+          <img src="assets/app/overview.webp" width="2000" height="1250" alt="The Lightning Overview screen showing net worth of 678,470 EGP, free cash of 216,640 EGP, and a breakdown of cash, deposits, holdings and what you owe." fetchpriority="high">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="c-game" id="game">
+    <div class="sec-head">
+      <div class="eyebrow">A quick game</div>
+      <h2>Wanna Play a Game?</h2>
+      <p>Start with one number and see what keeping more of it could do for your month.</p>
+    </div>
+    <div class="card c-calc">
+      <div class="c-calc-input">
+        <label for="monthly-amount">How Much Could You Cut from Your Expenses Right Now and Still Live Comfortably?</label>
+        <div class="money-input"><span>EGP</span><input id="monthly-amount" inputmode="numeric" autocomplete="off" value="2,000" placeholder="Enter amount" aria-describedby="monthly-help"></div>
+        <div class="presets" role="group" aria-label="Quick monthly amounts"><button type="button" data-amount="500">500</button><button type="button" data-amount="1000">1,000</button><button type="button" data-amount="2000" aria-pressed="true">2,000</button><button type="button" data-amount="5000">5,000</button></div>
+        <p id="monthly-help">Think of the orders, subscriptions and small buys you wouldn’t miss.</p>
+      </div>
+      <div class="c-calc-result" aria-live="polite">
+        <span class="result-label">That’s Worth the Same as Having</span>
+        <strong><span id="freedom-number">120,000</span> <small>EGP</small></strong>
+        <p>In the bank. At 20% a year, that sum pays about <b id="monthly-income">2,000 EGP</b> a month. Spending better gives you the same room, with no capital needed.</p>
+        <div class="c-calc-split">
+          <div><small>Kept in a year</small><b id="annual-savings">24,000 EGP</b></div>
+          <div><small>Saved monthly for 10 years at 20%*</small><b id="ten-year">752,191 EGP</b></div>
+        </div>
+      </div>
+    </div>
+    <p class="c-note">*An illustration, not a forecast. The bank comparison uses monthly savings × 12 ÷ 20%. The ten year figure assumes the same deposit every month at a hypothetical 20% a year, compounded monthly. Actual returns, inflation, taxes and fees vary.</p>
+  </section>
+
+  <section class="c-section" id="features">
+    <div class="sec-head">
+      <div class="eyebrow">Better visibility</div>
+      <h2>And Here Is What Lightning Can Do for You</h2>
+      <p>Lightning makes tracking the things that matter easy, so you can see your full financial picture before deciding what to do next.</p>
+    </div>
+    <div class="c-track">
+      <article class="card"><span class="c-icon" aria-hidden="true">↓</span><h3>What Comes In</h3><p>Salary, freelance work, bonuses, interest and dividends, all visible in one place and counted toward your savings rate.</p></article>
+      <article class="card"><span class="c-icon" aria-hidden="true">↗</span><h3>What Goes Out</h3><p>Everyday spending, budgets and the patterns behind them, from one Talabat order to a whole year of groceries.</p></article>
+      <article class="card"><span class="c-icon" aria-hidden="true">◒</span><h3>What You Own</h3><p>Cash, bank accounts, CDs, THNDR shares and funds, gold, savings goals, money held for family and work expenses to claim.</p></article>
+    </div>
+  </section>
+
+  <section class="c-demo" id="demo">
+    <div class="sec-head">
+      <div class="eyebrow">Live product tour</div>
+      <h2>See Lightning at Work</h2>
+      <p>These are real screens from the Lightning app, filled with six months of sample data for one household in Cairo. Pick a view, or let the tour play.</p>
+    </div>
+    <div class="tour-tabs" role="tablist" aria-label="Product tour"></div>
+    <div class="tour-stage" id="tour-stage"></div>
+    <p class="demo-note">Sample data for illustration. Click any screen to enlarge it.</p>
+  </section>
+
+  <section class="c-section" id="believe">
+    <div class="sec-head">
+      <div class="eyebrow">What we believe</div>
+      <h2>Three Truths About Building Wealth</h2>
+    </div>
+    <ol class="c-truths">
+      <li class="card"><span class="tn">1</span><blockquote>Compounding Is the Key to Financial Freedom.</blockquote><p>Money that grows on its own growth does the heavy lifting.</p></li>
+      <li class="card"><span class="tn">2</span><blockquote>There’s Nothing to Compound Until You Save.</blockquote><p>Every pound you keep is a pound that can start working.<span>Saving comes first; investing follows.</span></p></li>
+      <li class="card"><span class="tn">3</span><blockquote>Saving Is a Process. Understand It to Control It.</blockquote><p>That takes data that shows your patterns, so you can build better habits.<span>Lightning is that data.</span></p></li>
+    </ol>
+    <div class="c-voices">
+      <figure class="card"><blockquote>“Combining savings with compound interest works wonders.”</blockquote><figcaption><b>Warren Buffett</b><span>Investor</span></figcaption></figure>
+      <figure class="card"><blockquote>“The only way to be rich is to not spend money you have.”</blockquote><figcaption><b>Morgan Housel</b><span>Author, The Psychology of Money</span></figcaption></figure>
+      <figure class="card"><blockquote>“You do not rise to the level of your goals. You fall to the level of your systems.”</blockquote><figcaption><b>James Clear</b><span>Author, Atomic Habits</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="c-section" id="system">
+    <div class="c-system">
+      <div class="c-system-copy">
+        <div class="eyebrow">A better system</div>
+        <h2 style="margin-top:16px">You Don’t Suck at Budgeting. <span class="grad-text">You Don’t Have a System.</span></h2>
+        <p>You might convince yourself that you do have a system by creating a budget, but the two are not the same.</p>
+        <p>You on a Friday, budgeting your way to financial freedom, and you on a stressful Tuesday, ordering a vanilla shake to feel better, are not the same person.</p>
+        <p>You don’t save more by writing better budgets. You save more by understanding your spending patterns and cutting out what you can live without.</p>
+        <p class="closing">Study your patterns, and create better habits.</p>
+        <p class="warning">Or else your stressed out version will keep cursing you and your budget.</p>
+      </div>
+      <div class="c-selves" aria-label="Two versions of you">
+        <article class="card c-self calm"><small><i></i>Friday you · planning</small><blockquote>“This month, eating out stays under 3,000.”</blockquote><div class="meta"><span>Eating Out plan</span><b>3,000 EGP</b></div></article>
+        <article class="card c-self stressed"><small><i></i>Tuesday you · after a long meeting</small><blockquote>“One vanilla shake. Large. With delivery.”</blockquote><div class="meta"><span>Talabat, this month</span><b>6 orders</b></div></article>
+        <article class="card c-self fix"><small><i></i>Lightning · the system</small><blockquote>“Eating Out: 2,580 of 3,000 spent. You still have room.”</blockquote><div class="meta"><span>Left in plan</span><b>+420 EGP</b></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-section" id="wealth-management">
+    <div class="sec-head">
+      <div class="eyebrow">Wealth Management Made Easy</div>
+      <h2>And That Is Lightning</h2>
+      <p>Your money lives in five places. Your picture should live in one.</p>
+    </div>
+    <div class="c-gap">
+      <div class="card"><span>Your Bank App</span><b>Sees One Bank</b></div>
+      <div class="card"><span>Your Broker App</span><b>Sees Your Shares</b></div>
+      <div class="card"><span>Cash at Home</span><b>Seen by No One</b></div>
+      <div class="card"><span>Gold in a Drawer</span><b>Valued by Guesswork</b></div>
+      <div class="card"><span>Money You Hold for Family</span><b>Kept in Your Head</b></div>
+      <div class="card hl"><span>Lightning</span><b>All of It</b><small>In one place, in EGP, as of today.</small></div>
+    </div>
+  </section>
+
+  <section class="c-section" id="testimonials">
+    <div class="sec-head">
+      <div class="eyebrow">From early users</div>
+      <h2>What People Are Saying</h2>
+      <p>Early testers are using Lightning to see their month clearly. Here is what they told us.</p>
+    </div>
+    <!-- Placeholder testimonials: replace the quote, name, initials and role in each figure before launch. -->
+    <div class="c-quotes">
+      <figure class="card c-quote" data-placeholder="testimonial">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <blockquote>“[Testimonial placeholder] A longer, featured quote about the moment Lightning changed how this person sees their money. What did they discover, and what did they change afterward?”</blockquote>
+        <figcaption><span class="c-avatar" aria-hidden="true">AB</span><div><b>[Full name]</b><span>[Role] · [City]</span></div></figcaption>
+      </figure>
+      <figure class="card c-quote" data-placeholder="testimonial">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <blockquote>“[Testimonial placeholder] A short quote about seeing every account in one place.”</blockquote>
+        <figcaption><span class="c-avatar" aria-hidden="true">CD</span><div><b>[Full name]</b><span>[Role] · [City]</span></div></figcaption>
+      </figure>
+      <figure class="card c-quote" data-placeholder="testimonial">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <blockquote>“[Testimonial placeholder] A short quote about budgeting or spending patterns.”</blockquote>
+        <figcaption><span class="c-avatar" aria-hidden="true">EF</span><div><b>[Full name]</b><span>[Role] · [City]</span></div></figcaption>
+      </figure>
+      <figure class="card c-quote" data-placeholder="testimonial">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <blockquote>“[Testimonial placeholder] A short quote about tracking THNDR, gold or savings goals.”</blockquote>
+        <figcaption><span class="c-avatar" aria-hidden="true">GH</span><div><b>[Full name]</b><span>[Role] · [City]</span></div></figcaption>
+      </figure>
+      <figure class="card c-quote" data-placeholder="testimonial">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <blockquote>“[Testimonial placeholder] A short quote about knowing what is safe to spend.”</blockquote>
+        <figcaption><span class="c-avatar" aria-hidden="true">IJ</span><div><b>[Full name]</b><span>[Role] · [City]</span></div></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="card c-cta" id="join">
+    <div>
+      <div class="eyebrow">Help shape Lightning</div>
+      <h2>Have a Minute to Help Us Build This Better?</h2>
+      <p>Tell us what works, what doesn’t, and what you wish a finance app could do for you. Or leave your email and be first in line when Lightning opens.</p>
+    </div>
+    <div class="c-cta-actions">
+      <form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button class="btn btn-primary" type="submit">Get Early Access</button></form>
+      <p class="form-status" id="signup-status" role="status"></p>
+      <div class="divider">or</div>
+      <a class="btn btn-secondary" href="survey.html">Take the 3–5 minute survey</a>
+    </div>
+  </section>
+</main>
+
+<div class="wrap">
+  <div class="c-motto" aria-label="Lightning motto">
+    <div class="c-motto-brand"><img src="assets/favicon.svg?v=20260928-1" alt="" aria-hidden="true"><span>Lightning</span></div>
+    <div>Study Your Patterns. <span class="grad-text">Control Your Future.</span></div>
+  </div>
+  <footer class="c-foot">
+    <span>Lightning · Made in Egypt</span>
+    <nav aria-label="Footer"><a href="how-it-works.html">How It Works</a><a href="survey.html">Survey</a><a href="brand-guidelines.html">Brand Guidelines</a></nav>
+  </footer>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged screenshot"><button type="button" aria-label="Close" data-close>×</button><img alt=""><p></p></dialog>
+
+<script src="js/version-c.js?v=20260930-1"></script>
+<script>
+(() => {
+  const TOUR = [
+    {id: 'overview', label: 'Overview', img: 'overview', alt: 'The Overview screen with net worth of 678,470 EGP and free cash of 216,640 EGP.',  title: 'Your Whole Position, on One Screen',
+     body: 'Net worth, free cash and this month’s cash flow side by side, with the formula written under every number so nothing is a mystery.',
+     points: ['Net worth after what you owe, with money held for others left out', 'Free cash after reserves and bills due', 'A monthly savings rate and your largest categories']},
+    {id: 'log', label: 'Log', img: 'register', alt: 'The CIB Current register with Talabat suggested while typing a new transaction.',  title: 'Type It the Way You Say It',
+     body: 'Every account has its own register. Enter counterparty, category and amount in one row, and Lightning suggests the people and places you already use.',
+     points: ['Counterparty suggestions as you type', 'Running balance on every row', 'Import a bank CSV when typing is too slow']},
+    {id: 'budget', label: 'Budget', img: 'budget', alt: 'The Budget screen with 1,153.33 EGP left in plan and Personal category limits.',  title: 'A Plan That Fits Your Month',
+     body: 'Set each category as a fixed amount, a share of your income, or your own 3 or 6 month average. Lightning shows what is left in the plan, category by category.',
+     points: ['Planned, spent and left in plan for every group', 'Unused plan can carry over to next month', 'Suggestions for categories worth tracking']},
+    {id: 'patterns', label: 'Patterns', img: 'expenses', alt: 'Expense analysis for Personal spending year to date with categories ranked and a monthly trend.',  title: 'Where Did It Go? When Did It Change?',
+     body: 'Drill down from a spending group to a category to the transactions behind it, then follow the monthly trend to see when a habit started.',
+     points: ['Share of spending for every category', 'Month by month trend for any selection', 'Compare with the previous period in one glance']},
+    {id: 'invest', label: 'Investments', img: 'investments', alt: 'The Investments screen with a monthly result of 7,940 EGP and portfolio value of 245,630 EGP.',  title: 'THNDR, Funds and Gold, Valued Together',
+     body: 'Record buys, sells and dividends, update prices, and watch your portfolio value month by month next to its result.',
+     points: ['Portfolio value and monthly result', 'Stocks, funds, CDs and gold by grams and karat', 'An estimate of what it is worth if you sold today']},
+    {id: 'cash', label: 'Cash Planning', img: 'cash-planning', alt: 'Cash planning with 214,510 EGP safe to spend and upcoming bills and loan payments.',  title: 'Know What Is Safe to Spend',
+     body: 'Bills, subscriptions and loan payments come off first, and money set aside for goals stays set aside. What is left is the number you can actually use.',
+     points: ['Safe to spend until your next income', 'The next 30 days of bills and loan payments', 'Reserves for an emergency fund or a trip to Dahab']},
+  ];
+  window.LightningC.tour(document.querySelector('.tour-tabs'), document.getElementById('tour-stage'), TOUR);
+})();
+</script>
+</body>
+</html>

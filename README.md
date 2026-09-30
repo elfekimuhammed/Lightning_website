@@ -11,9 +11,14 @@ Built in the **Meadow** identity: meadow green for growth, azure for clarity, an
 ```
 index.html          Version A landing page
 version-b.html      Version B landing page
+version-c.html      Version C landing page (product-led, live app tour)
+how-it-works.html   Version C step-by-step workflow page
 survey.html         optional personal finance survey
 css/styles.css      shared styles
 css/version-b.css   Version B visual system
+css/version-c.css   Version C and How It Works visual system
+js/version-c.js     Version C calculator, signup, product tour and lightbox
+assets/app/         screenshots of the Lightning app (sample data)
 css/ux-test.css     shared UX test feedback rail
 js/ux-test.js       shared UX test behavior
 apps-script/        Apps Script receiver patches
@@ -43,10 +48,12 @@ The bank equivalent uses monthly amount × 12 ÷ 20% (for example, 2,000 EGP/mon
 
 ## UX test responses
 
-Both landing pages include the same scroll-aware UX feedback rail. It sends an internal release identifier rather than the visible landing-page name:
+Every landing page includes the same scroll-aware UX feedback rail. It sends an internal release identifier rather than the visible landing-page name:
 
 - `UX-2026.09.28.01` — `index.html`
 - `UX-2026.09.28.02` — `version-b.html`
+- `UX-2026.09.30.03` — `version-c.html`
+- `UX-2026.09.30.04` — `how-it-works.html`
 
 The rail discovers each top-level section automatically, so a future landing page only needs the shared CSS and JS includes plus `data-ux-version` and `data-ux-endpoint` on its `<body>`. Responses are posted in one batch and stored as one row per rated section in the `UX Tests` Sheet tab.
 
@@ -55,3 +62,11 @@ To route UX responses, add the small branch and helper in [apps-script/UXTestsRe
 ## Status
 
 The website, survey, and Google Sheets receiver are connected. When changing the receiver, update its URL in both landing pages and the survey page, then verify that a submission appears in the destination Sheet.
+
+## Version C
+
+Version C keeps the Version B copy and structure and adds a live product tour, a How It Works page and a testimonial section.
+
+- **App screenshots** in `assets/app/` are captured from the Lightning app running on a sample household (six months of salary, spending, budgets, THNDR holdings, gold, bills, a car loan and reserves, dated to 30 September 2026). They are 2000 × 1250 WebP files; keep that size when replacing one so the frames stay consistent.
+- **Testimonials** are placeholders. Replace the quote, name, initials and role in each `figure[data-placeholder="testimonial"]` in `version-c.html`, then remove the `data-placeholder` attribute.
+- The product tour copy lives in the `TOUR` list at the bottom of `version-c.html`.
