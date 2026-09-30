@@ -18,6 +18,8 @@ css/styles.css      shared styles
 css/version-b.css   Version B visual system
 css/version-c.css   Version C and How It Works visual system
 js/version-c.js     Version C calculator, signup, product tour and lightbox
+css/theme.css       light/dark switch
+js/theme.js         picks and remembers the theme
 assets/app/         screenshots of the Lightning app (sample data)
 css/ux-test.css     shared UX test feedback rail
 js/ux-test.js       shared UX test behavior
@@ -70,3 +72,11 @@ Version C tells the story in this order: hero, game, three truths, the budgeting
 - **App screenshots** in `assets/app/` are captured from the Lightning app running on a sample household (six months of salary, spending, budgets, THNDR holdings, gold, bills, a car loan and reserves, dated to 30 September 2026). They are 2000 × 1250 WebP files; keep that size when replacing one so the frames stay consistent.
 - **Testimonials** are placeholders. Replace the quote, name, initials and role in each `figure[data-placeholder="testimonial"]` in `version-c.html`, then remove the `data-placeholder` attribute.
 - The product tour copy lives in the `TOUR` list at the bottom of `version-c.html`.
+
+## Dark mode
+
+Version C, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in the Dark Mode section of `brand-guidelines.html`.
+
+- The page follows the device setting until the visitor uses the switch; the choice is then remembered in `localStorage` (`lightning-theme`).
+- To add dark mode to another page: include `css/theme.css` and `js/theme.js` (in `<head>`, not deferred), add `<button data-theme-toggle></button>` to the top bar, and define the page's dark colors under `:root[data-theme="dark"]`.
+- Versions A and B and the survey are still light only.

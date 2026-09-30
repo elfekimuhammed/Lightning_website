@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#E3F6EC">
-<meta name="description" content="The Lightning brand system: voice, colors, typography, spacing, cards, controls and accessibility.">
+<meta name="description" content="The Lightning brand system: voice, colors, typography, spacing, cards, controls, accessibility and dark mode.">
 <title>Lightning · Brand Guidelines</title>
 <link rel="icon" href="assets/favicon.svg?v=20260928-1" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,13 +75,82 @@ main>section{padding:64px 0;border-top:1px solid rgba(13,34,51,.08)}
 .end{padding:46px 0 76px;color:var(--muted);font-size:13px}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-mark{min-height:230px}.section-head{grid-template-columns:1fr;gap:8px}.tokens{grid-template-columns:repeat(3,1fr)}.card-grid{grid-template-columns:repeat(2,1fr)}.quote-strip{grid-template-columns:1fr}}
 @media(max-width:600px){.wrap{width:min(100% - 32px,1120px)}.topbar .wrap{align-items:flex-start;flex-direction:column;padding-block:14px}.topbar nav{gap:12px}.hero{padding:54px 0 48px}.hero-mark{min-height:200px}.hero-mark .bolt{font-size:60px}.hero-mark p{font-size:26px}main>section{padding:46px 0}.principles,.type-specimens,.card-grid,.spec-list{grid-template-columns:1fr}.tokens{grid-template-columns:repeat(2,1fr)}.gradient-showcase{display:block}.gradient-showcase p{margin-top:14px}.type-table,.tone-table{display:block;overflow-x:auto;white-space:nowrap}.type-specimen{min-height:130px}}
+.topbar nav{margin-left:auto}
+/* ---------- 07 · Dark mode section ---------- */
+.stage{--s-bg:linear-gradient(135deg,#E3F6EC,#E6F4F1 50%,#E1EEFB);--s-card:rgba(255,255,255,.82);--s-raised:#fff;--s-line:#DDE9E6;--s-ink:#0D2233;--s-ink2:#304A5C;--s-muted:#5C7483;--s-accent:#14A874;--s-accent-text:#0B8A5F;--s-azure:#0B6DD6;--s-rose:#C93D72;--s-action:#0A2442;--s-action-ink:#fff;--s-tint:linear-gradient(155deg,#F6FFFA,#D8F4E6);--s-shadow:0 14px 30px -24px rgba(10,36,66,.5);
+  position:relative;padding:26px;border-radius:22px;background:var(--s-bg);color:var(--s-ink);border:1px solid rgba(13,34,51,.08)}
+.stage.dark{--s-bg:linear-gradient(135deg,#071C1C,#08192A 50%,#0A1830);--s-card:#0F2233;--s-raised:#15293B;--s-line:#243A4C;--s-ink:#EAF4F1;--s-ink2:#B8CAD2;--s-muted:#8FA6B2;--s-accent:#3FCB93;--s-accent-text:#5FD9A6;--s-azure:#5AA9FF;--s-rose:#F27AA5;--s-action:#E3F6EC;--s-action-ink:#0A2442;--s-tint:linear-gradient(155deg,#0F2A2C,#0E3029);--s-shadow:0 14px 30px -20px rgba(0,0,0,.8);border-color:rgba(234,244,241,.08)}
+.stage-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stage-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;color:var(--s-muted);font:800 11px/1.2 var(--body);letter-spacing:.09em;text-transform:uppercase}
+.stage-label span{padding:5px 10px;border-radius:99px;background:var(--s-raised);border:1px solid var(--s-line);color:var(--s-ink2);letter-spacing:.04em}
+.stage-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.s-card{padding:18px;border-radius:18px;background:var(--s-card);border:1px solid var(--s-line);box-shadow:var(--s-shadow)}
+.s-card small{display:block;color:var(--s-muted);font:800 10.5px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase}
+.s-card h4{margin:10px 0 0;font:800 18px/1.2 var(--display);letter-spacing:-.02em}
+.s-card p{margin:6px 0 0;color:var(--s-ink2);font-size:13px;line-height:1.5}
+.s-card.tint{background:var(--s-tint)}
+.s-focal{padding:18px;border-radius:18px;background:var(--focal);color:#fff}
+.s-focal small{display:block;font:800 10.5px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.s-focal b{display:block;margin-top:12px;font:800 30px/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.s-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.s-btn{display:inline-flex;align-items:center;min-height:38px;padding:0 16px;border-radius:99px;font:700 13px/1 var(--body);border:1px solid transparent}
+.s-btn.primary{background:var(--s-action);color:var(--s-action-ink)}
+.s-btn.secondary{background:var(--s-raised);color:var(--s-ink);border-color:var(--s-line)}
+.s-chip{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border-radius:99px;background:var(--s-raised);border:1px solid var(--s-line);color:var(--s-ink2);font:700 12px/1 var(--body)}
+.s-chip.on{background:var(--s-action);border-color:var(--s-action);color:var(--s-action-ink)}
+.s-field{display:flex;align-items:baseline;gap:8px;margin-top:12px;padding:10px 14px;border-radius:14px;background:var(--s-raised);border:1px solid var(--s-accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--s-accent) 20%,transparent)}
+.s-field span{color:var(--s-muted);font:800 11px var(--body)}.s-field b{font:800 24px/1 var(--display);font-variant-numeric:tabular-nums}
+.s-values{display:flex;justify-content:space-between;margin-top:10px;font-size:13px;font-weight:700}.s-values .pos{color:var(--s-accent-text)}.s-values .neg{color:var(--s-rose)}.s-values .link{color:var(--s-azure)}
+.token-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.78);border-radius:18px;overflow:hidden}
+.token-table th,.token-table td{padding:12px 16px;border-bottom:1px solid var(--border);text-align:left;vertical-align:middle;font-size:14px}
+.token-table th{color:var(--muted);font:800 11px/1.3 var(--body);text-transform:uppercase;letter-spacing:.06em}
+.token-table tr:last-child td{border-bottom:0}
+.token-table code{font:700 12px/1.4 var(--body);color:var(--ink2)}
+.token-table .pair{display:flex;align-items:center;gap:10px}
+.dot{flex:none;width:26px;height:26px;border-radius:8px;background:var(--c);border:1px solid rgba(13,34,51,.14)}
+.ratio{display:inline-block;padding:3px 8px;border-radius:99px;background:#DDF4E8;color:#0B6B4A;font:800 11px/1.3 var(--body)}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:0;overflow:hidden;border-radius:22px;border:1px solid rgba(234,244,241,.08)}
+.ladder div{min-height:150px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;color:#EAF4F1}
+.ladder b{font:800 18px/1.2 var(--display)}.ladder code{margin-top:4px;font:700 12px/1.4 var(--body);color:#B8CAD2}.ladder span{margin-top:8px;font-size:12px;color:#8FA6B2}
+.dark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dark-grid h3{font-size:20px;margin-bottom:8px}.dark-grid p{font-size:15px;color:var(--ink2)}
+.switch-demo{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.switch-demo .live{display:grid;place-items:center;gap:12px;padding:26px 32px;border-radius:18px;background:var(--paper);border:1px solid var(--border)}
+.switch-demo .live small{color:var(--muted);font:800 11px/1.2 var(--body);letter-spacing:.08em;text-transform:uppercase}
+.shot-demo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.shot-demo figure{margin:0;padding:18px;border-radius:18px;background:#08192A}
+.shot-demo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top left;border-radius:10px;border:1px solid rgba(234,244,241,.1)}
+.shot-demo figure.good img{filter:brightness(.9) saturate(.95)}
+.shot-demo figcaption{margin-top:10px;color:#B8CAD2;font-size:13px;font-weight:600}
+.shot-demo figcaption b{color:#5FD9A6}.shot-demo figure.bad figcaption b{color:#F27AA5}
+@media(max-width:900px){.stage-pair,.shot-demo{grid-template-columns:1fr}.dark-grid{grid-template-columns:1fr}.ladder{grid-template-columns:1fr 1fr}.switch-demo{grid-template-columns:1fr}}
+@media(max-width:600px){.topbar .wrap{position:relative}.topbar .theme-toggle{position:absolute;top:14px;right:0}.stage-grid{grid-template-columns:1fr}.token-table{display:block;overflow-x:auto;white-space:nowrap}}
+
+/* ---------- this page in dark mode ---------- */
+:root[data-theme="dark"]{color-scheme:dark;--ink:#EAF4F1;--ink2:#B8CAD2;--muted:#8FA6B2;--meadow:#3FCB93;--meadow-dark:#5FD9A6;--azure:#5AA9FF;--rose:#F27AA5;--paper:#0F2233;--border:#243A4C}
+:root[data-theme="dark"] body{background:linear-gradient(135deg,#071C1C,#08192A 50%,#0A1830)}
+:root[data-theme="dark"] .topbar{background:rgba(8,25,42,.88);border-color:rgba(234,244,241,.08)}
+:root[data-theme="dark"] main>section{border-color:rgba(234,244,241,.08)}
+:root[data-theme="dark"] .hero h1 em{background:linear-gradient(90deg,#3FCB93,#2BC2C4,#5AA9FF);-webkit-background-clip:text;background-clip:text}
+:root[data-theme="dark"] .panel,:root[data-theme="dark"] .type-table,:root[data-theme="dark"] .tone-table,:root[data-theme="dark"] .token-table{background:rgba(15,34,51,.82);border-color:rgba(234,244,241,.08);box-shadow:0 14px 34px -24px rgba(0,0,0,.7)}
+:root[data-theme="dark"] .principles .panel:nth-child(2),:root[data-theme="dark"] .sample.info,:root[data-theme="dark"] .sample.action{background:linear-gradient(155deg,#0F2A2C,#0E3029)}
+:root[data-theme="dark"] .principles .panel:nth-child(3),:root[data-theme="dark"] .sample.quote,:root[data-theme="dark"] .quote-strip blockquote{background:linear-gradient(155deg,#0F2338,#112A47)}
+:root[data-theme="dark"] .sample.interaction,:root[data-theme="dark"] .sample.numbered,:root[data-theme="dark"] .swatch-label{background:#0F2233}
+:root[data-theme="dark"] .swatch{border-color:rgba(234,244,241,.08);background:#0F2233}
+:root[data-theme="dark"] .badge,:root[data-theme="dark"] .button.primary,:root[data-theme="dark"] .button.chip.selected{background:#E3F6EC;color:#0A2442;border-color:#E3F6EC}
+:root[data-theme="dark"] .button.secondary,:root[data-theme="dark"] .button.chip,:root[data-theme="dark"] .field-demo{background:#15293B;color:#EAF4F1;border-color:#243A4C}
+:root[data-theme="dark"] .dot{border-color:rgba(234,244,241,.18)}
+:root[data-theme="dark"] .ratio{background:rgba(63,203,147,.16);color:#5FD9A6}
+:root[data-theme="dark"] .stage:not(.dark){border-color:rgba(234,244,241,.12)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<link rel="stylesheet" href="css/theme.css?v=20260930-1">
+<script src="js/theme.js?v=20260930-1"></script>
 </head>
 <body>
-<div class="topbar"><div class="wrap"><a class="logo" href="index.html"><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a><nav aria-label="Brand guide sections"><a href="#idea">Idea</a><a href="#color">Color</a><a href="#type">Type</a><a href="#cards">Cards</a><a href="#voice">Voice</a><a href="#usage">Usage</a></nav></div></div>
+<div class="topbar"><div class="wrap"><a class="logo" href="index.html"><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a><nav aria-label="Brand guide sections"><a href="#idea">Idea</a><a href="#color">Color</a><a href="#type">Type</a><a href="#cards">Cards</a><a href="#voice">Voice</a><a href="#usage">Usage</a><a href="#dark">Dark Mode</a></nav><button data-theme-toggle aria-label="Dark mode"></button></div></div>
 <main class="wrap">
-  <header class="hero"><div><div class="eyebrow">Meadow identity · Version 1 · September 2026</div><h1>Lightning<br><em>Brand Guidelines</em></h1><p class="lead">A clear, energetic and calm system for helping people in Egypt understand their money and build better habits.</p><p class="meta">Study Your Patterns. Control Your Future. · Wealth Management Made Easy.</p></div><div class="hero-mark"><div class="bolt" aria-hidden="true">↯</div><p>See clearly.<br>Move forward.</p></div></header>
+  <header class="hero"><div><div class="eyebrow">Meadow identity · Version 1.1 · Light and dark · September 2026</div><h1>Lightning<br><em>Brand Guidelines</em></h1><p class="lead">A clear, energetic and calm system for helping people in Egypt understand their money and build better habits.</p><p class="meta">Study Your Patterns. Control Your Future. · Wealth Management Made Easy.</p></div><div class="hero-mark"><div class="bolt" aria-hidden="true">↯</div><p>See clearly.<br>Move forward.</p></div></header>
 
   <section id="idea"><div class="section-head"><div class="eyebrow">01 · Foundation</div><div><h2>The Brand Idea</h2><p>Meadow is a soft, welcoming environment with one vivid green to blue focal surface. Pale green signals growth, pale blue signals clarity, and deep Nile anchors actions.</p></div></div><div class="principles"><article class="panel"><h3>Show the Pattern</h3><p>Make money movement visible: what comes in, what goes out and what remains.</p></article><article class="panel"><h3>Make It Human</h3><p>Talk about decisions and habits without blame. Give the reader a practical next step.</p></article><article class="panel"><h3>Keep It Honest</h3><p>Label hypothetical returns clearly. Use examples to teach, never to promise an outcome.</p></article></div></section>
 
@@ -106,7 +175,85 @@ main>section{padding:64px 0;border-top:1px solid rgba(13,34,51,.08)}
   <section id="voice"><div class="section-head"><div class="eyebrow">05 · Language</div><div><h2>Voice and Tone</h2><p>Clear, encouraging, concrete, honest and local. Speak to the reader as “you.” Explain the money before asking for a decision.</p></div></div><table class="tone-table"><thead><tr><th>Quality</th><th>Do</th><th>Avoid</th></tr></thead><tbody><tr><td>Clear</td><td>“See what comes in, goes out and stays.”</td><td>Jargon without explanation.</td></tr><tr><td>Encouraging</td><td>“Small changes can make room in your month.”</td><td>Blame or guilt.</td></tr><tr><td>Concrete</td><td>“2,000 EGP a month is 24,000 EGP a year.”</td><td>Vague promises or guaranteed wealth.</td></tr><tr><td>Honest</td><td>Call the 20% calculation an illustration.</td><td>Presenting a hypothetical return as certain.</td></tr><tr><td>Local</td><td>Use EGP and familiar account examples.</td><td>Generic foreign banking language.</td></tr></tbody></table><div class="quote-strip"><blockquote>“Combining savings with compound interest works wonders.”<cite>Warren Buffett</cite></blockquote><blockquote>“The only way to be rich is to not spend money you have.”<cite>Morgan Housel</cite></blockquote><blockquote>“You do not rise to the level of your goals. You fall to the level of your systems.”<cite>James Clear</cite></blockquote></div><p class="note">These are the approved Version B quotes. Verify exact wording and attribution with original sources before using them in paid campaigns or printed material. Use humor lightly: “Wanna Play a Game?” fits; shame does not. Describe only features the product actually has.</p></section>
 
   <section id="usage"><div class="section-head"><div class="eyebrow">06 · Rules</div><div><h2>Make It Work Everywhere</h2><p>Consistent controls, spacing, format and accessibility keep the system useful beyond the landing page.</p></div></div><div class="panel"><div class="field-demo"><span>EGP</span><strong>2,000</strong></div><div class="controls"><span class="button primary">Primary Action</span><span class="button secondary">Secondary Action</span><span class="button chip">1,000</span><span class="button chip selected">2,000</span></div><p class="note">Standard button height is 48 px; minimum touch target is 44 px. Use Nile for primary actions, white for secondary actions and a green focus ring on inputs. Selected presets use Nile and white.</p></div><ul class="spec-list" style="margin-top:24px"><li>Maximum content width: 1,120 px. Side padding: 24 px desktop, 16 px narrow mobile.</li><li>Section rhythm: about 72 px desktop and 48–56 px mobile. Card radius: 22 px; field radius: 16–18 px.</li><li>Format marketing figures with commas, EGP and no decimals. The calculator starts at 2,000 EGP.</li><li>Update bank equivalent, monthly amount, annual savings and ten year illustration together. Show an em dash for empty values.</li><li>Explain rate and compounding assumptions beside the illustration. Actual outcomes are never implied.</li><li>Keep normal text at WCAG AA contrast or better, preserve visible keyboard focus and do not rely on color alone.</li><li>Stack calculator panels and secondary metrics on narrow screens. Respect reduced motion settings.</li><li>Use the bolt in <code>assets/favicon.svg</code>. Prefer simple product diagrams to stock finance photos.</li><li>Place email signup feedback beside the field. Confirm Google Sheets storage when changing its endpoint; a completed <code>no-cors</code> request alone cannot prove it.</li></ul><p class="note">Version B applies these rules in <code>version-b.html</code> and <code>css/version-b.css</code>. Version A remains the comparison page. The survey uses separate styles and should adopt these tokens when it is redesigned.</p></section>
-  <div class="end">Lightning · Meadow identity · Brand Guidelines</div>
+  <section id="dark"><div class="section-head"><div class="eyebrow">07 · Dark Mode</div><div><h2>Meadow Night</h2><p>The same calm system after dark. The canvas turns deep Nile, surfaces get lighter as they rise, and the brand colors glow a little brighter so they stay easy to read. The focal gradient does not change.</p></div></div>
+  <div class="dark-grid">
+    <article class="panel"><h3>Night, Not Black</h3><p>Use the deep Nile canvas, tinted green to blue like the light page. Never use pure black or pure white text; both feel harsh at night.</p></article>
+    <article class="panel"><h3>Light Lifts</h3><p>Show depth with lighter surfaces, not heavier shadows. Canvas, card, raised and overlay each step up in lightness.</p></article>
+    <article class="panel"><h3>Actions Invert</h3><p>Nile buttons become Mist buttons with Nile text. Selected chips, numbered badges and the active tab follow the same rule.</p></article>
+  </div>
+
+  <div class="stage-pair" style="margin-top:16px" aria-label="The same components in light and dark">
+    <div class="stage"><div class="stage-label">Meadow <span>Light</span></div><div class="stage-grid">
+      <div class="s-focal"><small>That’s worth the same as having</small><b>120,000 EGP</b></div>
+      <div class="s-card"><small>Interaction</small><h4>Enter an Amount</h4><div class="s-field"><span>EGP</span><b>2,000</b></div></div>
+      <div class="s-card tint"><small>Information</small><h4>What Comes In</h4><p>Salary and other income, all visible in one place.</p><div class="s-values"><span class="pos">+1,010</span><span class="neg">−170</span><span class="link">Details</span></div></div>
+      <div class="s-card"><small>Actions</small><div class="s-row"><span class="s-btn primary">Get Early Access</span><span class="s-btn secondary">Survey</span></div><div class="s-row"><span class="s-chip">1,000</span><span class="s-chip on">2,000</span><span class="s-chip">5,000</span></div></div>
+    </div></div>
+    <div class="stage dark"><div class="stage-label">Meadow Night <span>Dark</span></div><div class="stage-grid">
+      <div class="s-focal"><small>That’s worth the same as having</small><b>120,000 EGP</b></div>
+      <div class="s-card"><small>Interaction</small><h4>Enter an Amount</h4><div class="s-field"><span>EGP</span><b>2,000</b></div></div>
+      <div class="s-card tint"><small>Information</small><h4>What Comes In</h4><p>Salary and other income, all visible in one place.</p><div class="s-values"><span class="pos">+1,010</span><span class="neg">−170</span><span class="link">Details</span></div></div>
+      <div class="s-card"><small>Actions</small><div class="s-row"><span class="s-btn primary">Get Early Access</span><span class="s-btn secondary">Survey</span></div><div class="s-row"><span class="s-chip">1,000</span><span class="s-chip on">2,000</span><span class="s-chip">5,000</span></div></div>
+    </div></div>
+  </div>
+
+  <h3 style="margin:40px 0 14px;font-size:24px">Color Roles, Light and Dark</h3>
+  <table class="token-table"><thead><tr><th>Role</th><th>Light</th><th>Dark</th><th>Dark contrast on card</th><th>Use</th></tr></thead><tbody>
+    <tr><td>Canvas</td><td><div class="pair"><i class="dot" style="--c:linear-gradient(135deg,#E3F6EC,#E1EEFB)"></i><code>#E3F6EC → #E1EEFB</code></div></td><td><div class="pair"><i class="dot" style="--c:linear-gradient(135deg,#071C1C,#0A1830)"></i><code>#071C1C → #08192A → #0A1830</code></div></td><td>—</td><td>Page background</td></tr>
+    <tr><td>Card</td><td><div class="pair"><i class="dot" style="--c:#F8FCFA"></i><code>#F8FCFA</code></div></td><td><div class="pair"><i class="dot" style="--c:#0F2233"></i><code>#0F2233</code></div></td><td>—</td><td>Cards and panels</td></tr>
+    <tr><td>Raised</td><td><div class="pair"><i class="dot" style="--c:#FFFFFF"></i><code>#FFFFFF</code></div></td><td><div class="pair"><i class="dot" style="--c:#15293B"></i><code>#15293B</code></div></td><td>—</td><td>Fields, chips, secondary buttons</td></tr>
+    <tr><td>Border</td><td><div class="pair"><i class="dot" style="--c:#DDE9E6"></i><code>#DDE9E6</code></div></td><td><div class="pair"><i class="dot" style="--c:#243A4C"></i><code>#243A4C</code></div></td><td>—</td><td>Dividers and outlines</td></tr>
+    <tr><td>Ink</td><td><div class="pair"><i class="dot" style="--c:#0D2233"></i><code>#0D2233</code></div></td><td><div class="pair"><i class="dot" style="--c:#EAF4F1"></i><code>#EAF4F1</code></div></td><td><span class="ratio">14.4 : 1</span></td><td>Headlines and primary text</td></tr>
+    <tr><td>Secondary Ink</td><td><div class="pair"><i class="dot" style="--c:#304A5C"></i><code>#304A5C</code></div></td><td><div class="pair"><i class="dot" style="--c:#B8CAD2"></i><code>#B8CAD2</code></div></td><td><span class="ratio">9.6 : 1</span></td><td>Body copy</td></tr>
+    <tr><td>Muted</td><td><div class="pair"><i class="dot" style="--c:#5C7483"></i><code>#5C7483</code></div></td><td><div class="pair"><i class="dot" style="--c:#8FA6B2"></i><code>#8FA6B2</code></div></td><td><span class="ratio">6.4 : 1</span></td><td>Labels and hints</td></tr>
+    <tr><td>Meadow</td><td><div class="pair"><i class="dot" style="--c:#14A874"></i><code>#14A874</code></div></td><td><div class="pair"><i class="dot" style="--c:#3FCB93"></i><code>#3FCB93</code></div></td><td><span class="ratio">7.9 : 1</span></td><td>Growth accent, focus ring</td></tr>
+    <tr><td>Meadow Text</td><td><div class="pair"><i class="dot" style="--c:#0B8A5F"></i><code>#0B8A5F</code></div></td><td><div class="pair"><i class="dot" style="--c:#5FD9A6"></i><code>#5FD9A6</code></div></td><td><span class="ratio">9.2 : 1</span></td><td>Positive values, green labels</td></tr>
+    <tr><td>Azure</td><td><div class="pair"><i class="dot" style="--c:#0B6DD6"></i><code>#0B6DD6</code></div></td><td><div class="pair"><i class="dot" style="--c:#5AA9FF"></i><code>#5AA9FF</code></div></td><td><span class="ratio">6.6 : 1</span></td><td>Links and held money</td></tr>
+    <tr><td>Rose</td><td><div class="pair"><i class="dot" style="--c:#C93D72"></i><code>#C93D72</code></div></td><td><div class="pair"><i class="dot" style="--c:#F27AA5"></i><code>#F27AA5</code></div></td><td><span class="ratio">6.2 : 1</span></td><td>Overages and negatives</td></tr>
+    <tr><td>Primary Action</td><td><div class="pair"><i class="dot" style="--c:#0A2442"></i><code>Nile #0A2442 · white text</code></div></td><td><div class="pair"><i class="dot" style="--c:#E3F6EC"></i><code>Mist #E3F6EC · Nile text</code></div></td><td><span class="ratio">13.9 : 1</span></td><td>Buttons, selected chips, badges</td></tr>
+    <tr><td>Focal Gradient</td><td colspan="2"><div class="pair"><i class="dot" style="--c:var(--focal)"></i><code>#0C9B63 → #0A9E96 → #0B6DD6 · unchanged in both themes</code></div></td><td>—</td><td>One key result per view</td></tr>
+  </tbody></table>
+  <p class="note">Ratios are measured against the dark card surface (#0F2233). Every dark text color passes WCAG AA for normal text, and every one also passes on the raised surface. White text on the focal gradient keeps the light-mode rule: use it for large, bold figures and labels.</p>
+
+  <h3 style="margin:40px 0 14px;font-size:24px">Surface Ladder</h3>
+  <div class="ladder" aria-label="Dark surfaces from lowest to highest">
+    <div style="background:#08192A"><b>Canvas</b><code>#08192A</code><span>The page itself</span></div>
+    <div style="background:#0F2233"><b>Card</b><code>#0F2233</code><span>Panels and content</span></div>
+    <div style="background:#15293B"><b>Raised</b><code>#15293B</code><span>Fields, chips, menus</span></div>
+    <div style="background:#1B3246"><b>Overlay</b><code>#1B3246</code><span>Popovers and dialogs</span></div>
+  </div>
+  <p class="note">Each step is a little lighter than the one below it. Keep borders at 8–10% white and use shadows only to separate overlays from the page.</p>
+
+  <h3 style="margin:40px 0 14px;font-size:24px">Product Screenshots</h3>
+  <div class="shot-demo">
+    <figure class="good"><img src="assets/app/overview.webp" alt="A light Lightning app screenshot framed on the dark canvas and slightly dimmed." loading="lazy" width="2000" height="1250"><figcaption><b>Do.</b> The app is light for now, so keep screenshots light. Frame them with a 1 px border and dim them to 90% brightness.</figcaption></figure>
+    <figure class="bad"><img src="assets/app/overview.webp" alt="The same screenshot at full brightness, glaring against the dark canvas." loading="lazy" width="2000" height="1250"><figcaption><b>Avoid.</b> Full-brightness screens glare at night. Never invert or recolor a real screenshot.</figcaption></figure>
+  </div>
+
+  <h3 style="margin:40px 0 14px;font-size:24px">The Theme Switch</h3>
+  <div class="panel switch-demo">
+    <div class="live"><button data-theme-toggle aria-label="Dark mode"></button><small>Try it</small></div>
+    <ul class="spec-list" style="margin:0">
+      <li>Place the switch in the top bar, before the version switcher and actions.</li>
+      <li>Until the visitor chooses, follow the device setting. After a choice, remember it on that device.</li>
+      <li>Set the theme before the page draws, so it never flashes the wrong colors.</li>
+      <li>Track 64 × 36 px, thumb 28 px. Sun for light, moon for dark. The thumb uses the primary action color.</li>
+      <li>It is a switch: <code>role="switch"</code>, labelled “Dark mode”, with <code>aria-checked</code> showing its state.</li>
+      <li>Include <code>css/theme.css</code> and <code>js/theme.js</code>, then add <code>&lt;button data-theme-toggle&gt;</code>. Colors come from <code>:root[data-theme="dark"]</code>.</li>
+    </ul>
+  </div>
+
+  <table class="tone-table" style="margin-top:24px"><thead><tr><th>Area</th><th>Do</th><th>Avoid</th></tr></thead><tbody>
+    <tr><td>Canvas</td><td>Deep Nile, tinted green to blue.</td><td>Pure black #000 or flat gray.</td></tr>
+    <tr><td>Text</td><td>Ink #EAF4F1 for headings, Secondary Ink for body.</td><td>Pure white body text; it glows and tires the eyes.</td></tr>
+    <tr><td>Accents</td><td>Use the brighter dark-mode Meadow, Azure and Rose.</td><td>Light-mode accents on dark; they fall below AA.</td></tr>
+    <tr><td>Actions</td><td>Mist buttons with Nile text.</td><td>Nile buttons; they disappear into the canvas.</td></tr>
+    <tr><td>Focal card</td><td>One gradient card per view, unchanged.</td><td>Several gradients or a dimmed gradient.</td></tr>
+    <tr><td>Images</td><td>Frame and dim screenshots slightly.</td><td>Inverting, recoloring or glaring screenshots.</td></tr>
+  </tbody></table>
+  <p class="note">Dark mode is live on Version C, How It Works and this guide. Versions A and B and the survey stay light until they move to these tokens.</p>
+</section>
+  <div class="end">Lightning · Meadow identity · Brand Guidelines · Light and Dark</div>
 </main>
 </body>
 </html>
