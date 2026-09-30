@@ -10,17 +10,19 @@ Built in the **Meadow** identity: meadow green for growth, azure for clarity, an
 
 ```
 index.html          Version A landing page
-version-b.html      Version B landing page
+version-b.html      Version B landing page (product-first story, rebuilt 2026-09-30)
 version-c.html      Version C landing page (product-led, live app tour)
 how-it-works.html   Version C step-by-step workflow page
 survey.html         optional personal finance survey
 css/styles.css      shared styles
-css/version-b.css   Version B visual system
+css/version-b.css   Version B's own sections (builds on css/version-c.css)
+js/version-b.js     Version B calculator with an adjustable return rate
 css/version-c.css   Version C and How It Works visual system
 js/version-c.js     Version C calculator, signup, product tour and lightbox
 css/theme.css       light/dark switch
 js/theme.js         picks and remembers the theme
 assets/app/         screenshots of the Lightning app (sample data)
+assets/app/omar/    screenshots of the app's built-in sample household (python -m lightning --demo)
 css/ux-test.css     shared UX test feedback rail
 js/ux-test.js       shared UX test behavior
 apps-script/        Apps Script receiver patches
@@ -53,7 +55,8 @@ The bank equivalent uses monthly amount × 12 ÷ 20% (for example, 2,000 EGP/mon
 Every landing page includes the same scroll-aware UX feedback rail. It sends an internal release identifier rather than the visible landing-page name:
 
 - `UX-2026.09.28.01` — `index.html`
-- `UX-2026.09.28.02` — `version-b.html`
+- `UX-2026.09.28.02` — `version-b.html` (before the rebuild)
+- `UX-2026.09.30.05` — `version-b.html` (rebuilt)
 - `UX-2026.09.30.03` — `version-c.html`
 - `UX-2026.09.30.04` — `how-it-works.html`
 
@@ -75,8 +78,17 @@ Version C tells the story in this order: hero, game, three truths, the budgeting
 
 ## Dark mode
 
-Version C, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in the Dark Mode section of `brand-guidelines.html`.
+Versions B and C, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in the Dark Mode section of `brand-guidelines.html`.
 
 - The page follows the device setting until the visitor uses the switch; the choice is then remembered in `localStorage` (`lightning-theme`).
 - To add dark mode to another page: include `css/theme.css` and `js/theme.js` (in `<head>`, not deferred), add `<button data-theme-toggle></button>` to the top bar, and define the page's dark colors under `:root[data-theme="dark"]`.
-- Versions A and B and the survey are still light only.
+- Version A and the survey are still light only.
+
+## Version B
+
+Version B tells one story, in this order: what Lightning is (with privacy in the hero), money spread across many places, why your balance isn't all yours to spend, your habits, the small-change calculator, how small changes become wealth, the product tour, trust, FAQ and early access.
+
+- Screens and numbers come from the app's own sample household (Omar, September 2026). If you recapture `assets/app/omar/`, update the figures quoted in `version-b.html`.
+- Two FAQ answers are placeholders: pricing and the founder note. Fill them in before sharing the page widely.
+- There is no testimonial section. Add one once you have real quotes that describe a realization, not praise.
+- How It Works links back to whichever landing page (B or C) the visitor came from.
