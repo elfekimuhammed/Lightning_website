@@ -262,8 +262,10 @@ button,input{font:inherit}
 .hw-do ol{display:grid;gap:10px;margin-top:12px;counter-reset:d}
 .hw-do li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:15px;font-weight:600;line-height:1.45;counter-increment:d}
 .hw-do li::before{content:counter(d);display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--check-bg);color:var(--meadow-dark);font:800 12px/1 var(--body)}
-.hw-tip{display:flex;gap:10px;margin-top:16px;color:var(--ink2);font-size:14px;line-height:1.5}
-.hw-tip b{flex:none;color:var(--azure)}
+.hw-tip{display:flex;align-items:flex-start;gap:12px;margin-top:14px;padding:14px 16px;border:1px solid var(--card-line);border-radius:16px;background:var(--chip-blue);color:var(--ink2);font-size:14px;font-weight:600;line-height:1.5}
+.hw-tip-icon{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:10px;background:var(--field);color:var(--azure);box-shadow:0 4px 10px -8px rgba(10,36,66,.6)}
+.hw-tip-icon svg{width:17px;height:17px}
+.hw-tip>span:last-child{padding-top:4px}
 .hw-media{position:relative;min-width:0}
 .hw-media .frame+.frame{position:absolute;right:-18px;bottom:-40px;width:58%;box-shadow:0 30px 60px -30px rgba(10,36,66,.7)}
 .hw-media.has-pair{padding-bottom:40px}
