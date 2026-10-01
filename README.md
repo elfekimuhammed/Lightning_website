@@ -12,7 +12,7 @@ Built in the **Meadow** identity: meadow green for growth, azure for clarity, an
 index.html          Version A landing page (hybrid of B's clarity and C's philosophy)
 version-b.html      Version B landing page (product-first story, rebuilt 2026-09-30)
 version-c.html      Version C landing page (product-led, live app tour)
-how-it-works.html   Version C step-by-step workflow page
+how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
 survey.html         optional personal finance survey
 css/styles.css      shared styles
 css/version-b.css   Version B's own sections (builds on css/version-c.css)
@@ -23,8 +23,7 @@ css/theme.css       light/dark switch
 css/dev-dock.css    testing panel (page version + UX test)
 js/dev-dock.js      builds the testing panel on every version
 js/theme.js         picks and remembers the theme
-assets/app/         screenshots of the Lightning app (sample data)
-assets/app/omar/    screenshots of the app's built-in sample household (python -m lightning --demo)
+assets/app/omar/    app screenshots from the built-in sample household (python -m lightning --demo)
 css/ux-test.css     shared UX test feedback rail
 js/ux-test.js       shared UX test behavior
 apps-script/        Apps Script receiver patches
@@ -61,7 +60,8 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.09.28.02` — `version-b.html` (before the rebuild)
 - `UX-2026.09.30.05` — `version-b.html` (rebuilt)
 - `UX-2026.09.30.03` — `version-c.html`
-- `UX-2026.09.30.04` — `how-it-works.html`
+- `UX-2026.09.30.04` — `how-it-works.html` (six steps)
+- `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 
 The rail discovers each top-level section automatically, so a future landing page only needs the shared CSS and JS includes plus `data-ux-version` and `data-ux-endpoint` on its `<body>`. Responses are posted in one batch and stored as one row per rated section in the `UX Tests` Sheet tab.
 
@@ -114,3 +114,15 @@ Version A is the hybrid: Version B's clear opening and practical proof, with Ver
 - Order: what Lightning is (privacy in the hero), money in six places, safe to spend, the idea behind Lightning (the budgeting story), the calculator, three truths about building wealth, the product tour, trust, FAQ and early access.
 - One quote only: James Clear's line on systems, placed where the story turns from budgets to habits.
 - It shares B's styles, screenshots and calculator (`css/version-b.css`, `js/version-b.js`, `assets/app/omar/`), and has the same pricing and founder placeholders in the FAQ.
+
+## App screenshots
+
+All product images come from the app's sample household, pinned to the end of September 2026:
+
+```
+LIGHTNING_TODAY=2026-09-30 python -m lightning --demo
+```
+
+- Full-window screens (2000 × 1250) are used in tours and steps. Content crops without the sidebar (1800 × 1125, named `a-*.webp`) are used where the chart is the message: the hero trio on every version and the analysis grid on How It Works.
+- The hero on A, B and C shows the trio: Overview in the middle, Investments and Expense analysis beside it.
+- Quoted figures (net worth 198,065, savings rate 50.1%, safe to spend 71,354 and so on) match these screens. Rules are in the Product Screens section of `brand-guidelines.html`.

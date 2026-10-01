@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>How Lightning Works · Six Simple Steps</title>
-<meta name="description" content="How Lightning works, step by step: add your accounts, record your money, set a budget, study your patterns, plan ahead and see the whole picture.">
+<title>How Lightning Works · Thirty Minutes a Month</title>
+<meta name="description" content="How Lightning works: once a month, upload your bank CSVs, make a few small adjustments, then sit down for analysis. About 30 minutes of focused time.">
 <meta name="theme-color" content="#E3F6EC">
 <link rel="icon" href="assets/favicon.svg?v=20260928-1" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-c.css?v=20261001-7">
+<link rel="stylesheet" href="css/version-c.css?v=20261001-8">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -19,7 +19,7 @@
 <script src="js/dev-dock.js?v=20261001-1" defer></script>
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.09.30.04" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.01.07" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <div class="c-nav">
   <div class="wrap">
     <a class="logo" href="version-c.html" data-home-link><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a>
@@ -35,157 +35,101 @@
 <main class="wrap" id="top">
   <header class="hw-hero">
     <div class="eyebrow">How it works</div>
-    <h1>How Lightning Works,<br><span class="grad-text">in Six Simple Steps.</span></h1>
-    <p>Set it up once. Then check in for a few minutes a week. Every screen below is from the real app, with sample data.</p>
-    <nav class="hw-map" aria-label="Workflow steps">
-      <a href="#step-accounts"><b>1</b>Add accounts</a>
-      <a href="#step-record"><b>2</b>Record money</a>
-      <a href="#step-budget"><b>3</b>Set a budget</a>
-      <a href="#step-patterns"><b>4</b>Study patterns</a>
-      <a href="#step-plan"><b>5</b>Plan ahead</a>
-      <a href="#step-wealth"><b>6</b>See it all</a>
+    <h1>Thirty Minutes. <span class="grad-text">Once a Month.</span></h1>
+    <p>Lightning isn’t another app to check every day. At the end of the month, bring in your statements, tidy a few rows, then sit down with your numbers.</p>
+    <nav class="hw-time" aria-label="Your monthly half hour">
+      <a href="#step-upload" style="--w:10"><b>1</b><span>Upload your CSVs</span><small>10 min</small></a>
+      <a href="#step-adjust" style="--w:5"><b>2</b><span>Small adjustments</span><small>5 min</small></a>
+      <a href="#step-analyse" style="--w:15"><b>3</b><span>Sit down for analysis</span><small>15 min</small></a>
     </nav>
   </header>
 
-  <section class="hw-steps" aria-label="The Lightning workflow">
-    <article class="hw-step" id="step-accounts">
+  <section class="hw-setup card" aria-label="Before your first month">
+    <div><span class="eyebrow">Once, before your first month</span><h2>Set Up in an Afternoon</h2></div>
+    <ol>
+      <li><b>Add your accounts</b><span>Banks, wallets, CDs, THNDR and gold, with today’s balances.</span></li>
+      <li><b>Set a budget</b><span>A fixed amount, a share of income, or your usual average.</span></li>
+      <li><b>Add what’s coming</b><span>Bills, subscriptions, loans and money you set aside.</span></li>
+    </ol>
+  </section>
+
+  <section class="hw-steps" aria-label="Your month-end routine">
+    <article class="hw-step" id="step-upload">
       <div class="hw-copy">
-        <div class="hw-num"><b>1</b><span>Once</span></div>
-        <h2>Add Your Accounts</h2>
-        <p>Add each place your money lives: your bank, your wallet, a CD, THNDR, even the gold at home. Start with today’s balance.</p>
+        <div class="hw-num"><b>1</b><span>About 10 minutes</span></div>
+        <h2>Upload Your Statements</h2>
+        <p>Download last month’s CSV from each bank and wallet, and bring each one into its account. You match the columns once; after that it’s a few clicks.</p>
         <div class="hw-do">
           <h3>What you do</h3>
           <ol>
-            <li>Name the account and pick its type.</li>
-            <li>Enter today’s balance.</li>
-            <li>Repeat for each account.</li>
+            <li>Download the CSV from each bank or wallet.</li>
+            <li>Choose Import CSV on the matching account.</li>
+            <li>The first time, match date, name and amount.</li>
           </ol>
         </div>
-        <p class="hw-tip"><span class="hw-tip-label">Good to know</span>No need for your full history. Today is a fine place to start.</p>
+        <p class="hw-tip"><span class="hw-tip-label">Good to know</span>Only have a PDF? Lightning gives you ready-made instructions to turn it into a CSV with an AI assistant.</p>
       </div>
       <div class="hw-media has-pair">
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Accounts</span></div><button class="zoom" type="button" data-zoom="assets/app/accounts.webp" data-caption="Accounts: every place your money lives."><img src="assets/app/accounts.webp" width="2000" height="1250" loading="lazy" alt="The Accounts screen listing a Banque Misr CD, CIB Current, Gold at Home, NBE Savings, THNDR and Wallet, with a total of 817,170 EGP."></button></div>
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Add an account</span></div><button class="zoom" type="button" data-zoom="assets/app/new-account.webp" data-caption="Add an account: a name, a type and a starting balance."><img src="assets/app/new-account.webp" width="2000" height="1250" loading="lazy" alt="The Add an account form with fields for name, type, currency and starting balance."></button></div>
-        <p class="hw-cap">Six accounts, one total.</p>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Match your columns</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/import-map.webp" data-caption="Match your columns: tell Lightning which column is which, once."><img src="assets/app/omar/import-map.webp" width="2000" height="1250" loading="lazy" alt="Lightning's Match your columns screen for a CSV statement: date, a signed amount column, counterparty, category and notes."></button></div>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Import statement</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/import-upload.webp" data-caption="Import statement: upload the account’s CSV."><img src="assets/app/omar/import-upload.webp" width="2000" height="1250" loading="lazy" alt="Lightning's Import statement screen with a CSV upload and the option to prepare the file with an AI assistant."></button></div>
+        <p class="hw-cap">One file per account. Nothing is saved yet.</p>
       </div>
     </article>
 
-    <article class="hw-step" id="step-record">
+    <article class="hw-step" id="step-adjust">
       <div class="hw-copy">
-        <div class="hw-num"><b>2</b><span>As you go</span></div>
-        <h2>Record Your Money</h2>
-        <p>Type a purchase in seconds: who, what and how much. Or import your bank statement and check it before anything is saved.</p>
+        <div class="hw-num"><b>2</b><span>About 5 minutes</span></div>
+        <h2>Make Small Adjustments</h2>
+        <p>Lightning only asks about what needs you: a new name, a possible duplicate, a row it can’t place. Settle those, post the rest, and add any cash you spent.</p>
         <div class="hw-do">
           <h3>What you do</h3>
           <ol>
-            <li>Type the name. Lightning suggests the ones you use.</li>
-            <li>Pick a category and enter the amount.</li>
-            <li>Or upload a CSV, review the rows and confirm.</li>
+            <li>Answer the rows that need a decision. One answer fills every row with that name.</li>
+            <li>Post the ready rows.</li>
+            <li>Add any cash spending the statement can’t see.</li>
           </ol>
         </div>
+        <p class="hw-tip"><span class="hw-tip-label">Good to know</span>Tick “Remember category” and next month’s statement sorts itself.</p>
       </div>
       <div class="hw-media has-pair">
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · CIB Current</span></div><button class="zoom" type="button" data-zoom="assets/app/register.webp" data-caption="Typing a transaction: Lightning suggests Talabat as you type."><img src="assets/app/register.webp" width="2000" height="1250" loading="lazy" alt="The CIB Current register with a new row where Talabat is being typed and suggested, above recent transactions and a running balance."></button></div>
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Review import</span></div><button class="zoom" type="button" data-zoom="assets/app/import-review.webp" data-caption="Importing a statement: “Talabat Egypt” looks like Talabat, so Lightning asks first."><img src="assets/app/import-review.webp" width="2000" height="1250" loading="lazy" alt="The Review import screen where a row for Talabat Egypt needs a decision and shows Talabat as a possible match."></button></div>
-        <p class="hw-cap">Type it, or import it. Nothing is saved until you confirm.</p>
-      </div>
-    </article>
-
-    <article class="hw-step" id="step-budget">
-      <div class="hw-copy">
-        <div class="hw-num"><b>3</b><span>Once a month</span></div>
-        <h2>Set a Budget</h2>
-        <p>Give each category a limit. Then see what you planned, what you spent and what’s left.</p>
-        <div class="hw-do">
-          <h3>What you do</h3>
-          <ol>
-            <li>Open a group, like Personal.</li>
-            <li>Set a fixed amount, a % of income, or your usual average.</li>
-            <li>Check what’s left as the month goes on.</li>
-          </ol>
-        </div>
-        <p class="hw-tip"><span class="hw-tip-label">Good to know</span>Money you don’t use can roll over to next month.</p>
-      </div>
-      <div class="hw-media">
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/budget.webp" data-caption="Budget: planned, spent and what’s left, by category."><img src="assets/app/budget.webp" width="2000" height="1250" loading="lazy" alt="The Budget screen with 1,153.33 EGP left in plan, 31,320 EGP spent and the Personal group opened to show Food and Groceries and Eating Out limits."></button></div>
-        <p class="hw-cap">Groceries are 170 EGP over. Eating out has 420 EGP left.</p>
-      </div>
-    </article>
-
-    <article class="hw-step" id="step-patterns">
-      <div class="hw-copy">
-        <div class="hw-num"><b>4</b><span>Whenever you wonder</span></div>
-        <h2>Study Your Patterns</h2>
-        <p>See where your money went and when things changed. This is where habits become visible.</p>
-        <div class="hw-do">
-          <h3>What you do</h3>
-          <ol>
-            <li>Pick a period: this month, this year or all time.</li>
-            <li>Open a category to see what’s inside.</li>
-            <li>Read the trend to see when it started.</li>
-          </ol>
-        </div>
-        <p class="hw-tip"><span class="hw-tip-label">Good to know</span>Found a habit to change? Give it a limit in step 3.</p>
-      </div>
-      <div class="hw-media">
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/expenses.webp" data-caption="Expense analysis: where it went, and when it changed."><img src="assets/app/expenses.webp" width="2000" height="1250" loading="lazy" alt="The Expense analysis screen for Personal spending year to date, showing 181,240 EGP spent, categories ranked by share and a monthly trend line."></button></div>
-        <p class="hw-cap">This year so far: rent and food lead the way.</p>
-      </div>
-    </article>
-
-    <article class="hw-step" id="step-plan">
-      <div class="hw-copy">
-        <div class="hw-num"><b>5</b><span>Once, then it runs itself</span></div>
-        <h2>Plan Ahead</h2>
-        <p>Add the bills and loan payments you know are coming, and set money aside for goals. Lightning tells you what’s safe to spend.</p>
-        <div class="hw-do">
-          <h3>What you do</h3>
-          <ol>
-            <li>Add bills and subscriptions with their due dates.</li>
-            <li>Add loans and how many payments are left.</li>
-            <li>Set aside money for goals, like an emergency fund.</li>
-          </ol>
-        </div>
-        <p class="hw-tip"><span class="hw-tip-label">Good to know</span>When a bill is paid, Lightning can match it to the transaction.</p>
-      </div>
-      <div class="hw-media has-pair">
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/cash-planning.webp" data-caption="Cash planning: safe to spend, what you owe and the next 30 days."><img src="assets/app/cash-planning.webp" width="2000" height="1250" loading="lazy" alt="The Cash planning screen showing 214,510 EGP safe to spend, what you owe, and upcoming bills and a car loan payment in the next 30 days."></button></div>
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Reserves</span></div><button class="zoom" type="button" data-zoom="assets/app/reserves.webp" data-caption="Reserves: an emergency fund and savings goals."><img src="assets/app/reserves.webp" width="2000" height="1250" loading="lazy" alt="The Reserves screen with an emergency fund of 45,000 EGP and free cash of 216,640 EGP."></button></div>
-        <p class="hw-cap">214,510 EGP safe to spend, after bills and goals.</p>
-      </div>
-    </article>
-
-    <article class="hw-step" id="step-wealth">
-      <div class="hw-copy">
-        <div class="hw-num"><b>6</b><span>Anytime</span></div>
-        <h2>See the Whole Picture</h2>
-        <p>Cash, deposits, THNDR shares, funds and gold, all in EGP. See what you own, and what it would be worth if you sold today.</p>
-        <div class="hw-do">
-          <h3>What you do</h3>
-          <ol>
-            <li>Record your buys, sells and dividends.</li>
-            <li>Update prices when you like.</li>
-            <li>Open Birdview to see how it all adds up.</li>
-          </ol>
-        </div>
-        <p class="hw-tip"><span class="hw-tip-label">Good to know</span>Holding money for family? Mark it, and it stays out of your net worth.</p>
-      </div>
-      <div class="hw-media has-pair">
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Birdview</span></div><button class="zoom" type="button" data-zoom="assets/app/birdview.webp" data-caption="Birdview: how what you own adds up."><img src="assets/app/birdview.webp" width="2000" height="1250" loading="lazy" alt="The Birdview wealth composition screen: 793,670 EGP owned, split into cash, deposits and holdings, next to an estimate if you sold today."></button></div>
-        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/investments.webp" data-caption="Investments: value and result, month by month."><img src="assets/app/investments.webp" width="2000" height="1250" loading="lazy" alt="The Investments screen showing a monthly result of 7,940 EGP and portfolio value of 245,630 EGP with a six month trend."></button></div>
-        <p class="hw-cap">Everything you own, in one number.</p>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Review import</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/import-review.webp" data-caption="Review import: “Talabat Egypt” looks like Talabat, so Lightning asks first."><img src="assets/app/omar/import-review.webp" width="2000" height="1250" loading="lazy" alt="Lightning's Review import screen: a row for Talabat Egypt needs a decision and shows Talabat as a possible match."></button></div>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>CIB Payroll</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/register.webp" data-caption="The account register: add a cash expense in one row."><img src="assets/app/omar/register.webp" width="2000" height="1250" loading="lazy" alt="The CIB Payroll register with Talabat suggested while typing a new row."></button></div>
+        <p class="hw-cap">Exceptions first. Routine rows stay out of your way.</p>
       </div>
     </article>
   </section>
 
-  <section class="c-section" id="loop">
-    <div class="sec-head">
-      <div class="eyebrow">Then it becomes a habit</div>
-      <h2>A Few Minutes a Week</h2>
-      <p>Record as you go. Review each week. Adjust each month. Every month gets a little clearer.</p>
+  <section class="hw-analysis" id="step-analyse" aria-labelledby="analyse-title">
+    <div class="hw-analysis-head">
+      <div class="hw-num"><b>3</b><span>About 15 minutes</span></div>
+      <h2 id="analyse-title">Sit Down for <span class="grad-text">Analysis</span></h2>
+      <p>This is the part that matters. Pour a coffee, pick last month, and let each tab answer one question.</p>
     </div>
-    <div class="hw-loop" aria-label="The Lightning routine">
-      <span>Record</span><i aria-hidden="true">→</i><span>Review</span><i aria-hidden="true">→</i><span>Adjust</span><i aria-hidden="true">→</i><span class="hl">Grow</span>
+    <div class="hw-bento">
+      <article class="hw-q wide">
+        <div class="hw-q-copy"><span class="hw-min">3 min</span><h3>Where Do I Stand?</h3><p>Overview: your net worth and how it changed, how much you kept, and how much you invested.</p></div>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-overview.webp" data-caption="Overview: where you stand, and how it changed."><img src="assets/app/omar/a-overview.webp" width="1800" height="1125" loading="lazy" alt="Overview: net worth up 29,116 EGP, a 50.1% savings rate, a 39.4% investing rate and net worth of 198,065 EGP over time."></button></div>
+      </article>
+      <article class="hw-q">
+        <div class="hw-q-copy"><span class="hw-min">5 min</span><h3>Where Did It Go?</h3><p>Expense analysis: the biggest categories, how each one moved, and whether this month was unusual.</p></div>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-expenses.webp" data-caption="Expense analysis: where it went, and how each category moved."><img src="assets/app/omar/a-expenses.webp" width="1800" height="1125" loading="lazy" alt="Expense analysis: 23,390 EGP out, a treemap led by housing at 51%, and small charts of how each category moved."></button></div>
+      </article>
+      <article class="hw-q">
+        <div class="hw-q-copy"><span class="hw-min">3 min</span><h3>Is My Money Working?</h3><p>Investments: what you saved and invested, your gain or loss, and how your holdings are split.</p></div>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-investments.webp" data-caption="Investments: saved and invested, gain or loss, and allocation."><img src="assets/app/omar/a-investments.webp" width="1800" height="1125" loading="lazy" alt="Investments: a 50% savings rate and 39% investing rate, a net gain of 5,673 EGP, a portfolio of 78,303 EGP and its allocation."></button></div>
+      </article>
+      <article class="hw-q">
+        <div class="hw-q-copy"><span class="hw-min">2 min</span><h3>Did I Stick to My Plan?</h3><p>Budget: what you planned, what you spent, and the categories that went over.</p></div>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-budget.webp" data-caption="Budget: planned, spent and what’s left."><img src="assets/app/omar/a-budget.webp" width="1800" height="1125" loading="lazy" alt="Budget: two categories over plan, a 50.1% savings rate, 23,390 EGP spent of 24,698 EGP planned."></button></div>
+      </article>
+      <article class="hw-q">
+        <div class="hw-q-copy"><span class="hw-min">2 min</span><h3>What Can I Spend Next Month?</h3><p>Cash planning: safe to spend until payday, and the payments coming in the next 30 days.</p></div>
+        <div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-plan.webp" data-caption="Cash planning: safe to spend and the next 30 days."><img src="assets/app/omar/a-plan.webp" width="1800" height="1125" loading="lazy" alt="Cash planning: 71,354 EGP safe to spend, free cash of 72,663 EGP, and a timeline of the next 30 days of payments."></button></div>
+      </article>
+    </div>
+    <div class="hw-decide card">
+      <span class="c-icon" aria-hidden="true">✓</span>
+      <div><h3>End With One Change</h3><p>Pick one thing for next month: a budget to adjust, money to set aside, or a habit to fix. Next month, the numbers will tell you if it worked.</p></div>
     </div>
   </section>
 
@@ -197,7 +141,7 @@
     <div class="hw-trust">
       <article class="card"><span class="c-icon" aria-hidden="true">⌂</span><h3>It Stays with You</h3><p>Lightning runs on your own computer and keeps everything in one file. It backs up every time it starts.</p></article>
       <article class="card"><span class="c-icon" aria-hidden="true">✓</span><h3>You Always Confirm</h3><p>Imports wait for your review. Nothing is saved until you say so.</p></article>
-      <article class="card"><span class="c-icon" aria-hidden="true">=</span><h3>No Mystery Numbers</h3><p>Every number shows how it was worked out. Estimates are marked as estimates.</p></article>
+      <article class="card"><span class="c-icon" aria-hidden="true">=</span><h3>No Mystery Numbers</h3><p>Every key number shows what it’s made of, and each chart has a “Show the numbers” table. Estimates are marked as estimates.</p></article>
     </div>
   </section>
 

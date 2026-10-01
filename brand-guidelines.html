@@ -148,7 +148,7 @@ main>section{padding:64px 0;border-top:1px solid rgba(13,34,51,.08)}
 <script src="js/theme.js?v=20260930-1"></script>
 </head>
 <body>
-<div class="topbar"><div class="wrap"><a class="logo" href="index.html"><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a><nav aria-label="Brand guide sections"><a href="#idea">Idea</a><a href="#color">Color</a><a href="#type">Type</a><a href="#cards">Cards</a><a href="#voice">Voice</a><a href="#usage">Usage</a><a href="#dark">Dark Mode</a></nav><button data-theme-toggle aria-label="Dark mode"></button></div></div>
+<div class="topbar"><div class="wrap"><a class="logo" href="index.html"><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a><nav aria-label="Brand guide sections"><a href="#idea">Idea</a><a href="#color">Color</a><a href="#type">Type</a><a href="#cards">Cards</a><a href="#voice">Voice</a><a href="#usage">Usage</a><a href="#dark">Dark Mode</a><a href="#screens">Screens</a></nav><button data-theme-toggle aria-label="Dark mode"></button></div></div>
 <main class="wrap">
   <header class="hero"><div><div class="eyebrow">Meadow identity · Version 1.1 · Light and dark · September 2026</div><h1>Lightning<br><em>Brand Guidelines</em></h1><p class="lead">A clear, energetic and calm system for helping people in Egypt understand their money and build better habits.</p><p class="meta">Study Your Patterns. Control Your Future. · Wealth Management Made Easy.</p></div><div class="hero-mark"><div class="bolt" aria-hidden="true">↯</div><p>See clearly.<br>Move forward.</p></div></header>
 
@@ -226,8 +226,8 @@ main>section{padding:64px 0;border-top:1px solid rgba(13,34,51,.08)}
 
   <h3 style="margin:40px 0 14px;font-size:24px">Product Screenshots</h3>
   <div class="shot-demo">
-    <figure class="good"><img src="assets/app/overview.webp" alt="A light Lightning app screenshot framed on the dark canvas and slightly dimmed." loading="lazy" width="2000" height="1250"><figcaption><b>Do.</b> The app is light for now, so keep screenshots light. Frame them with a 1 px border and dim them to 90% brightness.</figcaption></figure>
-    <figure class="bad"><img src="assets/app/overview.webp" alt="The same screenshot at full brightness, glaring against the dark canvas." loading="lazy" width="2000" height="1250"><figcaption><b>Avoid.</b> Full-brightness screens glare at night. Never invert or recolor a real screenshot.</figcaption></figure>
+    <figure class="good"><img src="assets/app/omar/overview.webp" alt="A light Lightning app screenshot framed on the dark canvas and slightly dimmed." loading="lazy" width="2000" height="1250"><figcaption><b>Do.</b> The app is light for now, so keep screenshots light. Frame them with a 1 px border and dim them to 90% brightness.</figcaption></figure>
+    <figure class="bad"><img src="assets/app/omar/overview.webp" alt="The same screenshot at full brightness, glaring against the dark canvas." loading="lazy" width="2000" height="1250"><figcaption><b>Avoid.</b> Full-brightness screens glare at night. Never invert or recolor a real screenshot.</figcaption></figure>
   </div>
 
   <h3 style="margin:40px 0 14px;font-size:24px">The Theme Switch</h3>
@@ -251,7 +251,26 @@ main>section{padding:64px 0;border-top:1px solid rgba(13,34,51,.08)}
     <tr><td>Focal card</td><td>One gradient card per view, unchanged.</td><td>Several gradients or a dimmed gradient.</td></tr>
     <tr><td>Images</td><td>Frame and dim screenshots slightly.</td><td>Inverting, recoloring or glaring screenshots.</td></tr>
   </tbody></table>
-  <p class="note">Dark mode is live on Version C, How It Works and this guide. Versions A and B and the survey stay light until they move to these tokens.</p>
+  <p class="note">Dark mode is live on Versions A, B and C, How It Works and this guide. The survey stays light until it moves to these tokens.</p>
+</section>
+<section id="screens"><div class="section-head"><div class="eyebrow">08 · Product Screens</div><div><h2>Show the Real App</h2><p>Every product image on the site is a real screen from Lightning. The analysis tabs are the product’s best side, so they lead.</p></div></div>
+  <div class="dark-grid">
+    <article class="panel"><h3>One Sample Household</h3><p>Capture from the app’s built-in sample household (<code>python -m lightning --demo</code>), pinned to a month end so the month is complete. Never edit a number in a screenshot.</p></article>
+    <article class="panel"><h3>Two Crops</h3><p><b>Full window</b>, 2000 × 1250, with the sidebar, for tours and steps. <b>Content crop</b>, 1800 × 1125, sidebar removed, so charts are large enough to read.</p></article>
+    <article class="panel"><h3>Analysis First</h3><p>The first product view on every page is the trio: Overview in the middle, Investments and Expense analysis beside it. Content crops only.</p></article>
+  </div>
+  <div class="shot-demo" style="margin-top:16px">
+    <figure class="good"><img src="assets/app/omar/a-overview.webp" alt="A content crop of the Overview tab: change in net worth, savings rate, investing rate and net worth over time." loading="lazy" width="1800" height="1125"><figcaption><b>Content crop.</b> Use it where the chart is the message: the hero trio and the analysis grid on How It Works.</figcaption></figure>
+    <figure class="good"><img src="assets/app/omar/register.webp" alt="A full-window screen of an account register with the sidebar of accounts." loading="lazy" width="2000" height="1250"><figcaption><b>Full window.</b> Use it where the place in the app matters: the tour, importing and entering rows.</figcaption></figure>
+  </div>
+  <table class="tone-table" style="margin-top:24px"><thead><tr><th>Rule</th><th>Do</th><th>Avoid</th></tr></thead><tbody>
+    <tr><td>Frame</td><td>Put every screen in the browser frame, labelled “Lightning · Tab name”.</td><td>Bare screenshots, device mockups or tilted 3D angles.</td></tr>
+    <tr><td>Numbers</td><td>Quote figures that match the screen beside them, rounded to whole EGP.</td><td>Copy that quotes a number the screen doesn’t show.</td></tr>
+    <tr><td>Names</td><td>Use the app’s tab names: Overview, Budget, Investments, Expense analysis, Cash planning, Held for others.</td><td>Old names. Birdview now lives inside the Overview.</td></tr>
+    <tr><td>Files</td><td>WebP in <code>assets/app/omar/</code>. Content crops start with <code>a-</code>.</td><td>Mixing screens from different app versions on one page.</td></tr>
+    <tr><td>Refresh</td><td>When the app’s look changes, recapture every tab and check each caption and alt text.</td><td>Updating one page and leaving the others on old screens.</td></tr>
+  </tbody></table>
+  <p class="note">Current sample figures (September 2026): net worth 198,065 EGP, up 29,116; savings rate 50.1%; investing rate 39.4%; money out 23,390; portfolio 78,303 with a 5,673 gain; safe to spend 71,354; 10,000 held for family.</p>
 </section>
   <div class="end">Lightning · Meadow identity · Brand Guidelines · Light and Dark</div>
 </main>

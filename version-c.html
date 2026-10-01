@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-c.css?v=20261001-7">
+<link rel="stylesheet" href="css/version-c.css?v=20261001-8">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -42,15 +42,10 @@
       <a class="btn btn-primary" href="#game">See What You Are Worth</a>
       <a class="btn btn-secondary" href="how-it-works.html">How It Works <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <div class="c-hero-shot">
-      <div class="c-chip c-chip-a" aria-hidden="true"><i>↯</i><div><small>Safe to spend</small><b>214,510<span>EGP</span></b></div></div>
-      <div class="c-chip c-chip-b blue" aria-hidden="true"><i>◒</i><div><small>Portfolio this month</small><b>+7,940<span>EGP</span></b></div></div>
-      <div class="frame">
-        <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div>
-        <button class="zoom" type="button" data-zoom="assets/app/overview.webp" data-caption="Overview: what you own, what you owe and what is free to spend.">
-          <img src="assets/app/overview.webp" width="2000" height="1250" alt="The Lightning Overview screen showing net worth of 678,470 EGP, free cash of 216,640 EGP, and a breakdown of cash, deposits, holdings and what you owe." fetchpriority="high">
-        </button>
-      </div>
+    <div class="trio" aria-label="Three of Lightning's analysis tabs">
+      <figure class="trio-main"><div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-overview.webp" data-caption="Overview: where you stand, and how it changed this month."><img src="assets/app/omar/a-overview.webp" width="1800" height="1125" alt="Lightning Overview with example data: net worth up 29,116 EGP this month, a 50.1% savings rate, a 39.4% investing rate and a rising net worth of 198,065 EGP." fetchpriority="high"></button></div><figcaption>Overview <span>Where you stand</span></figcaption></figure>
+      <figure class="trio-side trio-left"><div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-investments.webp" data-caption="Investments: what your invested money is doing."><img src="assets/app/omar/a-investments.webp" width="1800" height="1125" alt="Lightning Investments: saved and invested this month, a net gain of 5,673 EGP, a portfolio of 78,303 EGP and its allocation across gold, shares and a money market fund." loading="lazy"></button></div><figcaption>Investments <span>What it’s doing</span></figcaption></figure>
+      <figure class="trio-side trio-right"><div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-expenses.webp" data-caption="Expense analysis: where your money went, and what changed."><img src="assets/app/omar/a-expenses.webp" width="1800" height="1125" alt="Lightning Expense analysis: 23,390 EGP out this month, a treemap of the biggest categories led by housing, and how each one moved." loading="lazy"></button></div><figcaption>Expense analysis <span>Where it went</span></figcaption></figure>
     </div>
   </header>
 
@@ -213,27 +208,27 @@
 <script>
 (() => {
   const TOUR = [
-    {id: 'overview', label: 'Overview', img: 'overview', alt: 'The Overview screen with net worth of 678,470 EGP and free cash of 216,640 EGP.',
+    {id: 'overview', label: 'Overview', img: 'omar/overview', alt: 'Lightning Overview: net worth up 29,116 EGP this month, a 50.1% savings rate and net worth of 198,065 EGP.',
      title: 'Everything on One Screen',
-     body: 'What you own, what you owe and what is free to spend. Every number shows how it was worked out.',
-     points: ['Your net worth', 'Your free cash', 'How much you saved this month']},
-    {id: 'log', label: 'Log', img: 'register', alt: 'The CIB Current register with Talabat suggested while typing a new transaction.',
+     body: 'What you own, what you owe and how it changed, with every number showing what it’s made of.',
+     points: ['Your net worth and how it moved', 'Your savings and investing rates', 'Where your money came from and went']},
+    {id: 'log', label: 'Log', img: 'omar/register', alt: 'The CIB Payroll register with Talabat suggested while typing a new transaction.',
      title: 'Add Spending in Seconds',
      body: 'Type who you paid, what it was for and how much. Lightning remembers names as you type.',
      points: ['Name suggestions as you type', 'A running balance on every row', 'Or import your bank’s CSV file']},
-    {id: 'budget', label: 'Budget', img: 'budget', alt: 'The Budget screen with 1,153.33 EGP left in plan and Personal category limits.',
+    {id: 'budget', label: 'Budget', img: 'omar/budget', alt: 'The Budget screen: 1,309 EGP left in plan, with the two categories over plan shown first.',
      title: 'A Budget That Fits You',
      body: 'Set each category as a fixed amount, a share of your income, or your usual average.',
      points: ['What’s left, category by category', 'Unused money can roll over', 'Tips on what to track next']},
-    {id: 'patterns', label: 'Patterns', img: 'expenses', alt: 'Expense analysis for Personal spending year to date with categories ranked and a monthly trend.',
+    {id: 'patterns', label: 'Patterns', img: 'omar/expenses', alt: 'Expense analysis: 23,390 EGP out this month, a treemap of the biggest categories and how each one moved.',
      title: 'See Where It Went',
      body: 'Open any category to see what’s inside it, and the month it started to change.',
-     points: ['Biggest categories first', 'A month by month trend', 'A comparison with last period']},
-    {id: 'invest', label: 'Investments', img: 'investments', alt: 'The Investments screen with a monthly result of 7,940 EGP and portfolio value of 245,630 EGP.',
+     points: ['Biggest categories first', 'How each one moved, month by month', 'Each month against your usual month']},
+    {id: 'invest', label: 'Investments', img: 'omar/investments', alt: 'Investments: a net gain of 5,673 EGP this month, a portfolio of 78,303 EGP and its allocation.',
      title: 'Shares, Funds and Gold Together',
      body: 'Track THNDR, funds, CDs and gold in one portfolio, in EGP.',
-     points: ['Value month by month', 'Your result this month', 'What it’s worth if you sold today']},
-    {id: 'cash', label: 'Cash Planning', img: 'cash-planning', alt: 'Cash planning with 214,510 EGP safe to spend and upcoming bills and loan payments.',
+     points: ['Saved and invested, side by side', 'Your gain or loss this month', 'What it’s worth if you sold today']},
+    {id: 'cash', label: 'Cash Planning', img: 'omar/safe-to-spend', alt: 'Cash planning: 71,354 EGP safe to spend until the next income, with the next 30 days of payments.',
      title: 'Know What’s Safe to Spend',
      body: 'Bills, loans and savings goals come off first. What’s left is yours to use.',
      points: ['Safe to spend until payday', 'Bills due in the next 30 days', 'Goals like an emergency fund']},
