@@ -64,7 +64,12 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 
 The rail discovers each top-level section automatically, so a future landing page only needs the shared CSS and JS includes plus `data-ux-version` and `data-ux-endpoint` on its `<body>`. Responses are posted in one batch and stored as one row per rated section in the `UX Tests` Sheet tab.
 
-To route UX responses, add the small branch and helper in [apps-script/UXTestsReceiverPatch.gs](apps-script/UXTestsReceiverPatch.gs) to the existing Apps Script receiver, then deploy a new version of that web app.
+UX responses go to the survey sheet until the Apps Script receiver routes them. To fix it, follow the steps at the top of [apps-script/UXTestsReceiverPatch.gs](apps-script/UXTestsReceiverPatch.gs):
+
+1. Paste the file into the receiver's Apps Script project.
+2. Make `if (e && e.parameter && e.parameter.form_type === 'ux_test') return saveUxTest_(e.parameter);` the first line of `doPost(e)`.
+3. Deploy → Manage deployments → edit the existing deployment → New version → Deploy. Saving alone does not change the live web app.
+4. Run `testUxRoute` once from the editor and check that a row appears in the **UX Tests** tab (created automatically if missing).
 
 ## Status
 

@@ -1,18 +1,50 @@
 /**
- * Lightning UX test receiver patch
+ * Lightning · route UX test feedback to its own "UX Tests" tab
  *
- * In the existing doPost(e), after you assign the request fields to `data`, add:
+ * Why responses land in the survey sheet: the receiver's doPost(e) saves every
+ * request as a survey row unless it checks form_type first. The website sends
+ * UX feedback with form_type=ux_test (see js/ux-test.js).
  *
- *   if (data.form_type === 'ux_test') return saveUxTest_(data);
+ * Setup (in the Apps Script project behind the receiver web app):
  *
- * Then add the function below to the same Apps Script project and deploy a new
- * version of the existing web app. This preserves the survey and signup routes.
+ * 1. Add a new script file (for example "UXTests") and paste this whole file into it.
+ *
+ * 2. Make this the FIRST line inside your existing doPost(e), before anything
+ *    that reads or saves survey fields:
+ *
+ *      if (e && e.parameter && e.parameter.form_type === 'ux_test') return saveUxTest_(e.parameter);
+ *
+ * 3. Deploy a new version of the SAME web app:
+ *    Deploy → Manage deployments → pencil (edit) → Version: "New version" → Deploy.
+ *    Saving the script is not enough: the live /exec URL keeps running the old
+ *    version until you deploy a new one. Keep the same deployment so the URL in
+ *    the website does not change.
+ *
+ * 4. Check it: run testUxRoute() once from the editor (approve access if asked).
+ *    A test row should appear in the "UX Tests" tab. Delete it afterwards.
+ *
+ * The "UX Tests" tab and its header row are created automatically if missing.
+ * If the script is not attached to the spreadsheet (a standalone project), paste
+ * the spreadsheet ID into UX_SPREADSHEET_ID below.
  */
+const UX_SPREADSHEET_ID = '';
+const UX_SHEET_NAME = 'UX Tests';
+const UX_HEADERS = ['Submitted at', 'Release', 'Section ID', 'Section', 'Reaction', 'Reasons', 'Page URL', 'Session ID', 'Device'];
+
+function uxSheet_() {
+  const book = UX_SPREADSHEET_ID ? SpreadsheetApp.openById(UX_SPREADSHEET_ID) : SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = book.getSheetByName(UX_SHEET_NAME);
+  if (!sheet) sheet = book.insertSheet(UX_SHEET_NAME);
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(UX_HEADERS);
+    sheet.setFrozenRows(1);
+  }
+  return sheet;
+}
+
 function saveUxTest_(data) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('UX Tests');
   const response = ContentService.createTextOutput(JSON.stringify({ ok: true }))
     .setMimeType(ContentService.MimeType.JSON);
-  if (!sheet) return response;
 
   let feedback = [];
   try { feedback = JSON.parse(data.feedback_json || '[]'); } catch (error) { return response; }
@@ -30,6 +62,28 @@ function saveUxTest_(data) {
       data.session_id || '',
       data.device || ''
     ]);
-  if (rows.length) sheet.getRange(sheet.getLastRow() + 1, 1, rows.length, 9).setValues(rows);
+  if (!rows.length) return response;
+
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const sheet = uxSheet_();
+    sheet.getRange(sheet.getLastRow() + 1, 1, rows.length, UX_HEADERS.length).setValues(rows);
+  } finally {
+    lock.releaseLock();
+  }
   return response;
+}
+
+/** Run once from the editor to confirm UX feedback reaches the "UX Tests" tab. */
+function testUxRoute() {
+  const result = doPost({ parameter: {
+    form_type: 'ux_test',
+    experience_version: 'TEST',
+    page_url: 'https://lightningeg.com/test',
+    session_id: 'test-session',
+    device: 'desktop',
+    feedback_json: JSON.stringify([{ id: 'test', title: 'Routing test', reaction: 'liked', reasons: [] }])
+  } });
+  Logger.log(result.getContent());
 }
