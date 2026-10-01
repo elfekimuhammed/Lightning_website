@@ -9,7 +9,7 @@ Built in the **Meadow** identity: meadow green for growth, azure for clarity, an
 ## Structure
 
 ```
-index.html          Version A landing page
+index.html          Version A landing page (hybrid of B's clarity and C's philosophy)
 version-b.html      Version B landing page (product-first story, rebuilt 2026-09-30)
 version-c.html      Version C landing page (product-led, live app tour)
 how-it-works.html   Version C step-by-step workflow page
@@ -56,7 +56,8 @@ The bank equivalent uses monthly amount × 12 ÷ 20% (for example, 2,000 EGP/mon
 
 Every landing page includes the same scroll-aware UX feedback rail. It sends an internal release identifier rather than the visible landing-page name:
 
-- `UX-2026.09.28.01` — `index.html`
+- `UX-2026.09.28.01` — `index.html` (before the hybrid)
+- `UX-2026.10.01.06` — `index.html` (hybrid)
 - `UX-2026.09.28.02` — `version-b.html` (before the rebuild)
 - `UX-2026.09.30.05` — `version-b.html` (rebuilt)
 - `UX-2026.09.30.03` — `version-c.html`
@@ -85,11 +86,11 @@ Version C tells the story in this order: hero, game, three truths, the budgeting
 
 ## Dark mode
 
-Versions B and C, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in the Dark Mode section of `brand-guidelines.html`.
+All three versions, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in the Dark Mode section of `brand-guidelines.html`.
 
 - The page follows the device setting until the visitor uses the switch; the choice is then remembered in `localStorage` (`lightning-theme`).
 - To add dark mode to another page: include `css/theme.css` and `js/theme.js` (in `<head>`, not deferred), add `<button data-theme-toggle></button>` to the top bar, and define the page's dark colors under `:root[data-theme="dark"]`.
-- Version A and the survey are still light only.
+- The survey is still light only.
 
 ## Version B
 
@@ -105,3 +106,11 @@ Version B tells one story, in this order: what Lightning is (with privacy in the
 - Every version uses the same header: the logo, **Home · How It Works**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
 - The page-version switch (A · B · C) and **Submit UX Test** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
 - How It Works remembers which version the visitor came from, so **Home** and the testing panel point back to it.
+
+## Version A
+
+Version A is the hybrid: Version B's clear opening and practical proof, with Version C's philosophy.
+
+- Order: what Lightning is (privacy in the hero), money in six places, safe to spend, the idea behind Lightning (the budgeting story), the calculator, three truths about building wealth, the product tour, trust, FAQ and early access.
+- One quote only: James Clear's line on systems, placed where the story turns from budgets to habits.
+- It shares B's styles, screenshots and calculator (`css/version-b.css`, `js/version-b.js`, `assets/app/omar/`), and has the same pricing and founder placeholders in the FAQ.

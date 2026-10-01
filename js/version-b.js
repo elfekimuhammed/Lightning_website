@@ -46,6 +46,4 @@
   rateButtons.forEach(b => b.addEventListener('click', () => { rate = Number(b.dataset.bRate); update(); }));
   update();
 
-  // Remember that the visitor came from Version B, so How It Works links back here.
-  try { sessionStorage.setItem('lightning-home', 'version-b.html'); } catch (_) {}
 })();
