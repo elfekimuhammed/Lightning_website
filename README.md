@@ -97,6 +97,6 @@ Version B tells one story, in this order: what Lightning is (with privacy in the
 
 ## Header and testing panel
 
-- Every version uses the same header: the logo plus **Home · How It Works · Survey**. The header only links to pages, never to a section of the same page.
+- Every version uses the same header: the logo, **Home · How It Works**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
 - The page-version switch (A · B · C) and **Submit UX Test** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
 - How It Works remembers which version the visitor came from, so **Home** and the testing panel point back to it.
