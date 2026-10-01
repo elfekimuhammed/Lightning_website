@@ -291,8 +291,8 @@ input:focus-visible{outline:none;border-color:var(--mint);box-shadow:0 0 0 4px v
 @media (max-width:760px){.survey-callout{display:grid;padding:30px 24px}.survey-actions form{display:grid;width:100%}.survey-actions input{width:100%}.survey-page{padding-top:48px;padding-bottom:64px}}
 
 /* Header page links on Version A, same set as the other versions */
-nav .a-links{margin-left:auto;gap:24px;font-weight:600}
-nav .a-links+.btn{margin-left:0}
+nav .a-links{margin-left:0;gap:24px;font-weight:600}
+nav .a-links+.btn{margin-left:auto}
 nav .a-links a[aria-current="page"]{color:var(--ink)}
 @media (max-width:900px){nav .a-links{display:flex;gap:16px;font-size:14px}}
 @media (max-width:480px){nav .a-links a:first-child{display:none}nav .a-links{gap:12px;font-size:13px}nav .a-links a{white-space:nowrap}nav .nav-cta{height:36px;padding:0 14px;font-size:13px}}
