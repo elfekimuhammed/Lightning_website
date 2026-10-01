@@ -129,19 +129,5 @@
     links.forEach(link => { const step = document.querySelector(link.hash); if (step) observer.observe(step); });
   }
 
-  // ---- home page for How It Works: link back to whichever landing page (B or C) sent the visitor ----
-  try {
-    if (/version-c\.html$/.test(location.pathname)) sessionStorage.setItem('lightning-home', 'version-c.html');
-    if (map && sessionStorage.getItem('lightning-home') === 'version-b.html') {
-      document.querySelectorAll('a[href^="version-c.html"]').forEach(link => {
-        if (link.closest('.version-links')) return;
-        link.setAttribute('href', link.getAttribute('href').replace('version-c.html', 'version-b.html'));
-      });
-      document.querySelectorAll('.version-links a').forEach(link => {
-        link.classList.toggle('is-active', link.getAttribute('href') === 'version-b.html');
-      });
-    }
-  } catch (_) {}
-
   window.LightningC = {tour};
 })();

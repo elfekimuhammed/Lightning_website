@@ -20,6 +20,8 @@ js/version-b.js     Version B calculator with an adjustable return rate
 css/version-c.css   Version C and How It Works visual system
 js/version-c.js     Version C calculator, signup, product tour and lightbox
 css/theme.css       light/dark switch
+css/dev-dock.css    testing panel (page version + UX test)
+js/dev-dock.js      builds the testing panel on every version
 js/theme.js         picks and remembers the theme
 assets/app/         screenshots of the Lightning app (sample data)
 assets/app/omar/    screenshots of the app's built-in sample household (python -m lightning --demo)
@@ -92,3 +94,9 @@ Version B tells one story, in this order: what Lightning is (with privacy in the
 - Two FAQ answers are placeholders: pricing and the founder note. Fill them in before sharing the page widely.
 - There is no testimonial section. Add one once you have real quotes that describe a realization, not praise.
 - How It Works links back to whichever landing page (B or C) the visitor came from.
+
+## Header and testing panel
+
+- Every version uses the same header: the logo plus **Home · How It Works · Survey**. The header only links to pages, never to a section of the same page.
+- The page-version switch (A · B · C) and **Submit UX Test** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
+- How It Works remembers which version the visitor came from, so **Home** and the testing panel point back to it.

@@ -11,11 +11,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-c.css?v=20260930-5">
+<link rel="stylesheet" href="css/version-c.css?v=20261001-1">
 <link rel="stylesheet" href="css/version-b.css?v=20260930-1">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
+<link rel="stylesheet" href="css/dev-dock.css?v=20261001-2">
+<script src="js/dev-dock.js?v=20261001-1" defer></script>
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 </head>
 <body data-ux-version="UX-2026.09.30.05" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
@@ -23,16 +25,11 @@
   <div class="wrap">
     <a class="logo" href="version-b.html"><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a>
     <nav class="c-nav-links" aria-label="Main">
-      <a href="#demo">Tour</a>
+      <a class="nav-home" href="version-b.html" aria-current="page">Home</a>
       <a href="how-it-works.html">How It Works</a>
-      <a href="#faq">FAQ</a>
+      <a href="survey.html">Survey</a>
     </nav>
-    <div class="c-nav-end">
-      <button data-theme-toggle aria-label="Dark mode"></button>
-      <div class="version-links" aria-label="Landing page version"><a href="index.html">A</a><a class="is-active" href="version-b.html" aria-current="page">B</a><a href="version-c.html">C</a></div>
-      <button class="ux-test-trigger" type="button" data-ux-open>Submit UX Test <span data-ux-count>0</span></button>
-      <a class="btn btn-primary" href="#join">Get Early Access</a>
-    </div>
+    <button data-theme-toggle aria-label="Dark mode"></button>
   </div>
 </div>
 
@@ -255,7 +252,7 @@
 
 <dialog class="lightbox" id="lightbox" aria-label="Enlarged screenshot"><button type="button" aria-label="Close" data-close>×</button><img alt=""><p></p></dialog>
 
-<script src="js/version-c.js?v=20260930-3"></script>
+<script src="js/version-c.js?v=20261001-1"></script>
 <script src="js/version-b.js?v=20260930-1"></script>
 <script>
 (() => {
