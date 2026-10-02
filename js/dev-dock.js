@@ -30,7 +30,7 @@
       <a class="dev-dock__release" href="versions.html#${encodeURIComponent(releaseId)}"><span>Release ID</span><b>${releaseId}</b></a>
       <p class="dev-dock__label">Feedback</p>
       ${hasUx ? '<button class="dev-dock__ux" type="button" data-ux-open>Submit UX Test <span data-ux-count>0</span></button>' : ''}
-      <a class="dev-dock__app-feedback" href="current-status.html#app-feedback">Submit app feedback</a>
+      <a class="dev-dock__app-feedback" href="app-feedback.html">Submit app feedback</a>
     </div>`;
   document.body.append(dock);
 

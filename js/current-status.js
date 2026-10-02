@@ -51,6 +51,8 @@
       experience_version: experiences[sourcePage] || experiences['index.html'],
       source_page: sourcePage,
       app_build: new FormData(form).get('app_build'),
+      reporter_name: new FormData(form).get('reporter_name')?.trim() || '',
+      reporter_email: new FormData(form).get('reporter_email')?.trim() || '',
       page_url: location.href,
       session_id: sessionId,
       device: matchMedia('(max-width: 760px)').matches ? 'mobile' : 'desktop',

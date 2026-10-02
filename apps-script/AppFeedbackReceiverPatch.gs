@@ -25,7 +25,8 @@ const APP_FEEDBACK_SPREADSHEET_ID = '';
 const APP_FEEDBACK_SHEET_NAME = 'App Feedback';
 const APP_FEEDBACK_HEADERS = [
   'Submitted at', 'Landing release', 'App build', 'Section / page', 'Type',
-  'Area', 'Description', 'Page URL', 'Session ID', 'Ticket #', 'Device'
+  'Area', 'Description', 'Page URL', 'Session ID', 'Ticket #', 'Device',
+  'Reporter Name', 'Reporter Email'
 ];
 
 function appFeedbackSheet_() {
@@ -37,6 +38,10 @@ function appFeedbackSheet_() {
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(APP_FEEDBACK_HEADERS);
     sheet.setFrozenRows(1);
+  } else {
+    const existing = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    const missing = APP_FEEDBACK_HEADERS.slice(existing.length);
+    if (missing.length) sheet.getRange(1, existing.length + 1, 1, missing.length).setValues([missing]);
   }
   return sheet;
 }
@@ -61,7 +66,9 @@ function saveAppFeedback_(data) {
       data.page_url || '',
       data.session_id || '',
       index + 1,
-      data.device || ''
+      data.device || '',
+      String(data.reporter_name || '').slice(0, 100),
+      String(data.reporter_email || '').slice(0, 254)
     ]);
   if (!rows.length) return response;
   const lock = LockService.getScriptLock();
