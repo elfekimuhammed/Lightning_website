@@ -24,7 +24,7 @@
 .b-source.other b{color:var(--muted)}
 .b-picture{display:flex;flex-direction:column;padding:28px;background:var(--action);color:var(--action-ink);border-color:var(--action)}
 .b-picture .label{display:flex;align-items:center;gap:10px;font:800 21px/1 var(--display);letter-spacing:-.02em}
-.b-picture .label img{width:24px;height:24px}
+.b-picture .label img{width:auto;height:28px}
 .b-picture ol{display:grid;gap:0;margin-top:22px}
 .b-picture li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-top:1px solid color-mix(in srgb,currentColor 16%,transparent);font-size:14px;font-weight:600}
 .b-picture li b{font:800 20px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}

@@ -56,7 +56,7 @@ button,input{font:inherit}
 .c-nav{position:sticky;top:0;z-index:15;background:var(--nav-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .c-nav .wrap{display:flex;align-items:center;gap:18px;min-height:70px}
 .logo{display:flex;align-items:center;gap:10px;font:800 21px/1 var(--display);letter-spacing:-.02em}
-.logo img{width:26px;height:26px}
+.logo img{width:auto;height:30px}
 .c-nav-links{display:flex;gap:4px;margin-left:18px}
 .c-nav [data-theme-toggle]{margin-left:auto}
 .c-nav-links a{padding:9px 13px;white-space:nowrap;border-radius:99px;color:var(--ink2);font:700 14px/1 var(--body)}
@@ -257,7 +257,7 @@ button,input{font:inherit}
 .form-status{min-height:1.4em;color:var(--meadow-dark);font-size:13px;font-weight:700}
 .c-motto{padding:96px 24px 40px;text-align:center;font:800 clamp(30px,5vw,56px)/1.06 var(--display);letter-spacing:-.04em}
 .c-motto-brand{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:22px;font:800 21px/1 var(--display);letter-spacing:-.02em}
-.c-motto-brand img{width:28px;height:28px}
+.c-motto-brand img{width:auto;height:34px}
 .c-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;font-weight:600}
 .c-foot nav{display:flex;flex-wrap:wrap;gap:20px}
 .c-foot a:hover{color:var(--ink)}
@@ -422,7 +422,7 @@ button,input{font:inherit}
   .c-nav .nav-cta{min-height:36px;margin-left:0;padding:0 14px;font-size:13px}
   .c-nav [data-theme-toggle]{margin-left:auto}
   .logo{font-size:18px}
-  .logo{font-size:19px}.logo img{width:22px;height:22px}
+  .logo{font-size:19px}.logo img{width:auto;height:26px}
   .c-hero,.hw-hero{padding-top:56px}
   .c-hero-lead,.hw-hero p{font-size:16px}
   .c-hero-actions .btn{width:100%}

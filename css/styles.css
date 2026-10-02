@@ -29,6 +29,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;backdrop-filter:b
 nav .wrap{display:flex;align-items:center;gap:32px;height:68px}
 .logo{display:flex;align-items:center;gap:10px;font:800 21px/1 var(--display);letter-spacing:-.02em}
 .logo svg{width:26px;height:26px}
+.logo img{width:auto;height:30px}
 nav .links{display:flex;gap:26px;font-size:15px;color:var(--ink2)}
 nav .links a:hover{color:var(--ink)}
 .version-links{display:flex;align-items:center;gap:3px;padding:4px;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.38);font:700 13px/1 var(--text)}
