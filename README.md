@@ -85,7 +85,7 @@ The app feedback form accepts multiple tickets at once. The browser sends a sing
 
 To activate it, follow [apps-script/AppFeedbackReceiverPatch.gs](apps-script/AppFeedbackReceiverPatch.gs): add the `app_feedback` `doPost` branch, then deploy a new version of the existing Apps Script web app. The static site is already wired to the existing endpoint. The pre-created **App Feedback** tab is in [Lightning-survey-responses](https://docs.google.com/spreadsheets/d/1rmV9GtffAJByilsxre0bQBMm-cza1uCXBwDbjuD_ffc/edit).
 
-The included `assets/samples/omar-*.csv` files are fictional test data. They have `Date`, `Description` and signed `Amount` columns so a tester can map them once and explore Import CSV, Review import, Overview, Budget and Cash Planning without entering their own data.
+The included `assets/samples/omar-2026-full-year.zip` is Omar’s full fictional 2026 sample pack: eight CSVs for accounts, CIB payroll, Vodafone Cash, cash wallet, gold, certificate, THNDR and prices. It lets a tester explore the complete import and analysis flow without entering their own data.
 
 ## Version identity and archive
 
