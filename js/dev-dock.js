@@ -10,7 +10,7 @@
     else home = sessionStorage.getItem('lightning-home') || home;
   } catch (_) {}
 
-  // Pages that aren't a version (How It Works) send "Home" back to the version the visitor came from.
+  // Shared pages send "Home" back to the version the visitor came from.
   document.querySelectorAll('[data-home-link]').forEach(link => { link.href = home; });
 
   const dock = document.createElement('div');
@@ -26,7 +26,9 @@
       <p class="dev-dock__label">Page version</p>
       <nav class="dev-dock__versions" aria-label="Landing page version">${VERSIONS.map(([label, href]) =>
         `<a href="${href}"${href === home ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav>
-      ${hasUx ? '<p class="dev-dock__label">Feedback</p><button class="dev-dock__ux" type="button" data-ux-open>Submit UX Test <span data-ux-count>0</span></button>' : ''}
+      <p class="dev-dock__label">Feedback</p>
+      ${hasUx ? '<button class="dev-dock__ux" type="button" data-ux-open>Submit UX Test <span data-ux-count>0</span></button>' : ''}
+      <a class="dev-dock__app-feedback" href="current-status.html#app-feedback">Submit app feedback</a>
     </div>`;
   document.body.append(dock);
 

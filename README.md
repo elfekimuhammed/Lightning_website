@@ -13,6 +13,7 @@ index.html          Version A landing page (hybrid of B's clarity and C's philos
 version-b.html      Version B landing page (product-first story, rebuilt 2026-09-30)
 version-c.html      Version C landing page (product-led, live app tour)
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
+current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
 survey.html         optional personal finance survey
 css/styles.css      shared styles
 css/version-b.css   Version B's own sections (builds on css/version-c.css)
@@ -26,7 +27,9 @@ js/theme.js         picks and remembers the theme
 assets/app/omar/    app screenshots from the built-in sample household (python -m lightning --demo)
 css/ux-test.css     shared UX test feedback rail
 js/ux-test.js       shared UX test behavior
+js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
+assets/samples/     fictional Omar CSV files for safe beta imports
 assets/favicon.svg  bolt icon
 brand-guidelines.html visual brand and component guide
 ```
@@ -72,6 +75,16 @@ UX responses go to the survey sheet until the Apps Script receiver routes them. 
 3. Deploy → Manage deployments → edit the existing deployment → New version → Deploy. Saving alone does not change the live web app.
 4. Run `testUxRoute` once from the editor and check that a row appears in the **UX Tests** tab (created automatically if missing).
 
+## Current Status and app feedback
+
+[Current Status](current-status.html) is the shared beta hub for all three landing experiences. It keeps beta orientation, harmless Omar sample CSVs, release notes/download links and app feedback in one predictable place. The header and the **Testing** panel both link to it. Home on this shared page returns to the landing version a visitor most recently viewed.
+
+The app feedback form accepts multiple tickets at once. The browser sends a single `form_type=app_feedback` request; the receiver expands it into **one row per ticket** in the **App Feedback** tab, capturing the internal landing release, selected app build, section, bug/improvement, visual/technical category, description, session and device.
+
+To activate it, follow [apps-script/AppFeedbackReceiverPatch.gs](apps-script/AppFeedbackReceiverPatch.gs): add the `app_feedback` `doPost` branch, then deploy a new version of the existing Apps Script web app. The static site is already wired to the existing endpoint. The pre-created **App Feedback** tab is in [Lightning-survey-responses](https://docs.google.com/spreadsheets/d/1rmV9GtffAJByilsxre0bQBMm-cza1uCXBwDbjuD_ffc/edit).
+
+The included `assets/samples/omar-*.csv` files are fictional test data. They have `Date`, `Description` and signed `Amount` columns so a tester can map them once and explore Import CSV, Review import, Overview, Budget and Cash Planning without entering their own data.
+
 ## Status
 
 The website, survey, and Google Sheets receiver are connected. When changing the receiver, update its URL in both landing pages and the survey page, then verify that a submission appears in the destination Sheet.
@@ -103,9 +116,9 @@ Version B tells one story, in this order: what Lightning is (with privacy in the
 
 ## Header and testing panel
 
-- Every version uses the same header: the logo, **Home · How It Works**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
-- The page-version switch (A · B · C) and **Submit UX Test** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
-- How It Works remembers which version the visitor came from, so **Home** and the testing panel point back to it.
+- Every version uses the same header: the logo, **Home · How It Works · Current Status**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
+- The page-version switch (A · B · C), **Submit UX Test**, and **Submit app feedback** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
+- How It Works and Current Status remember which version the visitor came from, so **Home** and the testing panel point back to it.
 
 ## Version A
 

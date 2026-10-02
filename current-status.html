@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Current Status · Lightning Beta</title>
+<meta name="description" content="The Lightning beta: why it exists, how to try it with sample data, what to evaluate and how to send actionable app feedback.">
+<meta name="theme-color" content="#E3F6EC">
+<link rel="icon" href="assets/favicon.svg?v=20260928-1" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/version-c.css?v=20261002-1">
+<link rel="stylesheet" href="css/current-status.css?v=20261002-1">
+<link rel="stylesheet" href="css/theme.css?v=20260930-1">
+<script src="js/theme.js?v=20260930-1"></script>
+<link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
+<link rel="stylesheet" href="css/dev-dock.css?v=20261002-1">
+<script src="js/dev-dock.js?v=20261002-1" defer></script>
+<script src="js/ux-test.js?v=20260928-1" defer></script>
+<script src="js/current-status.js?v=20261002-1" defer></script>
+</head>
+<body data-ux-version="UX-2026.10.02.01" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec" data-app-feedback-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<div class="c-nav">
+  <div class="wrap">
+    <a class="logo" href="index.html" data-home-link><img src="assets/favicon.svg?v=20260928-1" alt="">Lightning</a>
+    <nav class="c-nav-links" aria-label="Main">
+      <a class="nav-home" href="index.html" data-home-link>Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="current-status.html" aria-current="page">Current Status</a>
+    </nav>
+    <button data-theme-toggle aria-label="Dark mode"></button>
+    <a class="btn btn-primary nav-cta" href="#app-feedback"><span class="cta-long">Send feedback</span><span class="cta-short">Feedback</span></a>
+  </div>
+</div>
+
+<main class="wrap" id="top">
+  <header class="status-hero">
+    <div class="eyebrow">Lightning beta</div>
+    <h1>Current <span class="grad-text">Status.</span></h1>
+    <p>Everything you need to try Lightning with safe sample data, decide what is useful, and tell us exactly what should improve next.</p>
+    <div class="status-hero__actions">
+      <a class="btn btn-primary" href="#start">Start with Omar’s sample data</a>
+      <a class="btn btn-secondary" href="#app-feedback">Submit app feedback</a>
+    </div>
+    <div class="status-promise" role="note"><b>Beta rule:</b> use only the sample CSVs or other dummy data. Do not upload a real bank statement during this beta.</div>
+  </header>
+
+  <section class="status-story" id="why" aria-labelledby="why-title">
+    <div class="status-story__lead"><div class="eyebrow">Why Lightning exists</div><h2 id="why-title">A better system beats one big hit.</h2></div>
+    <div class="status-story__copy">
+      <p>In my first year investing, I was seeing returns of 50–70%. I thought that would be the key to financial freedom—until I stopped looking at percentages and looked at the actual amount I was making, and at the effort, anxiety and risk behind it.</p>
+      <p>From the moment I graduated, I tracked every inflow and outflow. Every transaction was logged and reviewed weekly. I realised that cutting Uber and Talabat orders, and being smarter around shopping, could create a very similar monthly gain to my risky investments—not once a year, but every month.</p>
+      <p>I come from finance and have read the books. They keep converging on the same idea: you cannot control much of the environment around you. You can control your own inputs, and sooner or later—usually later—the rest starts to fall into place.</p>
+      <p>The road to financial freedom is not one risky investment. It is good financial habits, compounding and compounding again. I tried every tool I could find: Excel was too complicated and time-consuming; good budgeting apps did not give me the full picture. That is what we are building here.</p>
+    </div>
+  </section>
+
+  <section class="status-start" id="start" aria-labelledby="start-title">
+    <div class="sec-head"><div class="eyebrow">The beta path</div><h2 id="start-title">Start Small. <span class="grad-text">See the Full Picture.</span></h2><p>Use Omar’s harmless demo files so you can test the real workflow without manual data entry or sharing personal information.</p></div>
+    <div class="status-path">
+      <article class="card status-path__item"><span>01</span><h3>Choose a build</h3><p>Pick the beta build you are testing below. No build has been published yet, so the buttons point to GitHub Releases.</p></article>
+      <article class="card status-path__item"><span>02</span><h3>Download Omar’s CSVs</h3><p>Save the sample CIB payroll and Vodafone Cash files. They are fictional, in EGP and ready to map.</p></article>
+      <article class="card status-path__item"><span>03</span><h3>Import, then explore</h3><p>Match <b>Date</b>, <b>Description</b> and <b>Amount</b> once. Review the import, then visit Overview, Budget and Cash Planning.</p></article>
+      <article class="card status-path__item"><span>04</span><h3>Send useful feedback</h3><p>Report a bug or improvement while it is fresh. You can add more than one ticket in a single submission.</p></article>
+    </div>
+  </section>
+
+  <section class="status-downloads" id="downloads" aria-labelledby="downloads-title">
+    <div class="status-downloads__head"><div><div class="eyebrow">Beta downloads</div><h2 id="downloads-title">Pick a Version to Test.</h2></div><p>Each release will live on GitHub with a short release note. Until the first app build is attached, the release page is the single source of truth.</p></div>
+    <div class="status-table-wrap" role="region" aria-label="Beta build availability" tabindex="0">
+      <table class="status-table">
+        <thead><tr><th>Version</th><th>What changes</th><th>Status</th><th>Download</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><b>Version A</b><small>Clear picture</small></th><td>One view of money across accounts, cash, investments and what is held for family.</td><td><span class="status-badge">Build pending</span></td><td><a class="btn btn-secondary status-table__button" href="https://github.com/elfekimuhammed/Lightning/releases" target="_blank" rel="noreferrer">GitHub Releases</a></td></tr>
+          <tr><th scope="row"><b>Version B</b><small>Habit-first</small></th><td>Focuses the story on habits, small changes and what they become over time.</td><td><span class="status-badge">Build pending</span></td><td><a class="btn btn-secondary status-table__button" href="https://github.com/elfekimuhammed/Lightning/releases" target="_blank" rel="noreferrer">GitHub Releases</a></td></tr>
+          <tr><th scope="row"><b>Version C</b><small>Interactive flow</small></th><td>Leads with an interactive money exercise, then shows the system behind it.</td><td><span class="status-badge">Build pending</span></td><td><a class="btn btn-secondary status-table__button" href="https://github.com/elfekimuhammed/Lightning/releases" target="_blank" rel="noreferrer">GitHub Releases</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="status-table-hint">Swipe the table to see each build’s status and download link <span aria-hidden="true">→</span></p>
+  </section>
+
+  <section class="status-setup" aria-labelledby="setup-title">
+    <div class="status-setup__copy"><div class="eyebrow">Omar CSV setup</div><h2 id="setup-title">A Safe First Run.</h2><p>Import these two fictional accounts first. The goal is to test the experience, not to recreate your financial life.</p><ol><li>Download both CSVs.</li><li>Create or open a sample profile in Lightning.</li><li>Import one file into each matching account.</li><li>Use the review screen before posting, then explore the analysis tabs.</li></ol></div>
+    <div class="status-samples">
+      <a class="status-sample" href="assets/samples/omar-cib-payroll.csv" download><span class="status-sample__icon" aria-hidden="true">↓</span><span><b>Omar · CIB payroll</b><small>11 fictional transactions · CSV</small></span><em>Download</em></a>
+      <a class="status-sample" href="assets/samples/omar-vodafone-cash.csv" download><span class="status-sample__icon" aria-hidden="true">↓</span><span><b>Omar · Vodafone Cash</b><small>8 fictional transactions · CSV</small></span><em>Download</em></a>
+      <div class="status-support"><b>WhatsApp beta group</b><p>The invite will appear here before the beta opens. Use the feedback form for anything that needs tracking.</p><span>Invite coming soon</span></div>
+    </div>
+  </section>
+
+  <section class="status-evaluate" aria-labelledby="evaluate-title">
+    <div class="sec-head"><div class="eyebrow">What to evaluate</div><h2 id="evaluate-title">Try the Path, Not Every Feature.</h2><p>You do not need to test everything. A useful beta session answers whether each step is clear, trustworthy and worth returning to.</p></div>
+    <div class="status-checklist">
+      <article><span class="c-icon" aria-hidden="true">1</span><h3>Can you import?</h3><p>Can you tell what file to use and match columns without guessing?</p></article>
+      <article><span class="c-icon" aria-hidden="true">2</span><h3>Can you trust it?</h3><p>Do review states and numbers make sense before anything is posted?</p></article>
+      <article><span class="c-icon" aria-hidden="true">3</span><h3>Can you act on it?</h3><p>Do Overview, Budget and Cash Planning give you one clear next move?</p></article>
+    </div>
+  </section>
+
+  <section class="status-feedback card" id="app-feedback" aria-labelledby="feedback-title">
+    <div class="status-feedback__intro"><div class="eyebrow">App feedback</div><h2 id="feedback-title">Tell Us What Happened.</h2><p>Add a separate ticket for each problem or idea. Each ticket becomes its own row in the team’s feedback sheet, so nothing gets lost in a long message.</p><ul><li>Say where you were.</li><li>Choose bug or improvement.</li><li>Choose visual or technical.</li><li>Describe what you expected and what happened.</li></ul></div>
+    <form class="status-feedback__form" id="app-feedback-form" novalidate>
+      <label class="status-field"><span>Which build did you test?</span><select name="app_build" required><option value="" selected disabled>Choose a version</option><option value="Version A">Version A</option><option value="Version B">Version B</option><option value="Version C">Version C</option><option value="Not sure">I’m not sure</option></select></label>
+      <div class="status-tickets" data-ticket-list></div>
+      <div class="status-feedback__actions"><button class="btn btn-secondary" type="button" data-add-ticket>+ Add another ticket</button><button class="btn btn-primary" type="submit">Submit app feedback</button></div>
+      <p class="status-feedback__status" role="status" aria-live="polite"></p>
+    </form>
+    <template id="ticket-template"><fieldset class="status-ticket"><legend>Ticket <span data-ticket-number></span></legend><button class="status-ticket__remove" type="button" data-remove-ticket aria-label="Remove this ticket">Remove</button><div class="status-ticket__grid"><label class="status-field"><span>Section or page</span><select name="section" required><option value="" selected disabled>Choose where</option><option>Overview</option><option>Account register</option><option>Import CSV</option><option>Review import</option><option>Budget</option><option>Expense analysis</option><option>Investments</option><option>Cash planning</option><option>Profile or settings</option><option>Something else</option></select></label><div class="status-choice"><span>What is it?</span><div><label><input type="radio" name="type" value="Bug" required> Bug</label><label><input type="radio" name="type" value="Improvement"> Improvement</label></div></div><div class="status-choice"><span>Which kind?</span><div><label><input type="radio" name="area" value="Visual" required> Visual</label><label><input type="radio" name="area" value="Technical"> Technical</label></div></div></div><label class="status-field"><span>Describe what you saw, expected, or would change</span><textarea name="description" rows="4" maxlength="1000" required placeholder="Example: On Review import, I expected the amount column to be detected. I could not tell which column to choose."></textarea></label></fieldset></template>
+  </section>
+</main>
+
+<div class="wrap"><div class="c-motto" aria-label="Lightning motto"><div class="c-motto-brand"><img src="assets/favicon.svg?v=20260928-1" alt="" aria-hidden="true"><span>Lightning</span></div><div>Study Your Patterns. <span class="grad-text">Control Your Future.</span></div></div><footer class="c-foot"><span>Lightning · Made in Egypt</span><nav aria-label="Footer"><a href="index.html" data-home-link>Home</a><a href="how-it-works.html">How It Works</a><a href="survey.html">Survey</a></nav></footer></div>
+</body>
+</html>
