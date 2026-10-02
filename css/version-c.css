@@ -201,7 +201,7 @@ button,input{font:inherit}
 /* ---------- budgeting story ---------- */
 .c-system{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .c-system h2{font-size:clamp(34px,4.4vw,50px);line-height:1.05}
-.c-system h2 span{display:block}
+.c-system h2 span{display:inline;-webkit-box-decoration-break:slice;box-decoration-break:slice}
 .c-system-copy p{margin-top:18px;max-width:33em;color:var(--ink2);font-size:17px;line-height:1.7}
 .c-system-copy p.strong{color:var(--ink);font-weight:700}
 .c-system-copy .closing.grad-text{width:fit-content;color:transparent}
