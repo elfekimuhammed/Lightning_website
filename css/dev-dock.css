@@ -20,6 +20,7 @@
 .dev-dock__versions a{display:grid;place-items:center;height:34px;border-radius:9px;color:var(--dd-muted);font-family:inherit;font-weight:800;font-size:13px;line-height:1;text-decoration:none}
 .dev-dock__versions a:hover{color:var(--dd-text)}
 .dev-dock__versions a[aria-current="page"]{background:var(--dd-active);color:var(--dd-active-ink)}
+.dev-dock__release{display:flex;flex-direction:column;gap:3px;margin-top:10px;padding:10px 12px;border:1px solid var(--dd-line);border-radius:12px;background:var(--dd-chip);color:var(--dd-text);text-decoration:none}.dev-dock__release:hover{border-color:#14A874}.dev-dock__release span{color:var(--dd-muted);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.dev-dock__release b{font-size:12px;line-height:1.2}
 .dev-dock__ux{display:flex;align-items:center;justify-content:space-between;width:100%;height:42px;margin-top:12px;padding:0 12px 0 14px;border:1px solid var(--dd-line);border-radius:12px;background:var(--dd-chip);color:var(--dd-text);font-family:inherit;font-weight:700;font-size:13px;line-height:1;cursor:pointer}
 .dev-dock__ux:hover{border-color:#14A874}
 .dev-dock__ux span{display:grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:99px;background:var(--dd-active);color:var(--dd-active-ink);font-size:11px;font-weight:800}

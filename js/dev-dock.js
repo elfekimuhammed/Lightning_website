@@ -16,6 +16,7 @@
   const dock = document.createElement('div');
   dock.className = 'dev-dock';
   const hasUx = Boolean(document.body.dataset.uxEndpoint);
+  const releaseId = document.body.dataset.uxVersion || 'Unversioned';
   dock.innerHTML = `
     <button class="dev-dock__tab" type="button" aria-expanded="false" aria-controls="dev-dock-panel">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
@@ -26,6 +27,7 @@
       <p class="dev-dock__label">Page version</p>
       <nav class="dev-dock__versions" aria-label="Landing page version">${VERSIONS.map(([label, href]) =>
         `<a href="${href}"${href === home ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav>
+      <a class="dev-dock__release" href="versions.html#${encodeURIComponent(releaseId)}"><span>Release ID</span><b>${releaseId}</b></a>
       <p class="dev-dock__label">Feedback</p>
       ${hasUx ? '<button class="dev-dock__ux" type="button" data-ux-open>Submit UX Test <span data-ux-count>0</span></button>' : ''}
       <a class="dev-dock__app-feedback" href="current-status.html#app-feedback">Submit app feedback</a>

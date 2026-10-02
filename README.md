@@ -14,6 +14,8 @@ version-b.html      Version B landing page (product-first story, rebuilt 2026-09
 version-c.html      Version C landing page (product-led, live app tour)
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
 current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
+versions.html       release registry and visible IDs for every testable experience
+version-registry.json machine-readable release IDs and archive locations
 survey.html         optional personal finance survey
 css/styles.css      shared styles
 css/version-b.css   Version B's own sections (builds on css/version-c.css)
@@ -84,6 +86,10 @@ The app feedback form accepts multiple tickets at once. The browser sends a sing
 To activate it, follow [apps-script/AppFeedbackReceiverPatch.gs](apps-script/AppFeedbackReceiverPatch.gs): add the `app_feedback` `doPost` branch, then deploy a new version of the existing Apps Script web app. The static site is already wired to the existing endpoint. The pre-created **App Feedback** tab is in [Lightning-survey-responses](https://docs.google.com/spreadsheets/d/1rmV9GtffAJByilsxre0bQBMm-cza1uCXBwDbjuD_ffc/edit).
 
 The included `assets/samples/omar-*.csv` files are fictional test data. They have `Date`, `Description` and signed `Amount` columns so a tester can map them once and explore Import CSV, Review import, Overview, Budget and Cash Planning without entering their own data.
+
+## Version identity and archive
+
+Every testable web experience has one visible immutable release ID, in the form `UX-YYYY.MM.DD.NN`. Current IDs appear in the Testing panel and on [Version Archive](versions.html); feedback records that same ID. Before a live page changes, copy it to `archive/RELEASE-ID.html`, add its permanent link to `version-registry.json` and `versions.html`, then allocate a new ID to the changed page. Never reuse an ID or overwrite an archived snapshot.
 
 ## Status
 
