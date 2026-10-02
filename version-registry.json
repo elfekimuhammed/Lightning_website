@@ -8,7 +8,8 @@
     {"id":"UX-2026.09.30.03","name":"Experience C · Interactive flow","page":"version-c.html","status":"current","archive_url":null},
     {"id":"UX-2026.10.01.07","name":"How It Works · Monthly routine","page":"how-it-works.html","status":"current","archive_url":null},
     {"id":"UX-2026.10.02.01","name":"Current Status · Beta hub","page":"current-status.html","status":"archived","archive_url":"archive/UX-2026.10.02.01.html"},
-    {"id":"UX-2026.10.02.05","name":"Current Status · Beta hub","page":"current-status.html","status":"current","archive_url":null},
+    {"id":"UX-2026.10.02.05","name":"Current Status · Beta hub","page":"current-status.html","status":"archived","archive_url":"archive/UX-2026.10.02.05.html"},
+    {"id":"UX-2026.10.02.08","name":"Current Status · Beta hub","page":"current-status.html","status":"current","archive_url":null},
     {"id":"UX-2026.10.02.06","name":"App Feedback · Ticket form","page":"app-feedback.html","status":"current","archive_url":null}
   ]
 }
