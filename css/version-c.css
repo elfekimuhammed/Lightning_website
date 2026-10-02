@@ -414,10 +414,13 @@ button,input{font:inherit}
 }
 @media (max-width:640px){
   .wrap{width:min(100% - 32px,1120px)}
-  .c-nav .wrap{gap:6px;min-height:60px}
-  .c-nav .nav-home{display:none}
+  /* A phone cannot fit the logo, two page links, theme switch and CTA in one row.
+     Keep the essential controls visible; footer and Testing still expose navigation. */
+  .c-nav{overflow:hidden}
+  .c-nav .wrap{justify-content:space-between;gap:8px;min-height:60px}
+  .c-nav-links{display:none}
   .c-nav .nav-cta{min-height:36px;margin-left:0;padding:0 14px;font-size:13px}
-  .c-nav-links a{padding:8px 6px;font-size:13px;white-space:nowrap}
+  .c-nav [data-theme-toggle]{margin-left:auto}
   .logo{font-size:18px}
   .logo{font-size:19px}.logo img{width:22px;height:22px}
   .c-hero,.hw-hero{padding-top:56px}
