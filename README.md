@@ -31,12 +31,12 @@ css/theme.css       light/dark switch
 css/dev-dock.css    testing panel (page version + UX test)
 js/dev-dock.js      builds the testing panel on every version
 js/theme.js         picks and remembers the theme
-assets/app/omar/    app screenshots from the built-in sample household (python -m lightning --demo)
+assets/app/mohab/    app screenshots from the built-in sample household (python -m lightning --demo)
 css/ux-test.css     shared UX test feedback rail
 js/ux-test.js       shared UX test behavior
 js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
-assets/samples/     fictional Omar CSV files for safe beta imports
+assets/samples/     fictional Mohab CSV files for safe beta imports
 assets/brand/       the two-leaf logo and icons (see Logo below)
 brand-guidelines.html Lightning guideline 3.8: A · App and B · Website (same file as the app's docs/BRAND_GUIDELINE.html)
 ```
@@ -91,13 +91,13 @@ UX responses go to the survey sheet until the Apps Script receiver routes them. 
 
 ## Current Status and app feedback
 
-[Current Status](current-status.html) is the shared beta hub for all three landing experiences. It keeps beta orientation, harmless Omar sample CSVs, release notes/download links and app feedback in one predictable place. The header and the **Testing** panel both link to it. Home on this shared page returns to the landing version a visitor most recently viewed.
+[Current Status](current-status.html) is the shared beta hub for all three landing experiences. It keeps beta orientation, harmless Mohab sample CSVs, release notes/download links and app feedback in one predictable place. The header and the **Testing** panel both link to it. Home on this shared page returns to the landing version a visitor most recently viewed.
 
 The app feedback form accepts multiple tickets at once. The browser sends a single `form_type=app_feedback` request; the receiver expands it into **one row per ticket** in the **App Feedback** tab, capturing the internal landing release, selected app build, section, bug/improvement, visual/technical category, description, session and device.
 
 To activate it, follow [apps-script/AppFeedbackReceiverPatch.gs](apps-script/AppFeedbackReceiverPatch.gs): add the `app_feedback` `doPost` branch, then deploy a new version of the existing Apps Script web app. The static site is already wired to the existing endpoint. The pre-created **App Feedback** tab is in [Lightning-survey-responses](https://docs.google.com/spreadsheets/d/1rmV9GtffAJByilsxre0bQBMm-cza1uCXBwDbjuD_ffc/edit).
 
-The included `assets/samples/omar-2026-full-year.zip` is Omar’s full fictional 2026 sample pack: eight CSVs for accounts, CIB payroll, Vodafone Cash, cash wallet, gold, certificate, THNDR and prices. It lets a tester explore the complete import and analysis flow without entering their own data.
+The included `assets/samples/mohab-2026-full-year.zip` is Mohab’s full fictional 2026 sample pack: eight CSVs for accounts, CIB payroll, Vodafone Cash, cash wallet, gold, certificate, THNDR and prices. It lets a tester explore the complete import and analysis flow without entering their own data.
 
 ## Version identity and archive
 
@@ -129,7 +129,7 @@ All four versions, How It Works and the brand guidelines support light and dark 
 
 Version B tells one story, in this order: what Lightning is (with privacy in the hero), money spread across many places, why your balance isn't all yours to spend, your habits, the small-change calculator, how small changes become wealth, the product tour, trust, FAQ and early access.
 
-- Screens and numbers come from the app's own sample household (Omar, September 2026). If you recapture `assets/app/omar/`, update the figures quoted in `version-b.html`.
+- Screens and numbers come from the app's own sample household (Mohab, September 2026). If you recapture `assets/app/mohab/`, update the figures quoted in `version-b.html`.
 - Two FAQ answers are placeholders: pricing and the founder note. Fill them in before sharing the page widely.
 - There is no testimonial section. Add one once you have real quotes that describe a realization, not praise.
 - How It Works links back to whichever landing page (B or C) the visitor came from.
@@ -146,7 +146,7 @@ Version D is built from [guideline 3.8](brand-guidelines.html) Part B, after the
 
 - Order: hero (label, H1 with its punch line in the gradient, one line, Get early access, the screen trio), one picture (six places counted as one net worth), what's really free (safe to spend beside the Cash planning screen), what we believe (one habit and the page's one quote), try it (the calculator), the tour (every screen answers one question), private by design, good questions and the early-access band. Each section opens with a short label so the reader knows what kind of section comes next.
 - It loads only `css/version-d.css` (plus the shared theme, testing panel and UX rail). Tokens are copied from the guideline; change them there first. Hero and section headers are centred; copy inside cards is left aligned.
-- Every figure is on the screen beside it or adds up from Omar's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth). Recapture the screens and these figures together.
+- Every figure is on the screen beside it or adds up from Mohab's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth). Recapture the screens and these figures together.
 - No placeholders: the FAQ answers only what the app does today, and the founder answer points to Current Status.
 - How It Works and Current Status are shared and still use the older style; the audit lists what they need.
 
@@ -166,7 +166,7 @@ Version A is the hybrid: Version B's clear opening and practical proof, with Ver
 
 - Order: what Lightning is (privacy in the hero), money in six places, safe to spend, the idea behind Lightning (the budgeting story), the calculator, three truths about building wealth, the product tour, trust, FAQ and early access.
 - One quote only: James Clear's line on systems, placed where the story turns from budgets to habits.
-- It shares B's styles, screenshots and calculator (`css/version-b.css`, `js/version-b.js`, `assets/app/omar/`), and has the same pricing and founder placeholders in the FAQ.
+- It shares B's styles, screenshots and calculator (`css/version-b.css`, `js/version-b.js`, `assets/app/mohab/`), and has the same pricing and founder placeholders in the FAQ.
 
 ## App screenshots
 

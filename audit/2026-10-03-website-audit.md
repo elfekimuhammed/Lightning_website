@@ -72,7 +72,7 @@ Scope: the three landing pages and the two shared pages, checked against [guidel
 | B04 type | H1 78/46, H2 48/30, card H3 21, result 64/46, body 18/16 |
 | B05 layout | H2, one line, one visual; 72px apart (48 on phones); 22px cards; no sideways scroll from 320 to 1280px |
 | B06 blocks | Money tiles (azure KPI cards), lead result cards, breakdown lists with result bands, one quote, the signup band |
-| B07 screens | Flat browser frames; every number in the copy is on the screen beside it or adds up from Omar's Overview |
+| B07 screens | Flat browser frames; every number in the copy is on the screen beside it or adds up from Mohab's Overview |
 | B08 calculator | Starts at 2,000; result as a lead card with "An illustration, not a forecast." under it and Get early access beside it; the maths once, small |
 | B09 dark | Meadow Night tokens; screenshots stay light, dimmed to 90% |
 | B10, B11 | No placeholders; the FAQ describes only today's Windows beta |
@@ -91,7 +91,7 @@ The first D (UX-2026.10.03.01, archived) went from safe to spend straight into "
 - **A label above every section** says what kind of section is next: Personal finance, made for Egypt · One picture · What's really free · What we believe · Try it · Take the tour · Private by design · Good questions · Early access. "What we believe" is the turn from product to belief.
 - **The calculator picks up the habit's number**: "Breakfast at home kept 3,000 EGP a month. Pick a regular expense you wouldn't miss and see what it adds up to."
 - **No two "Questions" headings**: the tour is now "Every Screen Answers One Question"; the FAQ keeps "Questions, Answered".
-- **Plain words**: Omar is introduced ("Omar, our sample household") instead of ending a line on a colon; "your register" became "Lightning".
+- **Plain words**: Mohab is introduced ("Mohab, our sample household") instead of ending a line on a colon; "your register" became "Lightning".
 - **Centred hero over a centred trio**: the left-aligned hero sat lopsided over the symmetric screens.
 - Order kept: hook (one picture, what's really free), belief, try it (with the CTA beside the result), proof on real screens, trust, questions, signup.
 
