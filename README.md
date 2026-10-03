@@ -25,6 +25,7 @@ js/version-b.js     Version B calculator with an adjustable return rate
 css/version-c.css   Version C and How It Works visual system
 js/version-c.js     Version C calculator, signup, product tour and lightbox
 css/version-d.css   Version D: self-contained, guideline 3.8 tokens and building blocks only
+js/analytics.js     GoatCounter page views and one event per download
 js/version-d.js     Version D calculator, product tour, lightbox and signup
 audit/              website audits against the guideline
 css/theme.css       light/dark switch
@@ -98,6 +99,15 @@ The app feedback form accepts multiple tickets at once. The browser sends a sing
 To activate it, follow [apps-script/AppFeedbackReceiverPatch.gs](apps-script/AppFeedbackReceiverPatch.gs): add the `app_feedback` `doPost` branch, then deploy a new version of the existing Apps Script web app. The static site is already wired to the existing endpoint. The pre-created **App Feedback** tab is in [Lightning-survey-responses](https://docs.google.com/spreadsheets/d/1rmV9GtffAJByilsxre0bQBMm-cza1uCXBwDbjuD_ffc/edit).
 
 The included `assets/samples/mohab-2026-full-year.zip` is Mohab’s full fictional 2026 sample pack: eight CSVs for accounts, CIB payroll, Vodafone Cash, cash wallet, gold, certificate, THNDR and prices. It lets a tester explore the complete import and analysis flow without entering their own data.
+
+## Analytics (GoatCounter)
+
+`js/analytics.js` is loaded on every page (not the brand guideline). It sends page views to [GoatCounter](https://mohamedelfeki.goatcounter.com), which shows visits and unique visitors, and records one event per download:
+
+- `download-app-<version>-<platform>` for an app build, read from any link to the Lightning-downloads repository that ends in `.zip`, `.exe`, `.msi`, `.dmg` or `.AppImage` (for example `download-app-v0.5.0-beta.1-windows`). A new build is counted as soon as its link is on a page; nothing to tag.
+- `download-sample-<file>` for the sample pack.
+
+Read them on the GoatCounter dashboard; events are listed with the pages, filter by `download`. GoatCounter ignores localhost, so local previews are not counted. Add `<script src="js/analytics.js?v=20261003-1" defer></script>` before `</head>` on any new page.
 
 ## Version identity and archive
 
