@@ -90,20 +90,41 @@
       "id": "UX-2026.10.02.09",
       "name": "App Feedback · Ticket form",
       "page": "app-feedback.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.02.09.html"
     },
     {
       "id": "UX-2026.10.03.04",
       "name": "Current Status · Beta hub with release log link",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.03.04.html"
     },
     {
       "id": "UX-2026.10.03.05",
       "name": "Release Log · Build by build",
       "page": "release-log.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.03.05.html"
+    },
+    {
+      "id": "UX-2026.10.03.06",
+      "name": "Current Status · Permanent app download archive",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.03.07",
+      "name": "Release Log · Lightning 0.5.0 beta 1",
+      "page": "release-log.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.03.08",
+      "name": "App Feedback · 0.5.0 and 0.4.0 build selection",
+      "page": "app-feedback.html",
       "status": "current",
       "archive_url": null
     }

@@ -76,7 +76,9 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
-- `UX-2026.10.03.05` — `release-log.html`
+- `UX-2026.10.03.06` — `current-status.html` (separate permanent 0.5 and 0.4 downloads)
+- `UX-2026.10.03.07` — `release-log.html` (0.5.0 beta 1 available)
+- `UX-2026.10.03.08` — `app-feedback.html` (0.5 and 0.4 build selection)
 
 The rail discovers each top-level section automatically, so a future landing page only needs the shared CSS and JS includes plus `data-ux-version` and `data-ux-endpoint` on its `<body>`. Responses are posted in one batch and stored as one row per rated section in the `UX Tests` Sheet tab.
 
@@ -100,6 +102,8 @@ The included `assets/samples/omar-2026-full-year.zip` is Omar’s full fictional
 ## Version identity and archive
 
 Every testable web experience has one visible immutable release ID, in the form `UX-YYYY.MM.DD.NN`. Current IDs appear in the Testing panel and on [Version Archive](versions.html); feedback records that same ID. Before a live page changes, copy it to `archive/RELEASE-ID.html`, add its permanent link to `version-registry.json` and `versions.html`, then allocate a new ID to the changed page. Never reuse an ID or overwrite an archived snapshot.
+
+Windows app versions are separate from website experience IDs. The Current Status page and [Version Archive](versions.html) link to each app build independently. Keep at least the three newest app versions permanently, add a new row for every release, and never replace an older version's file or link. Published ZIPs and checksums live in the public [Lightning-downloads repository](https://github.com/elfekimuhammed/Lightning-downloads).
 
 ## Status
 
