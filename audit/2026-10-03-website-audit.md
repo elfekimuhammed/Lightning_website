@@ -2,6 +2,8 @@
 
 Scope: the three landing pages and the two shared pages, checked against [guideline 3.6](../brand-guidelines.html) Part B (B01 to B11) and the Part A rules the site borrows (colour, numbers, buttons, icons). Each page was rendered at 320, 390, 640, 760, 900, 1000, 1100 and 1280px, in light and dark.
 
+> **Update, later the same day: owner decisions (guideline 3.7).** After seeing Version D, the owner chose centred hero and section headers, a short label above each section, and the hero's punch line in the gradient. Guideline 3.7 now says so, which overrules items 1 to 3 below for headers, labels and the hero (gradient words in *section* headings are still out). The site's logo is now the two-leaf mark from A02 everywhere; the old ribbon mark stays only in archived pages.
+
 | Page | Release | Verdict |
 |---|---|---|
 | A · `index.html` | UX-2026.10.02.07 | Clear story, but a near copy of B; numbers in "six places" don't add up; placeholders and an out-of-date FAQ |
@@ -81,3 +83,20 @@ Scope: the three landing pages and the two shared pages, checked against [guidel
 2. Retire A or B: as near copies they split testers without testing a real difference.
 3. If A, B and C stay live, fix the 760px overflow and the phone navigation in `css/version-c.css`.
 4. Decide the pricing answer and whether the FAQ should name Linux, so every version can say the same thing.
+
+## Version D, audited for flow and readability (UX-2026.10.03.02)
+
+The first D (UX-2026.10.03.01, archived) went from safe to spend straight into "You Don't Suck at Budgeting": product, then philosophy, with no warning. What changed:
+
+- **A label above every section** says what kind of section is next: Personal finance, made for Egypt · One picture · What's really free · What we believe · Try it · Take the tour · Private by design · Good questions · Early access. "What we believe" is the turn from product to belief.
+- **The calculator picks up the habit's number**: "Breakfast at home kept 3,000 EGP a month. Pick a regular expense you wouldn't miss and see what it adds up to."
+- **No two "Questions" headings**: the tour is now "Every Screen Answers One Question"; the FAQ keeps "Questions, Answered".
+- **Plain words**: Omar is introduced ("Omar, our sample household") instead of ending a line on a colon; "your register" became "Lightning".
+- **Centred hero over a centred trio**: the left-aligned hero sat lopsided over the symmetric screens.
+- Order kept: hook (one picture, what's really free), belief, try it (with the CTA beside the result), proof on real screens, trust, questions, signup.
+
+Known, left as is: the six tiles add to 260,566 while "In your accounts" shows 260,565. The app shows the same: it sums in piastres and rounds each balance for display.
+
+## Archive note
+
+Archived pages before 2026-10-03 load `css/...` relative to `archive/`, so they open unstyled. Snapshots are never edited, so they were left alone; `archive/UX-2026.10.03.01.html` uses `<base href="../">` and a frozen copy of its stylesheet, which is the pattern to follow from now on.

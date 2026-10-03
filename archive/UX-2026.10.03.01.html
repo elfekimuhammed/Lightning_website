@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Lightning · All Your Money. One Clear Picture.</title>
 <meta name="description" content="Lightning counts your banks, cash, THNDR and gold in EGP, leaves out money you hold for others, and shows what is safe to spend. It runs on your computer, and your data stays with you.">
 <meta name="theme-color" content="#E3F6EC">
-<link rel="icon" href="assets/brand/lightning-app-icon.svg?v=20261003-1" type="image/svg+xml">
-<link rel="icon" href="assets/brand/lightning-icon-64.png?v=20261003-1" type="image/png" sizes="64x64">
-<link rel="apple-touch-icon" href="assets/brand/lightning-icon-180.png?v=20261003-1">
+<link rel="icon" href="assets/brand/favicon-64.png?v=20261002-1" type="image/png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png?v=20261002-1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-d.css?v=20261003-3">
+<link rel="stylesheet" href="archive/UX-2026.10.03.01.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -21,7 +21,7 @@
 <script src="js/dev-dock.js?v=20261003-1" defer></script>
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.10.03.02" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.03.01" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -38,7 +38,7 @@
 
 <div class="d-bar">
   <div class="wrap">
-    <a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>
+    <a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark-192.png?v=20261002-1" alt="">Lightning</a>
     <nav class="d-links" aria-label="Main">
       <a href="version-d.html" aria-current="page">Home</a>
       <a href="how-it-works.html">How It Works</a>
@@ -54,7 +54,6 @@
 <main class="wrap" id="top">
   <!-- Hero (B02): H1, one line, two buttons, the product trio -->
   <header class="d-hero">
-    <p class="label">Personal finance, made for Egypt</p>
     <h1>All Your Money. <span>One Clear Picture.</span></h1>
     <p class="d-hero-line">Banks, cash, THNDR and gold, counted in EGP. It runs on your computer, and your data stays with you.</p>
     <div class="d-actions">
@@ -80,9 +79,8 @@
   <!-- 1 · One picture: money tiles beside the result card -->
   <section class="d-section" id="picture">
     <div class="d-head">
-      <p class="label">One picture</p>
       <h2>Your Money Is in Six Places. Lightning Counts It as One.</h2>
-      <p>Each app sees its own corner. Lightning adds them up in EGP and leaves out what isn’t yours. Here is Omar, our sample household, on 2026-09-30.</p>
+      <p>Each app sees its own corner. Lightning adds them up in EGP and leaves out what isn’t yours. Omar’s sample household, on 2026-09-30:</p>
     </div>
     <div class="d-money">
       <div class="d-tiles">
@@ -110,7 +108,6 @@
   <!-- 2 · Safe to spend: result card left, the same numbers on the real screen right -->
   <section class="d-section" id="safe-to-spend">
     <div class="d-head">
-      <p class="label">What’s really free</p>
       <h2>Your Balance Isn’t All Yours to Spend.</h2>
       <p>Lightning takes off what is already promised before payday. What’s left is safe to spend.</p>
     </div>
@@ -134,13 +131,12 @@
   <!-- 3 · Habits: one breakdown and the page's one quote -->
   <section class="d-section" id="habits">
     <div class="d-head">
-      <p class="label">What we believe</p>
       <h2>You Don’t Suck at Budgeting. You Just Don’t Have a System.</h2>
       <p>The you who plans the budget and the you who buys breakfast at 9:40 are rarely the same person. Fix the morning, and the budget follows.</p>
     </div>
     <div class="d-habit">
       <div class="card card-support">
-        <div class="chead"><h3>One Habit, One Month</h3><p>What one search in Lightning shows</p></div>
+        <div class="chead"><h3>One Habit, One Month</h3><p>What one search in your register shows</p></div>
         <ol class="rows">
           <li class="row"><span>Latte and croissant<small>On the way to work, no breakfast</small></span><b>−150</b></li>
           <li class="row"><span>Mornings like that this month</span><b>20</b></li>
@@ -159,9 +155,8 @@
   <!-- 4 · Calculator (B08): entry card, result as a lead card, the CTA the only vivid thing near it -->
   <section class="d-section" id="calculator">
     <div class="d-head">
-      <p class="label">Try it</p>
       <h2>See What a Small Change Is Worth</h2>
-      <p>Breakfast at home kept 3,000 EGP a month. Pick a regular expense you wouldn’t miss and see what it adds up to.</p>
+      <p>2,000 EGP a month is 24,000 EGP a year. Pick one regular expense you wouldn’t miss.</p>
     </div>
     <div class="d-calc">
       <div class="card card-entry">
@@ -189,8 +184,7 @@
   <!-- 5 · Product tour: one question per tab, the number on the screen beside it -->
   <section class="d-section" id="tour">
     <div class="d-head">
-      <p class="label">Take the tour</p>
-      <h2>Every Screen Answers One Question</h2>
+      <h2>Five Questions, One Screen Each</h2>
       <p>Real screens from the app, with Omar’s sample household. Pick a question.</p>
     </div>
     <div class="d-tabs" role="tablist" aria-label="Product tour">
@@ -225,7 +219,6 @@
   <!-- 6 · Trust -->
   <section class="d-section" id="trust">
     <div class="d-head">
-      <p class="label">Private by design</p>
       <h2>Your Money. Your Data.</h2>
       <p>No bank logins and no cloud account. Your numbers stay on your computer.</p>
     </div>
@@ -240,7 +233,6 @@
   <!-- 7 · Questions -->
   <section class="d-section" id="faq">
     <div class="d-head">
-      <p class="label">Good questions</p>
       <h2>Questions, Answered</h2>
       <p>What Lightning does today, and what it doesn’t yet.</p>
     </div>
@@ -257,7 +249,6 @@
   <!-- Signup band (B06): ends every page -->
   <section class="card card-lead d-band" id="join">
     <div>
-      <p class="label">Early access</p>
       <h2>See Your Money Clearly. Then Decide What Happens Next.</h2>
       <p>Leave your email and we’ll tell you when Lightning is ready for your own numbers.</p>
     </div>
@@ -271,7 +262,7 @@
 
 <div class="wrap">
   <footer class="d-foot">
-    <div class="d-foot-brand"><a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a><span>Study your patterns. Control your future.</span><span>Made in Egypt</span></div>
+    <div class="d-foot-brand"><a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark-192.png?v=20261002-1" alt="">Lightning</a><span>Study your patterns. Control your future.</span><span>Made in Egypt</span></div>
     <nav aria-label="Footer"><a href="how-it-works.html">How It Works</a><a href="current-status.html">Current Status</a><a href="survey.html">Survey</a></nav>
   </footer>
 </div>

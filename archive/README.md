@@ -7,3 +7,8 @@ page a new `UX-YYYY.MM.DD.NN` identifier.
 
 Archive IDs must never be reused. Keep the archived page’s own `data-ux-version`
 unchanged so UX and app-feedback rows remain comparable.
+
+Put `<base href="../">` right after `<meta charset>` in a new snapshot so its
+`css/`, `js/` and `assets/` paths resolve from the site root. If the page's own
+stylesheet will keep changing, save a copy beside the snapshot as
+`RELEASE-ID.css` and link that instead (see `UX-2026.10.03.01`).

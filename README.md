@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.6) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.7) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -12,7 +12,7 @@ Built in the **Meadow** identity: meadow green for growth, azure for clarity, an
 index.html          Version A landing page (hybrid of B's clarity and C's philosophy)
 version-b.html      Version B landing page (product-first story, rebuilt 2026-09-30)
 version-c.html      Version C landing page (product-led, live app tour)
-version-d.html      Version D landing page (built only from guideline 3.6 Part B)
+version-d.html      Version D landing page (built from guideline 3.7 Part B)
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
 current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
 versions.html       release registry and visible IDs for every testable experience
@@ -23,7 +23,7 @@ css/version-b.css   Version B's own sections (builds on css/version-c.css)
 js/version-b.js     Version B calculator with an adjustable return rate
 css/version-c.css   Version C and How It Works visual system
 js/version-c.js     Version C calculator, signup, product tour and lightbox
-css/version-d.css   Version D: self-contained, guideline 3.6 tokens and building blocks only
+css/version-d.css   Version D: self-contained, guideline 3.7 tokens and building blocks only
 js/version-d.js     Version D calculator, product tour, lightbox and signup
 audit/              website audits against the guideline
 css/theme.css       light/dark switch
@@ -36,8 +36,9 @@ js/ux-test.js       shared UX test behavior
 js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
 assets/samples/     fictional Omar CSV files for safe beta imports
-assets/favicon.svg  bolt icon
-brand-guidelines.html Lightning guideline 3.6: A · App and B · Website (same file as the app's docs/BRAND_GUIDELINE.html)
+assets/brand/       the two-leaf logo (see Logo below); older PNGs stay for archived pages
+assets/favicon.svg  old bolt icon, kept for archived pages
+brand-guidelines.html Lightning guideline 3.7: A · App and B · Website (same file as the app's docs/BRAND_GUIDELINE.html)
 ```
 
 It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
@@ -133,13 +134,23 @@ Version B tells one story, in this order: what Lightning is (with privacy in the
 
 ## Version D
 
-Version D is built only from [guideline 3.6](brand-guidelines.html) Part B, after the [2026-10-03 audit](audit/2026-10-03-guideline-3.6.md) of A, B, C, How It Works and Current Status.
+Version D is built from [guideline 3.7](brand-guidelines.html) Part B, after the [2026-10-03 audit](audit/2026-10-03-website-audit.md) of A, B, C, How It Works and Current Status.
 
-- Order: hero (H1, one line, Get early access, the screen trio), six places counted as one net worth, safe to spend beside the Cash planning screen, one habit and the page's one quote, the calculator, five questions with one screen each, trust, FAQ and the signup band.
-- It loads only `css/version-d.css` (plus the shared theme, testing panel and UX rail), so none of the older eyebrows, gradient words or vivid cards leak in. Tokens are copied from the guideline; change them there first.
+- Order: hero (label, H1 with its punch line in the gradient, one line, Get early access, the screen trio), one picture (six places counted as one net worth), what's really free (safe to spend beside the Cash planning screen), what we believe (one habit and the page's one quote), try it (the calculator), the tour (every screen answers one question), private by design, good questions and the early-access band. Each section opens with a short label so the reader knows what kind of section comes next.
+- It loads only `css/version-d.css` (plus the shared theme, testing panel and UX rail). Tokens are copied from the guideline; change them there first. Hero and section headers are centred; copy inside cards is left aligned.
 - Every figure is on the screen beside it or adds up from Omar's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth). Recapture the screens and these figures together.
 - No placeholders: the FAQ answers only what the app does today, and the founder answer points to Current Status.
 - How It Works and Current Status are shared and still use the older style; the audit lists what they need.
+
+## Logo
+
+The logo is the two-leaf mark from the guideline (A02): azure is money you hold, green is money that grows. Files are in `assets/brand/`, copied from the guideline:
+
+- `lightning-mark.svg`: the colour mark, used in every header and footer, light and dark.
+- `lightning-app-icon.svg`: the mark on a Nile tile, used as the favicon; `lightning-icon-64.png` and `lightning-icon-180.png` (home screen) are rendered from it.
+- `lightning-mark-flat.svg`, `lightning-mark-on-dark.svg`, `lightning-mark-nile.svg`, `lightning-mark-white.svg`, `lightning-lockup.svg` and `lightning-lockup-white.svg` for other uses.
+- `lightning-logo-gradient.png`, `lightning-logo-gradient-wordmark.png`, `lightning-mark.png`, `icon-512.png` and `linkedin-banner.png` are re-rendered from the SVGs.
+- `lightning-mark-192.png`, `favicon-64.png` and `apple-touch-icon.png` are the old ribbon mark, kept only because archived pages use them.
 
 ## Version A
 
