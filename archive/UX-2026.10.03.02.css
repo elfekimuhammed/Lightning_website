@@ -1,4 +1,4 @@
-/* Lightning Version D · built from Lightning guideline 3.8, Part B (brand-guidelines.html).
+/* Lightning Version D · built only from Lightning guideline 3.6, Part B (brand-guidelines.html).
    Self-contained: it does not load styles.css, version-b.css or version-c.css.
    Tokens are the guideline's own (A03, B03, B09). Building blocks are the guideline's six (B06):
    money tiles, result (lead) card, breakdown, steps, quote and the signup band. */
@@ -10,9 +10,8 @@
   --t-green:#EAF8F0;--t-azure:#EAF3FD;--t-rose:#FCEEF3;
   --canvas:linear-gradient(160deg,#E3F6EC 0%,#E6F4F1 50%,#E1EEFB 100%);
   --lead:linear-gradient(135deg,#E0F5E9,#DCF1F0 52%,#D7ECF7);
-  /* 3.8: two stops, green to blue, no teal middle */
-  --vivid:linear-gradient(135deg,#00995C 0%,#0066FF 100%);
-  --punch:linear-gradient(90deg,#00995C 0%,#0066FF 100%);
+  --vivid:linear-gradient(135deg,#14A874 0%,#0E8FA8 50%,#0B6DD6 100%);
+  --punch:linear-gradient(90deg,#14A874 0%,#0E8FA8 50%,#0B6DD6 100%);
   --paper:#F8FCFA;--white:#FFFFFF;--panel:rgba(255,255,255,.85);
   --line:#DDE9E6;--line-ctl:#7E96A0;--track:#E6EFEC;--field:#EEF6F3;--field-focus:#E6F2EC;
   --bar-bg:rgba(232,247,241,.9);
@@ -38,7 +37,7 @@
   --shadow:0 14px 34px -24px rgba(0,0,0,.7);
   --shadow-screen:0 30px 60px -34px rgba(0,0,0,.85);
   --mint-soft:rgba(63,203,147,.12);--azure-d:#8CC4FF;
-  --punch:linear-gradient(90deg,#3FE0A3 0%,#5AA9FF 100%);
+  --punch:linear-gradient(90deg,#3FCB93 0%,#2BC2C4 50%,#5AA9FF 100%);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -88,8 +87,8 @@ button,input{font:inherit}
 /* ---------- page hero (B02): H1 46–78, one line, up to two buttons, one product visual ---------- */
 .d-hero{padding:72px 0 0;text-align:center}
 .d-hero h1{font-size:clamp(46px,7vw,78px);line-height:1.02;letter-spacing:-.04em}
-/* the hero's one gradient phrase: the punch line (B02). The box hugs the words, so the gradient runs green to blue across them */
-.d-hero h1 span{display:block;width:fit-content;margin-inline:auto;padding-bottom:.06em;background:var(--punch);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* the hero's one gradient phrase: the punch line (guideline 3.7, B02) */
+.d-hero h1 span{display:block;padding-bottom:.06em;background:var(--punch);-webkit-background-clip:text;background-clip:text;color:transparent}
 .d-hero-line{max-width:34em;margin:20px auto 0;color:var(--ink2);font-size:20px;line-height:1.55}
 .d-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
 
@@ -158,7 +157,6 @@ button,input{font:inherit}
 .kpi .fig{margin-top:auto;font:800 24px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
 .kpi .fig .unit{font-size:12px}
 .kpi .foot{color:var(--ink2);font-size:13px;line-height:1.4}
-.d-tiles-cap{grid-column:1/-1;color:var(--muted);font-size:13px;font-weight:600;text-align:center}
 
 /* ---------- balance and screen side by side: lead left, support right ---------- */
 .d-pair{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:16px;align-items:center}
