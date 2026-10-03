@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Lightning · All Your Money. One Clear Picture.</title>
+<meta name="description" content="Lightning counts your banks, cash, THNDR and gold in EGP, leaves out money you hold for others, and shows what is safe to spend. It runs on your computer, and your data stays with you.">
+<meta name="theme-color" content="#E3F6EC">
+<link rel="icon" href="assets/brand/favicon-64.png?v=20261002-1" type="image/png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png?v=20261002-1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/version-d.css?v=20261003-1">
+<link rel="stylesheet" href="css/theme.css?v=20260930-1">
+<script src="js/theme.js?v=20260930-1"></script>
+<link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
+<link rel="stylesheet" href="css/dev-dock.css?v=20261003-1">
+<script src="js/dev-dock.js?v=20261003-1" defer></script>
+<script src="js/ux-test.js?v=20260928-1" defer></script>
+</head>
+<body data-ux-version="UX-2026.10.03.01" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
+  <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7l-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4M16.71 13.88l.7.71-2.82 2.82"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4M3 7l2 2 4-4M13 6h8M13 12h8M13 18h8"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 3v18M3 9h18M3 15h18"/></symbol>
+</svg>
+
+<div class="d-bar">
+  <div class="wrap">
+    <a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark-192.png?v=20261002-1" alt="">Lightning</a>
+    <nav class="d-links" aria-label="Main">
+      <a href="version-d.html" aria-current="page">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="current-status.html">Current Status</a>
+    </nav>
+    <div class="d-bar-end">
+      <button data-theme-toggle aria-label="Dark mode"></button>
+      <a class="btn btn-secondary btn-sm" href="survey.html"><span class="cta-long">Take the survey</span><span class="cta-short">Survey</span></a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="top">
+  <!-- Hero (B02): H1, one line, two buttons, the product trio -->
+  <header class="d-hero">
+    <h1>All Your Money. <span>One Clear Picture.</span></h1>
+    <p class="d-hero-line">Banks, cash, THNDR and gold, counted in EGP. It runs on your computer, and your data stays with you.</p>
+    <div class="d-actions">
+      <a class="btn btn-vivid" href="#join">Get early access</a>
+      <a class="btn btn-secondary" href="how-it-works.html">See how it works</a>
+    </div>
+    <div class="d-trio" aria-label="Three screens from Lightning, with sample data">
+      <figure>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-overview.webp" data-caption="Overview: where you stand, and how it changed this month."><img src="assets/app/omar/a-overview.webp" width="1800" height="1125" alt="Lightning Overview with sample data: net worth up 29,116 EGP this month, a 50.1% savings rate, a 39.4% investing rate and net worth of 198,065 EGP." fetchpriority="high"></button></div>
+        <figcaption class="d-cap"><b>Overview</b> · Where you stand</figcaption>
+      </figure>
+      <figure>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-investments.webp" data-caption="Investments: what your invested money is doing."><img src="assets/app/omar/a-investments.webp" width="1800" height="1125" alt="Lightning Investments: saved and invested this month, a net gain of 5,673 EGP, a portfolio of 78,303 EGP and its allocation across gold, shares and a money market fund." loading="lazy"></button></div>
+        <figcaption class="d-cap"><b>Investments</b> · What it is doing</figcaption>
+      </figure>
+      <figure>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-expenses.webp" data-caption="Expense analysis: where your money went, and what changed."><img src="assets/app/omar/a-expenses.webp" width="1800" height="1125" alt="Lightning Expense analysis: 23,390 EGP out this month and a treemap of the biggest categories, led by Housing &amp; Rent." loading="lazy"></button></div>
+        <figcaption class="d-cap"><b>Expense analysis</b> · Where it went</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <!-- 1 · One picture: money tiles beside the result card -->
+  <section class="d-section" id="picture">
+    <div class="d-head">
+      <h2>Your Money Is in Six Places. Lightning Counts It as One.</h2>
+      <p>Each app sees its own corner. Lightning adds them up in EGP and leaves out what isn’t yours. Omar’s sample household, on 2026-09-30:</p>
+    </div>
+    <div class="d-money">
+      <div class="d-tiles">
+        <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span><span class="lbl">CIB Payroll</span></div><span class="fig">68,893<span class="unit">EGP</span></span><span class="foot">Bank account</span></div>
+        <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg></span><span class="lbl">Cash wallet</span></div><span class="fig">10,220<span class="unit">EGP</span></span><span class="foot">Cash on hand</span></div>
+        <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="lbl">Vodafone Cash</span></div><span class="fig">3,150<span class="unit">EGP</span></span><span class="foot">Mobile wallet</span></div>
+        <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span><span class="lbl">NBE certificate</span></div><span class="fig">100,000<span class="unit">EGP</span></span><span class="foot">Three-year deposit</span></div>
+        <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg></span><span class="lbl">THNDR</span></div><span class="fig">21,108<span class="unit">EGP</span></span><span class="foot">Shares and a fund</span></div>
+        <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span><span class="lbl">Gold at home</span></div><span class="fig">57,195<span class="unit">EGP</span></span><span class="foot">Valued per gram</span></div>
+      </div>
+      <div class="card card-lead" aria-label="What Lightning shows">
+        <div class="chead"><h3>Net Worth</h3><p>What you own, less what you owe</p></div>
+        <span class="lead-fig">198,065<span class="unit">EGP</span></span>
+        <ol class="rows">
+          <li class="row"><span>In your accounts</span><b>260,565</b></li>
+          <li class="row"><span>Held for family<small>In your bank, but not yours</small></span><b>−10,000</b></li>
+          <li class="row result"><span>What you own</span><b>250,565</b></li>
+          <li class="row"><span>Left on the car loan</span><b>−52,500</b></li>
+          <li class="row result"><span>Net worth</span><b>198,065</b></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Safe to spend: result card left, the same numbers on the real screen right -->
+  <section class="d-section" id="safe-to-spend">
+    <div class="d-head">
+      <h2>Your Balance Isn’t All Yours to Spend.</h2>
+      <p>Lightning takes off what is already promised before payday. What’s left is safe to spend.</p>
+    </div>
+    <div class="d-pair">
+      <div class="card card-lead">
+        <div class="chead"><h3>Safe to Spend</h3><p>Until the next salary, 2026-10-01</p></div>
+        <span class="lead-fig">71,354<span class="unit">EGP</span></span>
+        <ol class="rows">
+          <li class="row"><span>Free cash<small>Your cash, less money held for family</small></span><b>72,663</b></li>
+          <li class="row"><span>Budget left to spend</span><b>−1,309</b></li>
+          <li class="row result"><span>Safe to spend</span><b>71,354</b></li>
+        </ol>
+      </div>
+      <figure>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/a-plan.webp" data-caption="Cash planning: safe to spend, worked out from free cash, with the next 30 days of payments."><img src="assets/app/omar/a-plan.webp" width="1800" height="1125" loading="lazy" alt="Lightning Cash planning: 71,354 EGP safe to spend until 2026-10-01, free cash of 72,663 EGP, budget left to spend of 1,309 EGP, and the next 30 days of payments."></button></div>
+        <figcaption class="d-cap">The same numbers on the Cash planning screen.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3 · Habits: one breakdown and the page's one quote -->
+  <section class="d-section" id="habits">
+    <div class="d-head">
+      <h2>You Don’t Suck at Budgeting. You Just Don’t Have a System.</h2>
+      <p>The you who plans the budget and the you who buys breakfast at 9:40 are rarely the same person. Fix the morning, and the budget follows.</p>
+    </div>
+    <div class="d-habit">
+      <div class="card card-support">
+        <div class="chead"><h3>One Habit, One Month</h3><p>What one search in your register shows</p></div>
+        <ol class="rows">
+          <li class="row"><span>Latte and croissant<small>On the way to work, no breakfast</small></span><b>−150</b></li>
+          <li class="row"><span>Mornings like that this month</span><b>20</b></li>
+          <li class="row total"><span>The café this month</span><b>−3,000</b></li>
+          <li class="row result"><span>Kept with breakfast at home</span><b>+3,000</b></li>
+        </ol>
+      </div>
+      <figure class="card card-support d-quote">
+        <blockquote>“You do not rise to the level of your goals. You fall to the level of your systems.”</blockquote>
+        <figcaption>James Clear, Atomic Habits</figcaption>
+        <p>Lightning shows where spending repeats. You decide what caused it and what to change, so you spend less without living worse.</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4 · Calculator (B08): entry card, result as a lead card, the CTA the only vivid thing near it -->
+  <section class="d-section" id="calculator">
+    <div class="d-head">
+      <h2>See What a Small Change Is Worth</h2>
+      <p>2,000 EGP a month is 24,000 EGP a year. Pick one regular expense you wouldn’t miss.</p>
+    </div>
+    <div class="d-calc">
+      <div class="card card-entry">
+        <label class="field-label" for="d-amount">Spend less each month</label>
+        <div class="amount"><span>EGP</span><input id="d-amount" inputmode="numeric" autocomplete="off" value="2,000" aria-describedby="d-amount-hint"></div>
+        <p class="field-hint" id="d-amount-hint">A few deliveries, a forgotten subscription, the morning café.</p>
+        <div class="choice" role="group" aria-label="Quick monthly amounts"><button type="button" data-d-amount="500">500</button><button type="button" data-d-amount="1000">1,000</button><button type="button" data-d-amount="2000" aria-pressed="true">2,000</button><button type="button" data-d-amount="5000">5,000</button></div>
+        <span class="field-label" id="d-rate-label">Yearly return to compare with</span>
+        <div class="choice" role="group" aria-labelledby="d-rate-label"><button type="button" data-d-rate="10">10%</button><button type="button" data-d-rate="15">15%</button><button type="button" data-d-rate="20" aria-pressed="true">20%</button><button type="button" data-d-rate="25">25%</button></div>
+      </div>
+      <div class="card card-lead" aria-live="polite">
+        <div class="chead"><h3>The Same as Having Saved</h3><p><span data-d-out="monthly">2,000</span> EGP less a month, at <span data-d-out="rate">20%</span> a year</p></div>
+        <span class="lead-fig"><span data-d-out="capital">120,000</span><span class="unit">EGP</span></span>
+        <p class="lead-sub">An illustration, not a forecast.</p>
+        <ol class="rows">
+          <li class="row"><span>Kept each year</span><b><span data-d-out="year">24,000</span> EGP</b></li>
+          <li class="row"><span>Saved every month for 10 years</span><b><span data-d-out="ten">752,191</span> EGP</b></li>
+        </ol>
+        <a class="btn btn-vivid" href="#join">Get early access</a>
+      </div>
+    </div>
+    <p class="d-note">How it is worked out: savings = the monthly amount × 12 ÷ the yearly return, because savings earning that return pay you the same each month. Ten years = the same amount saved every month at that return, compounded monthly. Real returns, inflation, taxes and fees vary.</p>
+  </section>
+
+  <!-- 5 · Product tour: one question per tab, the number on the screen beside it -->
+  <section class="d-section" id="tour">
+    <div class="d-head">
+      <h2>Five Questions, One Screen Each</h2>
+      <p>Real screens from the app, with Omar’s sample household. Pick a question.</p>
+    </div>
+    <div class="d-tabs" role="tablist" aria-label="Product tour">
+      <button type="button" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true">Overview</button>
+      <button type="button" role="tab" id="tab-expenses" aria-controls="panel-expenses" aria-selected="false" tabindex="-1">Expense analysis</button>
+      <button type="button" role="tab" id="tab-budget" aria-controls="panel-budget" aria-selected="false" tabindex="-1">Budget</button>
+      <button type="button" role="tab" id="tab-investments" aria-controls="panel-investments" aria-selected="false" tabindex="-1">Investments</button>
+      <button type="button" role="tab" id="tab-cash" aria-controls="panel-cash" aria-selected="false" tabindex="-1">Cash planning</button>
+    </div>
+    <div class="d-panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview">
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/overview.webp" data-caption="Overview: where you stand."><img src="assets/app/omar/overview.webp" width="2000" height="1250" loading="lazy" alt="Overview: net worth 198,065 EGP, up 29,116 EGP in 2026-09, with a 50.1% savings rate and what you own broken down."></button></div>
+      <div><h3>Where Do I Stand?</h3><span class="fig">198,065<span class="unit">EGP</span></span><p>Net worth, up 29,116 EGP in 2026-09. Money you hold for others is left out.</p><ul><li>Savings rate 50.1%: 23,444 kept of 46,833 money in</li><li>What you own, less the 52,500 you owe</li></ul></div>
+    </div>
+    <div class="d-panel" role="tabpanel" id="panel-expenses" aria-labelledby="tab-expenses" hidden>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/expenses.webp" data-caption="Expense analysis: where it went."><img src="assets/app/omar/expenses.webp" width="2000" height="1250" loading="lazy" alt="Expense analysis: 23,390 EGP out in 2026-09, a treemap led by Housing &amp; Rent at 51%, and how each category moved."></button></div>
+      <div><h3>Where Did It Go?</h3><span class="fig">23,390<span class="unit">EGP</span></span><p>Money out in 2026-09, 1,364 less than 2026-08.</p><ul><li>Housing &amp; Rent is 51% of money out</li><li>Each big category against the two months before</li></ul></div>
+    </div>
+    <div class="d-panel" role="tabpanel" id="panel-budget" aria-labelledby="tab-budget" hidden>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/budget.webp" data-caption="Budget: planned, spent and what is left."><img src="assets/app/omar/budget.webp" width="2000" height="1250" loading="lazy" alt="Budget: 23,390 EGP spent of 24,698 EGP planned, 1,309 EGP left in plan, and two categories over plan shown first."></button></div>
+      <div><h3>Did I Stick to My Plan?</h3><span class="fig">1,309<span class="unit">EGP</span></span><p>Left in plan: 23,390 spent of 24,698 planned.</p><ul><li>Two categories over plan, shown first</li><li>Of every 100 that came in, 50 stayed</li></ul></div>
+    </div>
+    <div class="d-panel" role="tabpanel" id="panel-investments" aria-labelledby="tab-investments" hidden>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/investments.webp" data-caption="Investments: what your invested money is doing."><img src="assets/app/omar/investments.webp" width="2000" height="1250" loading="lazy" alt="Investments: a net gain of 5,673 EGP in 2026-09, a portfolio value of 78,303 EGP, and its allocation across gold, stocks and a money market fund."></button></div>
+      <div><h3>Is My Money Working?</h3><span class="fig">+5,673<span class="unit">EGP</span></span><p>Net gain in 2026-09, on a portfolio worth 78,303 EGP.</p><ul><li>18,450 invested of 46,833 money in</li><li>Gold, shares and a fund in one allocation</li></ul></div>
+    </div>
+    <div class="d-panel" role="tabpanel" id="panel-cash" aria-labelledby="tab-cash" hidden>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/omar/recurring.webp" data-caption="Cash planning: bills and subscriptions that repeat."><img src="assets/app/omar/recurring.webp" width="2000" height="1250" loading="lazy" alt="Cash planning, Recurring: bills and subscriptions of 13,480 EGP a month, 30% of income, led by the landlord at 12,000 EGP."></button></div>
+      <div><h3>What Comes Out Every Month?</h3><span class="fig">13,480<span class="unit">EGP</span></span><p>Bills and subscriptions a month: 30% of income.</p><ul><li>The landlord, at 12,000, is the largest</li><li>Subscriptions come to 4,200 a year</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 6 · Trust -->
+  <section class="d-section" id="trust">
+    <div class="d-head">
+      <h2>Your Money. Your Data.</h2>
+      <p>No bank logins and no cloud account. Your numbers stay on your computer.</p>
+    </div>
+    <div class="d-trust">
+      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-house"/></svg></span><h3>It Stays with You</h3><p>Lightning runs on your computer, not on someone else’s server.</p></article>
+      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><h3>Locked with Your Password</h3><p>Each profile is encrypted and opens only with your password.</p></article>
+      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-checks"/></svg></span><h3>You Confirm Every Import</h3><p>Statement rows wait for your review. Nothing is saved until you say so.</p></article>
+      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-table"/></svg></span><h3>No Mystery Numbers</h3><p>Every key number shows what it is made of, and estimates say so.</p></article>
+    </div>
+  </section>
+
+  <!-- 7 · Questions -->
+  <section class="d-section" id="faq">
+    <div class="d-head">
+      <h2>Questions, Answered</h2>
+      <p>What Lightning does today, and what it doesn’t yet.</p>
+    </div>
+    <div class="d-faq">
+      <details><summary>Can I try it today?</summary><p>Yes, with sample data. <a href="current-status.html">Current Status</a> has the Windows beta and Omar’s sample files. Please don’t import a real bank statement yet.</p></details>
+      <details><summary>Which computers does it run on?</summary><p>Windows. The beta is a ZIP: unzip it and open Lightning. Other systems come later.</p></details>
+      <details><summary>Is there a phone app?</summary><p>Not yet. Add spending as you go on your computer, or import your bank’s CSV at the end of the month.</p></details>
+      <details><summary>Does it connect to my bank?</summary><p>No. Lightning never asks for bank logins. Download a CSV from any bank or wallet, match its columns once, and review every row before it’s saved.</p></details>
+      <details><summary>What goes online?</summary><p>Your data stays in an encrypted profile on your computer. The only thing Lightning looks up online is the latest price of listed shares, by ticker symbol.</p></details>
+      <details><summary>Who is building Lightning?</summary><p>Someone from finance in Egypt who has logged every pound since graduating. Excel took too long and budgeting apps missed the full picture, so Lightning does both. The full story is on <a href="current-status.html">Current Status</a>.</p></details>
+    </div>
+  </section>
+
+  <!-- Signup band (B06): ends every page -->
+  <section class="card card-lead d-band" id="join">
+    <div>
+      <h2>See Your Money Clearly. Then Decide What Happens Next.</h2>
+      <p>Leave your email and we’ll tell you when Lightning is ready for your own numbers.</p>
+    </div>
+    <div class="d-signup">
+      <form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="Email"><button class="btn btn-vivid" type="submit">Get early access</button></form>
+      <p class="d-status" id="signup-status" role="status"></p>
+      <p class="d-survey">Have five minutes? <a href="survey.html">Take the survey</a> and tell us what you need.</p>
+    </div>
+  </section>
+</main>
+
+<div class="wrap">
+  <footer class="d-foot">
+    <div class="d-foot-brand"><a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark-192.png?v=20261002-1" alt="">Lightning</a><span>Study your patterns. Control your future.</span><span>Made in Egypt</span></div>
+    <nav aria-label="Footer"><a href="how-it-works.html">How It Works</a><a href="current-status.html">Current Status</a><a href="survey.html">Survey</a></nav>
+  </footer>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged screenshot"><button type="button" aria-label="Close" data-close>×</button><img alt=""><p></p></dialog>
+<script src="js/version-d.js?v=20261003-1"></script>
+</body>
+</html>

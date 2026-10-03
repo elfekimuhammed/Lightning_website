@@ -12,6 +12,7 @@ Built in the **Meadow** identity: meadow green for growth, azure for clarity, an
 index.html          Version A landing page (hybrid of B's clarity and C's philosophy)
 version-b.html      Version B landing page (product-first story, rebuilt 2026-09-30)
 version-c.html      Version C landing page (product-led, live app tour)
+version-d.html      Version D landing page (built only from guideline 3.6 Part B)
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
 current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
 versions.html       release registry and visible IDs for every testable experience
@@ -22,6 +23,9 @@ css/version-b.css   Version B's own sections (builds on css/version-c.css)
 js/version-b.js     Version B calculator with an adjustable return rate
 css/version-c.css   Version C and How It Works visual system
 js/version-c.js     Version C calculator, signup, product tour and lightbox
+css/version-d.css   Version D: self-contained, guideline 3.6 tokens and building blocks only
+js/version-d.js     Version D calculator, product tour, lightbox and signup
+audit/              website audits against the guideline
 css/theme.css       light/dark switch
 css/dev-dock.css    testing panel (page version + UX test)
 js/dev-dock.js      builds the testing panel on every version
@@ -65,6 +69,7 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.09.28.02` — `version-b.html` (before the rebuild)
 - `UX-2026.09.30.05` — `version-b.html` (rebuilt)
 - `UX-2026.09.30.03` — `version-c.html`
+- `UX-2026.10.03.01` — `version-d.html`
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 
@@ -105,7 +110,7 @@ Version C tells the story in this order: hero, game, three truths, the budgeting
 
 ## Dark mode
 
-All three versions, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in section B09 Dark mode of `brand-guidelines.html`.
+All four versions, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in section B09 Dark mode of `brand-guidelines.html`.
 
 - The page follows the device setting until the visitor uses the switch; the choice is then remembered in `localStorage` (`lightning-theme`).
 - To add dark mode to another page: include `css/theme.css` and `js/theme.js` (in `<head>`, not deferred), add `<button data-theme-toggle></button>` to the top bar, and define the page's dark colors under `:root[data-theme="dark"]`.
@@ -123,8 +128,18 @@ Version B tells one story, in this order: what Lightning is (with privacy in the
 ## Header and testing panel
 
 - Every version uses the same header: the logo, **Home · How It Works · Current Status**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
-- The page-version switch (A · B · C), **Submit UX Test**, and **Submit app feedback** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
+- The page-version switch (A · B · C · D), **Submit UX Test**, and **Submit app feedback** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
 - How It Works and Current Status remember which version the visitor came from, so **Home** and the testing panel point back to it.
+
+## Version D
+
+Version D is built only from [guideline 3.6](brand-guidelines.html) Part B, after the [2026-10-03 audit](audit/2026-10-03-guideline-3.6.md) of A, B, C, How It Works and Current Status.
+
+- Order: hero (H1, one line, Get early access, the screen trio), six places counted as one net worth, safe to spend beside the Cash planning screen, one habit and the page's one quote, the calculator, five questions with one screen each, trust, FAQ and the signup band.
+- It loads only `css/version-d.css` (plus the shared theme, testing panel and UX rail), so none of the older eyebrows, gradient words or vivid cards leak in. Tokens are copied from the guideline; change them there first.
+- Every figure is on the screen beside it or adds up from Omar's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth). Recapture the screens and these figures together.
+- No placeholders: the FAQ answers only what the app does today, and the founder answer points to Current Status.
+- How It Works and Current Status are shared and still use the older style; the audit lists what they need.
 
 ## Version A
 

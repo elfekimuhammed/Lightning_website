@@ -16,7 +16,7 @@
 .dev-dock__close{display:grid;place-items:center;width:28px;height:28px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--dd-muted);font-family:inherit;font-weight:600;font-size:20px;line-height:1;cursor:pointer}
 .dev-dock__close:hover{background:var(--dd-chip);color:var(--dd-text)}
 .dev-dock__label{margin:14px 0 8px;color:var(--dd-muted);font-family:inherit;font-weight:800;font-size:10.5px;line-height:1.2;letter-spacing:.08em;text-transform:uppercase}
-.dev-dock__versions{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;border-radius:12px;background:var(--dd-chip)}
+.dev-dock__versions{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px;border-radius:12px;background:var(--dd-chip)}
 .dev-dock__versions a{display:grid;place-items:center;height:34px;border-radius:9px;color:var(--dd-muted);font-family:inherit;font-weight:800;font-size:13px;line-height:1;text-decoration:none}
 .dev-dock__versions a:hover{color:var(--dd-text)}
 .dev-dock__versions a[aria-current="page"]{background:var(--dd-active);color:var(--dd-active-ink)}
