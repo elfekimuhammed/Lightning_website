@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [visual brand guidelines](brand-guidelines.html) for the complete color, typography, card, layout, and voice system.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.6) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -33,7 +33,7 @@ js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
 assets/samples/     fictional Omar CSV files for safe beta imports
 assets/favicon.svg  bolt icon
-brand-guidelines.html visual brand and component guide
+brand-guidelines.html Lightning guideline 3.6: A · App and B · Website (same file as the app's docs/BRAND_GUIDELINE.html)
 ```
 
 It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
@@ -105,7 +105,7 @@ Version C tells the story in this order: hero, game, three truths, the budgeting
 
 ## Dark mode
 
-All three versions, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in the Dark Mode section of `brand-guidelines.html`.
+All three versions, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in section B09 Dark mode of `brand-guidelines.html`.
 
 - The page follows the device setting until the visitor uses the switch; the choice is then remembered in `localStorage` (`lightning-theme`).
 - To add dark mode to another page: include `css/theme.css` and `js/theme.js` (in `<head>`, not deferred), add `<button data-theme-toggle></button>` to the top bar, and define the page's dark colors under `:root[data-theme="dark"]`.
@@ -144,4 +144,4 @@ LIGHTNING_TODAY=2026-09-30 python -m lightning --demo
 
 - Full-window screens (2000 × 1250) are used in tours and steps. Content crops without the sidebar (1800 × 1125, named `a-*.webp`) are used where the chart is the message: the hero trio on every version and the analysis grid on How It Works.
 - The hero on A, B and C shows the trio: Overview in the middle, Investments and Expense analysis beside it.
-- Quoted figures (net worth 198,065, savings rate 50.1%, safe to spend 71,354 and so on) match these screens. Rules are in the Product Screens section of `brand-guidelines.html`.
+- Quoted figures (net worth 198,065, savings rate 50.1%, safe to spend 71,354 and so on) match these screens. Rules are in section B07 Product screens of `brand-guidelines.html`.
