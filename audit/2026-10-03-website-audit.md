@@ -99,4 +99,4 @@ Known, left as is: the six tiles add to 260,566 while "In your accounts" shows 2
 
 ## Archive note
 
-Archived pages before 2026-10-03 load `css/...` relative to `archive/`, so they open unstyled. Snapshots are never edited, so they were left alone; `archive/UX-2026.10.03.01.html` uses `<base href="../">` and a frozen copy of its stylesheet, which is the pattern to follow from now on.
+`archive/UX-2026.10.02.06.html` loaded `css/...` relative to `archive/` and opened unstyled; it now has `<base href="../">`. With the owner's go-ahead, every snapshot also carries the two-leaf logo and the current testing panel; their content and layout are unchanged.

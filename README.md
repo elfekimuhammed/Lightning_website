@@ -36,8 +36,7 @@ js/ux-test.js       shared UX test behavior
 js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
 assets/samples/     fictional Omar CSV files for safe beta imports
-assets/brand/       the two-leaf logo (see Logo below); older PNGs stay for archived pages
-assets/favicon.svg  old bolt icon, kept for archived pages
+assets/brand/       the two-leaf logo and icons (see Logo below)
 brand-guidelines.html Lightning guideline 3.7: A · App and B · Website (same file as the app's docs/BRAND_GUIDELINE.html)
 ```
 
@@ -150,7 +149,7 @@ The logo is the two-leaf mark from the guideline (A02): azure is money you hold,
 - `lightning-app-icon.svg`: the mark on a Nile tile, used as the favicon; `lightning-icon-64.png` and `lightning-icon-180.png` (home screen) are rendered from it.
 - `lightning-mark-flat.svg`, `lightning-mark-on-dark.svg`, `lightning-mark-nile.svg`, `lightning-mark-white.svg`, `lightning-lockup.svg` and `lightning-lockup-white.svg` for other uses.
 - `lightning-logo-gradient.png`, `lightning-logo-gradient-wordmark.png`, `lightning-mark.png`, `icon-512.png` and `linkedin-banner.png` are re-rendered from the SVGs.
-- `lightning-mark-192.png`, `favicon-64.png` and `apple-touch-icon.png` are the old ribbon mark, kept only because archived pages use them.
+- The old ribbon mark and bolt icon are gone; archived pages use the two-leaf mark too.
 
 ## Version A
 

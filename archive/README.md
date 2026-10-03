@@ -6,7 +6,9 @@ Before editing a live page, preserve it here as `RELEASE-ID.html`, for example
 page a new `UX-YYYY.MM.DD.NN` identifier.
 
 Archive IDs must never be reused. Keep the archived page’s own `data-ux-version`
-unchanged so UX and app-feedback rows remain comparable.
+unchanged so UX and app-feedback rows remain comparable. Brand-wide changes
+(the logo, icons, the testing panel) may be applied to snapshots; the page’s
+content and layout stay as they were.
 
 Put `<base href="../">` right after `<meta charset>` in a new snapshot so its
 `css/`, `js/` and `assets/` paths resolve from the site root. If the page's own
