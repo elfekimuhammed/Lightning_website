@@ -76,8 +76,8 @@
       "id": "UX-2026.10.02.08",
       "name": "Current Status · Beta hub",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.02.08.html"
     },
     {
       "id": "UX-2026.10.02.06",
@@ -90,6 +90,20 @@
       "id": "UX-2026.10.02.09",
       "name": "App Feedback · Ticket form",
       "page": "app-feedback.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.03.04",
+      "name": "Current Status · Beta hub with release log link",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.03.05",
+      "name": "Release Log · Build by build",
+      "page": "release-log.html",
       "status": "current",
       "archive_url": null
     }

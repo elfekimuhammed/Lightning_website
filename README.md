@@ -14,6 +14,7 @@ version-b.html      Version B landing page (product-first story, rebuilt 2026-09
 version-c.html      Version C landing page (product-led, live app tour)
 version-d.html      Version D landing page (built from guideline 3.8 Part B)
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
+release-log.html    release log: what changed build by build (Version D system; css/release-log.css)
 current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
 versions.html       release registry and visible IDs for every testable experience
 version-registry.json machine-readable release IDs and archive locations
@@ -74,6 +75,8 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.03.03` — `version-d.html` (guideline 3.8)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
+- `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
+- `UX-2026.10.03.05` — `release-log.html`
 
 The rail discovers each top-level section automatically, so a future landing page only needs the shared CSS and JS includes plus `data-ux-version` and `data-ux-endpoint` on its `<body>`. Responses are posted in one batch and stored as one row per rated section in the `UX Tests` Sheet tab.
 

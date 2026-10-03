@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Lightning · Release Log</title>
+<meta name="description" content="What changed in Lightning, build by build: what is in the Windows beta you can download, what is built and in testing, and what is still open.">
+<meta name="theme-color" content="#E3F6EC">
+<link rel="icon" href="assets/brand/lightning-app-icon.svg?v=20261003-1" type="image/svg+xml">
+<link rel="icon" href="assets/brand/lightning-icon-64.png?v=20261003-1" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/brand/lightning-icon-180.png?v=20261003-1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/version-d.css?v=20261003-4">
+<link rel="stylesheet" href="css/release-log.css?v=20261003-1">
+<link rel="stylesheet" href="css/theme.css?v=20260930-1">
+<script src="js/theme.js?v=20260930-1"></script>
+<link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
+<link rel="stylesheet" href="css/dev-dock.css?v=20261003-1">
+<script src="js/dev-dock.js?v=20261003-1" defer></script>
+<script src="js/ux-test.js?v=20260928-1" defer></script>
+</head>
+<body data-ux-version="UX-2026.10.03.05" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
+  <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7l-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18M7 6h1v4M16.71 13.88l.7.71-2.82 2.82"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4M3 7l2 2 4-4M13 6h8M13 12h8M13 18h8"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 3v18M3 9h18M3 15h18"/></symbol>
+
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+</svg>
+
+<div class="d-bar">
+  <div class="wrap">
+    <a class="d-lockup" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>
+    <nav class="d-links" aria-label="Main">
+      <a href="index.html" data-home-link >Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="current-status.html" aria-current="page">Current Status</a>
+    </nav>
+    <div class="d-bar-end">
+      <button data-theme-toggle aria-label="Dark mode"></button>
+      <a class="btn btn-secondary btn-sm" href="survey.html"><span class="cta-long">Take the survey</span><span class="cta-short">Survey</span></a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="top">
+  <header class="d-hero log-hero">
+    <p class="label">Release log</p>
+    <h1>What Changed, <span>Build by Build.</span></h1>
+    <p class="d-hero-line">What is in the Windows beta you can download, what is built and in testing, and what is still open.</p>
+    <div class="d-actions"><a class="btn btn-primary" href="current-status.html#downloads">Download the beta</a><a class="btn btn-secondary" href="app-feedback.html">Send feedback</a></div>
+    <p class="log-meta"><span>Downloadable now <span class="log-id">0.4.0 beta 1</span></span><span>Last updated <b>2026-10-03</b></span></p>
+  </header>
+
+  <section class="d-section" id="next" aria-labelledby="next-t">
+    <div class="d-head"><p class="label">Next build</p><h2 id="next-t">In Testing Now</h2><p>Built and tested, not in the download yet. Each of these arrives with the next Windows build.</p></div>
+    <div class="log-speed">
+      <div class="card card-lead"><p class="label">Budget, all time</p><span class="lead-fig">0.41<span class="unit">seconds</span></span><p class="lead-sub">It took 7.0 seconds. On an encrypted profile with 2,239 transactions, the Overview now opens in 0.24 seconds and the account register in 0.04.</p></div>
+      <div class="card card-support"><div class="chead"><h3>What Got Faster</h3><p>Encrypted profile, 2,239 transactions, seconds</p></div>
+        <table class="log-table"><thead><tr><th>Page</th><th>Before</th><th>Now</th></tr></thead><tbody>
+          <tr><th scope="row">Budget, all time</th><td>7.0</td><td>0.41</td></tr>
+          <tr><th scope="row">Overview</th><td>0.96</td><td>0.24</td></tr>
+          <tr><th scope="row">Account register</th><td>0.24</td><td>0.04</td></tr>
+          <tr><th scope="row">All transactions</th><td>0.31</td><td>0.04</td></tr>
+        </tbody></table>
+        <ul class="log-list"><li><div><b>Each figure is worked out once per page.</b> <span>Nothing is remembered between clicks, so no figure can be stale.</span></div></li>
+        <li><div><b>Registers read only the 50 rows shown.</b> <span>A page deep in five years of history costs the same as the first.</span></div></li>
+        <li><div><b>Encrypted reads are about 3× faster.</b> <span>Your key is still wiped from memory. We stopped wiping freed memory too, because the cost was large and the gain small.</span></div></li>
+        <li><div><b>Fonts and logo are bundled.</b> <span>The window no longer waits on the internet, and static files are kept for the session.</span></div></li></ul>
+      </div>
+    </div>
+    
+    <div class="log-grid">
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><h3>Money With Others</h3><p>Cash and investments you hold for someone else stay out of what you own.</p><ul class="log-list"><li><div><b>Held for others page.</b> <span>Cash and investments per person and account, with a history of every change.</span></div></li><li><div><b>Change ownership.</b> <span>Move cash between your share and a saved person. The account’s total balance does not change.</span></div></li><li><div><b>Someone paid an expense for you.</b> <span>It counts in your spending and budget, and the matching cash share is credited to whoever paid.</span></div></li><li><div><b>Checked on the dates affected.</b> <span>Edits, voids and restores check each person’s balance, so nobody goes negative by accident.</span></div></li></ul><span class="log-date">2026-10-03 · built, in testing</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span><h3>Export For AI</h3><p>Settings › Your data prepares one workbook of your own numbers for an AI of your choice.</p><ul class="log-list"><li><div><b>One .xlsx file.</b> <span>Choose All time, YTD, a month or a custom range. It holds Lightning’s own totals, your owned transaction lines, investment checkpoints and the category list.</span></div></li><li><div><b>A prompt that goes with it.</b> <span>It is copied for you and you can edit it before you paste.</span></div></li><li><div><b>Nothing is uploaded.</b> <span>The file stays on your computer. You decide where it goes.</span></div></li><li><div><b>Not capped.</b> <span>Every line in the period is there, and notes cannot run as spreadsheet formulas.</span></div></li></ul><span class="log-date">2026-10-03 · built, being merged into the main build</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-checks"/></svg></span><h3>Import A Statement With Fewer Decisions</h3><p>Rows with the same name are one block, so you answer once per name.</p><ul class="log-list"><li><div><b>Once per name.</b> <span>In the sample year that is 17 answers instead of 43 rows.</span></div></li><li><div><b>Pick a category by group.</b> <span>Every choice sits under its group, and typing filters by group and name.</span></div></li><li><div><b>Discard or finish later.</b> <span>A statement still in review can be discarded, or left and continued from Import CSV.</span></div></li><li><div><b>Bulk set a category.</b> <span>Select rows in a register and set one category on all of them. Transfers and held-for-others rows are left alone, and the message says how many changed.</span></div></li></ul><span class="log-date">2026-10-03</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span><h3>Check Against Your Bank</h3><p>Type the balance the bank shows on a date. That is the whole check.</p><ul class="log-list"><li><div><b>Small differences settle themselves.</b> <span>Up to 1% of the bank balance or 100 EGP, whichever is larger, becomes one balance adjustment row.</span></div></li><li><div><b>Bigger differences are sent to the right place.</b> <span>The check links to that month’s register or to Import CSV.</span></div></li><li><div><b>Replaces line-by-line clearing.</b> <span>The sample year’s October check was 62 clicks. It is one typed balance now.</span></div></li></ul><span class="log-date">2026-10-02</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-table"/></svg></span><h3>Certificates And Time Deposits</h3><p>Each bank has its own CD portfolio, and each certificate its own terms.</p><ul class="log-list"><li><div><b>Terms.</b> <span>Principal, start, earliest withdrawal, maturity, rate, simple or compound, and where the money goes.</span></div></li><li><div><b>Maturity as a date or a term.</b> <span>Enter years in three-month steps and the date is worked out for you.</span></div></li><li><div><b>Purchases are checked.</b> <span>The cash must be there on the purchase date, and later balances cannot go negative.</span></div></li><li><div><b>Estimates, never posted.</b> <span>Interest and maturity cash appear in Cash planning as estimates. Lightning does not post interest. You record the real amount from your statement.</span></div></li><li><div><b>If you sold today.</b> <span>A CD counts only after its earliest withdrawal date, at the early-redemption estimate until maturity.</span></div></li></ul><span class="log-date">2026-10-02</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg></span><h3>Honest Numbers</h3><p>Where two screens used to disagree, there is now one figure.</p><ul class="log-list"><li><div><b>Left in plan.</b> <span>The Overview and Budget show the same figure. In the sample September both now read 11,853 EGP left of 38,898. The Overview used to say −2,317 of 24,698.</span></div></li><li><div><b>Estimates say so.</b> <span>A small “!” explains when a budget estimate comes from thin data, for example one month of spending.</span></div></li><li><div><b>Out-of-date prices.</b> <span>Holdings valued from a price more than about two months old are flagged on the Overview and on the holding.</span></div></li><li><div><b>Needs you.</b> <span>The Overview’s list now says what is over plan and which goals are past their date.</span></div></li></ul><span class="log-date">2026-10-03</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><h3>Dates, Calendars And Heatmaps</h3><p>One calendar everywhere, and your month at a glance.</p><ul class="log-list"><li><div><b>Lightning’s own calendar.</b> <span>Weeks run Monday to Sunday. It works from the keyboard and inside popups.</span></div></li><li><div><b>Day by day.</b> <span>Expense analysis ends with the period as a calendar: spending on the left, net cash flow on the right.</span></div></li><li><div><b>Month by month.</b> <span>The Overview ends with the same view by month, one row per year. Each month opens its Expense analysis.</span></div></li><li><div><b>The period you pick stays picked.</b> <span>It carries across Overview, Budget, Expense analysis and Investments.</span></div></li></ul><span class="log-date">2026-10-01 to 2026-10-02</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><h3>A First Run That Guides You</h3><p>The Overview shows a Get set up card until the basics are in.</p><ul class="log-list"><li><div><b>Five steps.</b> <span>Accounts, history, salary and bills, an emergency fund, and a budget. Each one ticks itself from your data and the card disappears when all five are done.</span></div></li><li><div><b>Honest when empty.</b> <span>Without a salary and bills, Cash planning asks for them instead of showing a forecast built from nothing.</span></div></li><li><div><b>Start fresh.</b> <span>Settings › Your data can open a new profile and leave the old one exactly as it is.</span></div></li><li><div><b>Export selected.</b> <span>Check rows in a register, Categories or Reevaluations and export just those to CSV, up to 1,000.</span></div></li></ul><span class="log-date">2026-10-02 to 2026-10-03</span></article>
+    </div>
+  </section>
+  <section class="d-section" id="beta-1" aria-labelledby="beta-1-t">
+    <div class="d-head"><p class="label">First Windows beta</p><h2 id="beta-1-t">Lightning 0.4.0 Beta 1</h2><p>The build you can download today.</p></div>
+    <div class="log-grid">
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><h3>Your Data Stays Yours</h3><p>The first Windows app, with a profile for each person or purpose.</p><ul class="log-list"><li><div><b>Lightning.exe for Windows.</b> <span>No Python and no install steps beyond unzipping.</span></div></li><li><div><b>Encrypted profiles.</b> <span>Each profile lives in Documents/Lightning, opens with a password, and has a recovery key shown once at setup.</span></div></li><li><div><b>Safe upgrades.</b> <span>A verified backup is made before any upgrade changes your data.</span></div></li><li><div><b>Version in the title bar.</b> <span>And in Settings, so feedback names the right build.</span></div></li></ul><span class="log-date">2026-10-01</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg></span><h3>Read Your Money</h3><p>Five pages that each answer one question.</p><ul class="log-list"><li><div><b>Overview.</b> <span>Net worth, free cash, what it is made of, and what needs you.</span></div></li><li><div><b>Budget.</b> <span>Planned, spent, then left in plan, by category.</span></div></li><li><div><b>Cash planning.</b> <span>Safe to spend until payday, bills and income that repeat, loans, and reserves with your emergency fund.</span></div></li><li><div><b>Investments.</b> <span>Buy, sell and dividends, prices you type or fetch, and the period’s gain or loss.</span></div></li><li><div><b>Expense analysis.</b> <span>Where it went, compared with your usual month.</span></div></li></ul><span class="log-date">2026-09-30 to 2026-10-01</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span><h3>Bring Your Own Statement</h3><p>Import a bank CSV and review it before anything is posted.</p><ul class="log-list"><li><div><b>CSV only.</b> <span>One signed amount column, or separate money in and out columns, up to 5 MiB. PDFs are not supported.</span></div></li><li><div><b>Nothing posts until you review it.</b> <span>Duplicates are flagged and similar names are suggestions you pick, never merged silently.</span></div></li><li><div><b>Private while it is read.</b> <span>The file is held in memory and not written to a temporary file.</span></div></li></ul><span class="log-date">2026-10-01</span></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-checks"/></svg></span><h3>Try It With Omar</h3><p>A fictional household, so you never need your own data.</p><ul class="log-list"><li><div><b>A sample household.</b> <span>Omar, a salaried user in Cairo, with a year of fictional statements, prices and a certificate.</span></div></li><li><div><b>Open it from the welcome page.</b> <span>Or download the sample CSVs from Current Status and import them yourself.</span></div></li><li><div><b>Use dummy data in this beta.</b> <span>Do not upload a real bank statement.</span></div></li></ul><span class="log-date">2026-10-01</span></article>
+    </div>
+  </section>
+  <section class="d-section" id="gaps" aria-labelledby="gaps-t">
+    <div class="d-head"><p class="label">Open items</p><h2 id="gaps-t">Known Gaps</h2><p>What is open, so you know where to look.</p></div>
+    <div class="log-grid">
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-table"/></svg></span><h3>Known Gaps We Are Fixing</h3><p>These are open, and we would rather say so.</p><ul class="log-list is-gap"><li><div><b>Other assets can be counted twice.</b> <span>An “Other” asset such as a flat can appear in both brokerage cash and holdings, so two screens may differ.</span></div></li><li><div><b>Recording something you already owned.</b> <span>It currently counts as a change in net worth.</span></div></li><li><div><b>Safe to spend the day before payday.</b> <span>It does not yet subtract bills due right after payday.</span></div></li><li><div><b>Sold everything in a period.</b> <span>The Investments tab shows “No holdings yet” and hides that period’s gain. The Overview still shows it.</span></div></li></ul></article>
+      <article class="card card-support"><span class="log-tile"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span><h3>Not In The App Yet</h3><p>What the beta cannot do today.</p><ul class="log-list is-gap"><li><div><b>Bringing in your old data.</b> <span>Legacy import is not in the screens yet.</span></div></li><li><div><b>Restoring a backup.</b> <span>Backups are written, but restore is not in the screens yet.</span></div></li><li><div><b>Ordinary-PC acceptance.</b> <span>The app is still being checked on everyday Windows machines.</span></div></li><li><div><b>Next on our list.</b> <span>Simpler registers with two-line rows, clearer Reserves and emergency-fund wording, and a words-and-numbers sweep.</span></div></li></ul></article>
+    </div>
+  </section>
+
+  <!-- Signup band (B06): ends every page -->
+  <section class="card card-lead d-band" id="join">
+    <div>
+      <p class="label">Early access</p>
+      <h2>See Your Money Clearly. Then Decide What Happens Next.</h2>
+      <p>Leave your email and we’ll tell you when Lightning is ready for your own numbers.</p>
+    </div>
+    <div class="d-signup">
+      <form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="Email"><button class="btn btn-vivid" type="submit">Get early access</button></form>
+      <p class="d-status" id="signup-status" role="status"></p>
+      <p class="d-survey">Have five minutes? <a href="survey.html">Take the survey</a> and tell us what you need.</p>
+    </div>
+  </section>
+</main>
+
+<div class="wrap">
+  <footer class="d-foot">
+    <div class="d-foot-brand"><a class="d-lockup" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a><span>Study your patterns. Control your future.</span><span>Made in Egypt</span></div>
+    <nav aria-label="Footer"><a href="how-it-works.html">How It Works</a><a href="current-status.html">Current Status</a><a href="release-log.html">Release Log</a><a href="survey.html">Survey</a></nav>
+  </footer>
+</div>
+
+<script src="js/version-d.js?v=20261003-1"></script>
+</body>
+</html>
