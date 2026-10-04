@@ -181,12 +181,26 @@
       "id": "UX-2026.10.04.08",
       "name": "Experience A · Product · What Lightning does",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.08.html"
     },
     {
       "id": "UX-2026.10.04.09",
       "name": "Experience B · Philosophy · Split game card",
+      "page": "version-b.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.09.html"
+    },
+    {
+      "id": "UX-2026.10.04.10",
+      "name": "Experience A · Product · Sign-off ending",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.11",
+      "name": "Experience B · Philosophy · Sign-off ending",
       "page": "version-b.html",
       "status": "current",
       "archive_url": null

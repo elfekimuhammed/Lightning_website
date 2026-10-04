@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.13) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.14) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -61,7 +61,7 @@ Settings → Pages → Deploy from a branch → `main` / root.
 
 GitHub Pages is static. The survey and both landing pages send responses to the configured Google Apps Script endpoint, which writes to Google Sheets. The survey posts `form_type=survey`; the email signup posts `form_type=signup`. The calculator runs in the browser.
 
-The calculator on B shows the capital that would pay what you keep each month: monthly amount × 12 ÷ the yearly return (2,000 EGP a month = 120,000 EGP at 20%). It is one split card: inputs on the left, the answer on the vivid gradient on the right, with Kept each year and Capital you need: 0. No explanation notes or field hints: if something needs a description, rewrite it.
+The calculator on B shows the capital that would pay what you keep each month: monthly amount × 12 ÷ the yearly return (2,000 EGP a month = 120,000 EGP at 20%). It is one split card: inputs on the left, the answer on the vivid gradient on the right, with one chip, Kept each year. No explanation notes or field hints: if something needs a description, rewrite it.
 
 ## UX test responses
 
@@ -84,6 +84,8 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.07` — `index.html` (A · no explanation captions)
 - `UX-2026.10.04.08` — `index.html` (A · what Lightning does, no comparisons)
 - `UX-2026.10.04.09` — `version-b.html` (B · split game card)
+- `UX-2026.10.04.10` — `index.html` (A · sign-off ending)
+- `UX-2026.10.04.11` — `version-b.html` (B · sign-off ending)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
@@ -145,7 +147,7 @@ Both landing pages, How It Works and the brand guidelines support light and dark
 
 ## Landing pages
 
-There are two landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
+There are two landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band (white email pill, Get early access, or, a dark Take the survey button) and a sign-off: the mark and "Study Your Patterns. Control Your Future." Fields on the site are white with a hairline, never grey. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
 
 **A · Product (`index.html`)** shows Lightning's three strengths: everything you own and owe, the next three months, and why it changed. It never compares Lightning with other apps. Order: hero (H1 with its punch line, the screen trio), what Lightning does (three pillar cards), everything you own and owe (six places counted as one net worth), the next three months (safe to spend beside the forecast, then the next 30 days, the loan payoff and the month ahead), analysis (the tour), does the tedious part (bills find their payments, repeats spotted, one balance checks an account, imports ask once per name, beside the Looks recurring screen), how it works (three numbered steps), private by design, good questions and the early-access band.
 
