@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.9) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.10) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -77,6 +77,9 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.03.03` — `version-d.html` (guideline 3.8)
 - `UX-2026.10.04.01` — `index.html` (A · Product)
 - `UX-2026.10.04.02` — `version-b.html` (B · Philosophy)
+- `UX-2026.10.04.03` — `index.html` (A · Product, three advantages)
+- `UX-2026.10.04.04` — `version-b.html` (B · Philosophy, new screens)
+- `UX-2026.10.04.05` — `release-log.html` (guideline 3.10 gradient)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
@@ -140,11 +143,12 @@ Both landing pages, How It Works and the brand guidelines support light and dark
 
 There are two landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
 
-**A · Product (`index.html`)** shows what Lightning does. Order: hero (H1 with its punch line, the screen trio), one picture (six places counted as one net worth), what's really free (safe to spend beside the Cash planning screen), the tour (every screen answers one question), how it works (three numbered steps, a real screen each), private by design, good questions and the early-access band.
+**A · Product (`index.html`)** sells Lightning's three advantages over apps that only automate tracking: everything you own and owe, the next three months, and why it changed. Order: hero (H1 with its punch line, the screen trio), beyond tracking (three pillar cards, each against what most apps give), everything you own and owe (six places counted as one net worth), the next three months (safe to spend beside the forecast, then the next 30 days, the loan payoff and the month ahead), analysis (the tour), does the tedious part (bills find their payments, repeats spotted, one balance checks an account, imports ask once per name, beside the Looks recurring screen), how it works (three numbered steps), private by design, good questions and the early-access band.
 
 **B · Philosophy (`version-b.html`)** shows why it works, then the product as proof. Order: hero (H1 with its punch line, the story trio: the plan, the 9:40 reality, the habit), a better system (the habit sum and the page's one quote), a quick game (the calculator), three truths in order, every app sees one corner (six places, then Lightning, beside the Overview screen), private by design and the early-access band.
 
-- Every figure on A is on the screen beside it or adds up from Mohab's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth; free cash 72,663 less 1,309 budget left = 71,354 safe to spend). B uses the same household. Recapture the screens and these figures together.
+- Screens are in `assets/app/mohab-2026-10-04/`, captured 2026-10-04 from the app's demo (`LIGHTNING_TODAY=2026-09-30 python -m lightning --demo`); `assets/app/mohab/` keeps the older screens for archived pages.
+- Every figure on A is on the screen beside it or adds up from Mohab's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth; free cash 72,663 less 1,309 budget left = 71,354 safe to spend; holdings 177,903; next 30 days −15,980 out; +21,830 expected in 2026-11; car loan paid off 2028-06-05). B uses the same household. Recapture the screens and these figures together.
 - One quote per page at most (B has James Clear; A has none). No testimonials until there are real ones. No placeholders.
 - How It Works, Current Status and the release log are shared; Home on them returns to the landing page the visitor came from.
 

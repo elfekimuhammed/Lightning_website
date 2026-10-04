@@ -118,8 +118,8 @@
       "id": "UX-2026.10.03.07",
       "name": "Release Log · Lightning 0.5.0 beta 1",
       "page": "release-log.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.03.07.html"
     },
     {
       "id": "UX-2026.10.03.08",
@@ -132,13 +132,34 @@
       "id": "UX-2026.10.04.01",
       "name": "Experience A · Product",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.01.html"
     },
     {
       "id": "UX-2026.10.04.02",
       "name": "Experience B · Philosophy",
       "page": "version-b.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.02.html"
+    },
+    {
+      "id": "UX-2026.10.04.03",
+      "name": "Experience A · Product · Three advantages",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.04",
+      "name": "Experience B · Philosophy · New screens",
+      "page": "version-b.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.05",
+      "name": "Release Log · Guideline 3.10 gradient",
+      "page": "release-log.html",
       "status": "current",
       "archive_url": null
     }

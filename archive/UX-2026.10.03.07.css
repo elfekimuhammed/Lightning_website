@@ -10,9 +10,9 @@
   --t-green:#EAF8F0;--t-azure:#EAF3FD;--t-rose:#FCEEF3;
   --canvas:linear-gradient(160deg,#E3F6EC 0%,#E6F4F1 50%,#E1EEFB 100%);
   --lead:linear-gradient(135deg,#E0F5E9,#DCF1F0 52%,#D7ECF7);
-  /* 3.10: two stops, green to the brand azure (the logo's own blue), no teal middle */
-  --vivid:linear-gradient(135deg,#00995C 0%,#0B6DD6 100%);
-  --punch:linear-gradient(90deg,#00995C 0%,#0B6DD6 100%);
+  /* 3.8: two stops, green to blue, no teal middle */
+  --vivid:linear-gradient(135deg,#00995C 0%,#0066FF 100%);
+  --punch:linear-gradient(90deg,#00995C 0%,#0066FF 100%);
   --paper:#F8FCFA;--white:#FFFFFF;--panel:rgba(255,255,255,.85);
   --line:#DDE9E6;--line-ctl:#7E96A0;--track:#E6EFEC;--field:#EEF6F3;--field-focus:#E6F2EC;
   --bar-bg:rgba(232,247,241,.9);

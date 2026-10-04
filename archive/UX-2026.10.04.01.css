@@ -1,4 +1,5 @@
-/* Lightning Version D · built from Lightning guideline 3.8, Part B (brand-guidelines.html).
+/* Lightning landing pages A (Product) and B (Philosophy) · guideline 3.9, Part B (brand-guidelines.html).
+   Grown from Version D. Both pages load only this file, so they cannot drift apart.
    Self-contained: it does not load styles.css, version-b.css or version-c.css.
    Tokens are the guideline's own (A03, B03, B09). Building blocks are the guideline's six (B06):
    money tiles, result (lead) card, breakdown, steps, quote and the signup band. */
@@ -10,9 +11,9 @@
   --t-green:#EAF8F0;--t-azure:#EAF3FD;--t-rose:#FCEEF3;
   --canvas:linear-gradient(160deg,#E3F6EC 0%,#E6F4F1 50%,#E1EEFB 100%);
   --lead:linear-gradient(135deg,#E0F5E9,#DCF1F0 52%,#D7ECF7);
-  /* 3.10: two stops, green to the brand azure (the logo's own blue), no teal middle */
-  --vivid:linear-gradient(135deg,#00995C 0%,#0B6DD6 100%);
-  --punch:linear-gradient(90deg,#00995C 0%,#0B6DD6 100%);
+  /* 3.8: two stops, green to blue, no teal middle */
+  --vivid:linear-gradient(135deg,#00995C 0%,#0066FF 100%);
+  --punch:linear-gradient(90deg,#00995C 0%,#0066FF 100%);
   --paper:#F8FCFA;--white:#FFFFFF;--panel:rgba(255,255,255,.85);
   --line:#DDE9E6;--line-ctl:#7E96A0;--track:#E6EFEC;--field:#EEF6F3;--field-focus:#E6F2EC;
   --bar-bg:rgba(232,247,241,.9);
@@ -256,6 +257,48 @@ button,input{font:inherit}
 :root[data-theme="dark"] .ux-rail__section-button,:root[data-theme="dark"] .ux-rail__reaction,:root[data-theme="dark"] .ux-rail__reason,:root[data-theme="dark"] .ux-rail__other{background:var(--field);color:var(--ink2)}
 :root[data-theme="dark"] .ux-rail__reason.is-selected{background:var(--t-azure);border-color:var(--azure);color:var(--azure-d)}
 
+/* ---------- A · how it works: three numbered steps, a real screen each (B06 steps) ---------- */
+.l-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:step}
+.l-steps li{display:flex;flex-direction:column;gap:14px}
+.l-steps .num{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--nile);color:var(--on-nile);font:800 15px/1 var(--display)}
+.l-steps .step-head{display:flex;align-items:center;gap:12px}
+.l-steps h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
+.l-steps p{color:var(--ink2);font-size:16px;line-height:1.5}
+.l-more{display:flex;justify-content:center;margin-top:28px}
+
+/* ---------- B · story trio: plan, reality, habit. KPI cards toned by meaning (A08) ---------- */
+.l-story{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:56px;text-align:left}
+.l-story .kpi{min-height:200px}
+.l-story .kpi.plan{--tone:var(--line-ctl);--tint:var(--track)}
+.l-story .kpi.out{--tone:var(--rose);--tint:var(--t-rose)}
+.l-story .kpi.kept{--tone:var(--green);--tint:var(--t-green)}
+.l-story .when{color:var(--muted);font:700 12px/1.3 var(--body)}
+.l-story q{color:var(--ink);font:700 17px/1.35 var(--display);quotes:"“" "”"}
+.l-story .fig{font-size:30px}
+.l-story .fig.word{font-size:24px}
+.l-story .kpi.kept .fig{color:var(--green-text)}
+
+/* ---------- B · three truths: numbered in order, one small drawing each ---------- */
+.l-truths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.l-truths .card{display:flex;flex-direction:column;gap:14px}
+.l-truths .art{height:96px;border-radius:14px;background:var(--white);display:grid;place-items:center}
+:root[data-theme="dark"] .l-truths .art{background:var(--field)}
+.l-truths .art svg{width:100%;max-width:220px;height:80px}
+.l-truths .step-head{display:flex;align-items:center;gap:12px}
+.l-truths .num{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--nile);color:var(--on-nile);font:800 15px/1 var(--display)}
+.l-truths h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
+.l-truths p{color:var(--ink2);font-size:16px;line-height:1.5}
+
+/* ---------- B · every app sees one corner: six corners, then Lightning (story exception, B06) ---------- */
+.l-corners{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:16px;align-items:center}
+.l-corner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.l-corner{padding:14px 16px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}
+.l-corner b{display:block;color:var(--ink);font:800 16px/1.25 var(--display)}
+.l-corner span{display:block;margin-top:3px;color:var(--muted);font-size:14px;font-weight:600}
+.l-corner.all{grid-column:1/-1;background:var(--lead);border-color:transparent;box-shadow:var(--shadow)}
+.l-corner.all b{font-size:20px}
+.l-corner.all span{color:var(--ink2)}
+
 /* ---------- responsive: one column on phones, nothing scrolls sideways ---------- */
 @media (max-width:900px){.cta-long{display:none}.cta-short{display:inline}}
 @media (max-width:760px){
@@ -270,9 +313,11 @@ button,input{font:inherit}
   .d-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
   .d-trust{grid-template-columns:repeat(2,minmax(0,1fr))}
   .d-panel{grid-template-columns:1fr;gap:20px}
+  .l-corners{grid-template-columns:1fr}
 }
 @media (max-width:820px){
-  .d-calc,.d-habit,.d-band,.d-faq{grid-template-columns:1fr}
+  .d-calc,.d-habit,.d-band,.d-faq,.l-steps,.l-truths,.l-story{grid-template-columns:1fr}
+  .l-story .kpi{min-height:0}
   .d-band{padding:28px 24px}
   .d-trio{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .d-trio figure:nth-child(1){order:0;grid-column:1/-1}

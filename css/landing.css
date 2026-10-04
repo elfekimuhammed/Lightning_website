@@ -11,9 +11,9 @@
   --t-green:#EAF8F0;--t-azure:#EAF3FD;--t-rose:#FCEEF3;
   --canvas:linear-gradient(160deg,#E3F6EC 0%,#E6F4F1 50%,#E1EEFB 100%);
   --lead:linear-gradient(135deg,#E0F5E9,#DCF1F0 52%,#D7ECF7);
-  /* 3.8: two stops, green to blue, no teal middle */
-  --vivid:linear-gradient(135deg,#00995C 0%,#0066FF 100%);
-  --punch:linear-gradient(90deg,#00995C 0%,#0066FF 100%);
+  /* 3.10: two stops, green to the brand azure (the logo's own blue), no teal middle */
+  --vivid:linear-gradient(135deg,#00995C 0%,#0B6DD6 100%);
+  --punch:linear-gradient(90deg,#00995C 0%,#0B6DD6 100%);
   --paper:#F8FCFA;--white:#FFFFFF;--panel:rgba(255,255,255,.85);
   --line:#DDE9E6;--line-ctl:#7E96A0;--track:#E6EFEC;--field:#EEF6F3;--field-focus:#E6F2EC;
   --bar-bg:rgba(232,247,241,.9);
@@ -299,6 +299,34 @@ button,input{font:inherit}
 .l-corner.all b{font-size:20px}
 .l-corner.all span{color:var(--ink2)}
 
+/* ---------- A · beyond tracking: three pillars, each a KPI card toned by meaning ---------- */
+.l-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.l-pillars .kpi{gap:14px;min-height:0;padding:22px}
+.l-pillars .kpi .fig{margin-top:6px;font-size:34px}
+.l-pillars .kpi .fig .unit{font-size:13px}
+.kpi.ahead,.kpi.kept{--tone:var(--green);--tint:var(--t-green)}
+.kpi.why,.kpi.out{--tone:var(--rose);--tint:var(--t-rose)}
+.l-has{display:grid;gap:8px;margin-top:4px}
+.l-has li{display:flex;gap:10px;color:var(--ink);font-size:15px;font-weight:600;line-height:1.4}
+.l-has li::before{content:"";flex:none;width:7px;height:7px;margin-top:.5em;border-radius:2px;background:var(--tone);transform:rotate(var(--angle))}
+.l-vs{margin-top:auto;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--tone) 22%,var(--line));color:var(--muted);font-size:14px;font-weight:600}
+.l-vs span{display:inline-block;margin-right:8px;padding:2px 9px;border-radius:999px;background:var(--track);color:var(--ink2);font-size:12px;font-weight:800}
+
+/* ---------- A · the next three months ---------- */
+.l-ahead{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.l-ahead .kpi{min-height:0}
+.l-ahead .kpi .fig{font-size:28px}
+.l-ahead .kpi.kept .fig{color:var(--green-text)}
+.d-frame.free img{aspect-ratio:auto;object-fit:contain}
+
+/* ---------- A · smart where it saves time ---------- */
+.l-smart{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:16px;align-items:center}
+.l-smart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.l-smart .card{display:flex;flex-direction:column;gap:10px;padding:20px}
+.l-smart .tile{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:var(--nile);color:var(--on-nile)}
+.l-smart h3{font-size:18px;line-height:1.2;letter-spacing:-.01em}
+.l-smart p{color:var(--ink2);font-size:15px;line-height:1.5}
+
 /* ---------- responsive: one column on phones, nothing scrolls sideways ---------- */
 @media (max-width:900px){.cta-long{display:none}.cta-short{display:inline}}
 @media (max-width:760px){
@@ -313,10 +341,11 @@ button,input{font:inherit}
   .d-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
   .d-trust{grid-template-columns:repeat(2,minmax(0,1fr))}
   .d-panel{grid-template-columns:1fr;gap:20px}
-  .l-corners{grid-template-columns:1fr}
+  .l-corners,.l-smart{grid-template-columns:1fr}
+  .l-pillars,.l-ahead{grid-template-columns:1fr}
 }
 @media (max-width:820px){
-  .d-calc,.d-habit,.d-band,.d-faq,.l-steps,.l-truths,.l-story{grid-template-columns:1fr}
+  .d-calc,.d-habit,.d-band,.d-faq,.l-steps,.l-truths,.l-story,.l-smart-grid{grid-template-columns:1fr}
   .l-story .kpi{min-height:0}
   .d-band{padding:28px 24px}
   .d-trio{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}

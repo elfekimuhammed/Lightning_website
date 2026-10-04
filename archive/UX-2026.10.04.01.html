@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Lightning · All Your Money. One Clear Picture.</title>
-<meta name="description" content="Lightning counts everything you own and owe in EGP: banks, wallets, cash, shares, gold, certificates and loans. Then it forecasts your next three months and shows where your money really goes. It runs on your computer.">
+<meta name="description" content="Lightning counts your banks, cash, THNDR and gold in EGP, leaves out money you hold for others, and shows what is safe to spend. It runs on your computer, and your data stays with you.">
 <meta name="theme-color" content="#E3F6EC">
 <link rel="icon" href="assets/brand/lightning-app-icon.svg?v=20261003-1" type="image/svg+xml">
 <link rel="icon" href="assets/brand/lightning-icon-64.png?v=20261003-1" type="image/png" sizes="64x64">
@@ -13,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/landing.css?v=20261004-2">
+<link rel="stylesheet" href="archive/UX-2026.10.04.01.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -22,7 +23,7 @@
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.10.04.03" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.04.01" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -57,60 +58,31 @@
   <header class="d-hero">
     <p class="label">Personal finance, made for Egypt</p>
     <h1>All Your Money. <span>One Clear Picture.</span></h1>
-    <p class="d-hero-line">Everything you own and owe, counted in EGP. Then where it’s heading for the next three months.</p>
+    <p class="d-hero-line">Banks, cash, THNDR and gold, counted in EGP. It runs on your computer, and your data stays with you.</p>
     <div class="d-actions">
       <a class="btn btn-vivid" href="#join">Get early access</a>
       <a class="btn btn-secondary" href="how-it-works.html">See how it works</a>
     </div>
     <div class="d-trio" aria-label="Three screens from Lightning, with sample data">
       <figure>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/a-overview.webp" data-caption="Overview: where you stand, and how it changed this month."><img src="assets/app/mohab-2026-10-04/a-overview.webp" width="1800" height="1125" alt="Lightning Overview with sample data: net worth up 29,116 EGP this month, a 50.1% savings rate, a 39.4% investing rate and net worth of 198,065 EGP." fetchpriority="high"></button></div>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/a-overview.webp" data-caption="Overview: where you stand, and how it changed this month."><img src="assets/app/mohab/a-overview.webp" width="1800" height="1125" alt="Lightning Overview with sample data: net worth up 29,116 EGP this month, a 50.1% savings rate, a 39.4% investing rate and net worth of 198,065 EGP." fetchpriority="high"></button></div>
         <figcaption class="d-cap"><b>Overview</b> · Where you stand</figcaption>
       </figure>
       <figure>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/a-investments.webp" data-caption="Investments: what your invested money is doing."><img src="assets/app/mohab-2026-10-04/a-investments.webp" width="1800" height="1125" alt="Lightning Investments: saved and invested this month, a net gain of 5,673 EGP, holdings worth 177,903 EGP and their allocation across certificates, gold, shares and a money market fund." loading="lazy"></button></div>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/a-investments.webp" data-caption="Investments: what your invested money is doing."><img src="assets/app/mohab/a-investments.webp" width="1800" height="1125" alt="Lightning Investments: saved and invested this month, a net gain of 5,673 EGP, a portfolio of 78,303 EGP and its allocation across gold, shares and a money market fund." loading="lazy"></button></div>
         <figcaption class="d-cap"><b>Investments</b> · What it is doing</figcaption>
       </figure>
       <figure>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/a-expenses.webp" data-caption="Expense analysis: where your money went, and what changed."><img src="assets/app/mohab-2026-10-04/a-expenses.webp" width="1800" height="1125" alt="Lightning Expense analysis: 23,390 EGP out this month and a treemap of the biggest categories, led by Housing &amp; Rent." loading="lazy"></button></div>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/a-expenses.webp" data-caption="Expense analysis: where your money went, and what changed."><img src="assets/app/mohab/a-expenses.webp" width="1800" height="1125" alt="Lightning Expense analysis: 23,390 EGP out this month and a treemap of the biggest categories, led by Housing &amp; Rent." loading="lazy"></button></div>
         <figcaption class="d-cap"><b>Expense analysis</b> · Where it went</figcaption>
       </figure>
     </div>
   </header>
 
-  <!-- 1 · Beyond tracking: the three things Lightning does that tracking apps don't -->
-  <section class="d-section" id="different">
-    <div class="d-head">
-      <p class="label">Beyond tracking</p>
-      <h2>Most Apps Tell You What Happened. Lightning Tells You What’s Next.</h2>
-      <p>Three things you don’t get from an app that only sorts transactions.</p>
-    </div>
-    <div class="l-pillars">
-      <article class="kpi">
-        <div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span><span class="lbl">Everything you own and owe</span></div>
-        <span class="fig">198,065<span class="unit">EGP net worth</span></span>
-        <ul class="l-has"><li>Banks, wallets and cash at home</li><li>Shares, funds and gold by the gram</li><li>Certificates with their interest</li><li>Loans, and money you hold for family</li></ul>
-        <p class="l-vs"><span>Most apps</span>the accounts they can connect to</p>
-      </article>
-      <article class="kpi ahead">
-        <div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg></span><span class="lbl">The next three months</span></div>
-        <span class="fig">71,354<span class="unit">EGP safe to spend</span></span>
-        <ul class="l-has"><li>Safe to spend until payday</li><li>Every bill and loan payment ahead</li><li>Your cash, month by month, forecast</li><li>The lowest point before it happens</li></ul>
-        <p class="l-vs"><span>Most apps</span>your balance today</p>
-      </article>
-      <article class="kpi why">
-        <div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-table"/></svg></span><span class="lbl">Why it changed</span></div>
-        <span class="fig">51%<span class="unit">of money out is rent</span></span>
-        <ul class="l-has"><li>Each category against your usual month</li><li>Spent against your plan</li><li>Investment gains split by source</li><li>Every figure shows what it’s made of</li></ul>
-        <p class="l-vs"><span>Most apps</span>a chart of last month</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- 2 · Everything you own and owe: money tiles beside the result card -->
+  <!-- 1 · One picture: money tiles beside the result card -->
   <section class="d-section" id="picture">
     <div class="d-head">
-      <p class="label">Everything you own and owe</p>
+      <p class="label">One picture</p>
       <h2>Your Money Is in Six Places. Lightning Counts It as One.</h2>
       <p>Each app sees one corner. Lightning adds them up in EGP, without what isn’t yours.</p>
     </div>
@@ -138,12 +110,12 @@
     </div>
   </section>
 
-  <!-- 3 · The next three months: forecasting -->
-  <section class="d-section" id="ahead">
+  <!-- 2 · Safe to spend: result card left, the same numbers on the real screen right -->
+  <section class="d-section" id="safe-to-spend">
     <div class="d-head">
-      <p class="label">The next three months</p>
-      <h2>See Your Next Three Months Before You Live Them.</h2>
-      <p>Your bills, loan payments and salary are already in the plan.</p>
+      <p class="label">What’s really free</p>
+      <h2>Your Balance Isn’t All Yours to Spend.</h2>
+      <p>Lightning takes off what is already promised before payday. What’s left is safe to spend.</p>
     </div>
     <div class="d-pair">
       <div class="card card-lead">
@@ -156,23 +128,18 @@
         </ol>
       </div>
       <figure>
-        <div class="d-frame free"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/plan.webp" data-caption="Cash planning: safe to spend, the next 30 days and where your cash is heading."><img src="assets/app/mohab-2026-10-04/a-forecast.webp" width="1454" height="691" loading="lazy" alt="Lightning Cash planning: free cash over the last two months, then a dashed forecast to 114,966 EGP in 2026-11, beside money in and out for each month ahead: +21,781 in 2026-10 and +21,830 in 2026-11."></button></div>
-        <figcaption class="d-cap">Solid is what happened. Dashed is the forecast.</figcaption>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/a-plan.webp" data-caption="Cash planning: safe to spend, worked out from free cash, with the next 30 days of payments."><img src="assets/app/mohab/a-plan.webp" width="1800" height="1125" loading="lazy" alt="Lightning Cash planning: 71,354 EGP safe to spend until 2026-10-01, free cash of 72,663 EGP, budget left to spend of 1,309 EGP, and the next 30 days of payments."></button></div>
+        <figcaption class="d-cap">The same numbers on the Cash planning screen.</figcaption>
       </figure>
-    </div>
-    <div class="l-ahead">
-      <div class="kpi out"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span><span class="lbl">Next 30 days</span></div><span class="fig">−15,980<span class="unit">EGP</span></span><span class="foot">Five bills and loan payments, on their dates</span></div>
-      <div class="kpi out"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-house"/></svg></span><span class="lbl">Car loan</span></div><span class="fig">2028-06-05</span><span class="foot">Paid off then · 3 of 24 payments made</span></div>
-      <div class="kpi kept"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg></span><span class="lbl">Ahead in 2026-11</span></div><span class="fig">+21,830<span class="unit">EGP</span></span><span class="foot">Expected money in, less money out</span></div>
     </div>
   </section>
 
 
 
-  <!-- 4 · Analysis: the product tour: one question per tab, the number on the screen beside it -->
+  <!-- 3 · Product tour: one question per tab, the number on the screen beside it -->
   <section class="d-section" id="tour">
     <div class="d-head">
-      <p class="label">Analysis</p>
+      <p class="label">Take the tour</p>
       <h2>Every Screen Answers One Question</h2>
       <p>Real screens from the app, with Mohab’s sample household. Pick a question.</p>
     </div>
@@ -184,49 +151,28 @@
       <button type="button" role="tab" id="tab-cash" aria-controls="panel-cash" aria-selected="false" tabindex="-1">Cash planning</button>
     </div>
     <div class="d-panel" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview">
-      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/overview.webp" data-caption="Overview: where you stand."><img src="assets/app/mohab-2026-10-04/overview.webp" width="2000" height="1250" loading="lazy" alt="Overview: net worth 198,065 EGP, up 29,116 EGP in 2026-09, with a 50.1% savings rate and what you own broken down."></button></div>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Overview</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/overview.webp" data-caption="Overview: where you stand."><img src="assets/app/mohab/overview.webp" width="2000" height="1250" loading="lazy" alt="Overview: net worth 198,065 EGP, up 29,116 EGP in 2026-09, with a 50.1% savings rate and what you own broken down."></button></div>
       <div><h3>Where Do I Stand?</h3><span class="fig">198,065<span class="unit">EGP</span></span><p>Net worth, up 29,116 EGP in 2026-09. Money you hold for others is left out.</p><ul><li>Savings rate 50.1%: 23,444 kept of 46,833 money in</li><li>What you own, less the 52,500 you owe</li></ul></div>
     </div>
     <div class="d-panel" role="tabpanel" id="panel-expenses" aria-labelledby="tab-expenses" hidden>
-      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/expenses.webp" data-caption="Expense analysis: where it went."><img src="assets/app/mohab-2026-10-04/expenses.webp" width="2000" height="1250" loading="lazy" alt="Expense analysis: 23,390 EGP out in 2026-09, a treemap led by Housing &amp; Rent at 51%, and how each category moved."></button></div>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/expenses.webp" data-caption="Expense analysis: where it went."><img src="assets/app/mohab/expenses.webp" width="2000" height="1250" loading="lazy" alt="Expense analysis: 23,390 EGP out in 2026-09, a treemap led by Housing &amp; Rent at 51%, and how each category moved."></button></div>
       <div><h3>Where Did It Go?</h3><span class="fig">23,390<span class="unit">EGP</span></span><p>Money out in 2026-09, 1,364 less than 2026-08.</p><ul><li>Housing &amp; Rent is 51% of money out</li><li>Each big category against the two months before</li></ul></div>
     </div>
     <div class="d-panel" role="tabpanel" id="panel-budget" aria-labelledby="tab-budget" hidden>
-      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/budget.webp" data-caption="Budget: planned, spent and what is left."><img src="assets/app/mohab-2026-10-04/budget.webp" width="2000" height="1250" loading="lazy" alt="Budget: 23,390 EGP spent of 24,698 EGP planned, 1,309 EGP left in plan, and two categories over plan shown first."></button></div>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/budget.webp" data-caption="Budget: planned, spent and what is left."><img src="assets/app/mohab/budget.webp" width="2000" height="1250" loading="lazy" alt="Budget: 23,390 EGP spent of 24,698 EGP planned, 1,309 EGP left in plan, and two categories over plan shown first."></button></div>
       <div><h3>Did I Stick to My Plan?</h3><span class="fig">1,309<span class="unit">EGP</span></span><p>Left in plan: 23,390 spent of 24,698 planned.</p><ul><li>Two categories over plan, shown first</li><li>Of every 100 that came in, 50 stayed</li></ul></div>
     </div>
     <div class="d-panel" role="tabpanel" id="panel-investments" aria-labelledby="tab-investments" hidden>
-      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/investments.webp" data-caption="Investments: what your invested money is doing."><img src="assets/app/mohab-2026-10-04/investments.webp" width="2000" height="1250" loading="lazy" alt="Investments: a net gain of 5,673 EGP in 2026-09, holdings worth 177,903 EGP, and their allocation across certificates, gold, stocks and a money market fund."></button></div>
-      <div><h3>Is My Money Working?</h3><span class="fig">+5,673<span class="unit">EGP</span></span><p>Net gain in 2026-09, on holdings worth 177,903 EGP.</p><ul><li>18,450 invested of 46,833 money in</li><li>Certificates, gold, shares and a fund in one allocation</li></ul></div>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Investments</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/investments.webp" data-caption="Investments: what your invested money is doing."><img src="assets/app/mohab/investments.webp" width="2000" height="1250" loading="lazy" alt="Investments: a net gain of 5,673 EGP in 2026-09, a portfolio value of 78,303 EGP, and its allocation across gold, stocks and a money market fund."></button></div>
+      <div><h3>Is My Money Working?</h3><span class="fig">+5,673<span class="unit">EGP</span></span><p>Net gain in 2026-09, on a portfolio worth 78,303 EGP.</p><ul><li>18,450 invested of 46,833 money in</li><li>Gold, shares and a fund in one allocation</li></ul></div>
     </div>
     <div class="d-panel" role="tabpanel" id="panel-cash" aria-labelledby="tab-cash" hidden>
-      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/recurring.webp" data-caption="Cash planning: bills and subscriptions that repeat."><img src="assets/app/mohab-2026-10-04/recurring.webp" width="2000" height="1250" loading="lazy" alt="Cash planning, Recurring: bills and subscriptions of 13,480 EGP a month, 30% of income, led by the landlord at 12,000 EGP."></button></div>
+      <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/recurring.webp" data-caption="Cash planning: bills and subscriptions that repeat."><img src="assets/app/mohab/recurring.webp" width="2000" height="1250" loading="lazy" alt="Cash planning, Recurring: bills and subscriptions of 13,480 EGP a month, 30% of income, led by the landlord at 12,000 EGP."></button></div>
       <div><h3>What Comes Out Every Month?</h3><span class="fig">13,480<span class="unit">EGP</span></span><p>Bills and subscriptions a month: 30% of income.</p><ul><li>The landlord, at 12,000, is the largest</li><li>Subscriptions come to 4,200 a year</li></ul></div>
     </div>
   </section>
 
-  <!-- 5 · Smart where it saves time: Lightning suggests, you confirm -->
-  <section class="d-section" id="smart">
-    <div class="d-head">
-      <p class="label">Does the tedious part</p>
-      <h2>Smart Where It Saves You Time. Yours Where It Matters.</h2>
-      <p>Lightning does the matching and the maths. You confirm, so nothing changes behind your back.</p>
-    </div>
-    <div class="l-smart">
-      <div class="l-smart-grid">
-        <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-checks"/></svg></span><h3>Bills Find Their Payments</h3><p>Pay the landlord 12,000 and the bill due on the 3rd is settled. An early or different amount is suggested, never assumed.</p></article>
-        <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg></span><h3>Repeats Are Spotted for You</h3><p>Six months of history show what comes back every month. One click turns it into a tracked bill.</p></article>
-        <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span><h3>One Balance Checks an Account</h3><p>Type what your bank shows. A small gap becomes one adjustment; a big one is reviewed row by row.</p></article>
-        <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-table"/></svg></span><h3>Imports Ask Once per Name</h3><p>43 statement rows, 17 questions. Every Talabat order is sorted with one answer.</p></article>
-      </div>
-      <figure>
-        <div class="d-frame free"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Recurring</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/recurring.webp" data-caption="Recurring: bills that repeat, and what looks recurring from your last six months."><img src="assets/app/mohab-2026-10-04/a-suggested.webp" width="1454" height="753" loading="lazy" alt="Lightning Looks recurring: payments repeated about monthly in the last six months, such as Carrefour at about 3,250 and Talabat at about 469, each with a Track button."></button></div>
-        <figcaption class="d-cap">Found in Mohab’s last six months. Track the ones that matter.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 6 · How it works: a real sequence, so numbered steps (B06) -->
+  <!-- 4 · How it works: a real sequence, so numbered steps (B06) -->
   <section class="d-section" id="how">
     <div class="d-head">
       <p class="label">How it works</p>
@@ -236,24 +182,24 @@
     <ol class="l-steps">
       <li>
         <div class="step-head"><span class="num" aria-hidden="true">1</span><h3>Upload Your Statements</h3></div>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Import</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/import-upload.webp" data-caption="Upload: drop in the CSV your bank or wallet gives you."><img src="assets/app/mohab-2026-10-04/import-upload.webp" width="2000" height="1250" loading="lazy" alt="Lightning Import statement for Vodafone Cash: choose the CSV file, then Review statement."></button></div>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Import</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/import-upload.webp" data-caption="Upload: drop in the CSV your bank or wallet gives you."><img src="assets/app/mohab/import-upload.webp" width="1800" height="1125" loading="lazy" alt="Lightning Import: a bank statement CSV dropped in, ready to read."></button></div>
         <p>Download a CSV from your bank or wallet and drop it in.</p>
       </li>
       <li>
         <div class="step-head"><span class="num" aria-hidden="true">2</span><h3>Make Small Adjustments</h3></div>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Review</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/import-review.webp" data-caption="Review: check each row and fix a category before anything is saved."><img src="assets/app/mohab-2026-10-04/import-review.webp" width="2000" height="1250" loading="lazy" alt="Lightning Review import: 27 rows grouped into 3 names, possible duplicates flagged, the rest ready to post."></button></div>
-        <p>Rows are grouped by name, so you answer once per name. Nothing is saved until you say so.</p>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Review</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/import-review.webp" data-caption="Review: check each row and fix a category before anything is saved."><img src="assets/app/mohab/import-review.webp" width="1800" height="1125" loading="lazy" alt="Lightning Import review: statement rows waiting for a check, with categories you can change before saving."></button></div>
+        <p>Check each row and fix a category. Nothing is saved until you say so.</p>
       </li>
       <li>
         <div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Sit Down for Analysis</h3></div>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-2026-10-04/a-budget.webp" data-caption="Analysis: five screens, five questions, one change for next month."><img src="assets/app/mohab-2026-10-04/a-budget.webp" width="1800" height="1125" loading="lazy" alt="Lightning Budget: spent against plan for the month, with the categories over plan shown first."></button></div>
+        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/a-budget.webp" data-caption="Analysis: five screens, five questions, one change for next month."><img src="assets/app/mohab/a-budget.webp" width="1800" height="1125" loading="lazy" alt="Lightning Budget: spent against plan for the month, with the categories over plan shown first."></button></div>
         <p>Five screens answer five questions. End with one change for next month.</p>
       </li>
     </ol>
     <div class="l-more"><a class="btn btn-secondary" href="how-it-works.html">See how it works</a></div>
   </section>
 
-  <!-- 7 · Trust -->
+  <!-- 5 · Trust -->
   <section class="d-section" id="trust">
     <div class="d-head">
       <p class="label">Private by design</p>
@@ -268,7 +214,7 @@
     </div>
   </section>
 
-  <!-- 8 · Questions -->
+  <!-- 6 · Questions -->
   <section class="d-section" id="faq">
     <div class="d-head">
       <p class="label">Good questions</p>
