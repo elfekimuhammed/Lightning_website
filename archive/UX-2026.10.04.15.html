@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Lightning · Study Your Patterns. Control Your Future.</title>
@@ -13,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/landing.css?v=20261005-2">
+<link rel="stylesheet" href="archive/UX-2026.10.04.15.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -22,7 +23,7 @@
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.10.04.20" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.04.15" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -65,7 +66,7 @@
     <div class="l-story" aria-label="One month, three moments">
       <div class="kpi plan"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span><span class="lbl">The plan</span></div><span class="when">Start of the month</span><q>This month, I’m keeping my spending low.</q><span class="fig word">Spend less</span></div>
       <div class="kpi out"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span><span class="lbl">The reality</span></div><span class="when">9:40, no breakfast</span><q>A large latte and a croissant. Whatever it costs.</q><span class="fig">−150<span class="unit">EGP a day</span></span></div>
-      <div class="kpi kept"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-house"/></svg></span><span class="lbl">The habit</span></div><span class="when">Breakfast at home</span><q>No hungry mornings, no emergency coffee.</q><span class="fig">+100<span class="unit">EGP a day</span></span></div>
+      <div class="kpi kept"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-house"/></svg></span><span class="lbl">The habit</span></div><span class="when">Breakfast at home</span><q>No hungry mornings, no emergency coffee.</q><span class="fig">+3,000<span class="unit">EGP a month</span></span></div>
     </div>
   </header>
 
@@ -83,10 +84,9 @@
         <div class="chead"><h3>One Habit, One Month</h3><p>What one search in Lightning shows</p></div>
         <ol class="rows">
           <li class="row"><span>Latte and croissant<small>On the way to work, no breakfast</small></span><b>−150</b></li>
-          <li class="row"><span>Breakfast at home<small>Eggs, bread and coffee</small></span><b>−50</b></li>
-          <li class="row total"><span>Kept each morning</span><b>+100</b></li>
           <li class="row"><span>Mornings like that this month</span><b>× 20</b></li>
-          <li class="row result"><span>Kept this month</span><b>+2,000</b></li>
+          <li class="row total"><span>The café this month</span><b>−3,000</b></li>
+          <li class="row result"><span>Kept with breakfast at home</span><b>+3,000</b></li>
         </ol>
       </div>
       <figure class="card card-support d-quote">
@@ -100,25 +100,26 @@
   <!-- 2 · A quick game: the calculator (B08): entry card, result as a lead card, the CTA the only vivid thing near it -->
   <section class="d-section" id="calculator">
     <div class="d-head">
-      <p class="label">Try it</p>
-      <h2>What Is a Small Change Really Worth?</h2>
-      <p>Breakfast at home keeps about 2,000 EGP a month. What could you keep?</p>
+      <p class="label">A quick game</p>
+      <h2>See What a Small Change Is Worth</h2>
+      <p>Breakfast at home kept 3,000 EGP a month. What would yours add up to?</p>
     </div>
     <div class="l-game">
       <div class="l-game-in">
-      <h3>What Could You Keep Each Month Without Missing It?</h3>
-      <label class="sr-only" for="d-amount">Kept each month, in EGP</label>
-      <div class="amount"><span>EGP</span><input id="d-amount" inputmode="numeric" autocomplete="off" value="2,000"></div>
-      <div class="choice" role="group" aria-label="Quick monthly amounts"><button type="button" data-d-amount="500">500</button><button type="button" data-d-amount="1000">1,000</button><button type="button" data-d-amount="2000" aria-pressed="true">2,000</button><button type="button" data-d-amount="5000">5,000</button></div>
-      <span class="field-label" id="d-rate-label">Compared with a yearly return of</span>
-      <div class="choice" role="group" aria-labelledby="d-rate-label"><button type="button" data-d-rate="10">10%</button><button type="button" data-d-rate="15">15%</button><button type="button" data-d-rate="20" aria-pressed="true">20%</button><button type="button" data-d-rate="25">25%</button></div>
-    </div>
-    <div class="l-game-out" aria-live="polite">
-      <p class="l-game-k">Keeping it is like owning</p>
-      <span class="l-game-fig"><span data-d-out="capital">120,000</span><span class="unit">EGP</span></span>
-      <p class="l-game-line">That is what it would take to earn <b><span data-d-out="monthly">2,000</span> EGP</b> a month at <span data-d-out="rate">20%</span> a year. Keep it instead, and that income starts this month.</p>
-      <div class="l-game-chips"><div><span>Kept in a year</span><b><span data-d-out="year">24,000</span> EGP</b></div></div>
-    </div>
+        <h3>How Much Could You Cut Each Month and Still Live Comfortably?</h3>
+        <label class="sr-only" for="d-amount">Spend less each month, in EGP</label>
+        <div class="amount"><span>EGP</span><input id="d-amount" inputmode="numeric" autocomplete="off" value="2,000"></div>
+        <div class="choice" role="group" aria-label="Quick monthly amounts"><button type="button" data-d-amount="500">500</button><button type="button" data-d-amount="1000">1,000</button><button type="button" data-d-amount="2000" aria-pressed="true">2,000</button><button type="button" data-d-amount="5000">5,000</button></div>
+        <span class="field-label" id="d-rate-label">Yearly return to compare with</span>
+        <div class="choice" role="group" aria-labelledby="d-rate-label"><button type="button" data-d-rate="10">10%</button><button type="button" data-d-rate="15">15%</button><button type="button" data-d-rate="20" aria-pressed="true">20%</button><button type="button" data-d-rate="25">25%</button></div>
+      </div>
+      <div class="l-game-out" aria-live="polite">
+        <p class="l-game-k">That’s worth the same as having</p>
+        <span class="l-game-fig"><span data-d-out="capital">120,000</span><span class="unit">EGP</span></span>
+        <p class="l-game-line">At <span data-d-out="rate">20%</span> a year, that pays you <b><span data-d-out="monthly">2,000</span> EGP</b> a month, without having the money first.</p>
+        <div class="l-game-chips"><div><span>Kept each year</span><b><span data-d-out="year">24,000</span> EGP</b></div></div>
+        <div class="l-game-end"><a class="btn l-game-cta" href="#join">Get early access</a><span>An illustration, not a forecast.</span></div>
+      </div>
     </div>
   </section>
 
@@ -219,6 +220,6 @@
 </div>
 
 <dialog class="lightbox" id="lightbox" aria-label="Enlarged screenshot"><button type="button" aria-label="Close" data-close>×</button><img alt=""><p></p></dialog>
-<script src="js/landing.js?v=20261005-1"></script>
+<script src="js/landing.js?v=20261004-1"></script>
 </body>
 </html>

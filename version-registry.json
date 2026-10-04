@@ -230,8 +230,8 @@
       "id": "UX-2026.10.04.15",
       "name": "Experience B · Philosophy · Mohab's year",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.15.html"
     },
     {
       "id": "UX-2026.10.04.16",
@@ -244,6 +244,20 @@
       "id": "UX-2026.10.04.17",
       "name": "Experience A · Product · Screens open themselves",
       "page": "index.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.17.html"
+    },
+    {
+      "id": "UX-2026.10.04.19",
+      "name": "Experience A · Product · The calculator is back",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.20",
+      "name": "Experience B · Philosophy · Breakfast, counted honestly",
+      "page": "version-b.html",
       "status": "current",
       "archive_url": null
     }
