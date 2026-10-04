@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Lightning · All Your Money. Added Up Right.</title>
@@ -13,8 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/landing.css?v=20261005-2">
-<link rel="stylesheet" href="css/landing-c.css?v=20261004-2">
+<link rel="stylesheet" href="archive/UX-2026.10.04.18.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -23,7 +23,7 @@
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.10.04.23" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.04.18" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -58,7 +58,7 @@
   <header class="d-hero">
     <p class="label">Personal finance, built in Egypt</p>
     <h1 style="--fit:7.4">All Your Money. <span>Added Up Right.</span></h1>
-    <p class="d-hero-line">Banks, wallets, gold, certificates and shares, counted in EGP, minus what isn’t yours.</p>
+    <p class="d-hero-line">Banks, wallets, gold, certificates and shares, in EGP. Every number shows its working.</p>
     <div class="d-actions">
       <a class="btn btn-vivid" href="#join">Get early access</a>
       <a class="btn btn-secondary" href="how-it-works.html">See how it works</a>
@@ -87,7 +87,7 @@
     <div class="d-head">
       <p class="label">Numbers you can trust</p>
       <h2>Every Number Shows Its Working.</h2>
-      <p>Three of Mohab’s numbers, each with its working and the screen it comes from.</p>
+      <p>Pick one of Mohab’s numbers. See what it’s made of, then find it on the screen.</p>
     </div>
     <div class="d-tabs c-seg" role="tablist" aria-label="Three of Mohab’s numbers"><button type="button" role="tab" id="c-tab-spend" aria-controls="c-panel-spend" aria-selected="true" tabindex="0">Safe to spend</button><button type="button" role="tab" id="c-tab-out" aria-controls="c-panel-out" aria-selected="false" tabindex="-1">Money out, 2026-09</button><button type="button" role="tab" id="c-tab-kept" aria-controls="c-panel-kept" aria-selected="false" tabindex="-1">Saved this year</button></div>
       <div class="c-panel c-trace" role="tabpanel" id="c-panel-spend" aria-labelledby="c-tab-spend">
@@ -95,7 +95,6 @@
           <div class="chead"><h3>Safe to Spend</h3><p>Until the next salary, 2026-11-01</p></div>
           <span class="lead-fig">170,089<span class="unit">EGP</span></span>
           <ol class="rows"><li class="row"><span>Free cash<small>Your cash, less reserves and bills due</small></span><b>199,566</b></li><li class="row"><span>Bills and loan payments<small>Before the next salary</small></span><b>−4,460</b></li><li class="row"><span>Budget left to spend<small>What this month’s plan still allows</small></span><b>−25,017</b></li><li class="row result"><span>Safe to spend</span><b>170,089</b></li></ol>
-          <button class="btn btn-secondary c-see" type="button" data-zoom="assets/app/mohab-year-2026-10-04/a-plan.webp" data-caption="Cash planning: safe to spend, worked out from free cash.">See it on the screen</button>
         </div>
         <figure class="c-trace-shot"><div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Cash planning</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-year-2026-10-04/a-plan.webp" data-caption="Cash planning: safe to spend, worked out from free cash."><img src="assets/app/mohab-year-2026-10-04/a-plan.webp" width="1800" height="1125" loading="lazy" alt="Lightning Cash planning: 170,089 EGP safe to spend until 2026-11-01, free cash of 199,566 EGP and 4,460 EGP of bills and loan payments before the next salary."></button></div><figcaption class="d-cap">The same figure on Mohab’s Cash planning screen</figcaption></figure>
       </div>
@@ -104,7 +103,6 @@
           <div class="chead"><h3>Money Out</h3><p>2026-09, by category</p></div>
           <span class="lead-fig">28,818<span class="unit">EGP</span></span><span class="c-pct out">42% went on rent</span>
           <ol class="rows"><li class="row"><span>Housing &amp; Rent<small>The landlord, on the 3rd</small></span><b>12,000</b></li><li class="row"><span>Food &amp; Groceries</span><b>4,644</b></li><li class="row"><span>Health</span><b>2,700</b></li><li class="row"><span>Loan payments</span><b>2,500</b></li><li class="row"><span>Other</span><b>6,974</b></li><li class="row total"><span>Money out</span><b>28,818</b></li></ol>
-          <button class="btn btn-secondary c-see" type="button" data-zoom="assets/app/mohab-year-2026-10-04/a-expenses.webp" data-caption="Expense analysis: where September’s money went.">See it on the screen</button>
         </div>
         <figure class="c-trace-shot"><div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Expense analysis</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-year-2026-10-04/a-expenses.webp" data-caption="Expense analysis: where September’s money went."><img src="assets/app/mohab-year-2026-10-04/a-expenses.webp" width="1800" height="1125" loading="lazy" alt="Lightning Expense analysis for 2026-09: 28,818 EGP out, a treemap led by Housing &amp; Rent at 12,000 EGP, and how each category moved."></button></div><figcaption class="d-cap">The same figure on Mohab’s Expense analysis screen</figcaption></figure>
       </div>
@@ -113,7 +111,6 @@
           <div class="chead"><h3>Saved This Year</h3><p>2026-01-01 to 2026-10-04</p></div>
           <span class="lead-fig">284,586<span class="unit">EGP</span></span><span class="c-pct">49.2% of money in</span>
           <ol class="rows"><li class="row"><span>Money in<small>Salary and everything else</small></span><b>577,860</b></li><li class="row"><span>Spent</span><b>−293,274</b></li><li class="row result"><span>Saved</span><b>284,586</b></li><li class="row sub"><span>Invested<small>20.0% of money in</small></span><b>115,450</b></li><li class="row sub"><span>Kept as cash</span><b>169,136</b></li></ol>
-          <button class="btn btn-secondary c-see" type="button" data-zoom="assets/app/mohab-year-2026-10-04/a-budget.webp" data-caption="Budget: saved and invested this year.">See it on the screen</button>
         </div>
         <figure class="c-trace-shot"><div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab-year-2026-10-04/a-budget.webp" data-caption="Budget: saved and invested this year."><img src="assets/app/mohab-year-2026-10-04/a-budget.webp" width="1800" height="1125" loading="lazy" alt="Lightning Budget, year to date: a 49.2% savings rate and 20.0% investing rate, with 115,450 EGP invested, 169,136 EGP kept and 293,274 EGP spent of 577,860 EGP money in."></button></div><figcaption class="d-cap">The same figure on Mohab’s Budget screen</figcaption></figure>
       </div>

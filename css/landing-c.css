@@ -1,4 +1,4 @@
-/* Landing page C · Trust (UX-2026.10.04.18, 2026-10-04): only what css/landing.css lacks. Loads after it. */
+/* Landing page C · Trust (UX-2026.10.04.23, 2026-10-04): only what css/landing.css lacks. Loads after it. */
 /* B02: labels and the "or" are sentence case */
 .label,.l-or{text-transform:none;letter-spacing:.01em;word-spacing:0}
 .label{font-size:13px}
@@ -25,6 +25,7 @@
 .c-panel .row.sub span{padding-left:14px}
 .c-panel figure{margin:0}
 .c-trace-shot{display:flex;flex-direction:column;gap:10px}
+.c-see{display:none}
 @media (prefers-reduced-motion:no-preference){
   .c-panel:not([hidden]) .rows .row{animation:c-in .32s ease both}
   .c-panel:not([hidden]) .rows .row:nth-child(2){animation-delay:.05s}
@@ -56,6 +57,8 @@
 
 @media (max-width:1000px){
   .c-trace{grid-template-columns:1fr}
+  .c-trace-shot{display:none}
+  .c-see{display:flex;width:100%;margin-top:18px}
   .c-promise{grid-template-columns:1fr}
 }
 @media (max-width:820px){.c-steps{grid-template-columns:1fr}}
