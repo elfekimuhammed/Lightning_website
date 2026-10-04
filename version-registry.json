@@ -13,22 +13,22 @@
       "id": "UX-2026.10.02.07",
       "name": "Experience A · Clear picture",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.02.07.html"
     },
     {
       "id": "UX-2026.09.30.05",
       "name": "Experience B · Habit-first",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.09.30.05.html"
     },
     {
       "id": "UX-2026.09.30.03",
       "name": "Experience C · Interactive flow",
       "page": "version-c.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.09.30.03.html"
     },
     {
       "id": "UX-2026.10.03.01",
@@ -48,8 +48,8 @@
       "id": "UX-2026.10.03.03",
       "name": "Experience D · Guideline 3.8",
       "page": "version-d.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.03.03.html"
     },
     {
       "id": "UX-2026.10.01.07",
@@ -125,6 +125,20 @@
       "id": "UX-2026.10.03.08",
       "name": "App Feedback · 0.5.0 and 0.4.0 build selection",
       "page": "app-feedback.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.01",
+      "name": "Experience A · Product",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.02",
+      "name": "Experience B · Philosophy",
+      "page": "version-b.html",
       "status": "current",
       "archive_url": null
     }

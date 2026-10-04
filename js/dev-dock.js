@@ -1,7 +1,7 @@
 // Lightning testing panel: page-version switch and the UX test button, in one fold-out on the right edge.
 // Load with `defer` BEFORE js/ux-test.js, so the UX button exists when that script wires it up.
 (() => {
-  const VERSIONS = [['A', 'index.html'], ['B', 'version-b.html'], ['C', 'version-c.html'], ['D', 'version-d.html']];
+  const VERSIONS = [['A · Product', 'index.html'], ['B · Philosophy', 'version-b.html']];
   const page = location.pathname.split('/').pop() || 'index.html';
   const landing = VERSIONS.some(([, href]) => href === page);
   let home = landing ? page : 'index.html';

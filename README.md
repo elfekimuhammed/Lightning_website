@@ -4,15 +4,15 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.8) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.9) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
 ```
-index.html          Version A landing page (hybrid of B's clarity and C's philosophy)
-version-b.html      Version B landing page (product-first story, rebuilt 2026-09-30)
-version-c.html      Version C landing page (product-led, live app tour)
-version-d.html      Version D landing page (built from guideline 3.8 Part B)
+index.html          Landing page A · Product: what Lightning does (guideline 3.9 Part B)
+version-b.html      Landing page B · Philosophy: why it works (guideline 3.9 Part B)
+version-c.html      redirect to version-b.html (Version C is archived)
+version-d.html      redirect to index.html (Version D is archived)
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
 release-log.html    release log: what changed build by build (Version D system; css/release-log.css)
 current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
@@ -24,9 +24,10 @@ css/version-b.css   Version B's own sections (builds on css/version-c.css)
 js/version-b.js     Version B calculator with an adjustable return rate
 css/version-c.css   Version C and How It Works visual system
 js/version-c.js     Version C calculator, signup, product tour and lightbox
-css/version-d.css   Version D: self-contained, guideline 3.8 tokens and building blocks only
+css/landing.css     both landing pages: self-contained, guideline 3.9 tokens and building blocks only
+js/landing.js       both landing pages: calculator, product tour, lightbox and signup
+css/version-d.css   Version D's stylesheet, kept for the release log page
 js/analytics.js     GoatCounter page views and one event per download
-js/version-d.js     Version D calculator, product tour, lightbox and signup
 audit/              website audits against the guideline
 css/theme.css       light/dark switch
 css/dev-dock.css    testing panel (page version + UX test)
@@ -74,6 +75,8 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.03.01` — `version-d.html` (guideline 3.6)
 - `UX-2026.10.03.02` — `version-d.html` (guideline 3.7)
 - `UX-2026.10.03.03` — `version-d.html` (guideline 3.8)
+- `UX-2026.10.04.01` — `index.html` (A · Product)
+- `UX-2026.10.04.02` — `version-b.html` (B · Philosophy)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
@@ -92,7 +95,7 @@ UX responses go to the survey sheet until the Apps Script receiver routes them. 
 
 ## Current Status and app feedback
 
-[Current Status](current-status.html) is the shared beta hub for all three landing experiences. It keeps beta orientation, harmless Mohab sample CSVs, release notes/download links and app feedback in one predictable place. The header and the **Testing** panel both link to it. Home on this shared page returns to the landing version a visitor most recently viewed.
+[Current Status](current-status.html) is the shared beta hub for both landing pages. It keeps beta orientation, harmless Mohab sample CSVs, release notes/download links and app feedback in one predictable place. The header and the **Testing** panel both link to it. Home on this shared page returns to the landing version a visitor most recently viewed.
 
 The app feedback form accepts multiple tickets at once. The browser sends a single `form_type=app_feedback` request; the receiver expands it into **one row per ticket** in the **App Feedback** tab, capturing the internal landing release, selected app build, section, bug/improvement, visual/technical category, description, session and device.
 
@@ -119,46 +122,31 @@ Windows app versions are separate from website experience IDs. The Current Statu
 
 The website, survey, and Google Sheets receiver are connected. When changing the receiver, update its URL in both landing pages and the survey page, then verify that a submission appears in the destination Sheet.
 
-## Version C
-
-Version C tells the story in this order: hero, game, three truths, the budgeting story, “And That Is Lightning”, a live product tour, testimonials and signup. `how-it-works.html` walks through the app in six steps.
-
-- **App screenshots** in `assets/app/` are captured from the Lightning app running on a sample household (six months of salary, spending, budgets, THNDR holdings, gold, bills, a car loan and reserves, dated to 30 September 2026). They are 2000 × 1250 WebP files; keep that size when replacing one so the frames stay consistent.
-- **Testimonials** are placeholders. Replace the quote, name, initials and role in each `figure[data-placeholder="testimonial"]` in `version-c.html`, then remove the `data-placeholder` attribute.
-- The product tour copy lives in the `TOUR` list at the bottom of `version-c.html`.
-
 ## Dark mode
 
-All four versions, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in section B09 Dark mode of `brand-guidelines.html`.
+Both landing pages, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in section B09 Dark mode of `brand-guidelines.html`.
 
 - The page follows the device setting until the visitor uses the switch; the choice is then remembered in `localStorage` (`lightning-theme`).
 - To add dark mode to another page: include `css/theme.css` and `js/theme.js` (in `<head>`, not deferred), add `<button data-theme-toggle></button>` to the top bar, and define the page's dark colors under `:root[data-theme="dark"]`.
 - The survey is still light only.
 
-## Version B
-
-Version B tells one story, in this order: what Lightning is (with privacy in the hero), money spread across many places, why your balance isn't all yours to spend, your habits, the small-change calculator, how small changes become wealth, the product tour, trust, FAQ and early access.
-
-- Screens and numbers come from the app's own sample household (Mohab, September 2026). If you recapture `assets/app/mohab/`, update the figures quoted in `version-b.html`.
-- Two FAQ answers are placeholders: pricing and the founder note. Fill them in before sharing the page widely.
-- There is no testimonial section. Add one once you have real quotes that describe a realization, not praise.
-- How It Works links back to whichever landing page (B or C) the visitor came from.
-
 ## Header and testing panel
 
 - Every version uses the same header: the logo, **Home · How It Works · Current Status**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
-- The page-version switch (A · B · C · D), **Submit UX Test**, and **Submit app feedback** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
+- The page-version switch (A · Product, B · Philosophy), **Submit UX Test**, and **Submit app feedback** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
 - How It Works and Current Status remember which version the visitor came from, so **Home** and the testing panel point back to it.
 
-## Version D
+## Landing pages
 
-Version D is built from [guideline 3.8](brand-guidelines.html) Part B, after the [2026-10-03 audit](audit/2026-10-03-website-audit.md) of A, B, C, How It Works and Current Status.
+There are two landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
 
-- Order: hero (label, H1 with its punch line in the gradient, one line, Get early access, the screen trio), one picture (six places counted as one net worth), what's really free (safe to spend beside the Cash planning screen), what we believe (one habit and the page's one quote), try it (the calculator), the tour (every screen answers one question), private by design, good questions and the early-access band. Each section opens with a short label so the reader knows what kind of section comes next.
-- It loads only `css/version-d.css` (plus the shared theme, testing panel and UX rail). Tokens are copied from the guideline; change them there first. Hero and section headers are centred; copy inside cards is left aligned.
-- Every figure is on the screen beside it or adds up from Mohab's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth). Recapture the screens and these figures together.
-- No placeholders: the FAQ answers only what the app does today, and the founder answer points to Current Status.
-- How It Works and Current Status are shared and still use the older style; the audit lists what they need.
+**A · Product (`index.html`)** shows what Lightning does. Order: hero (H1 with its punch line, the screen trio), one picture (six places counted as one net worth), what's really free (safe to spend beside the Cash planning screen), the tour (every screen answers one question), how it works (three numbered steps, a real screen each), private by design, good questions and the early-access band.
+
+**B · Philosophy (`version-b.html`)** shows why it works, then the product as proof. Order: hero (H1 with its punch line, the story trio: the plan, the 9:40 reality, the habit), a better system (the habit sum and the page's one quote), a quick game (the calculator), three truths in order, every app sees one corner (six places, then Lightning, beside the Overview screen), private by design and the early-access band.
+
+- Every figure on A is on the screen beside it or adds up from Mohab's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth; free cash 72,663 less 1,309 budget left = 71,354 safe to spend). B uses the same household. Recapture the screens and these figures together.
+- One quote per page at most (B has James Clear; A has none). No testimonials until there are real ones. No placeholders.
+- How It Works, Current Status and the release log are shared; Home on them returns to the landing page the visitor came from.
 
 ## Logo
 
@@ -170,14 +158,6 @@ The logo is the two-leaf mark from the guideline (A02): azure is money you hold,
 - `lightning-logo-gradient.png`, `lightning-logo-gradient-wordmark.png`, `lightning-mark.png`, `icon-512.png` and `linkedin-banner.png` are re-rendered from the SVGs.
 - The old ribbon mark and bolt icon are gone; archived pages use the two-leaf mark too.
 
-## Version A
-
-Version A is the hybrid: Version B's clear opening and practical proof, with Version C's philosophy.
-
-- Order: what Lightning is (privacy in the hero), money in six places, safe to spend, the idea behind Lightning (the budgeting story), the calculator, three truths about building wealth, the product tour, trust, FAQ and early access.
-- One quote only: James Clear's line on systems, placed where the story turns from budgets to habits.
-- It shares B's styles, screenshots and calculator (`css/version-b.css`, `js/version-b.js`, `assets/app/mohab/`), and has the same pricing and founder placeholders in the FAQ.
-
 ## App screenshots
 
 All product images come from the app's sample household, pinned to the end of September 2026:
@@ -187,5 +167,5 @@ LIGHTNING_TODAY=2026-09-30 python -m lightning --demo
 ```
 
 - Full-window screens (2000 × 1250) are used in tours and steps. Content crops without the sidebar (1800 × 1125, named `a-*.webp`) are used where the chart is the message: the hero trio on every version and the analysis grid on How It Works.
-- The hero on A, B and C shows the trio: Overview in the middle, Investments and Expense analysis beside it.
+- The hero on A shows the trio: Overview in the middle, Investments and Expense analysis beside it. B shows the Overview beside its six corners.
 - Quoted figures (net worth 198,065, savings rate 50.1%, safe to spend 71,354 and so on) match these screens. Rules are in section B07 Product screens of `brand-guidelines.html`.

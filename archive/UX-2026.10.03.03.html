@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Lightning · All Your Money. One Clear Picture.</title>
@@ -13,16 +14,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/landing.css?v=20261004-1">
+<link rel="stylesheet" href="archive/UX-2026.10.03.03.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
-<link rel="stylesheet" href="css/dev-dock.css?v=20261004-1">
-<script src="js/dev-dock.js?v=20261004-1" defer></script>
+<link rel="stylesheet" href="css/dev-dock.css?v=20261003-1">
+<script src="js/dev-dock.js?v=20261003-1" defer></script>
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.10.04.01" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.03.03" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -39,9 +40,9 @@
 
 <div class="d-bar">
   <div class="wrap">
-    <a class="d-lockup" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>
+    <a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>
     <nav class="d-links" aria-label="Main">
-      <a href="index.html" data-home-link aria-current="page">Home</a>
+      <a href="version-d.html" aria-current="page">Home</a>
       <a href="how-it-works.html">How It Works</a>
       <a href="current-status.html">Current Status</a>
     </nav>
@@ -133,9 +134,62 @@
     </div>
   </section>
 
+  <!-- 3 · Habits: one breakdown and the page's one quote -->
+  <section class="d-section" id="habits">
+    <div class="d-head">
+      <p class="label">What we believe</p>
+      <h2>You Don’t Suck at Budgeting. You Just Don’t Have a System.</h2>
+      <p>Budgets don’t break at the start of the month. They break at 9:40, with no breakfast.</p>
+    </div>
+    <div class="d-habit">
+      <div class="card card-support">
+        <div class="chead"><h3>One Habit, One Month</h3><p>What one search in Lightning shows</p></div>
+        <ol class="rows">
+          <li class="row"><span>Latte and croissant<small>On the way to work, no breakfast</small></span><b>−150</b></li>
+          <li class="row"><span>Mornings like that this month</span><b>× 20</b></li>
+          <li class="row total"><span>The café this month</span><b>−3,000</b></li>
+          <li class="row result"><span>Kept with breakfast at home</span><b>+3,000</b></li>
+        </ol>
+      </div>
+      <figure class="card card-support d-quote">
+        <blockquote>“You do not rise to the level of your goals. You fall to the level of your systems.”</blockquote>
+        <figcaption>James Clear, Atomic Habits</figcaption>
+        <p>Lightning shows where spending repeats. You decide what caused it and what to change, so you spend less without living worse.</p>
+      </figure>
+    </div>
+  </section>
 
+  <!-- 4 · Calculator (B08): entry card, result as a lead card, the CTA the only vivid thing near it -->
+  <section class="d-section" id="calculator">
+    <div class="d-head">
+      <p class="label">Try it</p>
+      <h2>See What a Small Change Is Worth</h2>
+      <p>Breakfast at home kept 3,000 EGP a month. What would your small change add up to?</p>
+    </div>
+    <div class="d-calc">
+      <div class="card card-entry">
+        <label class="field-label" for="d-amount">Spend less each month</label>
+        <div class="amount"><span>EGP</span><input id="d-amount" inputmode="numeric" autocomplete="off" value="2,000" aria-describedby="d-amount-hint"></div>
+        <p class="field-hint" id="d-amount-hint">A few deliveries, a forgotten subscription, the morning café.</p>
+        <div class="choice" role="group" aria-label="Quick monthly amounts"><button type="button" data-d-amount="500">500</button><button type="button" data-d-amount="1000">1,000</button><button type="button" data-d-amount="2000" aria-pressed="true">2,000</button><button type="button" data-d-amount="5000">5,000</button></div>
+        <span class="field-label" id="d-rate-label">Yearly return to compare with</span>
+        <div class="choice" role="group" aria-labelledby="d-rate-label"><button type="button" data-d-rate="10">10%</button><button type="button" data-d-rate="15">15%</button><button type="button" data-d-rate="20" aria-pressed="true">20%</button><button type="button" data-d-rate="25">25%</button></div>
+      </div>
+      <div class="card card-lead" aria-live="polite">
+        <div class="chead"><h3>The Same as Having Saved</h3><p><span data-d-out="monthly">2,000</span> EGP less a month, at <span data-d-out="rate">20%</span> a year</p></div>
+        <span class="lead-fig"><span data-d-out="capital">120,000</span><span class="unit">EGP</span></span>
+        <p class="lead-sub">An illustration, not a forecast.</p>
+        <ol class="rows">
+          <li class="row"><span>Kept each year</span><b><span data-d-out="year">24,000</span></b></li>
+          <li class="row"><span>Saved every month for 10 years</span><b><span data-d-out="ten">752,191</span></b></li>
+        </ol>
+        <a class="btn btn-vivid" href="#join">Get early access</a>
+      </div>
+    </div>
+    <p class="d-note">How it is worked out: savings = the monthly amount × 12 ÷ the yearly return, because savings earning that return pay you the same each month. Ten years = the same amount saved every month at that return, compounded monthly. Real returns, inflation, taxes and fees vary.</p>
+  </section>
 
-  <!-- 3 · Product tour: one question per tab, the number on the screen beside it -->
+  <!-- 5 · Product tour: one question per tab, the number on the screen beside it -->
   <section class="d-section" id="tour">
     <div class="d-head">
       <p class="label">Take the tour</p>
@@ -171,34 +225,7 @@
     </div>
   </section>
 
-  <!-- 4 · How it works: a real sequence, so numbered steps (B06) -->
-  <section class="d-section" id="how">
-    <div class="d-head">
-      <p class="label">How it works</p>
-      <h2>Thirty Minutes. Once a Month.</h2>
-      <p>Upload, check, then sit down with your numbers.</p>
-    </div>
-    <ol class="l-steps">
-      <li>
-        <div class="step-head"><span class="num" aria-hidden="true">1</span><h3>Upload Your Statements</h3></div>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Import</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/import-upload.webp" data-caption="Upload: drop in the CSV your bank or wallet gives you."><img src="assets/app/mohab/import-upload.webp" width="1800" height="1125" loading="lazy" alt="Lightning Import: a bank statement CSV dropped in, ready to read."></button></div>
-        <p>Download a CSV from your bank or wallet and drop it in.</p>
-      </li>
-      <li>
-        <div class="step-head"><span class="num" aria-hidden="true">2</span><h3>Make Small Adjustments</h3></div>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Review</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/import-review.webp" data-caption="Review: check each row and fix a category before anything is saved."><img src="assets/app/mohab/import-review.webp" width="1800" height="1125" loading="lazy" alt="Lightning Import review: statement rows waiting for a check, with categories you can change before saving."></button></div>
-        <p>Check each row and fix a category. Nothing is saved until you say so.</p>
-      </li>
-      <li>
-        <div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Sit Down for Analysis</h3></div>
-        <div class="d-frame"><div class="d-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Lightning · Budget</span></div><button class="zoom" type="button" data-zoom="assets/app/mohab/a-budget.webp" data-caption="Analysis: five screens, five questions, one change for next month."><img src="assets/app/mohab/a-budget.webp" width="1800" height="1125" loading="lazy" alt="Lightning Budget: spent against plan for the month, with the categories over plan shown first."></button></div>
-        <p>Five screens answer five questions. End with one change for next month.</p>
-      </li>
-    </ol>
-    <div class="l-more"><a class="btn btn-secondary" href="how-it-works.html">See how it works</a></div>
-  </section>
-
-  <!-- 5 · Trust -->
+  <!-- 6 · Trust -->
   <section class="d-section" id="trust">
     <div class="d-head">
       <p class="label">Private by design</p>
@@ -213,7 +240,7 @@
     </div>
   </section>
 
-  <!-- 6 · Questions -->
+  <!-- 7 · Questions -->
   <section class="d-section" id="faq">
     <div class="d-head">
       <p class="label">Good questions</p>
@@ -226,7 +253,7 @@
       <details><summary>Is there a phone app?</summary><p>Not yet. Add spending as you go on your computer, or import your bank’s CSV at the end of the month.</p></details>
       <details><summary>Does it connect to my bank?</summary><p>No. Lightning never asks for bank logins. Download a CSV from any bank or wallet, match its columns once, and review every row before it’s saved.</p></details>
       <details><summary>What goes online?</summary><p>Your data stays in an encrypted profile on your computer. The only thing Lightning looks up online is the latest price of listed shares, by ticker symbol.</p></details>
-      <details><summary>Who is building Lightning, and why?</summary><p>Someone from finance in Egypt who has logged every pound since graduating. Excel took too long and budgeting apps missed the full picture, so Lightning does both. <a href="version-b.html">Read what we believe</a>.</p></details>
+      <details><summary>Who is building Lightning?</summary><p>Someone from finance in Egypt who has logged every pound since graduating. Excel took too long and budgeting apps missed the full picture, so Lightning does both. The full story is on <a href="current-status.html">Current Status</a>.</p></details>
     </div>
   </section>
 
@@ -247,12 +274,12 @@
 
 <div class="wrap">
   <footer class="d-foot">
-    <div class="d-foot-brand"><a class="d-lockup" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a><span>Study your patterns. Control your future.</span><span>Made in Egypt</span></div>
+    <div class="d-foot-brand"><a class="d-lockup" href="version-d.html"><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a><span>Study your patterns. Control your future.</span><span>Made in Egypt</span></div>
     <nav aria-label="Footer"><a href="how-it-works.html">How It Works</a><a href="current-status.html">Current Status</a><a href="survey.html">Survey</a></nav>
   </footer>
 </div>
 
 <dialog class="lightbox" id="lightbox" aria-label="Enlarged screenshot"><button type="button" aria-label="Close" data-close>×</button><img alt=""><p></p></dialog>
-<script src="js/landing.js?v=20261004-1"></script>
+<script src="js/version-d.js?v=20261003-1"></script>
 </body>
 </html>
