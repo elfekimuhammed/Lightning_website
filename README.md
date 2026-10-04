@@ -11,8 +11,7 @@ Built in the **Meadow** identity: meadow green for growth, azure for clarity, an
 ```
 index.html          Landing page A · Product: what Lightning does (guideline 3.9 Part B)
 version-b.html      Landing page B · Philosophy: why it works (guideline 3.9 Part B)
-version-c.html      redirect to version-b.html (Version C is archived)
-version-d.html      redirect to index.html (Version D is archived)
+version-c.html      Landing page C · Trust: every number shows its working (guideline 3.17 Part B)
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
 release-log.html    release log: what changed build by build (Version D system; css/release-log.css)
 current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
@@ -22,10 +21,11 @@ survey.html         optional personal finance survey
 css/styles.css      shared styles
 css/version-b.css   Version B's own sections (builds on css/version-c.css)
 js/version-b.js     Version B calculator with an adjustable return rate
-css/version-c.css   Version C and How It Works visual system
-js/version-c.js     Version C calculator, signup, product tour and lightbox
-css/landing.css     both landing pages: self-contained, guideline 3.9 tokens and building blocks only
-js/landing.js       both landing pages: calculator, product tour, lightbox and signup
+css/version-c.css   the old Version C system, still used by How It Works, Current Status, App Feedback and Versions
+js/version-c.js     the old Version C script, still used by How It Works
+css/landing.css     the landing pages: self-contained, guideline tokens and building blocks only
+css/landing-c.css   landing page C's own sections, loaded after css/landing.css
+js/landing.js       the landing pages: calculator, tabs, lightbox and signup
 css/version-d.css   Version D's stylesheet, kept for the release log page
 js/analytics.js     GoatCounter page views and one event per download
 audit/              website audits against the guideline
@@ -95,6 +95,7 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.20` — `version-b.html` (B · breakfast, counted honestly)
 - `UX-2026.10.04.21` — `index.html` (A · like having it in the bank)
 - `UX-2026.10.04.22` — `version-b.html` (B · like having it in the bank)
+- `UX-2026.10.04.18` — `version-c.html` (C · trust: added up right)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.04.16` — `how-it-works.html` (Mohab's year)
@@ -157,11 +158,13 @@ Both landing pages, How It Works and the brand guidelines support light and dark
 
 ## Landing pages
 
-There are two landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band (white email pill, Get early access, or, a dark Take the survey button) and a sign-off: the mark and "Study Your Patterns. Control Your Future." Fields on the site are white with a hairline, never grey. Phones come first: each hero sentence stays on one line (the h1's `--fit` is its longest line in em), buttons stack full width, the screen trio is one column and fields are 54px tall. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
+There are three landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band (white email pill, Get early access, or, a dark Take the survey button) and a sign-off: the mark and "Study Your Patterns. Control Your Future." Fields on the site are white with a hairline, never grey. Phones come first: each hero sentence stays on one line (the h1's `--fit` is its longest line in em), buttons stack full width, the screen trio is one column and fields are 54px tall. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
 
 **A · Product (`index.html`)** shows Lightning's three strengths: everything you own and owe, the next three months, and why it changed. It never compares Lightning with other apps. Order: hero (H1 with its punch line, the screen trio), what Lightning does (three pillar cards), everything you own and owe (six places counted as one net worth), the next three months (safe to spend beside the forecast, then the next 30 days, the loan payoff and the month ahead), analysis (the tour), does the tedious part (bills find their payments, repeats spotted, one balance checks an account, imports ask once per name, beside the Looks recurring screen), how it works (three numbered steps), try it (the calculator), private by design, good questions and the early-access band.
 
 **B · Philosophy (`version-b.html`)** shows why it works, then the product as proof. Order: hero (H1 with its punch line, the story trio: the plan, the 9:40 reality, the habit), a better system (the habit sum: 150 at the café, 50 at home, 100 kept × 20 = 2,000 a month and the page's one quote), try it (the calculator: keeping it each month is like having the capital in the bank), three truths in order, every app sees one corner (six places, then Lightning, beside the Overview screen), private by design and the early-access band.
+
+**C · Trust (`version-c.html`)** leads with numbers you can trust. It loads `css/landing.css`, then `css/landing-c.css`, and `js/landing.js`. Order: hero (H1 "All Your Money. Added Up Right.", "Free to use. No card, no account.", then the six places added up to net worth), numbers you can trust (pick safe to spend, money out in 2026-09 or saved this year; each shows its working beside the screen it comes from), the next three months, try it (the calculator), how it works (three steps, text only), our promise (every feature free, pay once when it's worth it, your money stays with you), good questions and the early-access band. Labels are sentence case and the sign-off is ink. Money out in 2026-09 is Housing & Rent 12,000, Food & Groceries 4,644, Health 2,700, Loan payments 2,500 and Other 6,974; saved this year is 577,860 in less 293,274 spent = 284,586, of which 115,450 invested and 169,136 kept.
 
 - Screens are in `assets/app/mohab-year-2026-10-04/`, captured 2026-10-04 from Mohab's full 2026 in the app (`python -m lightning --sample`, port 8767). Overview, Investments and Budget show YTD; Expense analysis shows 2026-09 (every section filled); Cash planning shows today. Older folders (`mohab/`, `mohab-2026-10-04/`) stay for archived pages.
 - Every figure on A is on the screen beside it or adds up from Mohab's year on 2026-10-04 (487,967 in your accounts, 6,000 held for family, 49,500 owed: the car loan's 37,500 and October's rent due; 432,467 net worth, up 287,067 this year; free cash 199,566 less 4,460 payments and 25,017 budget left = 170,089 safe to spend until 2026-11-01; portfolio 250,401, +14,841 this year; next 30 days −28,460 out; +6,981 expected in 2026-11; car loan paid off 2027-12-05; September money out 28,818, 42% rent). B uses the same household. Recapture the screens and these figures together.

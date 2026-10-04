@@ -274,6 +274,13 @@
       "page": "version-b.html",
       "status": "current",
       "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.18",
+      "name": "Experience C · Trust · Added up right",
+      "page": "version-c.html",
+      "status": "current",
+      "archive_url": null
     }
   ]
 }
