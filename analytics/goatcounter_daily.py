@@ -1,6 +1,6 @@
-"""Append one day of GoatCounter numbers to analytics/daily.csv.
+"""Keep analytics/daily.csv up to date from GoatCounter: one row per Cairo day.
 
-    python analytics/goatcounter_daily.py              # yesterday, Cairo time
+    python analytics/goatcounter_daily.py              # yesterday (final) and today (so far)
     python analytics/goatcounter_daily.py 2026-10-03   # a given day
 
 Reads https://mohamedelfeki.goatcounter.com/api/v0 (the API key is added to the
@@ -19,7 +19,7 @@ from zoneinfo import ZoneInfo
 API = "https://mohamedelfeki.goatcounter.com/api/v0"
 CAIRO = ZoneInfo("Africa/Cairo")
 OUT = Path(__file__).with_name("daily.csv")
-HEADER = ["date", "unique_visitors", "app_downloads", "sample_downloads", "downloads_by_build"]
+HEADER = ["date", "unique_visitors", "app_downloads", "sample_downloads", "downloads_by_build", "updated_at"]
 
 
 def get(path: str) -> dict:
@@ -28,12 +28,14 @@ def get(path: str) -> dict:
         return json.load(r)
 
 
-def utc(d: date) -> str:
-    return datetime.combine(d, time(), CAIRO).astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+def utc(moment: datetime) -> str:
+    return moment.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def day_row(d: date) -> list:
-    span = f"start={utc(d)}&end={utc(d + timedelta(days=1))}"
+    start = datetime.combine(d, time(), CAIRO)
+    end = min(start + timedelta(days=1), datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0))
+    span = f"start={utc(start)}&end={utc(end)}"
     visitors = get(f"/stats/total?{span}").get("total", 0)
     builds, sample = {}, 0
     after = ""
@@ -49,19 +51,24 @@ def day_row(d: date) -> list:
             break
         after = f"&exclude_paths={','.join(str(h['path_id']) for h in page['hits'])}"
     by_build = "; ".join(f"{k}: {v}" for k, v in sorted(builds.items()))
-    return [d.isoformat(), visitors, sum(builds.values()), sample, by_build]
+    stamp = datetime.now(CAIRO).strftime("%Y-%m-%d %H:%M")
+    return [d.isoformat(), visitors, sum(builds.values()), sample, by_build, stamp]
 
 
 def main() -> None:
-    d = date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.now(CAIRO).date() - timedelta(days=1)
+    today = datetime.now(CAIRO).date()
+    days = [date.fromisoformat(sys.argv[1])] if len(sys.argv) > 1 else [today - timedelta(days=1), today]
+    new = [day_row(d) for d in days]
+    keep = {d.isoformat() for d in days}
     rows = list(csv.reader(OUT.open(encoding="utf-8")))[1:] if OUT.exists() else []
-    rows = [r for r in rows if r and r[0] != d.isoformat()] + [day_row(d)]
+    rows = [(r + [""] * len(HEADER))[:len(HEADER)] for r in rows if r and r[0] not in keep] + new
     rows.sort(key=lambda r: r[0])
     with OUT.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(HEADER)
         w.writerows(rows)
-    print(",".join(map(str, next(r for r in rows if r[0] == d.isoformat()))))
+    for r in new:
+        print(",".join(map(str, r)))
 
 
 if __name__ == "__main__":

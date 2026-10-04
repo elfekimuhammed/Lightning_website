@@ -1,2 +1,3 @@
-date,unique_visitors,app_downloads,sample_downloads,downloads_by_build
-2026-10-03,2,0,0,
+date,unique_visitors,app_downloads,sample_downloads,downloads_by_build,updated_at
+2026-10-03,2,0,0,,2026-10-04 22:11
+2026-10-04,10,0,0,,2026-10-04 22:11
