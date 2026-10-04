@@ -251,12 +251,26 @@
       "id": "UX-2026.10.04.19",
       "name": "Experience A · Product · The calculator is back",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.19.html"
     },
     {
       "id": "UX-2026.10.04.20",
       "name": "Experience B · Philosophy · Breakfast, counted honestly",
+      "page": "version-b.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.20.html"
+    },
+    {
+      "id": "UX-2026.10.04.21",
+      "name": "Experience A · Product · Like having it in the bank",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.22",
+      "name": "Experience B · Philosophy · Like having it in the bank",
       "page": "version-b.html",
       "status": "current",
       "archive_url": null

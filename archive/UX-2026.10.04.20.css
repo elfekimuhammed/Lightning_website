@@ -1,0 +1,414 @@
+/* Lightning landing pages A (Product) and B (Philosophy) · guideline 3.9, Part B (brand-guidelines.html).
+   Grown from Version D. Both pages load only this file, so they cannot drift apart.
+   Self-contained: it does not load styles.css, version-b.css or version-c.css.
+   Tokens are the guideline's own (A03, B03, B09). Building blocks are the guideline's six (B06):
+   money tiles, result (lead) card, breakdown, steps, quote and the signup band. */
+:root{
+  color-scheme:light;
+  --ink:#0D2233;--ink2:#304A5C;--muted:#5C7483;
+  --nile:#0A2442;--nile-2:#143A63;--on-nile:#FFFFFF;
+  --green:#14A874;--green-text:#097852;--azure:#0B6DD6;--rose:#E68CA8;--rose-strong:#C93D72;
+  --t-green:#EAF8F0;--t-azure:#EAF3FD;--t-rose:#FCEEF3;
+  --canvas:linear-gradient(160deg,#E3F6EC 0%,#E6F4F1 50%,#E1EEFB 100%);
+  --lead:linear-gradient(135deg,#E0F5E9,#DCF1F0 52%,#D7ECF7);
+  /* 3.10: two stops, green to the brand azure (the logo's own blue), no teal middle */
+  --vivid:linear-gradient(135deg,#00995C 0%,#0B6DD6 100%);
+  --punch:linear-gradient(90deg,#00995C 0%,#0B6DD6 100%);
+  --paper:#F8FCFA;--white:#FFFFFF;--panel:rgba(255,255,255,.85);
+  --line:#DDE9E6;--line-ctl:#7E96A0;--track:#E6EFEC;--field:#EEF6F3;--field-focus:#E6F2EC;
+  --bar-bg:rgba(232,247,241,.9);
+  --shadow:0 14px 34px -24px rgba(10,36,66,.42);
+  --shadow-screen:0 30px 60px -34px rgba(10,36,66,.5);
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:Manrope,"Segoe UI",system-ui,sans-serif;
+  --r-card:22px;--r-tile:10px;--angle:26deg;
+  /* names css/ux-test.css reads */
+  --text:var(--body);--mint:var(--green);--mint-t:var(--green-text);--mint-soft:var(--t-green);--azure-d:#0A57AD;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ink:#EAF4F1;--ink2:#B8CAD2;--muted:#8FA6B2;
+  --nile:#E3F6EC;--nile-2:#FFFFFF;--on-nile:#0A2442;
+  --green:#3FCB93;--green-text:#5FD9A6;--azure:#5AA9FF;--rose:#F2A2BC;--rose-strong:#F27AA5;
+  --t-green:#123A35;--t-azure:#13304E;--t-rose:#3A2236;
+  --canvas:linear-gradient(160deg,#071C1C 0%,#08192A 50%,#0A1830 100%);
+  --lead:linear-gradient(135deg,#123A33,#11343B 52%,#12304A);
+  --paper:#0F2233;--white:#15293B;--panel:#0F2233;
+  --line:#243A4C;--line-ctl:#4F6878;--track:#1E3446;--field:#15293B;--field-focus:#1B3246;
+  --bar-bg:rgba(8,25,42,.88);
+  --shadow:0 14px 34px -24px rgba(0,0,0,.7);
+  --shadow-screen:0 30px 60px -34px rgba(0,0,0,.85);
+  --mint-soft:rgba(63,203,147,.12);--azure-d:#8CC4FF;
+  --punch:linear-gradient(90deg,#3FE0A3 0%,#5AA9FF 100%);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--canvas) fixed;background-color:#E3F6EC;color:var(--ink);font:500 18px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+:root[data-theme="dark"] body{background-color:#08192A}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,figure,blockquote,ol,ul,dl,dd{margin:0}
+ol,ul{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--display);font-weight:800;color:var(--ink);text-wrap:balance}
+button,input{font:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.wrap{width:min(1120px,100% - 48px);margin-inline:auto}
+.unit{margin-left:5px;color:var(--muted);font:600 .3em/1 var(--body);letter-spacing:0}
+.tab{font-variant-numeric:tabular-nums;white-space:nowrap}
+/* section label: a short line above the heading that says what kind of section comes next (guideline 3.7, B02) */
+.label{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font:800 12px/1.2 var(--body);letter-spacing:.1em;word-spacing:.15em;text-transform:uppercase}
+.label::before{content:"";flex:none;width:19px;height:4px;border-radius:99px;background:var(--punch)}
+.label+h1,.label+h2{margin-top:16px}
+.icon{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- buttons (A10.1): 44 on the page, 36 in a card. Sentence case, no arrows ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 22px;border:1px solid transparent;border-radius:999px;font:700 15px/1 var(--body);text-decoration:none;white-space:nowrap;cursor:pointer;transition:background-color .2s,border-color .2s,filter .2s}
+.btn-vivid{background:var(--vivid);color:#fff}
+.btn-vivid:hover{filter:brightness(1.06)}
+.btn-primary{background:var(--nile);color:var(--on-nile)}
+.btn-primary:hover{background:var(--nile-2)}
+.btn-secondary{background:var(--white);color:var(--ink);border-color:var(--line-ctl)}
+.btn-secondary:hover{border-color:var(--green)}
+.btn-sm{height:36px;padding:0 16px;font-size:14px}
+.btn:disabled{opacity:.65;cursor:wait}
+
+/* ---------- top bar (B02): sticky 70px, lockup left, three links, theme switch, one button ---------- */
+.d-bar{position:sticky;top:0;z-index:15;background:var(--bar-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.d-bar .wrap{display:flex;align-items:center;gap:20px;min-height:70px}
+.d-lockup{display:flex;align-items:center;gap:9px;color:var(--ink);font:800 21px/1 var(--display);text-decoration:none}
+.d-lockup img{width:auto;height:30px}
+.d-links{display:flex;gap:4px}
+.d-links a{padding:9px 12px;border-radius:999px;color:var(--ink2);font:700 15px/1 var(--body);text-decoration:none;white-space:nowrap}
+.d-links a:hover{color:var(--ink);background:var(--white)}
+.d-links a[aria-current="page"]{color:var(--ink);background:var(--white)}
+.d-bar-end{display:flex;align-items:center;gap:12px;margin-left:auto}
+.cta-short{display:none}
+
+/* ---------- page hero (B02): H1 46–78, one line, up to two buttons, one product visual ---------- */
+.d-hero{padding:72px 0 0;text-align:center}
+/* each sentence stays on one line: --fit is the longest line in em, set on the h1 */
+.d-hero h1{font-size:min(clamp(46px,7vw,78px),calc((100vw - 34px) / var(--fit,9.6)));line-height:1.04;letter-spacing:-.04em;white-space:nowrap}
+/* the hero's one gradient phrase: the punch line (B02). The box hugs the words, so the gradient runs green to blue across them */
+.d-hero h1 span{display:block;width:fit-content;margin-inline:auto;padding-bottom:.06em;background:var(--punch);-webkit-background-clip:text;background-clip:text;color:transparent}
+.d-hero-line{max-width:34em;margin:20px auto 0;color:var(--ink2);font-size:20px;line-height:1.55}
+.d-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
+
+/* ---------- product screens (B07): real screens in a browser frame, flat ---------- */
+.d-trio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr);gap:16px;align-items:center;margin-top:56px}
+.d-trio figure:nth-child(1){order:2}
+.d-trio figure:nth-child(2){order:1}
+.d-trio figure:nth-child(3){order:3}
+.d-frame{overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--white);box-shadow:var(--shadow-screen)}
+.d-frame-bar{display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-bottom:1px solid var(--line);background:var(--paper)}
+.d-frame-bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.d-frame-bar span{min-width:0;margin:0 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font:700 12px/1 var(--body);padding-right:33px}
+.d-frame img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.d-frame .zoom{all:unset;display:block;cursor:zoom-in}
+.d-frame .zoom:focus-visible{outline:3px solid var(--green);outline-offset:-3px}
+:root[data-theme="dark"] .d-frame img{filter:brightness(.9)}
+.d-cap{margin-top:12px;text-align:center;color:var(--ink2);font-size:14px;font-weight:600;line-height:1.4}
+.d-cap b{color:var(--ink);font-weight:800}
+
+/* ---------- sections (B05): H2 · line · one visual. Left aligned, 72px apart ---------- */
+.d-section{padding-top:72px}
+.d-head{max-width:760px;margin:0 auto 32px;text-align:center}
+.d-head h2{font-size:clamp(30px,4.2vw,48px);line-height:1.06;letter-spacing:-.035em}
+.d-head p{margin:14px auto 0;max-width:40em;text-wrap:pretty;color:var(--ink2)}
+
+/* ---------- cards (A07 via B06): 22px corners on the site, 16px gaps ---------- */
+.card{position:relative;min-width:0;border-radius:var(--r-card);padding:24px}
+.card-lead{background:var(--lead);box-shadow:var(--shadow)}
+.card-support{background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)}
+.card-entry{background:var(--white);border:1px solid var(--line)}
+:root[data-theme="dark"] .card-entry{background:var(--paper)}
+.chead{padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid var(--line)}
+.chead h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
+.chead p{margin-top:4px;color:var(--ink2);font-size:15px;line-height:1.45}
+.lead-fig{display:block;font:800 clamp(46px,5.6vw,64px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.lead-sub{margin-top:8px;color:var(--ink2);font-size:15px;line-height:1.45}
+
+/* breakdown list (A12.4.3): signs on every step, each result on a soft band, no bars */
+.rows{margin-top:18px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:11px 0;border-top:1px solid var(--line);font-size:16px}
+.row:first-child{border-top:0}
+.row span{color:var(--ink2)}
+.row span small{display:block;margin-top:2px;color:var(--muted);font-size:13px;font-weight:600}
+.row b{color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.row.result{margin-top:6px;padding:11px 14px;border-top:0;border-radius:12px;background:color-mix(in srgb,var(--green) 10%,transparent)}
+.row.result span{color:var(--ink);font-weight:800}
+.row.result b{color:var(--green-text);font-weight:800}
+.row.result+.row{border-top:0}
+.row.total{margin-top:6px;padding:11px 14px;border-top:0;border-radius:12px;background:var(--t-rose)}
+.row.total span{color:var(--ink);font-weight:800}
+.row.total+.row{border-top:0}
+
+/* ---------- money tiles (A08 KPI cards): toned by meaning, azure = money you hold ---------- */
+.d-money{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.d-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.kpi{--tone:var(--azure);--tint:var(--t-azure);position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;gap:10px;min-height:150px;padding:18px;border-radius:var(--r-card);
+  background:linear-gradient(165deg,var(--white) 0%,var(--white) 38%,var(--tint) 100%);border:1px solid color-mix(in srgb,var(--tone) 26%,var(--line));box-shadow:var(--shadow)}
+.kpi::before,.kpi::after{content:"";position:absolute;z-index:-1;width:46px;border-radius:23px;background:linear-gradient(180deg,var(--tone),transparent 85%);transform:rotate(var(--angle))}
+.kpi::before{top:-56px;right:20px;height:190px;opacity:.18}
+.kpi::after{top:-30px;right:-18px;height:150px;opacity:.1}
+.kpi .top{display:flex;align-items:center;gap:10px}
+.kpi .ico{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:var(--r-tile);background:var(--tone);color:#fff}
+.kpi .ico .icon{width:18px;height:18px}
+:root[data-theme="dark"] .kpi .ico{color:#0A2442}
+.kpi .lbl{color:var(--ink2);font:700 14px/1.3 var(--body)}
+.kpi .fig{margin-top:auto;font:800 24px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi .fig .unit{font-size:12px}
+.kpi .foot{color:var(--ink2);font-size:13px;line-height:1.4}
+.d-tiles-cap{grid-column:1/-1;color:var(--muted);font-size:13px;font-weight:600;text-align:center}
+
+/* ---------- balance and screen side by side: lead left, support right ---------- */
+.d-pair{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:16px;align-items:center}
+
+/* ---------- habit: breakdown and the page's one quote ---------- */
+.d-habit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.d-quote{display:flex;flex-direction:column;justify-content:center}
+.d-quote blockquote{font:800 clamp(22px,2.4vw,26px)/1.3 var(--display);letter-spacing:-.02em}
+.d-quote figcaption{margin-top:12px;color:var(--muted);font-size:14px;font-weight:700}
+.d-quote p{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink2);font-size:16px}
+
+/* ---------- calculator (B08): entry card, then the result as a lead card ---------- */
+.d-calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.field-label{display:block;color:var(--ink2);font:700 13px/1.3 var(--body)}
+.amount{display:flex;align-items:baseline;gap:10px;margin-top:8px;padding:12px 18px;border:1px solid var(--line);border-radius:16px;background:var(--white)}
+.amount:focus-within{border-color:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 22%,transparent)}
+.amount span{color:var(--muted);font:700 13px/1 var(--body)}
+.amount input{flex:1;min-width:0;width:100%;padding:0;border:0;background:transparent;color:var(--ink);font:800 clamp(34px,4vw,44px)/1.1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;outline:0}
+.field-hint{margin-top:8px;color:var(--muted);font-size:13px}
+.choice{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.choice button{height:36px;padding:0 15px;border:1px solid var(--line-ctl);border-radius:999px;background:var(--white);color:var(--ink2);font:700 14px/1 var(--body);cursor:pointer}
+.choice button:hover{border-color:var(--green)}
+.choice button[aria-pressed="true"]{border-color:var(--nile);background:var(--nile);color:var(--on-nile)}
+.d-calc .card-entry .field-label+.choice{margin-top:8px}
+.d-calc .card-entry>*+.field-label{margin-top:22px}
+.d-calc .card-entry{display:flex;flex-direction:column;justify-content:center}
+.d-calc .card-lead .btn{margin-top:22px}
+.d-note{max-width:62em;margin:14px auto 0;text-align:center;color:var(--muted);font-size:13px;line-height:1.55}
+
+/* ---------- product tour: one pill bar, chosen tab in Nile (A10.4) ---------- */
+.d-tabs{display:flex;flex-wrap:wrap;gap:4px;width:fit-content;max-width:100%;padding:5px;margin:0 auto 24px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.d-tabs button{height:36px;padding:0 15px;border:0;border-radius:999px;background:transparent;color:var(--ink2);font:700 14px/1 var(--body);cursor:pointer}
+.d-tabs button:hover{color:var(--ink);background:var(--white)}
+.d-tabs button[aria-selected="true"]{background:var(--nile);color:var(--on-nile)}
+.d-panel{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:32px;align-items:center}
+.d-panel[hidden]{display:none}
+.d-panel h3{font-size:clamp(21px,2.4vw,26px);line-height:1.15;letter-spacing:-.02em}
+.d-panel p{margin-top:10px;color:var(--ink2);font-size:16px}
+.d-panel ul{display:grid;gap:10px;margin-top:18px}
+.d-panel li{display:flex;gap:10px;align-items:flex-start;color:var(--ink);font-size:15px;font-weight:600;line-height:1.45}
+.d-panel li::before{content:"";flex:none;width:6px;height:6px;margin-top:.55em;border-radius:50%;background:var(--green)}
+.d-panel .fig{display:block;margin-top:14px;font:800 clamp(34px,3.6vw,38px)/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.d-panel .fig .unit{font-size:13px}
+
+/* ---------- trust: four support cards, Lucide icons on a Nile tile ---------- */
+.d-trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.d-trust .card{display:flex;flex-direction:column;gap:12px}
+.d-trust .tile{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--nile);color:var(--on-nile)}
+.d-trust h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
+.d-trust p{color:var(--ink2);font-size:16px;line-height:1.5}
+
+/* ---------- FAQ: white panels ---------- */
+.d-faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.d-faq details{padding:0 22px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+.d-faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:62px;color:var(--ink);font:800 18px/1.3 var(--display);letter-spacing:-.01em;list-style:none;cursor:pointer}
+.d-faq summary::-webkit-details-marker{display:none}
+.d-faq summary::after{content:"";flex:none;width:9px;height:9px;margin-right:4px;border-right:2px solid var(--ink2);border-bottom:2px solid var(--ink2);transform:translateY(-3px) rotate(45deg);transition:transform .2s}
+.d-faq details[open] summary::after{transform:translateY(2px) rotate(-135deg)}
+.d-faq details p{padding-bottom:20px;color:var(--ink2);font-size:16px}
+.d-faq a{color:var(--ink);font-weight:700}
+
+/* ---------- signup band (B06): ends the page ---------- */
+.d-band{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center;margin-top:72px;padding:40px}
+.d-band h2{font-size:clamp(30px,3.6vw,40px);line-height:1.08;letter-spacing:-.035em}
+.d-band>div>p{margin-top:12px;color:var(--ink2)}
+.d-signup{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.d-signup form{display:flex;gap:10px}
+.d-signup input[type=email]{flex:1;min-width:0;height:48px;padding:0 20px;border:1px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink);font:600 16px var(--body)}
+.d-signup input[type=email]::placeholder{color:var(--muted)}
+.d-signup input[type=email]:focus{outline:0;border-color:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 22%,transparent)}
+.d-status:empty{display:none}
+.d-status{min-height:1.4em;color:var(--green-text);font-size:14px;font-weight:700}
+.d-status.is-error{color:var(--rose-strong)}
+.d-survey{color:var(--ink2);font-size:15px}
+.d-survey a{color:var(--ink);font-weight:700}
+
+/* ---------- footer (B05): lockup · tagline · links ---------- */
+.d-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;margin-top:40px;padding:28px 0 48px;border-top:1px solid var(--line);color:var(--ink2);font-size:14px;font-weight:600}
+.d-foot .d-lockup{font-size:18px}.d-foot .d-lockup img{height:26px}
+.d-foot-brand{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+.d-foot nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+.d-foot nav a{text-decoration:none}
+.d-foot nav a:hover{color:var(--ink)}
+
+/* ---------- lightbox ---------- */
+.lightbox{width:min(1440px,96vw);max-width:none;max-height:94vh;padding:0;border:0;background:transparent;overflow:visible}
+.lightbox::backdrop{background:rgba(10,36,66,.72)}
+.lightbox img{width:100%;max-height:86vh;object-fit:contain;border-radius:14px;background:#fff}
+.lightbox p{margin-top:12px;text-align:center;color:#fff;font-size:15px;font-weight:700}
+.lightbox button{position:absolute;top:-14px;right:-14px;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:#fff;color:#0D2233;font:600 24px/1 var(--body);cursor:pointer}
+
+/* ---------- testing rail (css/ux-test.css) and dock on dark surfaces ---------- */
+:root[data-theme="dark"] .ux-test-trigger{background:var(--paper);color:var(--ink)}
+:root[data-theme="dark"] .ux-test-trigger span,:root[data-theme="dark"] .ux-rail__submit,:root[data-theme="dark"] .ux-rail__section-button.is-active,:root[data-theme="dark"] .ux-rail__reaction.is-selected{background:var(--nile);border-color:var(--nile);color:var(--on-nile)}
+:root[data-theme="dark"] .ux-rail{background:#0F2233;border-color:var(--line)}
+:root[data-theme="dark"] .ux-rail__section-button,:root[data-theme="dark"] .ux-rail__reaction,:root[data-theme="dark"] .ux-rail__reason,:root[data-theme="dark"] .ux-rail__other{background:var(--field);color:var(--ink2)}
+:root[data-theme="dark"] .ux-rail__reason.is-selected{background:var(--t-azure);border-color:var(--azure);color:var(--azure-d)}
+
+/* ---------- A · how it works: three numbered steps, a real screen each (B06 steps) ---------- */
+.l-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:step}
+.l-steps li{display:flex;flex-direction:column;gap:14px}
+.l-steps .num{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--nile);color:var(--on-nile);font:800 15px/1 var(--display)}
+.l-steps .step-head{display:flex;align-items:center;gap:12px}
+.l-steps h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
+.l-steps p{color:var(--ink2);font-size:16px;line-height:1.5}
+.l-more{display:flex;justify-content:center;margin-top:28px}
+
+/* ---------- B · story trio: plan, reality, habit. KPI cards toned by meaning (A08) ---------- */
+.l-story{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:56px;text-align:left}
+.l-story .kpi{min-height:200px}
+.l-story .kpi.plan{--tone:var(--line-ctl);--tint:var(--track)}
+.l-story .kpi.out{--tone:var(--rose);--tint:var(--t-rose)}
+.l-story .kpi.kept{--tone:var(--green);--tint:var(--t-green)}
+.l-story .when{color:var(--muted);font:700 12px/1.3 var(--body)}
+.l-story q{color:var(--ink);font:700 17px/1.35 var(--display);quotes:"“" "”"}
+.l-story .fig{font-size:30px}
+.l-story .fig.word{font-size:24px}
+.l-story .kpi.kept .fig{color:var(--green-text)}
+
+/* ---------- B · three truths: numbered in order, one small drawing each ---------- */
+.l-truths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.l-truths .card{display:flex;flex-direction:column;gap:14px}
+.l-truths .art{height:96px;border-radius:14px;background:var(--white);display:grid;place-items:center}
+:root[data-theme="dark"] .l-truths .art{background:var(--field)}
+.l-truths .art svg{width:100%;max-width:220px;height:80px}
+.l-truths .step-head{display:flex;align-items:center;gap:12px}
+.l-truths .num{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--nile);color:var(--on-nile);font:800 15px/1 var(--display)}
+.l-truths h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
+.l-truths p{color:var(--ink2);font-size:16px;line-height:1.5}
+
+/* ---------- B · every app sees one corner: six corners, then Lightning (story exception, B06) ---------- */
+.l-corners{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:16px;align-items:center}
+.l-corner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.l-corner{padding:14px 16px;border-radius:16px;background:var(--panel);border:1px solid var(--line)}
+.l-corner b{display:block;color:var(--ink);font:800 16px/1.25 var(--display)}
+.l-corner span{display:block;margin-top:3px;color:var(--muted);font-size:14px;font-weight:600}
+.l-corner.all{grid-column:1/-1;background:var(--lead);border-color:transparent;box-shadow:var(--shadow)}
+.l-corner.all b{font-size:20px}
+.l-corner.all span{color:var(--ink2)}
+
+/* ---------- A · what Lightning does: three pillars, each a KPI card toned by meaning ---------- */
+.l-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.l-pillars .kpi{gap:14px;min-height:0;padding:22px}
+.l-pillars .kpi .fig{margin-top:6px;font-size:34px}
+.l-pillars .kpi .fig .unit{font-size:13px}
+.kpi.ahead,.kpi.kept{--tone:var(--green);--tint:var(--t-green)}
+.kpi.why,.kpi.out{--tone:var(--rose);--tint:var(--t-rose)}
+.l-has{display:grid;gap:8px;margin-top:4px}
+.l-has li{display:flex;gap:10px;color:var(--ink);font-size:15px;font-weight:600;line-height:1.4}
+.l-has li::before{content:"";flex:none;width:7px;height:7px;margin-top:.5em;border-radius:2px;background:var(--tone);transform:rotate(var(--angle))}
+
+/* ---------- A · the next three months ---------- */
+.l-ahead{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.l-ahead .kpi{min-height:0}
+.l-ahead .kpi .fig{font-size:28px}
+.l-ahead .kpi.kept .fig{color:var(--green-text)}
+.d-frame.free img{aspect-ratio:auto;object-fit:contain}
+
+/* ---------- A · smart where it saves time ---------- */
+.l-smart{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:16px;align-items:center}
+.l-smart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.l-smart .card{display:flex;flex-direction:column;gap:10px;padding:20px}
+.l-smart .tile{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:var(--nile);color:var(--on-nile)}
+.l-smart h3{font-size:18px;line-height:1.2;letter-spacing:-.01em}
+.l-smart p{color:var(--ink2);font-size:15px;line-height:1.5}
+
+/* ---------- B · the game: input left, the answer on the vivid gradient right (guideline 3.16, B08: the answer centred, no button, no disclaimer) ---------- */
+.l-game{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden;border-radius:var(--r-card);border:1px solid var(--line);box-shadow:var(--shadow)}
+.l-game-in{display:flex;flex-direction:column;justify-content:center;padding:36px;background:var(--paper)}
+.l-game-in h3{font-size:clamp(22px,2.4vw,26px);line-height:1.2;letter-spacing:-.02em;margin-bottom:18px}
+.l-game-in .field-label{margin-top:22px}
+.l-game-out{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:44px 36px;background:var(--vivid);color:#fff}
+.l-game-k{font:800 12px/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.l-game-fig{font:800 clamp(56px,7.5vw,96px)/1 var(--display);letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.l-game-fig .unit{color:rgba(255,255,255,.85);font-size:.3em}
+.l-game-line{max-width:32ch;font-size:17px;line-height:1.5;color:rgba(255,255,255,.95)}
+.l-game-line b{color:#fff}
+.l-game-chips{display:flex;justify-content:center}
+.l-game-chips div{min-width:180px;padding:12px 16px;border-radius:14px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28)}
+.l-game-chips div>span{display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,.85)}
+.l-game-chips b{display:block;margin-top:2px;font:800 18px/1.2 var(--display);font-variant-numeric:tabular-nums}
+:root[data-theme="dark"] .l-game-out{background:linear-gradient(135deg,#0A7A4C 0%,#0A5BB5 100%)}
+
+/* ---------- signup band: email, or, the survey (guideline 3.14, B06) ---------- */
+.d-signup .btn-vivid{height:48px}
+.l-or{display:flex;align-items:center;gap:12px;color:var(--muted);font:700 12px/1 var(--body);text-transform:uppercase;letter-spacing:.1em}
+.l-or::before,.l-or::after{content:"";flex:1;height:1px;background:var(--line)}
+.l-survey{width:100%;height:48px}
+
+/* ---------- sign-off: the mark and the tagline, before the footer ---------- */
+.l-sign{display:flex;flex-direction:column;align-items:center;gap:16px;padding:72px 0 8px;text-align:center}
+.l-sign img{width:40px;height:auto}
+.l-sign p{font:800 clamp(30px,4.6vw,52px)/1.05 var(--display);letter-spacing:-.035em;color:var(--ink);text-wrap:balance}
+.l-sign span{background:var(--punch);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (forced-colors:active){.l-sign span{background:none;color:CanvasText}}
+
+/* ---------- responsive: one column on phones, nothing scrolls sideways ---------- */
+@media (max-width:900px){.cta-long{display:none}.cta-short{display:inline}}
+@media (max-width:760px){
+  .d-bar .wrap{flex-wrap:wrap;gap:0 12px;min-height:0;padding:10px 0 6px}
+  .d-lockup{font-size:19px}.d-lockup img{height:26px}
+  .d-bar-end{gap:8px}
+  .d-links{order:3;width:100%;margin:6px -12px 0;gap:0}
+  .d-links a{padding:8px 12px;font-size:14px}
+}
+@media (max-width:1000px){
+  .d-money,.d-pair{grid-template-columns:1fr}
+  .d-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .d-trust{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .d-panel{grid-template-columns:1fr;gap:20px}
+  .l-corners,.l-smart{grid-template-columns:1fr}
+  .l-pillars,.l-ahead{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  .d-calc,.d-habit,.d-band,.d-faq,.l-steps,.l-truths,.l-story,.l-smart-grid,.l-game{grid-template-columns:1fr}
+  .l-game-in{padding:26px 22px}.l-game-out{padding:36px 22px}
+  .l-story .kpi{min-height:0}
+  .d-band{padding:28px 24px}
+  .d-trio{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .d-trio figure:nth-child(1){order:0;grid-column:1/-1}
+  .d-trio figure:nth-child(2),.d-trio figure:nth-child(3){order:1}
+}
+@media (max-width:640px){
+  /* phones first: every line readable, every target easy */
+  .d-actions{flex-direction:column;align-items:stretch}
+  .d-actions .btn{height:52px;font-size:16px}
+  .d-trio{grid-template-columns:1fr;gap:20px}
+  .d-trio figure:nth-child(1){grid-column:auto}
+  .d-cap{font-size:15px}
+  .d-tiles .kpi .top{flex-direction:column;align-items:flex-start;gap:10px}
+  .d-tiles .kpi .lbl{white-space:nowrap}
+  .d-faq summary{font-size:17px;min-height:56px}
+  .d-signup input[type=email]{flex:none;height:54px;font-size:17px}
+  .d-signup .btn-vivid,.l-survey{height:54px;font-size:16px}
+  body{font-size:16px}
+  .wrap{width:min(1120px,100% - 32px)}
+  .d-hero{padding-top:48px}
+  .d-hero-line{font-size:17px}
+  .d-trio{margin-top:40px}
+  .d-section{padding-top:48px}
+  .d-head{margin-bottom:24px}
+  .d-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .kpi{min-height:132px;padding:16px}
+  .kpi .fig{font-size:21px}
+  .d-trust{grid-template-columns:1fr}
+  .card{padding:20px}
+  .d-signup form{flex-direction:column}
+  .d-band,.d-foot{margin-top:48px}
+}
+@media (max-width:380px){.d-tiles{grid-template-columns:1fr}.d-links a{padding:8px 9px;font-size:13px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}

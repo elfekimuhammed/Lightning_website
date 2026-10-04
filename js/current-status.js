@@ -8,8 +8,8 @@
   if (!form || !template || !list || !add || !endpoint) return;
 
   const experiences = {
-    'index.html': 'UX-2026.10.04.19',
-    'version-b.html': 'UX-2026.10.04.20'
+    'index.html': 'UX-2026.10.04.21',
+    'version-b.html': 'UX-2026.10.04.22'
   };
   let sourcePage = 'index.html';
   try { sourcePage = sessionStorage.getItem('lightning-home') || sourcePage; } catch (_) {}
