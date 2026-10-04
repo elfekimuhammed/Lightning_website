@@ -146,20 +146,34 @@
       "id": "UX-2026.10.04.03",
       "name": "Experience A · Product · Three advantages",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.03.html"
     },
     {
       "id": "UX-2026.10.04.04",
       "name": "Experience B · Philosophy · New screens",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.04.html"
     },
     {
       "id": "UX-2026.10.04.05",
       "name": "Release Log · Guideline 3.10 gradient",
       "page": "release-log.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.06",
+      "name": "Experience B · Philosophy · Capital-equivalent calculator",
+      "page": "version-b.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.07",
+      "name": "Experience A · Product · No explanation captions",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }

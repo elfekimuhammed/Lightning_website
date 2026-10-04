@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.10) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.11) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -61,7 +61,7 @@ Settings → Pages → Deploy from a branch → `main` / root.
 
 GitHub Pages is static. The survey and both landing pages send responses to the configured Google Apps Script endpoint, which writes to Google Sheets. The survey posts `form_type=survey`; the email signup posts `form_type=signup`. The calculator runs in the browser.
 
-The bank equivalent uses monthly amount × 12 ÷ 20% (for example, 2,000 EGP/month = 120,000 EGP). Version B also illustrates ten years of monthly deposits at a hypothetical 20% annual rate, compounded monthly.
+The calculator on B shows the capital that would pay what you keep each month: monthly amount × 12 ÷ the yearly return (2,000 EGP a month = 120,000 EGP at 20%). Its rows prove it (what you keep, what that capital pays, capital you need: 0). No explanation notes or field hints: if something needs a description, rewrite it.
 
 ## UX test responses
 
@@ -80,6 +80,8 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.03` — `index.html` (A · Product, three advantages)
 - `UX-2026.10.04.04` — `version-b.html` (B · Philosophy, new screens)
 - `UX-2026.10.04.05` — `release-log.html` (guideline 3.10 gradient)
+- `UX-2026.10.04.06` — `version-b.html` (B · capital-equivalent calculator)
+- `UX-2026.10.04.07` — `index.html` (A · no explanation captions)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
