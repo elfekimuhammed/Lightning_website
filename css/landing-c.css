@@ -1,6 +1,7 @@
-/* Landing page C · Trust (UX-2026.10.04.23, 2026-10-04): only what css/landing.css lacks. Loads after it. */
+/* Landing page C · Trust (UX-2026.10.04.24, 2026-10-04): only what css/landing.css lacks. Loads after it. */
 /* B02: labels and the "or" are sentence case */
-.label,.l-or{text-transform:none;letter-spacing:.01em;word-spacing:0}
+.label,.l-or,.l-game-k{text-transform:none;letter-spacing:.01em;word-spacing:0}
+.l-game-k{font-size:14px}
 .label{font-size:13px}
 /* the sign-off is ink: the hero punch line is the only gradient (B11) */
 .l-sign span{background:none;color:var(--ink)}
@@ -66,7 +67,7 @@
   .c-hero-money{margin-top:40px}
   .c-seg{width:100%}
   .c-seg button{flex:1;min-height:48px;padding:6px 8px;font-size:13px}
-  .c-steps h3,.c-promise h3{font-size:19px}
+  .c-steps h3,.c-promise h3,.l-game-in h3{font-size:19px}
 }
 @media (max-width:640px){
   .d-links a{display:inline-flex;align-items:center;min-height:44px}
