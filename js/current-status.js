@@ -8,7 +8,7 @@
   if (!form || !template || !list || !add || !endpoint) return;
 
   const experiences = {
-    'index.html': 'UX-2026.10.04.07',
+    'index.html': 'UX-2026.10.04.08',
     'version-b.html': 'UX-2026.10.04.06'
   };
   let sourcePage = 'index.html';

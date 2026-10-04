@@ -299,7 +299,7 @@ button,input{font:inherit}
 .l-corner.all b{font-size:20px}
 .l-corner.all span{color:var(--ink2)}
 
-/* ---------- A · what Lightning does: three pillars, each a KPI card toned by meaning ---------- */
+/* ---------- A · beyond tracking: three pillars, each a KPI card toned by meaning ---------- */
 .l-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .l-pillars .kpi{gap:14px;min-height:0;padding:22px}
 .l-pillars .kpi .fig{margin-top:6px;font-size:34px}
@@ -309,6 +309,8 @@ button,input{font:inherit}
 .l-has{display:grid;gap:8px;margin-top:4px}
 .l-has li{display:flex;gap:10px;color:var(--ink);font-size:15px;font-weight:600;line-height:1.4}
 .l-has li::before{content:"";flex:none;width:7px;height:7px;margin-top:.5em;border-radius:2px;background:var(--tone);transform:rotate(var(--angle))}
+.l-vs{margin-top:auto;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--tone) 22%,var(--line));color:var(--muted);font-size:14px;font-weight:600}
+.l-vs span{display:inline-block;margin-right:8px;padding:2px 9px;border-radius:999px;background:var(--track);color:var(--ink2);font-size:12px;font-weight:800}
 
 /* ---------- A · the next three months ---------- */
 .l-ahead{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
