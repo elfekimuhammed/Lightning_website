@@ -88,8 +88,11 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.11` — `version-b.html` (B · sign-off ending)
 - `UX-2026.10.04.12` — `index.html` (A · phones first)
 - `UX-2026.10.04.13` — `version-b.html` (B · phones first)
+- `UX-2026.10.04.14` — `index.html` (A · Mohab's year)
+- `UX-2026.10.04.15` — `version-b.html` (B · Mohab's year)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
+- `UX-2026.10.04.16` — `how-it-works.html` (Mohab's year)
 - `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
 - `UX-2026.10.03.06` — `current-status.html` (separate permanent 0.5 and 0.4 downloads)
 - `UX-2026.10.03.07` — `release-log.html` (0.5.0 beta 1 available)
@@ -155,8 +158,8 @@ There are two landing pages, both built only from [guideline 3.9](brand-guidelin
 
 **B · Philosophy (`version-b.html`)** shows why it works, then the product as proof. Order: hero (H1 with its punch line, the story trio: the plan, the 9:40 reality, the habit), a better system (the habit sum and the page's one quote), a quick game (the calculator), three truths in order, every app sees one corner (six places, then Lightning, beside the Overview screen), private by design and the early-access band.
 
-- Screens are in `assets/app/mohab-2026-10-04/`, captured 2026-10-04 from the app's demo (`LIGHTNING_TODAY=2026-09-30 python -m lightning --demo`); `assets/app/mohab/` keeps the older screens for archived pages.
-- Every figure on A is on the screen beside it or adds up from Mohab's Overview on 2026-09-30 (260,565 in your accounts, 10,000 held for family, 52,500 left on the car loan, 198,065 net worth; free cash 72,663 less 1,309 budget left = 71,354 safe to spend; holdings 177,903; next 30 days −15,980 out; +21,830 expected in 2026-11; car loan paid off 2028-06-05). B uses the same household. Recapture the screens and these figures together.
+- Screens are in `assets/app/mohab-year-2026-10-04/`, captured 2026-10-04 from Mohab's full 2026 in the app (`python -m lightning --sample`, port 8767). Overview, Investments and Budget show YTD; Expense analysis shows 2026-09 (every section filled); Cash planning shows today. Older folders (`mohab/`, `mohab-2026-10-04/`) stay for archived pages.
+- Every figure on A is on the screen beside it or adds up from Mohab's year on 2026-10-04 (487,967 in your accounts, 6,000 held for family, 49,500 owed: the car loan's 37,500 and October's rent due; 432,467 net worth, up 287,067 this year; free cash 199,566 less 4,460 payments and 25,017 budget left = 170,089 safe to spend until 2026-11-01; portfolio 250,401, +14,841 this year; next 30 days −28,460 out; +6,981 expected in 2026-11; car loan paid off 2027-12-05; September money out 28,818, 42% rent). B uses the same household. Recapture the screens and these figures together.
 - One quote per page at most (B has James Clear; A has none). No testimonials until there are real ones. No placeholders.
 - How It Works, Current Status and the release log are shared; Home on them returns to the landing page the visitor came from.
 
@@ -172,12 +175,14 @@ The logo is the two-leaf mark from the guideline (A02): azure is money you hold,
 
 ## App screenshots
 
-All product images come from the app's sample household, pinned to the end of September 2026:
+All product images come from Mohab's full 2026 in the app (the sample CSVs), loaded up to the capture date:
 
 ```
-LIGHTNING_TODAY=2026-09-30 python -m lightning --demo
+python -m lightning --sample
 ```
+
+Pick the period that shows each tab at its best: YTD for the Overview, Investments and Budget, a whole month for Expense analysis, today for Cash planning.
 
 - Full-window screens (2000 × 1250) are used in tours and steps. Content crops without the sidebar (1800 × 1125, named `a-*.webp`) are used where the chart is the message: the hero trio on every version and the analysis grid on How It Works.
 - The hero on A shows the trio: Overview in the middle, Investments and Expense analysis beside it. B shows the Overview beside its six corners.
-- Quoted figures (net worth 198,065, savings rate 50.1%, safe to spend 71,354 and so on) match these screens. Rules are in section B07 Product screens of `brand-guidelines.html`.
+- Quoted figures (net worth 432,467, savings rate 49.2%, safe to spend 170,089 and so on) match these screens. Rules are in section B07 Product screens of `brand-guidelines.html`.
