@@ -9,7 +9,7 @@
 
   const experiences = {
     'index.html': 'UX-2026.10.04.08',
-    'version-b.html': 'UX-2026.10.04.06'
+    'version-b.html': 'UX-2026.10.04.09'
   };
   let sourcePage = 'index.html';
   try { sourcePage = sessionStorage.getItem('lightning-home') || sourcePage; } catch (_) {}

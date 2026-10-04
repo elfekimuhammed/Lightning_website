@@ -167,8 +167,8 @@
       "id": "UX-2026.10.04.06",
       "name": "Experience B · Philosophy · Capital-equivalent calculator",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.06.html"
     },
     {
       "id": "UX-2026.10.04.07",
@@ -181,6 +181,13 @@
       "id": "UX-2026.10.04.08",
       "name": "Experience A · Product · What Lightning does",
       "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.09",
+      "name": "Experience B · Philosophy · Split game card",
+      "page": "version-b.html",
       "status": "current",
       "archive_url": null
     }
