@@ -195,12 +195,26 @@
       "id": "UX-2026.10.04.10",
       "name": "Experience A · Product · Sign-off ending",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.10.html"
     },
     {
       "id": "UX-2026.10.04.11",
       "name": "Experience B · Philosophy · Sign-off ending",
+      "page": "version-b.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.11.html"
+    },
+    {
+      "id": "UX-2026.10.04.12",
+      "name": "Experience A · Product · Phones first",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.13",
+      "name": "Experience B · Philosophy · Phones first",
       "page": "version-b.html",
       "status": "current",
       "archive_url": null

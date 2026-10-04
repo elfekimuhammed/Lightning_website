@@ -88,8 +88,7 @@ button,input{font:inherit}
 
 /* ---------- page hero (B02): H1 46–78, one line, up to two buttons, one product visual ---------- */
 .d-hero{padding:72px 0 0;text-align:center}
-/* each sentence stays on one line: --fit is the longest line in em, set on the h1 */
-.d-hero h1{font-size:min(clamp(46px,7vw,78px),calc((100vw - 34px) / var(--fit,9.6)));line-height:1.04;letter-spacing:-.04em;white-space:nowrap}
+.d-hero h1{font-size:clamp(46px,7vw,78px);line-height:1.02;letter-spacing:-.04em}
 /* the hero's one gradient phrase: the punch line (B02). The box hugs the words, so the gradient runs green to blue across them */
 .d-hero h1 span{display:block;width:fit-content;margin-inline:auto;padding-bottom:.06em;background:var(--punch);-webkit-background-clip:text;background-clip:text;color:transparent}
 .d-hero-line{max-width:34em;margin:20px auto 0;color:var(--ink2);font-size:20px;line-height:1.55}
@@ -388,21 +387,11 @@ button,input{font:inherit}
   .d-trio figure:nth-child(2),.d-trio figure:nth-child(3){order:1}
 }
 @media (max-width:640px){
-  /* phones first: every line readable, every target easy */
-  .d-actions{flex-direction:column;align-items:stretch}
-  .d-actions .btn{height:52px;font-size:16px}
-  .d-trio{grid-template-columns:1fr;gap:20px}
-  .d-trio figure:nth-child(1){grid-column:auto}
-  .d-cap{font-size:15px}
-  .d-tiles .kpi .top{flex-direction:column;align-items:flex-start;gap:10px}
-  .d-tiles .kpi .lbl{white-space:nowrap}
-  .d-faq summary{font-size:17px;min-height:56px}
-  .d-signup input[type=email]{flex:none;height:54px;font-size:17px}
-  .d-signup .btn-vivid,.l-survey{height:54px;font-size:16px}
   body{font-size:16px}
   .wrap{width:min(1120px,100% - 32px)}
   .d-hero{padding-top:48px}
   .d-hero-line{font-size:17px}
+  .d-actions .btn{flex:1 1 auto}
   .d-trio{margin-top:40px}
   .d-section{padding-top:48px}
   .d-head{margin-bottom:24px}
