@@ -53,6 +53,7 @@
   const openZoom = button => {
     if (!lightbox || typeof lightbox.showModal !== 'function') { window.open(button.dataset.zoom, '_blank'); return; }
     const img = lightbox.querySelector('img');
+    img.removeAttribute('src');
     img.src = button.dataset.zoom;
     img.alt = button.querySelector('img')?.alt || '';
     lightbox.querySelector('p').textContent = button.dataset.caption || '';

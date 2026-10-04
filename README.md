@@ -90,6 +90,7 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.13` — `version-b.html` (B · phones first)
 - `UX-2026.10.04.14` — `index.html` (A · Mohab's year)
 - `UX-2026.10.04.15` — `version-b.html` (B · Mohab's year)
+- `UX-2026.10.04.17` — `index.html` (A · screens open themselves)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.04.16` — `how-it-works.html` (Mohab's year)

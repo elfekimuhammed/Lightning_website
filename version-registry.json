@@ -223,8 +223,8 @@
       "id": "UX-2026.10.04.14",
       "name": "Experience A · Product · Mohab's year",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.14.html"
     },
     {
       "id": "UX-2026.10.04.15",
@@ -237,6 +237,13 @@
       "id": "UX-2026.10.04.16",
       "name": "How It Works · Mohab's year",
       "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.17",
+      "name": "Experience A · Product · Screens open themselves",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }

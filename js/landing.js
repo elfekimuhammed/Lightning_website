@@ -58,6 +58,7 @@
     if (!zoom) return;
     if (!lightbox || typeof lightbox.showModal !== 'function') { window.open(zoom.dataset.zoom, '_blank'); return; }
     const img = lightbox.querySelector('img');
+    img.removeAttribute('src');
     img.src = zoom.dataset.zoom;
     img.alt = zoom.querySelector('img')?.alt || '';
     lightbox.querySelector('p').textContent = zoom.dataset.caption || '';
