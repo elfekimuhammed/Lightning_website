@@ -103,6 +103,7 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.27` — `version-c.html` (C · beta, and ready to use)
 - `UX-2026.10.04.28` — `current-status.html` (Current Status · beta, and ready to use)
 - `UX-2026.10.04.29` — `release-log.html` (Release Log · beta, and ready to use)
+- `UX-2026.10.04.30` — `release-log.html` (Release Log · one card per build)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.04.16` — `how-it-works.html` (Mohab's year)

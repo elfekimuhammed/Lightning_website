@@ -28,6 +28,6 @@
 .log-days{display:grid;gap:16px;max-width:760px;margin-inline:auto}
 .log-day .chead h3{font-size:21px}
 .log-list i{color:var(--muted);font-style:normal;font-weight:700}
-.log-grp{margin:18px 0 0;color:var(--muted);font:800 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase}
+.log-grp{margin:22px 0 0;color:var(--muted);font:800 14px/1.2 var(--body)}
 .log-grp+.log-list{margin-top:10px}
 .chead+.log-grp{margin-top:0}

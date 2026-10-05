@@ -328,6 +328,13 @@
       "id": "UX-2026.10.04.29",
       "name": "Release Log · Beta, and ready to use",
       "page": "release-log.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.29.html"
+    },
+    {
+      "id": "UX-2026.10.04.30",
+      "name": "Release Log · One card per build",
+      "page": "release-log.html",
       "status": "current",
       "archive_url": null
     }
