@@ -440,8 +440,8 @@
       "id": "UX-2026.10.04.45",
       "name": "Experience C · Trust · One signup everywhere",
       "page": "version-c.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.45.html"
     },
     {
       "id": "UX-2026.10.04.46",
@@ -461,6 +461,13 @@
       "id": "UX-2026.10.04.48",
       "name": "Release Log · One signup everywhere",
       "page": "release-log.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.49",
+      "name": "Experience C · Trust · One clear picture",
+      "page": "version-c.html",
       "status": "current",
       "archive_url": null
     }
