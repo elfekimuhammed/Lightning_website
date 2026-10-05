@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Lightning · All Your Money. One Clear Picture.</title>
@@ -13,8 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/landing.css?v=20261005-3">
-<link rel="stylesheet" href="css/landing-c.css?v=20261004-5">
+<link rel="stylesheet" href="archive/UX-2026.10.04.49.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -24,7 +24,7 @@
 <script src="js/analytics.js?v=20261003-1" defer></script>
 <link rel="stylesheet" href="css/signup-band.css?v=20261004-1">
 </head>
-<body data-ux-version="UX-2026.10.04.51" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.04.49" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -55,26 +55,17 @@
 </div>
 
 <main class="wrap" id="top">
-  <!-- Hero -->
+  <!-- Hero: everything you own and owe, added up in front of you -->
   <header class="d-hero">
     <p class="label">Personal finance, built in Egypt</p>
     <h1 style="--fit:8.3">All Your Money. <span>One Clear Picture.</span></h1>
-    <p class="d-hero-line">Everything you own and owe, counted in EGP, with nothing left out and nothing counted twice.</p>
+    <p class="d-hero-line">Banks, wallets, gold, certificates and shares, counted in EGP, minus what isn’t yours.</p>
     <div class="d-actions">
       <a class="btn btn-vivid" href="#join">Get early access</a>
       <a class="btn btn-secondary" href="how-it-works.html">See how it works</a>
     </div>
     <p class="c-free">Free to use. No card, no account.</p>
-  </header>
-
-  <!-- 1 · Everything you own and owe: six places, counted as one -->
-  <section class="d-section" id="picture">
-    <div class="d-head">
-      <p class="label">Everything you own and owe</p>
-      <h2>Your Money Is in Six Places. Lightning Counts It as One.</h2>
-      <p>Mohab keeps money in a bank, a wallet, cash at home, a certificate, THNDR and gold. Lightning adds it up in EGP, and leaves out what isn’t his.</p>
-    </div>
-    <div class="d-money">
+    <div class="d-money c-hero-money">
       <div class="d-tiles">
         <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span><span class="lbl">CIB Payroll</span></div><span class="fig">215,657<span class="unit">EGP</span></span><span class="foot">Bank account</span></div>
         <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg></span><span class="lbl">Cash wallet</span></div><span class="fig">10,564<span class="unit">EGP</span></span><span class="foot">Cash on hand</span></div>
@@ -90,9 +81,9 @@
         <ol class="rows"><li class="row"><span>In your accounts<small>The six places, in EGP</small></span><b>487,967</b></li><li class="row"><span>Held for family<small>In your bank, but not yours</small></span><b>−6,000</b></li><li class="row result"><span>What you own</span><b>481,967</b></li><li class="row"><span>What you owe<small>The car loan, and October’s rent due</small></span><b>−49,500</b></li><li class="row result"><span>Net worth</span><b>432,467</b></li></ol>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- 2 · Numbers you can trust: pick a figure, see its working and its screen -->
+  <!-- 1 · Numbers you can trust: pick a figure, see its working and its screen -->
   <section class="d-section" id="trust">
     <div class="d-head">
       <p class="label">Numbers you can trust</p>
@@ -129,7 +120,7 @@
       </div>
   </section>
 
-  <!-- 3 · The next three months -->
+  <!-- 2 · The next three months -->
   <section class="d-section c-ahead" id="ahead">
     <div class="d-head">
       <p class="label">The next three months</p>
@@ -144,7 +135,7 @@
     </div>
   </section>
 
-  <!-- 4 · Try it: the calculator (B08) -->
+  <!-- 3 · Try it: the calculator (B08) -->
   <section class="d-section" id="calculator">
     <div class="d-head">
       <p class="label">Try it</p>
@@ -169,7 +160,7 @@
     </div>
   </section>
 
-  <!-- 5 · How it works: a real sequence -->
+  <!-- 4 · How it works: a real sequence -->
   <section class="d-section" id="how">
     <div class="d-head">
       <p class="label">How it works</p>
@@ -184,7 +175,7 @@
     <div class="l-more"><a class="btn btn-secondary" href="how-it-works.html">See how it works</a></div>
   </section>
 
-  <!-- 6 · The promise: free, paid once if it helps, private -->
+  <!-- 5 · The promise: free, paid once if it helps, private -->
   <section class="d-section" id="promise">
     <div class="d-head">
       <p class="label">Our promise</p>
@@ -198,7 +189,7 @@
     </div>
   </section>
 
-  <!-- 7 · Good questions -->
+  <!-- 6 · Good questions -->
   <section class="d-section" id="faq">
     <div class="d-head">
       <p class="label">Good questions</p>

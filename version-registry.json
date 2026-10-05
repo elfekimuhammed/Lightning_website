@@ -468,13 +468,20 @@
       "id": "UX-2026.10.04.49",
       "name": "Experience C · Trust · One clear picture",
       "page": "version-c.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.49.html"
     },
     {
       "id": "UX-2026.10.04.50",
       "name": "Current Status · What my own numbers taught me",
       "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.51",
+      "name": "Experience C · Trust · Six places, with a header",
+      "page": "version-c.html",
       "status": "current",
       "archive_url": null
     }
