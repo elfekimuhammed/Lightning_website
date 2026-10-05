@@ -1,0 +1,15 @@
+/* Beta testers wanted: one Nile strip above the top bar on the public pages (guideline 3.18, B02). Pressing it opens the survey. */
+.beta-bar{position:relative;z-index:60;display:flex;align-items:center;justify-content:center;gap:4px 14px;flex-wrap:wrap;min-height:44px;padding:8px 52px 8px 16px;padding-top:calc(8px + env(safe-area-inset-top,0px));background:#0A2442;color:#fff;font:600 14px/1.35 "Manrope","Segoe UI",system-ui,sans-serif;text-align:center}
+.beta-bar[hidden]{display:none}
+.beta-bar b{font-weight:800}
+.beta-bar a{display:inline-flex;align-items:center;min-height:32px;padding:0 14px;border-radius:999px;background:#fff;color:#0A2442;font-weight:800;text-decoration:none;white-space:nowrap}
+.beta-bar a:hover{background:#E3F6EC}
+.beta-bar a:focus-visible,.beta-bar button:focus-visible{outline:3px solid #14A874;outline-offset:2px}
+.beta-bar button{position:absolute;top:50%;right:4px;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:999px;background:transparent;color:inherit;font:400 22px/1 system-ui,sans-serif;cursor:pointer}
+.beta-bar button:hover{background:rgba(255,255,255,.12)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .beta-bar{background:#E3F6EC;color:#0A2442}:root:not([data-theme="light"]) .beta-bar a{background:#0A2442;color:#fff}:root:not([data-theme="light"]) .beta-bar button:hover{background:rgba(10,36,66,.1)}}
+:root[data-theme="dark"] .beta-bar{background:#E3F6EC;color:#0A2442}
+:root[data-theme="dark"] .beta-bar a{background:#0A2442;color:#fff}
+:root[data-theme="dark"] .beta-bar button:hover{background:rgba(10,36,66,.1)}
+@media (max-width:640px){.beta-bar{font-size:13px;padding-left:12px}}
+@media print{.beta-bar{display:none}}

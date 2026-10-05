@@ -8,9 +8,9 @@
   if (!form || !template || !list || !add || !endpoint) return;
 
   const experiences = {
-    'index.html': 'UX-2026.10.04.25',
-    'version-b.html': 'UX-2026.10.04.26',
-    'version-c.html': 'UX-2026.10.04.27'
+    'index.html': 'UX-2026.10.04.31',
+    'version-b.html': 'UX-2026.10.04.32',
+    'version-c.html': 'UX-2026.10.04.33'
   };
   let sourcePage = 'index.html';
   try { sourcePage = sessionStorage.getItem('lightning-home') || sourcePage; } catch (_) {}

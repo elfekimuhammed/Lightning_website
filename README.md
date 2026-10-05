@@ -25,6 +25,8 @@ css/version-c.css   the old Version C system, still used by How It Works, Curren
 js/version-c.js     the old Version C script, still used by How It Works
 css/landing.css     the landing pages: self-contained, guideline tokens and building blocks only
 css/landing-c.css   landing page C's own sections, loaded after css/landing.css
+css/beta-bar.css    the Beta testers wanted strip on the public pages (guideline 3.18)
+js/beta-bar.js      closes the strip and keeps it closed on that browser
 js/landing.js       the landing pages: calculator, tabs, lightbox and signup
 css/version-d.css   Version D's stylesheet, kept for the release log page
 js/analytics.js     GoatCounter page views and one event per download
@@ -104,6 +106,12 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.28` — `current-status.html` (Current Status · beta, and ready to use)
 - `UX-2026.10.04.29` — `release-log.html` (Release Log · beta, and ready to use)
 - `UX-2026.10.04.30` — `release-log.html` (Release Log · one card per build)
+- `UX-2026.10.04.31` — `index.html` (A · beta testers wanted)
+- `UX-2026.10.04.32` — `version-b.html` (B · beta testers wanted)
+- `UX-2026.10.04.33` — `version-c.html` (C · beta testers wanted)
+- `UX-2026.10.04.34` — `how-it-works.html` (How It Works · beta testers wanted)
+- `UX-2026.10.04.35` — `current-status.html` (Current Status · beta testers wanted)
+- `UX-2026.10.04.36` — `release-log.html` (Release Log · beta testers wanted)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.04.16` — `how-it-works.html` (Mohab's year)

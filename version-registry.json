@@ -237,8 +237,8 @@
       "id": "UX-2026.10.04.16",
       "name": "How It Works · Mohab's year",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.16.html"
     },
     {
       "id": "UX-2026.10.04.17",
@@ -300,29 +300,29 @@
       "id": "UX-2026.10.04.25",
       "name": "Experience A · Product · Beta, and ready to use",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.25.html"
     },
     {
       "id": "UX-2026.10.04.26",
       "name": "Experience B · Philosophy · Beta, and ready to use",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.26.html"
     },
     {
       "id": "UX-2026.10.04.27",
       "name": "Experience C · Trust · Beta, and ready to use",
       "page": "version-c.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.27.html"
     },
     {
       "id": "UX-2026.10.04.28",
       "name": "Current Status · Beta, and ready to use",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.28.html"
     },
     {
       "id": "UX-2026.10.04.29",
@@ -334,6 +334,48 @@
     {
       "id": "UX-2026.10.04.30",
       "name": "Release Log · One card per build",
+      "page": "release-log.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.30.html"
+    },
+    {
+      "id": "UX-2026.10.04.31",
+      "name": "Experience A · Product · Beta testers wanted",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.32",
+      "name": "Experience B · Philosophy · Beta testers wanted",
+      "page": "version-b.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.33",
+      "name": "Experience C · Trust · Beta testers wanted",
+      "page": "version-c.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.34",
+      "name": "How It Works · Beta testers wanted",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.35",
+      "name": "Current Status · Beta testers wanted",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.36",
+      "name": "Release Log · Beta testers wanted",
       "page": "release-log.html",
       "status": "current",
       "archive_url": null
