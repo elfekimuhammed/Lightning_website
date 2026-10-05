@@ -111,8 +111,8 @@
       "id": "UX-2026.10.03.06",
       "name": "Current Status · Permanent app download archive",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.03.06.html"
     },
     {
       "id": "UX-2026.10.03.07",
@@ -160,8 +160,8 @@
       "id": "UX-2026.10.04.05",
       "name": "Release Log · Guideline 3.10 gradient",
       "page": "release-log.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.05.html"
     },
     {
       "id": "UX-2026.10.04.06",
@@ -265,15 +265,15 @@
       "id": "UX-2026.10.04.21",
       "name": "Experience A · Product · Like having it in the bank",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.21.html"
     },
     {
       "id": "UX-2026.10.04.22",
       "name": "Experience B · Philosophy · Like having it in the bank",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.22.html"
     },
     {
       "id": "UX-2026.10.04.18",
@@ -293,6 +293,41 @@
       "id": "UX-2026.10.04.24",
       "name": "Experience C · Trust · One voice",
       "page": "version-c.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.24.html"
+    },
+    {
+      "id": "UX-2026.10.04.25",
+      "name": "Experience A · Product · Beta, and ready to use",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.26",
+      "name": "Experience B · Philosophy · Beta, and ready to use",
+      "page": "version-b.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.27",
+      "name": "Experience C · Trust · Beta, and ready to use",
+      "page": "version-c.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.28",
+      "name": "Current Status · Beta, and ready to use",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.29",
+      "name": "Release Log · Beta, and ready to use",
+      "page": "release-log.html",
       "status": "current",
       "archive_url": null
     }

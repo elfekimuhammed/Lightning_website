@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Current Status · Lightning Beta</title>
-<meta name="description" content="The Lightning beta, ready to use with your own statements: download it, learn the steps with a sample year, and tell us what should improve.">
+<meta name="description" content="The Lightning beta: why it exists, how to try it with sample data, what to evaluate and how to send actionable app feedback.">
 <meta name="theme-color" content="#E3F6EC">
 <link rel="icon" href="assets/brand/lightning-app-icon.svg?v=20261003-1" type="image/svg+xml">
 <link rel="icon" href="assets/brand/lightning-icon-64.png?v=20261003-1" type="image/png" sizes="64x64">
@@ -13,8 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-c.css?v=20261002-2">
-<link rel="stylesheet" href="css/current-status.css?v=20261002-2">
+<link rel="stylesheet" href="archive/UX-2026.10.03.06.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -23,7 +23,7 @@
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.10.04.28" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.03.06" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <div class="c-nav">
   <div class="wrap">
     <a class="logo" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>
@@ -41,12 +41,12 @@
   <header class="status-hero">
     <div class="eyebrow">Lightning beta</div>
     <h1>Current <span class="grad-text">Status.</span></h1>
-    <p>Lightning is in beta, and ready to use with your own statements. Learn the steps with a sample year if you like, then tell us exactly what should improve next.</p>
+    <p>Everything you need to try Lightning with safe sample data, decide what is useful, and tell us exactly what should improve next.</p>
     <div class="status-hero__actions">
-      <a class="btn btn-primary" href="#downloads">Download the beta</a>
+      <a class="btn btn-primary" href="#start">Start with Mohab’s sample data</a>
       <a class="btn btn-secondary" href="app-feedback.html">Submit app feedback</a>
     </div>
-    <div class="status-promise" role="note"><b>Beta, and ready to use:</b> your real statements are welcome. The <a href="release-log.html">release log</a> lists what’s still open.</div>
+    <div class="status-promise" role="note"><b>Beta rule:</b> use only the sample CSVs or other dummy data. Do not upload a real bank statement during this beta.</div>
   </header>
 
   <section class="status-story" id="why" aria-labelledby="why-title">
@@ -60,7 +60,7 @@
   </section>
 
   <section class="status-start" id="start" aria-labelledby="start-title">
-    <div class="sec-head"><div class="eyebrow">The beta path</div><h2 id="start-title">Start Small. <span class="grad-text">See the Full Picture.</span></h2><p>Learn the steps on Mohab’s sample year, then do the same with your own statements.</p></div>
+    <div class="sec-head"><div class="eyebrow">The beta path</div><h2 id="start-title">Start Small. <span class="grad-text">See the Full Picture.</span></h2><p>Use Mohab’s harmless demo files so you can test the real workflow without manual data entry or sharing personal information.</p></div>
     <div class="status-path">
       <article class="card status-path__item"><span>01</span><h3>Choose a beta version</h3><p>Download the newest 0.5.0 beta or the earlier 0.4.0 beta below. Both remain available.</p></article>
       <article class="card status-path__item"><span>02</span><h3>Download Mohab’s year</h3><p>Save the complete 2026 sample pack: eight fictional accounts and price files, in EGP and ready to import.</p></article>
@@ -84,7 +84,7 @@
   </section>
 
   <section class="status-setup" aria-labelledby="setup-title">
-    <div class="status-setup__copy"><div class="eyebrow">Mohab CSV setup</div><h2 id="setup-title">A Safe First Run.</h2><p>Import Mohab’s full fictional year to learn the steps. When you’re ready, do the same with your own statements.</p><ol><li><span>Download and unzip Mohab’s 2026 sample pack.</span></li><li><span>Create or open a sample profile in Lightning.</span></li><li><span><b>Start with <code>cib-payroll.csv</code>.</b> It is the main account and gives the rest of the sample year context.</span></li><li><span>Then import each remaining CSV into its matching account, review before posting, and explore the analysis tabs.</span></li></ol></div>
+    <div class="status-setup__copy"><div class="eyebrow">Mohab CSV setup</div><h2 id="setup-title">A Safe First Run.</h2><p>Import Mohab’s full fictional year. The goal is to test the experience, not to recreate your financial life.</p><ol><li><span>Download and unzip Mohab’s 2026 sample pack.</span></li><li><span>Create or open a sample profile in Lightning.</span></li><li><span><b>Start with <code>cib-payroll.csv</code>.</b> It is the main account and gives the rest of the sample year context.</span></li><li><span>Then import each remaining CSV into its matching account, review before posting, and explore the analysis tabs.</span></li></ol></div>
     <div class="status-samples">
       <a class="status-sample" href="assets/samples/mohab-2026-full-year.zip" download><span class="status-sample__icon" aria-hidden="true">↓</span><span><b>Mohab · 2026 full year</b><small>8 fictional CSVs · complete sample pack · ZIP</small></span><em>Download</em></a>
       <div class="status-support"><b>WhatsApp beta group</b><p>The invite will appear here before the beta opens. Use the feedback form for anything that needs tracking.</p><span>Invite coming soon</span></div>
