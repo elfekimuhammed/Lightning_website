@@ -18,6 +18,7 @@ current-status.html shared beta hub: status, safe sample CSVs, builds and app fe
 versions.html       release registry and visible IDs for every testable experience
 version-registry.json machine-readable release IDs and archive locations
 survey.html         optional personal finance survey
+features.html       Features: everything the app does today, in ten groups, one bullet a feature, no screens (css/features.css)
 guides.html         Money Guides: the seven guides below, one card each
 *-egypt.html, net-worth-tracker.html, cash-flow-planner.html, bank-statement-budgeting.html, offline-personal-finance-app.html
                     the guides: one search question each, answered with Mohab's year (see Search below)
@@ -203,7 +204,7 @@ Both landing pages, How It Works and the brand guidelines support light and dark
 
 ## Header and testing panel
 
-- Every version uses the same header: the logo, **Home · How It Works · Current Status**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
+- Every version uses the same header: the logo, **Home · Features · How It Works · Current Status**, and a dark **Take the survey** button (just "Survey" on phones). The header only links to pages, never to a section of the same page.
 - The release ID (linking to the version archive), **Submit UX Test**, and **Submit app feedback** live in the **Testing** tab on the right edge of the screen. `js/dev-dock.js` builds it the same way on every page; load it with `defer` before `js/ux-test.js`.
 - There is one live landing page, so **Home** always goes to `index.html`. Archived versions are on [Version Archive](versions.html).
 

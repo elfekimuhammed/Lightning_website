@@ -125,8 +125,8 @@
       "id": "UX-2026.10.03.08",
       "name": "App Feedback · 0.5.0 and 0.4.0 build selection",
       "page": "app-feedback.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.03.08.html"
     },
     {
       "id": "UX-2026.10.04.01",
@@ -447,8 +447,8 @@
       "id": "UX-2026.10.04.46",
       "name": "How It Works · One signup everywhere",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.46.html"
     },
     {
       "id": "UX-2026.10.04.47",
@@ -461,8 +461,8 @@
       "id": "UX-2026.10.04.48",
       "name": "Release Log · One signup everywhere",
       "page": "release-log.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.48.html"
     },
     {
       "id": "UX-2026.10.04.49",
@@ -475,8 +475,8 @@
       "id": "UX-2026.10.04.50",
       "name": "Current Status · What my own numbers taught me",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.50.html"
     },
     {
       "id": "UX-2026.10.04.51",
@@ -496,62 +496,160 @@
       "id": "UX-2026.10.05.02",
       "name": "Lightning · Home · Free personal finance for Egypt",
       "page": "index.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.02.html"
+    },
+    {
+      "id": "UX-2026.10.05.03",
+      "name": "Money Guides · Money Questions. Plain Answers.",
+      "page": "guides.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.03.html"
+    },
+    {
+      "id": "UX-2026.10.05.04",
+      "name": "Guide · Net worth tracker for Egypt",
+      "page": "net-worth-tracker.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.04.html"
+    },
+    {
+      "id": "UX-2026.10.05.05",
+      "name": "Guide · Budget app for Egypt",
+      "page": "budget-app-egypt.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.05.html"
+    },
+    {
+      "id": "UX-2026.10.05.06",
+      "name": "Guide · Expense tracker for Egypt",
+      "page": "expense-tracker-egypt.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.06.html"
+    },
+    {
+      "id": "UX-2026.10.05.07",
+      "name": "Guide · Investment tracker for Egypt",
+      "page": "investment-tracker-egypt.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.07.html"
+    },
+    {
+      "id": "UX-2026.10.05.08",
+      "name": "Guide · Cash flow planner",
+      "page": "cash-flow-planner.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.08.html"
+    },
+    {
+      "id": "UX-2026.10.05.09",
+      "name": "Guide · Bank statement budgeting",
+      "page": "bank-statement-budgeting.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.09.html"
+    },
+    {
+      "id": "UX-2026.10.05.10",
+      "name": "Guide · Private by design",
+      "page": "offline-personal-finance-app.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.10.html"
+    },
+    {
+      "id": "UX-2026.10.05.12",
+      "name": "Lightning · Home · Free personal finance for Egypt",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.03",
+      "id": "UX-2026.10.05.13",
+      "name": "How It Works · One signup everywhere",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.14",
+      "name": "Current Status · What my own numbers taught me",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.15",
+      "name": "App Feedback · 0.5.0 and 0.4.0 build selection",
+      "page": "app-feedback.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.16",
+      "name": "Release Log · One signup everywhere",
+      "page": "release-log.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.17",
       "name": "Money Guides · Money Questions. Plain Answers.",
       "page": "guides.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.04",
+      "id": "UX-2026.10.05.18",
       "name": "Guide · Net worth tracker for Egypt",
       "page": "net-worth-tracker.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.05",
+      "id": "UX-2026.10.05.19",
       "name": "Guide · Budget app for Egypt",
       "page": "budget-app-egypt.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.06",
+      "id": "UX-2026.10.05.20",
       "name": "Guide · Expense tracker for Egypt",
       "page": "expense-tracker-egypt.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.07",
+      "id": "UX-2026.10.05.21",
       "name": "Guide · Investment tracker for Egypt",
       "page": "investment-tracker-egypt.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.08",
+      "id": "UX-2026.10.05.22",
       "name": "Guide · Cash flow planner",
       "page": "cash-flow-planner.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.09",
+      "id": "UX-2026.10.05.23",
       "name": "Guide · Bank statement budgeting",
       "page": "bank-statement-budgeting.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.05.10",
+      "id": "UX-2026.10.05.24",
       "name": "Guide · Private by design",
       "page": "offline-personal-finance-app.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.11",
+      "name": "Features · Everything Lightning does today",
+      "page": "features.html",
       "status": "current",
       "archive_url": null
     }
