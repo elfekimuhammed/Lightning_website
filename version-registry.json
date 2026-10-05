@@ -384,40 +384,82 @@
       "id": "UX-2026.10.04.37",
       "name": "Experience A · Product · Beta testers, in the signup",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.37.html"
     },
     {
       "id": "UX-2026.10.04.38",
       "name": "Experience B · Philosophy · Beta testers, in the signup",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.38.html"
     },
     {
       "id": "UX-2026.10.04.39",
       "name": "Experience C · Trust · Beta testers, in the signup",
       "page": "version-c.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.39.html"
     },
     {
       "id": "UX-2026.10.04.40",
       "name": "How It Works · Beta testers, in the signup",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.40.html"
     },
     {
       "id": "UX-2026.10.04.41",
       "name": "Current Status · No strip",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.41.html"
     },
     {
       "id": "UX-2026.10.04.42",
       "name": "Release Log · Beta testers, in the signup",
+      "page": "release-log.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.42.html"
+    },
+    {
+      "id": "UX-2026.10.04.43",
+      "name": "Experience A · Product · One signup everywhere",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.44",
+      "name": "Experience B · Philosophy · One signup everywhere",
+      "page": "version-b.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.45",
+      "name": "Experience C · Trust · One signup everywhere",
+      "page": "version-c.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.46",
+      "name": "How It Works · One signup everywhere",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.47",
+      "name": "Current Status · One signup everywhere",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.48",
+      "name": "Release Log · One signup everywhere",
       "page": "release-log.html",
       "status": "current",
       "archive_url": null

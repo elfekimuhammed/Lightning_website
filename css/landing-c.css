@@ -1,6 +1,6 @@
 /* Landing page C · Trust (UX-2026.10.04.24, 2026-10-04): only what css/landing.css lacks. Loads after it. */
 /* B02: labels and the "or" are sentence case */
-.label,.l-or,.l-game-k{text-transform:none;letter-spacing:.01em;word-spacing:0}
+.label,.l-game-k{text-transform:none;letter-spacing:.01em;word-spacing:0}
 .l-game-k{font-size:14px}
 .label{font-size:13px}
 /* the sign-off is ink: the hero punch line is the only gradient (B11) */

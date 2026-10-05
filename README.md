@@ -25,6 +25,8 @@ css/version-c.css   the old Version C system, still used by How It Works, Curren
 js/version-c.js     the old Version C script, still used by How It Works
 css/landing.css     the landing pages: self-contained, guideline tokens and building blocks only
 css/landing-c.css   landing page C's own sections, loaded after css/landing.css
+css/signup-band.css the signup band, the same on every page (guideline 3.20)
+js/signup.js        the signup form on pages whose own script doesn't handle it (Current Status)
 js/landing.js       the landing pages: calculator, tabs, lightbox and signup
 css/version-d.css   Version D's stylesheet, kept for the release log page
 js/analytics.js     GoatCounter page views and one event per download
@@ -116,6 +118,12 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.40` — `how-it-works.html` (How It Works · beta testers, in the signup)
 - `UX-2026.10.04.41` — `current-status.html` (Current Status · no strip)
 - `UX-2026.10.04.42` — `release-log.html` (Release Log · beta testers, in the signup)
+- `UX-2026.10.04.43` — `index.html` (A · one signup everywhere)
+- `UX-2026.10.04.44` — `version-b.html` (B · one signup everywhere)
+- `UX-2026.10.04.45` — `version-c.html` (C · one signup everywhere)
+- `UX-2026.10.04.46` — `how-it-works.html` (How It Works · one signup everywhere)
+- `UX-2026.10.04.47` — `current-status.html` (Current Status · one signup everywhere)
+- `UX-2026.10.04.48` — `release-log.html` (Release Log · one signup everywhere)
 - `UX-2026.09.30.04` — `how-it-works.html` (six steps)
 - `UX-2026.10.01.07` — `how-it-works.html` (monthly routine)
 - `UX-2026.10.04.16` — `how-it-works.html` (Mohab's year)

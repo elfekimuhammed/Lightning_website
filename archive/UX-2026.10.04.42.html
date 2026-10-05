@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Lightning · Release Log</title>
@@ -13,8 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-d.css?v=20261004-1">
-<link rel="stylesheet" href="css/release-log.css?v=20261004-1">
+<link rel="stylesheet" href="archive/UX-2026.10.04.42.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -22,9 +22,8 @@
 <script src="js/dev-dock.js?v=20261004-3" defer></script>
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
-<link rel="stylesheet" href="css/signup-band.css?v=20261004-1">
 </head>
-<body data-ux-version="UX-2026.10.04.48" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.04.42" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -84,18 +83,17 @@
     </div>
   </section>
 
-  <!-- Signup band (guideline 3.20, B06): the same on every page -->
-  <section class="sb" id="join" aria-labelledby="sb-title">
-    <div class="sb-copy">
-      <p class="sb-label">Beta testers wanted</p>
-      <h2 id="sb-title">Help Us Shape the Future of Lightning.</h2>
-      <p>Your opinion decides what we build next. Take the 3–5 minute survey and we’ll invite you to the beta, and to our testers’ community on WhatsApp.</p>
+  <!-- Signup band (B06): ends every page -->
+  <section class="card card-lead d-band" id="join">
+    <div>
+      <p class="label">Beta testers wanted</p>
+      <h2>We Need Beta Testers.</h2>
+      <p>Take the 3–5 minute survey below and we’ll invite you to the beta. Or just leave your email for early access.</p>
     </div>
-    <div class="sb-actions">
-      <a class="sb-btn sb-survey" href="survey.html">Take the survey · 3–5 min</a>
-      <p class="sb-or">or get news of each build</p>
-      <form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="Email"><button class="sb-btn" type="submit">Get early access</button></form>
-      <p class="sb-status" id="signup-status" role="status"></p>
+    <div class="d-signup">
+      <form id="email-signup" data-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec"><input type="hidden" name="form_type" value="signup"><input type="hidden" name="page_url" value=""><label for="signup-email" class="sr-only">Email</label><input id="signup-email" type="email" name="email" required autocomplete="email" placeholder="Email"><button class="btn btn-vivid" type="submit">Get early access</button></form>
+      <p class="d-status" id="signup-status" role="status"></p>
+      <p class="d-survey">Want to test it? <a href="survey.html">Take the survey · 3–5 min</a> and we’ll invite you.</p>
     </div>
   </section>
 </main>

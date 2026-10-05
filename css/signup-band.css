@@ -1,0 +1,37 @@
+/* The signup band (guideline 3.20, B06): one look on every page, whatever else the page loads. Self-contained: its own tokens, light and dark. */
+.sb{--sb-ink:#0D2233;--sb-ink2:#3A5566;--sb-muted:#5C7483;--sb-line:#DDE9E6;--sb-field:#FFFFFF;--sb-lead:linear-gradient(135deg,#E0F5E9,#DCF1F0 52%,#D7ECF7);--sb-shadow:0 14px 34px -24px rgba(10,36,66,.42);--sb-nile:#0A2442;--sb-on-nile:#FFFFFF;--sb-green:#14A874;--sb-green-text:#097852;--sb-rose:#C93D72;--sb-vivid:linear-gradient(135deg,#00995C 0%,#0B6DD6 100%)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sb{--sb-ink:#EAF4F1;--sb-ink2:#B8CAD2;--sb-muted:#8FA6B2;--sb-line:#243A4C;--sb-field:#15293B;--sb-lead:linear-gradient(135deg,#123A33,#11343B 52%,#12304A);--sb-shadow:0 14px 34px -24px rgba(0,0,0,.7);--sb-nile:#E3F6EC;--sb-on-nile:#0A2442;--sb-green:#3FCB93;--sb-green-text:#5FD9A6;--sb-rose:#F27AA5}}
+:root[data-theme="dark"] .sb{--sb-ink:#EAF4F1;--sb-ink2:#B8CAD2;--sb-muted:#8FA6B2;--sb-line:#243A4C;--sb-field:#15293B;--sb-lead:linear-gradient(135deg,#123A33,#11343B 52%,#12304A);--sb-shadow:0 14px 34px -24px rgba(0,0,0,.7);--sb-nile:#E3F6EC;--sb-on-nile:#0A2442;--sb-green:#3FCB93;--sb-green-text:#5FD9A6;--sb-rose:#F27AA5}
+
+.sb{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center;margin:72px 0 0;padding:40px;border-radius:22px;background:var(--sb-lead);box-shadow:var(--sb-shadow);color:var(--sb-ink);font-family:Manrope,"Segoe UI",system-ui,sans-serif;text-align:left}
+.sb *{box-sizing:border-box}
+.sb-label{display:flex;align-items:center;gap:10px;margin:0;color:var(--sb-muted);font:700 13px/1.2 Manrope,"Segoe UI",system-ui,sans-serif;letter-spacing:.01em;text-transform:none}
+.sb-label::before{content:"";width:20px;height:4px;border-radius:2px;background:var(--sb-vivid)}
+.sb h2{margin:12px 0 0;color:var(--sb-ink);font:800 clamp(30px,3.6vw,40px)/1.08 "Bricolage Grotesque","Segoe UI",system-ui,sans-serif;letter-spacing:-.035em;text-transform:none}
+.sb-copy>p:last-child{margin:12px 0 0;color:var(--sb-ink2);font-size:17px;line-height:1.55}
+.sb-actions{display:grid;gap:10px}
+.sb-btn{display:inline-flex;align-items:center;justify-content:center;width:100%;height:48px;padding:0 22px;border:0;border-radius:999px;font:700 15px/1 Manrope,"Segoe UI",system-ui,sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer}
+.sb-btn:focus-visible,.sb input:focus-visible{outline:3px solid var(--sb-green);outline-offset:2px}
+.sb-survey{background:var(--sb-vivid);color:#fff}
+.sb-survey:hover{filter:brightness(1.06)}
+.sb form{display:flex;gap:10px;margin:0}
+.sb input[type=email]{flex:1;min-width:0;height:48px;margin:0;padding:0 20px;border:1px solid var(--sb-line);border-radius:999px;background:var(--sb-field);color:var(--sb-ink);font:600 16px Manrope,"Segoe UI",system-ui,sans-serif}
+.sb input[type=email]::placeholder{color:var(--sb-muted)}
+.sb input[type=email]:focus{outline:0;border-color:var(--sb-green);box-shadow:0 0 0 3px color-mix(in srgb,var(--sb-green) 22%,transparent)}
+.sb form .sb-btn{width:auto;background:var(--sb-nile);color:var(--sb-on-nile)}
+.sb-or{display:flex;align-items:center;gap:12px;margin:2px 0;color:var(--sb-muted);font:700 13px/1 Manrope,"Segoe UI",system-ui,sans-serif;text-transform:none}
+.sb-or::before,.sb-or::after{content:"";flex:1;height:1px;background:var(--sb-line)}
+.sb-status{min-height:1.4em;margin:0;color:var(--sb-green-text);font-size:14px;font-weight:700}
+.sb-status:empty{display:none}
+.sb-status.is-error{color:var(--sb-rose)}
+.sb .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (max-width:900px){.sb{grid-template-columns:1fr;padding:28px 24px}}
+@media (max-width:640px){
+  .sb{margin-top:48px;padding:24px 20px;gap:22px}
+  .sb h2{font-size:30px}
+  .sb-copy>p:last-child{font-size:16px}
+  .sb form{flex-direction:column}
+  .sb-btn,.sb form .sb-btn,.sb input[type=email]{width:100%;height:54px;font-size:16px}
+  .sb input[type=email]{flex:none}
+}
+@media (forced-colors:active){.sb-label::before{background:CanvasText}}
