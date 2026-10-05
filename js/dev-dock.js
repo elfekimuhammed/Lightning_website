@@ -1,16 +1,10 @@
-// Lightning testing panel: page-version switch and the UX test button, in one fold-out on the right edge.
+// Lightning testing panel: the release ID, the version archive and the feedback buttons, in one fold-out on the right edge.
 // Load with `defer` BEFORE js/ux-test.js, so the UX button exists when that script wires it up.
 (() => {
-  const VERSIONS = [['A', 'index.html'], ['B', 'version-b.html'], ['C', 'version-c.html']];
-  const page = location.pathname.split('/').pop() || 'index.html';
-  const landing = VERSIONS.some(([, href]) => href === page);
-  let home = landing ? page : 'index.html';
-  try {
-    if (landing) sessionStorage.setItem('lightning-home', page);
-    else home = sessionStorage.getItem('lightning-home') || home;
-  } catch (_) {}
+  // One live landing page: Home is always index.html. Archived versions are on versions.html.
+  const home = 'index.html';
+  try { sessionStorage.setItem('lightning-home', home); } catch (_) {}
 
-  // Shared pages send "Home" back to the version the visitor came from.
   document.querySelectorAll('[data-home-link]').forEach(link => { link.href = home; });
 
   const dock = document.createElement('div');
@@ -24,9 +18,7 @@
     </button>
     <div class="dev-dock__panel" id="dev-dock-panel" role="dialog" aria-label="Testing tools" hidden>
       <div class="dev-dock__head"><p class="dev-dock__title">Testing tools</p><button class="dev-dock__close" type="button" aria-label="Close testing tools">×</button></div>
-      <p class="dev-dock__label">Page version</p>
-      <nav class="dev-dock__versions" aria-label="Landing page version">${VERSIONS.map(([label, href]) =>
-        `<a href="${href}"${href === home ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav>
+      <p class="dev-dock__label">This page</p>
       <a class="dev-dock__release" href="versions.html#${encodeURIComponent(releaseId)}"><span>Release ID</span><b>${releaseId}</b></a>
       <p class="dev-dock__label">Feedback</p>
       ${hasUx ? '<button class="dev-dock__ux" type="button" data-ux-open>Submit UX Test <span data-ux-count>0</span></button>' : ''}

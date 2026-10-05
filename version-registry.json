@@ -426,15 +426,15 @@
       "id": "UX-2026.10.04.43",
       "name": "Experience A · Product · One signup everywhere",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.43.html"
     },
     {
       "id": "UX-2026.10.04.44",
       "name": "Experience B · Philosophy · One signup everywhere",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.44.html"
     },
     {
       "id": "UX-2026.10.04.45",
@@ -482,6 +482,13 @@
       "id": "UX-2026.10.04.51",
       "name": "Experience C · Trust · Six places, with a header",
       "page": "version-c.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.51.html"
+    },
+    {
+      "id": "UX-2026.10.05.01",
+      "name": "Lightning · Home (Experience C · Trust)",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }
