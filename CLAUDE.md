@@ -8,7 +8,8 @@ Be as efficient with tokens as you can, in what you read, run and write. This ne
 
 - **Never open `brand-guidelines.html` whole** (about 95,000 tokens, mostly drawings; Part B, sections B01–B11, is this site). With the app repository checked out next to this one, `python ../Lightning/tools/guideline.py --file brand-guidelines.html B05` prints one section as text. Without it, find the section with `grep -n 'secnum">B05' brand-guidelines.html` and read only that section.
 - Search before you read: grep for the class, id or text, then read only the lines around it.
-- The app's hand-off, including website tasks, is `NOW.md` in the app repository (`elfekimuhammed/Lightning`).
+- The app's hand-off, including website tasks, is `NOW.md` in the app repository (`elfekimuhammed/Lightning`); what only the owner can do or decide is its `OWNER.md`.
+- Change `brand-guidelines.html` and the app's `docs/BRAND_GUIDELINE.html` together: the app's tests check they are one file.
 
 ## Git workflow (owner rule)
 
