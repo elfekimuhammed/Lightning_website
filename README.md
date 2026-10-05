@@ -18,7 +18,7 @@ current-status.html shared beta hub: status, safe sample CSVs, builds and app fe
 versions.html       release registry and visible IDs for every testable experience
 version-registry.json machine-readable release IDs and archive locations
 survey.html         optional personal finance survey
-features.html       Features: everything the app does today, in ten groups, one bullet a feature, no screens (css/features.css)
+features.html       Features: the five things it does best (each with a Mohab number), then all 79 features in ten groups with a jump to each (css/features.css)
 guides.html         Money Guides: the seven guides below, one card each
 *-egypt.html, net-worth-tracker.html, cash-flow-planner.html, bank-statement-budgeting.html, offline-personal-finance-app.html
                     the guides: one search question each, answered with Mohab's year (see Search below)

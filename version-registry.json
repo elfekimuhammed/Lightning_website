@@ -650,6 +650,13 @@
       "id": "UX-2026.10.05.11",
       "name": "Features · Everything Lightning does today",
       "page": "features.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.11.html"
+    },
+    {
+      "id": "UX-2026.10.05.25",
+      "name": "Features · Five things it does exceptionally well",
+      "page": "features.html",
       "status": "current",
       "archive_url": null
     }
