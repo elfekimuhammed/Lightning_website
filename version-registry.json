@@ -657,6 +657,13 @@
       "id": "UX-2026.10.05.25",
       "name": "Features · Five things it does exceptionally well",
       "page": "features.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.25.html"
+    },
+    {
+      "id": "UX-2026.10.05.26",
+      "name": "Features · Headers that say what each section is",
+      "page": "features.html",
       "status": "current",
       "archive_url": null
     }
