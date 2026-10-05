@@ -489,6 +489,69 @@
       "id": "UX-2026.10.05.01",
       "name": "Lightning · Home",
       "page": "index.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.01.html"
+    },
+    {
+      "id": "UX-2026.10.05.02",
+      "name": "Lightning · Home · Free personal finance for Egypt",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.03",
+      "name": "Money Guides · Money Questions. Plain Answers.",
+      "page": "guides.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.04",
+      "name": "Guide · Net worth tracker for Egypt",
+      "page": "net-worth-tracker.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.05",
+      "name": "Guide · Budget app for Egypt",
+      "page": "budget-app-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.06",
+      "name": "Guide · Expense tracker for Egypt",
+      "page": "expense-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.07",
+      "name": "Guide · Investment tracker for Egypt",
+      "page": "investment-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.08",
+      "name": "Guide · Cash flow planner",
+      "page": "cash-flow-planner.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.09",
+      "name": "Guide · Bank statement budgeting",
+      "page": "bank-statement-budgeting.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.05.10",
+      "name": "Guide · Private by design",
+      "page": "offline-personal-finance-app.html",
       "status": "current",
       "archive_url": null
     }

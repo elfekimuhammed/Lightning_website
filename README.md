@@ -18,6 +18,11 @@ current-status.html shared beta hub: status, safe sample CSVs, builds and app fe
 versions.html       release registry and visible IDs for every testable experience
 version-registry.json machine-readable release IDs and archive locations
 survey.html         optional personal finance survey
+guides.html         Money Guides: the seven guides below, one card each
+*-egypt.html, net-worth-tracker.html, cash-flow-planner.html, bank-statement-budgeting.html, offline-personal-finance-app.html
+                    the guides: one search question each, answered with Mohab's year (see Search below)
+robots.txt          crawl rules and the sitemap's address
+sitemap.xml         every page that should be in search, and nothing else
 css/styles.css      shared styles
 css/version-b.css   Version B's own sections (builds on css/version-c.css)
 js/version-b.js     Version B calculator with an adjustable return rate
@@ -25,6 +30,7 @@ css/version-c.css   the old Version C system, still used by How It Works, Curren
 js/version-c.js     the old Version C script, still used by How It Works
 css/landing.css     the landing pages: self-contained, guideline tokens and building blocks only
 css/home.css        the home page's own sections, loaded after css/landing.css
+css/guides.css      the guide pages' few extras, loaded after css/home.css
 css/signup-band.css the signup band, the same on every page (guideline 3.20)
 js/signup.js        the signup form on pages whose own script doesn't handle it (Current Status)
 js/landing.js       the landing pages: calculator, tabs, lightbox and signup
@@ -41,7 +47,7 @@ js/ux-test.js       shared UX test behavior
 js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
 assets/samples/     fictional Mohab CSV files for safe beta imports
-assets/brand/       the two-leaf logo and icons (see Logo below)
+assets/brand/       the two-leaf logo and icons (see Logo below); social-card.png is the 1200 × 630 link preview
 brand-guidelines.html Lightning guideline 3.8: A · App and B · Website (same file as the app's docs/BRAND_GUIDELINE.html)
 ```
 
@@ -162,7 +168,20 @@ The included `assets/samples/mohab-2026-full-year.zip` is Mohab’s full fiction
 - `download-app-<version>-<platform>` for an app build, read from any link to the Lightning-downloads repository that ends in `.zip`, `.exe`, `.msi`, `.dmg` or `.AppImage` (for example `download-app-v0.5.0-beta.1-windows`). A new build is counted as soon as its link is on a page; nothing to tag.
 - `download-sample-<file>` for the sample pack.
 
+"Unique visitors" counts browsing sessions, not people: one person who visits in the morning and again after GoatCounter's session window has passed counts twice, so five people can show as up to ten. Read it as visits from distinct sessions or devices.
+
 Read them on the GoatCounter dashboard; events are listed with the pages, filter by `download`. GoatCounter ignores localhost, so local previews are not counted. Add `<script src="js/analytics.js?v=20261003-1" defer></script>` before `</head>` on any new page.
+
+## Search (SEO)
+
+Lightning aims to be found first for **free personal finance for Egypt**, then for the wider terms. The home page owns that phrase; each guide owns one question.
+
+- **Every indexable page** has a title and description written for search, an absolute `<link rel="canonical" href="https://lightningeg.com/...">` (the home page is `https://lightningeg.com/`), Open Graph tags with `assets/brand/social-card.png`, and a line in `sitemap.xml`. Add all four to any new public page.
+- **Not in search:** survey, app feedback, the version archive, the brand guideline and every `archive/` snapshot carry `<meta name="robots" content="noindex,follow">` and stay out of the sitemap. Add the same line to each new snapshot (the one head change allowed on a snapshot besides brand-wide ones). `version-b.html` and `version-c.html` redirect to the home page and canonicalise to it. `robots.txt` blocks only files that are not pages (`audit/`, `analytics/`, `apps-script/`, the READMEs), because a blocked page can't show its noindex.
+- **Structured data:** the home page has `Organization`, `WebSite` and `SoftwareApplication` (free, Windows, FinanceApplication); each guide has `WebPage` and `FAQPage` matching its visible questions. Only true claims: no ratings, reviews or download counts until real ones exist. Update `softwareVersion` with each app release.
+- **The guides** (`guides.html` lists them): net worth, budget, expenses, investments, safe to spend, bank statements, privacy. Each is built from the landing building blocks only (hero, a worked example beside its real screen, three cards or steps, good questions, keep reading, the signup band). Every figure comes from Mohab's year on 2026-10-04 and matches the screen beside it, as on the home page; recapture them together. They never mention other apps (B10, B11), so comparison pages are not built.
+- **Head-only changes** (title, description, canonical, social tags, structured data) don't change what a visitor sees, so they don't need a new release ID. Visible copy does.
+- **After publishing:** the owner verifies `lightningeg.com` as a Domain property in Google Search Console (DNS) and in Bing Webmaster Tools, submits `https://lightningeg.com/sitemap.xml` and requests indexing for the home page, How It Works, Current Status and the guides. Then write the next guides from the queries Search Console reports.
 
 ## Version identity and archive
 
@@ -190,7 +209,7 @@ Both landing pages, How It Works and the brand guidelines support light and dark
 
 ## Landing pages
 
-**Since 2026-10-05 there is one live landing page: the home page, `index.html` (`UX-2026.10.05.01`).** It grew out of Version C; don't call it C any more. A (`UX-2026.10.04.43`), B (`UX-2026.10.04.44`) and C's last release at `version-c.html` (`UX-2026.10.04.51`) are archived; `version-b.html` and `version-c.html` redirect to the home page. The A and B descriptions below are history.
+**Since 2026-10-05 there is one live landing page: the home page, `index.html` (`UX-2026.10.05.02`).** It grew out of Version C; don't call it C any more. A (`UX-2026.10.04.43`), B (`UX-2026.10.04.44`) and C's last release at `version-c.html` (`UX-2026.10.04.51`) are archived; `version-b.html` and `version-c.html` redirect to the home page. The A and B descriptions below are history.
 
 There are three landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band (white email pill, Get early access, or, a dark Take the survey button) and a sign-off: the mark and "Study Your Patterns. Control Your Future." Fields on the site are white with a hairline, never grey. Phones come first: each hero sentence stays on one line (the h1's `--fit` is its longest line in em), buttons stack full width, the screen trio is one column and fields are 54px tall. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
 

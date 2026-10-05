@@ -4,8 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>Lightning · All Your Money. One Clear Picture.</title>
-<meta name="description" content="Lightning adds up everything you own and owe in EGP, from banks and wallets to gold, certificates and shares, and every number shows its working. Free to use. Your money data stays on your computer.">
+<title>Lightning · Free Personal Finance App for Egypt</title>
+<meta name="description" content="Free personal finance app for Egypt: spending, budgets, bank accounts, gold, certificates, shares and net worth in EGP, plus your next three months. No bank login.">
+<link rel="canonical" href="https://lightningeg.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lightning">
+<meta property="og:title" content="Lightning · Free Personal Finance for Egypt">
+<meta property="og:description" content="Free personal finance app for Egypt: spending, budgets, bank accounts, gold, certificates, shares and net worth in EGP, plus your next three months. No bank login.">
+<meta property="og:url" content="https://lightningeg.com/">
+<meta property="og:image" content="https://lightningeg.com/assets/brand/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lightning: All Your Money. One Clear Picture. Free personal finance for Egypt, beside the Overview screen.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#E3F6EC">
 <link rel="icon" href="assets/brand/lightning-app-icon.svg?v=20261003-1" type="image/svg+xml">
 <link rel="icon" href="assets/brand/lightning-icon-64.png?v=20261003-1" type="image/png" sizes="64x64">
@@ -23,8 +34,15 @@
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
 <link rel="stylesheet" href="css/signup-band.css?v=20261004-1">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://lightningeg.com/#organization","name":"Lightning","url":"https://lightningeg.com/","logo":"https://lightningeg.com/assets/brand/icon-512.png","description":"Lightning makes a personal finance app for salaried people in Egypt."},
+{"@type":"WebSite","@id":"https://lightningeg.com/#website","url":"https://lightningeg.com/","name":"Lightning","inLanguage":"en","publisher":{"@id":"https://lightningeg.com/#organization"}},
+{"@type":"SoftwareApplication","@id":"https://lightningeg.com/#app","name":"Lightning","applicationCategory":"FinanceApplication","operatingSystem":"Windows","softwareVersion":"0.5.0 beta 1","url":"https://lightningeg.com/","downloadUrl":"https://lightningeg.com/current-status.html#downloads","description":"Free personal finance software for Egypt. Track spending, budgets, bank accounts, wallets, cash, gold, certificates, shares and net worth in EGP, and see your next three months. No bank login: your money data stays in an encrypted profile on your computer.","image":"https://lightningeg.com/assets/brand/social-card.png","screenshot":"https://lightningeg.com/assets/app/mohab-year-2026-10-04/overview.webp","featureList":["Net worth across banks, wallets, cash, certificates, shares and gold","Bank statement CSV import with review before saving","Expense analysis by category","Monthly budget","Investment tracking with net gain","Safe to spend until payday and a three-month cash forecast","Encrypted local profile"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EGP"},"publisher":{"@id":"https://lightningeg.com/#organization"}}
+]}
+</script>
 </head>
-<body data-ux-version="UX-2026.10.05.01" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.05.02" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -57,7 +75,7 @@
 <main class="wrap" id="top">
   <!-- Hero -->
   <header class="d-hero">
-    <p class="label">Personal finance, built in Egypt</p>
+    <p class="label">Free personal finance for Egypt</p>
     <h1 style="--fit:8.3">All Your Money. <span>One Clear Picture.</span></h1>
     <p class="d-hero-line">Everything you own and owe, counted in EGP, with nothing left out and nothing counted twice.</p>
     <div class="d-actions">
@@ -211,8 +229,8 @@
       <details><summary>What will it cost?</summary><p>Nothing to start, and nothing is ever locked. After seven days, Lightning asks now and then for a one-time payment. Pay when it’s worth it to you, and you own it forever.</p></details>
       <details><summary>Which computers does it run on?</summary><p>Windows. The beta is a ZIP: unzip it and open Lightning. Other systems come later.</p></details>
       <details><summary>Is there a phone app?</summary><p>Not yet. We’re building one that syncs straight to your computer, with no server in between. Until then, add spending on your computer or import your bank’s CSV at the end of the month.</p></details>
-      <details><summary>Does it connect to my bank?</summary><p>No. Lightning never asks for bank logins. Download a CSV from any bank or wallet, match its columns once, and review every row before it’s saved.</p></details>
-      <details><summary>What goes online?</summary><p>Your money data never does. It stays in an encrypted profile on your computer. The only thing Lightning looks up online is the latest price of listed shares, by ticker symbol.</p></details>
+      <details><summary>Does it connect to my bank?</summary><p>No. Lightning never asks for bank logins. Download a CSV from any bank or wallet, match its columns once, and review every row before it’s saved. <a href="bank-statement-budgeting.html">How importing a statement works</a>.</p></details>
+      <details><summary>What goes online?</summary><p>Your money data never does. It stays in an encrypted profile on your computer. The only thing Lightning looks up online is the latest price of listed shares, by ticker symbol. <a href="offline-personal-finance-app.html">Where your data lives</a>.</p></details>
     </div>
   </section>
 
@@ -240,7 +258,7 @@
 <div class="wrap">
   <footer class="d-foot">
     <div class="d-foot-brand"><a class="d-lockup" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a><span>Made in Egypt</span></div>
-    <nav aria-label="Footer"><a href="how-it-works.html">How It Works</a><a href="current-status.html">Current Status</a><a href="release-log.html">Release Log</a><a href="survey.html">Survey</a></nav>
+    <nav aria-label="Footer"><a href="how-it-works.html">How It Works</a><a href="current-status.html">Current Status</a><a href="guides.html">Money Guides</a><a href="release-log.html">Release Log</a><a href="survey.html">Survey</a></nav>
   </footer>
 </div>
 

@@ -1,0 +1,12 @@
+# Lightning website. Pages that should not appear in search carry <meta name="robots" content="noindex,follow">
+# (survey, app feedback, version archive, brand guideline, archive/). Only files that are not pages are blocked here.
+User-agent: *
+Allow: /
+Disallow: /audit/
+Disallow: /analytics/
+Disallow: /apps-script/
+Disallow: /README
+Disallow: /CLAUDE
+Disallow: /archive/README
+
+Sitemap: https://lightningeg.com/sitemap.xml
