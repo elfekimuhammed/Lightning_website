@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Current Status · Lightning Beta</title>
@@ -13,8 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-c.css?v=20261002-2">
-<link rel="stylesheet" href="css/current-status.css?v=20261002-2">
+<link rel="stylesheet" href="archive/UX-2026.10.04.35.css">
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -22,8 +22,21 @@
 <script src="js/dev-dock.js?v=20261004-3" defer></script>
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <script src="js/analytics.js?v=20261003-1" defer></script>
+<script>// Beta testers wanted (guideline 3.18): the strip stays until the visitor closes it, then stays closed on this browser.
+(() => {
+  const bar = document.querySelector('[data-beta-bar]');
+  if (!bar) return;
+  const KEY = 'lightning-beta-bar-1';
+  try { if (localStorage.getItem(KEY) === 'closed') { bar.hidden = true; return; } } catch (_) {}
+  bar.querySelector('button')?.addEventListener('click', () => {
+    bar.hidden = true;
+    try { localStorage.setItem(KEY, 'closed'); } catch (_) {}
+  });
+})();
+</script>
 </head>
-<body data-ux-version="UX-2026.10.04.41" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.04.35" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<div class="beta-bar" data-beta-bar role="region" aria-label="Beta testers wanted"><span><b>Beta testers wanted.</b> Answer a short survey and we’ll invite you.</span><a href="survey.html">Take the survey · 3–5 min</a><button type="button" aria-label="Close">×</button></div>
 <div class="c-nav">
   <div class="wrap">
     <a class="logo" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>

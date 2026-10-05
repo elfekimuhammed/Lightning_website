@@ -342,40 +342,82 @@
       "id": "UX-2026.10.04.31",
       "name": "Experience A · Product · Beta testers wanted",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.31.html"
     },
     {
       "id": "UX-2026.10.04.32",
       "name": "Experience B · Philosophy · Beta testers wanted",
       "page": "version-b.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.32.html"
     },
     {
       "id": "UX-2026.10.04.33",
       "name": "Experience C · Trust · Beta testers wanted",
       "page": "version-c.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.33.html"
     },
     {
       "id": "UX-2026.10.04.34",
       "name": "How It Works · Beta testers wanted",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.34.html"
     },
     {
       "id": "UX-2026.10.04.35",
       "name": "Current Status · Beta testers wanted",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.35.html"
     },
     {
       "id": "UX-2026.10.04.36",
       "name": "Release Log · Beta testers wanted",
+      "page": "release-log.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.04.36.html"
+    },
+    {
+      "id": "UX-2026.10.04.37",
+      "name": "Experience A · Product · Beta testers, in the signup",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.38",
+      "name": "Experience B · Philosophy · Beta testers, in the signup",
+      "page": "version-b.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.39",
+      "name": "Experience C · Trust · Beta testers, in the signup",
+      "page": "version-c.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.40",
+      "name": "How It Works · Beta testers, in the signup",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.41",
+      "name": "Current Status · No strip",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.04.42",
+      "name": "Release Log · Beta testers, in the signup",
       "page": "release-log.html",
       "status": "current",
       "archive_url": null
