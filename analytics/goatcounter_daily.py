@@ -22,7 +22,6 @@ CAIRO = ZoneInfo("Africa/Cairo")
 OUT = Path(__file__).with_name("daily.csv")
 HEADER = [
     "date",
-    "unique_visitors",
     "page_visits",
     "app_downloads",
     "sample_downloads",
@@ -62,7 +61,6 @@ def day_row(d: date) -> list:
     span = f"start={utc(start)}&end={utc(end)}"
 
     total = get(f"/stats/total?{span}")
-    visitors = max(0, int(total.get("total", 0)) - int(total.get("total_events", 0)))
 
     builds = {}
     sample = 0
@@ -98,7 +96,6 @@ def day_row(d: date) -> list:
     stamp = datetime.now(CAIRO).strftime("%Y-%m-%d %H:%M")
     return [
         d.isoformat(),
-        visitors,
         page_visits,
         sum(builds.values()),
         sample,
