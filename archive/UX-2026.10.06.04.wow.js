@@ -1,9 +1,8 @@
-// The wow moment (home UX-2026.10.06.05, test.html): the six places pour into one figure.
+// The wow moment (home UX-2026.10.06.04, test.html): the six places pour into one figure.
 // Each money tile, as it scrolls up to the sticky "In your accounts" card, shrinks into it and its amount
 // is added; scrolling back takes it out again. GSAP + ScrollTrigger, hosted here in js/vendor/ and fetched
-// only once the page has loaded. <body data-wow-always> (the home page, owner's choice 2026-10-06, and
-// test.html) plays it even with reduce motion on; any other page skips it then and downloads nothing.
-// Without it, the card shows the total and the tiles stay still.
+// only once the page has loaded, and only when it will play: never with reduce motion on (the test page,
+// <body data-wow-always>, plays it anyway). Without it, the card shows the total and the tiles stay still.
 (() => {
   const stage = document.querySelector('.t-stage');
   if (!stage || (matchMedia('(prefers-reduced-motion: reduce)').matches && !('wowAlways' in document.body.dataset))) return;
@@ -47,22 +46,19 @@
     landed = done.length;
   };
 
-  // Paced so the eye can follow: each tile takes 420px of scroll to fly in, the figure trails the scroll
-  // by about a second, and tiles side by side go one after another, left to right, 160px of scroll apart.
-  const DISTANCE = 420, APART = 160;
-  const row = el => tiles.filter(t => t.el.offsetTop === el.offsetTop);
-  const lead = el => APART * row(el).filter(t => t.el.offsetLeft > el.offsetLeft).length; // left goes first
+  // tiles side by side pour in left to right, one after another
+  const shift = el => 80 * tiles.filter(t => t.el.offsetTop === el.offsetTop && t.el.offsetLeft < el.offsetLeft).length;
   tiles.forEach(t => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: t.el, scrub: 1.2, invalidateOnRefresh: true,
-        start: () => `top ${land() + lead(t.el) + DISTANCE}px`, end: () => `top ${land() + lead(t.el)}px`,
+        trigger: t.el, scrub: .5, invalidateOnRefresh: true,
+        start: () => `top ${land() + 220 - shift(t.el)}px`, end: () => `top ${land() - shift(t.el)}px`,
       },
       onUpdate() { t.p = this.progress(); paint(); },
     });
     tl.to(t.el, {
       x: () => counter.offsetLeft + counter.offsetWidth / 2 - (t.el.offsetLeft + t.el.offsetWidth / 2),
-      y: () => -(lead(t.el) + 50), scale: .3, ease: 'power1.in', transformOrigin: '50% 0',
+      y: -50, scale: .3, ease: 'power1.in', transformOrigin: '50% 0',
     }, 0).to(t.el, {opacity: 0, ease: 'power3.in'}, 0);
   });
   paint();

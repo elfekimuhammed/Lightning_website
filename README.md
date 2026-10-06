@@ -208,7 +208,7 @@ The home page loads `css/motion.css` and `js/motion.js` (about 6 KB together, no
 - Without the script, every figure shows as written.
 - Every count ends on the page's own text, so a figure always matches its screen (B07).
 - To add it to another page, link both files after the page's own CSS; page fades need both pages to load `css/motion.css`.
-- **The wow moment** (`css/wow.css`, `js/wow.js`): in section 1 the six money tiles pour into one sticky *In Your Accounts* figure as you scroll, which adds them up to the first line of the breakdown. GSAP + ScrollTrigger (about 46 KB compressed, `js/vendor/`) are fetched only after the page has loaded and only when it will play; with *reduce motion* on it never plays, the card shows the total and nothing is downloaded. `test.html` (`noindex`, not in the sitemap or any menu, `<body data-wow-always>`) plays it regardless, for judging.
+- **The wow moment** (`css/wow.css`, `js/wow.js`): in section 1 the six money tiles pour into one sticky *In Your Accounts* figure as you scroll, which adds them up to the first line of the breakdown. Each tile takes 420px of scroll, tiles side by side go 160px apart, and the figure trails the scroll by about a second, so the eye can follow. GSAP + ScrollTrigger (about 46 KB compressed, `js/vendor/`) are fetched only after the page has loaded. `<body data-wow-always>` plays it even with *reduce motion* on: the home page has it (owner's choice, 2026-10-06), and so does `test.html` (`noindex`, not in the sitemap or any menu).
 
 ## Dark mode
 

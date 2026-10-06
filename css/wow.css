@@ -1,6 +1,6 @@
-/* The wow moment (home UX-2026.10.06.04, test.html). As you scroll, the six money tiles pour into one figure
+/* The wow moment (home UX-2026.10.06.05, test.html). As you scroll, the six money tiles pour into one figure
    that adds them up, then the breakdown takes it to net worth. js/wow.js adds .is-live when it plays;
-   until then (or with reduce motion on) the card shows the total and nothing sticks. */
+   until then the card shows the total and nothing sticks. */
 .t-stage{position:relative}
 .t-count{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 20px;margin-bottom:16px;transform-origin:50% 0}
 .t-count .chead{margin:0;padding:0;border:0}
