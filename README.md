@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.25) for the complete system: Part A is the app, Part B is this site, Part C is the app on a phone. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](guideline/) (3.26, three documents in `guideline/`) for the complete system: [app.html](guideline/app.html) is Part A, the app, [website.html](guideline/website.html) is Part B, this site, and [phone.html](guideline/phone.html) is Part C, the app on a phone. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -51,7 +51,7 @@ js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
 assets/samples/     fictional Mohab CSV files for safe beta imports
 assets/brand/       the two-leaf logo and icons (see Logo below); social-card.png is the 1200 × 630 link preview
-brand-guidelines.html Lightning guideline 3.25: A · App, B · Website and C · Phone (same file as the app's docs/BRAND_GUIDELINE.html)
+guideline/            Lightning guideline 3.26 in three documents: app.html (A, the PC app), website.html (B, this site) and phone.html (C, the phone); same folder as the app's guideline/
 ```
 
 It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
@@ -207,7 +207,7 @@ The home page loads `css/motion.css` and `js/motion.js` (about 6 KB together, no
 
 ## Dark mode
 
-Both landing pages, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in section B09 Dark mode of `brand-guidelines.html`.
+Both landing pages, How It Works and the brand guidelines support light and dark ("Meadow Night"). The full spec is in section B09 Dark mode of `guideline/website.html`.
 
 - The page follows the device setting until the visitor uses the switch; the choice is then remembered in `localStorage` (`lightning-theme`).
 - To add dark mode to another page: include `css/theme.css` and `js/theme.js` (in `<head>`, not deferred), add `<button data-theme-toggle></button>` to the top bar, and define the page's dark colors under `:root[data-theme="dark"]`.
@@ -223,7 +223,7 @@ Both landing pages, How It Works and the brand guidelines support light and dark
 
 **Since 2026-10-05 there is one live landing page: the home page, `index.html` (`UX-2026.10.05.02`).** It grew out of Version C; don't call it C any more. A (`UX-2026.10.04.43`), B (`UX-2026.10.04.44`) and C's last release at `version-c.html` (`UX-2026.10.04.51`) are archived; `version-b.html` and `version-c.html` redirect to the home page. The A and B descriptions below are history.
 
-There are three landing pages, both built only from [guideline 3.9](brand-guidelines.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band (white email pill, Get early access, or, a dark Take the survey button) and a sign-off: the mark and "Study Your Patterns. Control Your Future." Fields on the site are white with a hairline, never grey. Phones come first: each hero sentence stays on one line (the h1's `--fit` is its longest line in em), buttons stack full width, the screen trio is one column and fields are 54px tall. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
+There are three landing pages, both built only from [guideline 3.9](guideline/website.html) Part B and both loading only `css/landing.css` and `js/landing.js` (plus the shared theme, testing panel and UX rail). Hero and section headers are centred, each section opens with a short label, and every page ends with the same early-access band (white email pill, Get early access, or, a dark Take the survey button) and a sign-off: the mark and "Study Your Patterns. Control Your Future." Fields on the site are white with a hairline, never grey. Phones come first: each hero sentence stays on one line (the h1's `--fit` is its longest line in em), buttons stack full width, the screen trio is one column and fields are 54px tall. Versions A, B, C and D before 2026-10-04 are in the [version archive](versions.html); `version-c.html` and `version-d.html` now redirect.
 
 **A · Product (`index.html`)** shows Lightning's three strengths: everything you own and owe, the next three months, and why it changed. It never compares Lightning with other apps. Order: hero (H1 with its punch line, the screen trio), what Lightning does (three pillar cards), everything you own and owe (six places counted as one net worth), the next three months (safe to spend beside the forecast, then the next 30 days, the loan payoff and the month ahead), analysis (the tour), does the tedious part (bills find their payments, repeats spotted, one balance checks an account, imports ask once per name, beside the Looks recurring screen), how it works (three numbered steps), try it (the calculator), private by design, good questions and the early-access band.
 
@@ -258,4 +258,4 @@ Pick the period that shows each tab at its best: YTD for the Overview, Investmen
 
 - Full-window screens (2000 × 1250) are used in tours and steps. Content crops without the sidebar (1800 × 1125, named `a-*.webp`) are used where the chart is the message: the hero trio on every version and the analysis grid on How It Works.
 - The hero on A shows the trio: Overview in the middle, Investments and Expense analysis beside it. B shows the Overview beside its six corners.
-- Quoted figures (net worth 432,467, savings rate 49.2%, safe to spend 170,089 and so on) match these screens. Rules are in section B07 Product screens of `brand-guidelines.html`.
+- Quoted figures (net worth 432,467, savings rate 49.2%, safe to spend 170,089 and so on) match these screens. Rules are in section B07 Product screens of `guideline/website.html`.
