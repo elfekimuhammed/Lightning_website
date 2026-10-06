@@ -12,6 +12,7 @@ import csv
 import json
 import os
 import sys
+import urllib.error
 import urllib.request
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
@@ -29,8 +30,12 @@ def get(path: str) -> dict:
     if token:
         headers["Authorization"] = f"Bearer {token}"
     req = urllib.request.Request(API + path, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"GoatCounter {e.code} for {path}: {body}") from e
 
 
 def utc(moment: datetime) -> str:
