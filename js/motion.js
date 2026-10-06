@@ -1,8 +1,10 @@
-// Motion (UX-2026.10.06.07): money figures count up to their real value, the calculator answer rolls
+// Motion (UX-2026.10.06.20): money figures count up to their real value, the calculator answer rolls
 // to each new value, sections rise in as they scroll into view and lists arrive item by item. Styles in css/motion.css.
 // Every figure ends on the exact text the page was written with. The counts always play (they change
 // numbers, not places); css/motion.css turns the big movement off when the visitor asks for less motion.
 (() => {
+  // Search and AI crawlers read the page as written: no counting from zero, nothing hidden, no library.
+  if (/bot|crawl|spider|slurp|inspectiontool|bingpreview|facebookexternalhit/i.test(navigator.userAgent)) return;
   if (!('IntersectionObserver' in window)) return;
   const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
   const ease = t => 1 - Math.pow(1 - t, 3);
@@ -52,7 +54,7 @@
   });
   once(parts, el => {
     el.classList.replace('mo-wait', 'mo-in');
-    setTimeout(() => el.classList.remove('mo-in'), 1600); // every arrival is over by then
+    setTimeout(() => el.classList.remove('mo-in'), 2800); // every arrival is over by then
   });
 
   // ---- money figures count up from zero as they come into view, also in a newly chosen tab ----
@@ -63,7 +65,7 @@
   });
   once(figs, el => {
     const node = el.firstChild;
-    roll(text => { node.textContent = text; }, 0, node.textContent, 900);
+    roll(text => { node.textContent = text; }, 0, node.textContent, 1400);
   });
 
   // ---- calculator (B08): the answer rolls from its last value to the new one ----
@@ -78,7 +80,7 @@
       stop(); stop = () => {};
       if (!from || !to || from.value === to.value) { shown = next; return; }
       live && live.setAttribute('aria-busy', 'true'); // screen readers hear only the final figure
-      stop = roll(write, from.value, next, 450, quiet);
+      stop = roll(write, from.value, next, 600, quiet);
     });
     watch.observe(capital, {childList: true, characterData: true, subtree: true});
   }

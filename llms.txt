@@ -1,0 +1,34 @@
+# Lightning
+
+> Lightning (lightningeg.com) is a free personal finance app for salaried people in Egypt. It runs on Windows, counts everything you own and owe in EGP (bank accounts, mobile wallets, cash, gold, bank certificates, EGX shares and funds), tracks spending and a monthly budget, and shows how much is safe to spend until payday plus the next three months. It never asks for a bank login: you import CSV statements and review every row. Your money data stays in an encrypted profile on your own computer.
+
+Lightning is a different product from anything else called "Lightning": it is the Egyptian personal finance app at lightningeg.com.
+
+## Key facts
+
+- Who it is for: salaried people in Egypt who want one clear picture of their money in EGP.
+- Platform: Windows. The current beta is 0.5.0 beta 1, a ZIP to unzip and open. A phone app that syncs straight to the computer, with no server in between, is being built; it is not available yet.
+- Price: free to download and use, and nothing is ever locked. After seven days, Lightning asks now and then for a one-time payment; you pay when it is worth it to you and own it forever.
+- Bank connection: none. Download a CSV from any bank or wallet, match its columns once, and review each row before it is saved.
+- Privacy: money data never goes online. It stays in an encrypted profile on your computer. The only online lookup is the latest price of listed shares, by ticker symbol. No account is needed.
+- Figures on the site come from Mohab, a fictional 31-year-old salaried user in Cairo, and match the app screens shown beside them.
+- Status: a working beta you can use with your real numbers today. The release log lists what is still open.
+
+## What it does
+
+- [Home](https://lightningeg.com/): net worth across six kinds of places, every number with its working, safe to spend, the next three months, and a calculator for what a small monthly saving is worth.
+- [Features](https://lightningeg.com/features.html): 79 features in ten groups: the overview page, accounts and transactions, money held for others, bank statement CSV import, budget by category, safe to spend, bills and forecast, shares and funds, gold and bank certificates, privacy, backups and recovery, and typing shortcuts.
+- [How it works](https://lightningeg.com/how-it-works.html): a monthly routine of about 30 minutes: upload your statements (10 minutes), settle a few rows (5 minutes), then sit down with your numbers (15 minutes).
+- [Download and current status](https://lightningeg.com/current-status.html): the Windows beta downloads, a safe sample year of fictional CSV statements to learn on, and how to give feedback.
+- [Release log](https://lightningeg.com/release-log.html): what changed build by build.
+
+## Guides
+
+- [How to calculate your net worth in Egypt](https://lightningeg.com/net-worth-tracker.html): count bank accounts, cash, gold, certificates and shares in EGP, and leave out money held for others.
+- [Budget app for Egypt](https://lightningeg.com/budget-app-egypt.html): plan a monthly budget in EGP around your salary.
+- [Expense tracker for Egypt](https://lightningeg.com/expense-tracker-egypt.html): see where your salary went, by category and month.
+- [Investment tracker for Egypt](https://lightningeg.com/investment-tracker-egypt.html): gold, bank certificates, EGX shares and funds in one EGP portfolio.
+- [Cash flow planner](https://lightningeg.com/cash-flow-planner.html): how much is safe to spend before payday, and a three-month forecast.
+- [Budget from your bank statement CSV](https://lightningeg.com/bank-statement-budgeting.html): no bank login, just your statement.
+- [Offline personal finance app](https://lightningeg.com/offline-personal-finance-app.html): where your data lives and why it stays on your PC.
+- [All guides](https://lightningeg.com/guides.html)

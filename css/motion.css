@@ -1,4 +1,4 @@
-/* Motion (UX-2026.10.06.07): small, fast and only where it explains a number. Loads with js/motion.js on
+/* Motion (UX-2026.10.06.20): small, fast and only where it explains a number. Loads with js/motion.js on
    the home page, Features, How It Works, Current Status, Money Guides and every guide.
    Only transform and opacity move, so nothing re-lays out. The script adds .mo-wait to parts below the fold
    and .mo-in when they scroll into view (taken off again once done, so each part's own hover effects return);
@@ -6,16 +6,17 @@
    Small motion (counts, and cards, tiles, lines and steps arriving in order) always plays.
    Big motion (sections rising, screens lifting, page fades) is off when the visitor asks for less motion. */
 
-/* a list's items arrive one after another: the script marks the list .mo-list and numbers each item --mo-i */
-.mo-wait .mo-list>*{opacity:0}
-.mo-in .mo-list>*{animation:mo-rise .45s cubic-bezier(.2,.7,.2,1) both!important;animation-delay:calc(var(--mo-i,0) * 60ms)!important}
-@keyframes mo-rise{from{opacity:0;translate:0 10px}}
+/* a list's items arrive one after another, slowly enough to follow (owner's request): 0.7 s each, 0.16 s apart.
+   The script marks the list .mo-list and numbers each item --mo-i (up to 8, so a long list ends within 2.1 s) */
+.mo-wait .mo-list>*,.mo-wait.mo-list>*{opacity:0!important}
+.mo-in .mo-list>*,.mo-in.mo-list>*{animation:mo-rise .7s cubic-bezier(.25,.6,.3,1) both!important;animation-delay:calc(.15s + var(--mo-i,0) * 160ms)!important}
+@keyframes mo-rise{from{opacity:0;translate:0 14px}}
 
 @media (prefers-reduced-motion:no-preference){
   /* each section's header, then what it shows, rise into place once */
   .mo-wait{opacity:0;translate:0 18px}
-  .mo-in{transition:opacity .5s ease,translate .6s cubic-bezier(.2,.7,.2,1)}
-  .mo-in~.mo-in{transition-delay:.08s}
+  .mo-in{transition:opacity .8s ease,translate .9s cubic-bezier(.25,.6,.3,1)}
+  .mo-in~.mo-in{transition-delay:.15s}
 
   /* real screens lift a little under the pointer, inviting a closer look */
   @media (hover:hover){

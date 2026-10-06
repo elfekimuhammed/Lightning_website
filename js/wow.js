@@ -6,6 +6,8 @@
 // Without it, the card shows the total and the tiles stay still.
 (() => {
   const stage = document.querySelector('.t-stage');
+  // Search and AI crawlers read the page as written: no counting from zero, nothing hidden, no library.
+  if (/bot|crawl|spider|slurp|inspectiontool|bingpreview|facebookexternalhit/i.test(navigator.userAgent)) return;
   if (!stage || (matchMedia('(prefers-reduced-motion: reduce)').matches && !('wowAlways' in document.body.dataset))) return;
   const load = src => new Promise((ok, fail) => {
     const script = Object.assign(document.createElement('script'), {src, onload: ok, onerror: fail});

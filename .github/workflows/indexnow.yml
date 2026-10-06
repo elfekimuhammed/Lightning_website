@@ -1,0 +1,43 @@
+name: Tell search engines about changes (IndexNow)
+
+# After each publish, send every sitemap address to IndexNow, which Bing (and through it ChatGPT and
+# Copilot search), Yandex, Seznam and Naver share. The key file 7778af1015309ba6ad3ba3f379bb6811.txt at the site root proves the
+# site is ours. Google does not use IndexNow; it reads sitemap.xml (submit it once in Search Console).
+on:
+  push:
+    branches: [main]
+    paths: ["*.html", "sitemap.xml", "llms.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lightning-indexnow
+  cancel-in-progress: true
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Wait for GitHub Pages to publish the key file
+        run: |
+          for i in $(seq 1 40); do
+            if [ "$(curl -fsS https://lightningeg.com/7778af1015309ba6ad3ba3f379bb6811.txt || true)" = "7778af1015309ba6ad3ba3f379bb6811" ]; then exit 0; fi
+            sleep 15
+          done
+          echo "The key file is not live yet; skipping this run." && exit 1
+      - name: Send the sitemap addresses
+        run: |
+          python3 - <<'PY'
+          import json, re, urllib.request
+          urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml").read())
+          body = json.dumps({"host": "lightningeg.com", "key": "7778af1015309ba6ad3ba3f379bb6811",
+                             "keyLocation": "https://lightningeg.com/7778af1015309ba6ad3ba3f379bb6811.txt", "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print(r.status, len(urls), "addresses sent")
+          PY
