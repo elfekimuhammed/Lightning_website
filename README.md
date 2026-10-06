@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.21) for the complete system: Part A is the app, Part B is this site. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](brand-guidelines.html) (3.25) for the complete system: Part A is the app, Part B is this site, Part C is the app on a phone. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -49,7 +49,7 @@ js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
 assets/samples/     fictional Mohab CSV files for safe beta imports
 assets/brand/       the two-leaf logo and icons (see Logo below); social-card.png is the 1200 × 630 link preview
-brand-guidelines.html Lightning guideline 3.21: A · App and B · Website (same file as the app's docs/BRAND_GUIDELINE.html)
+brand-guidelines.html Lightning guideline 3.25: A · App, B · Website and C · Phone (same file as the app's docs/BRAND_GUIDELINE.html)
 ```
 
 It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
