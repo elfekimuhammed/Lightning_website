@@ -28,6 +28,8 @@
 <link rel="stylesheet" href="css/home.css?v=20261005-1">
 <link rel="stylesheet" href="css/motion.css?v=20261006-2">
 <script src="js/motion.js?v=20261006-2" defer></script>
+<link rel="stylesheet" href="css/wow.css?v=20261006-1">
+<script src="js/wow.js?v=20261006-1" defer></script>
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -44,7 +46,7 @@
 ]}
 </script>
 </head>
-<body data-ux-version="UX-2026.10.06.02" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.06.04" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -95,7 +97,8 @@
       <h2>Your Money Is in Six Places. Lightning Counts It as One.</h2>
       <p>Mohab keeps money in a bank, a wallet, cash at home, a certificate, THNDR and gold. Lightning adds it up in EGP, and leaves out what isn’t his.</p>
     </div>
-    <div class="d-money">
+    <div class="t-stage" data-mo-skip>
+      <div class="card card-lead t-count" aria-hidden="true"><div class="chead"><h3>In Your Accounts</h3><p data-t-line>The six places, in EGP</p></div><span class="lead-fig"><span data-t-sum>487,967</span><span class="unit">EGP</span></span></div>
       <div class="d-tiles">
         <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-landmark"/></svg></span><span class="lbl">CIB Payroll</span></div><span class="fig">215,657<span class="unit">EGP</span></span><span class="foot">Bank account</span></div>
         <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg></span><span class="lbl">Cash wallet</span></div><span class="fig">10,564<span class="unit">EGP</span></span><span class="foot">Cash on hand</span></div>
@@ -105,6 +108,8 @@
         <div class="kpi"><div class="top"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span><span class="lbl">Gold at home</span></div><span class="fig">110,295<span class="unit">EGP</span></span><span class="foot">Valued per gram</span></div>
         <p class="d-tiles-cap">Mohab, our sample household, on 2026-10-04</p>
       </div>
+    </div>
+    <div class="t-after">
       <div class="card card-lead" aria-label="Mohab’s net worth, worked out">
         <div class="chead"><h3>Net Worth</h3><p>What you own, less what you owe</p></div>
         <span class="lead-fig">432,467<span class="unit">EGP</span></span>

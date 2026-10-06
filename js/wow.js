@@ -1,12 +1,23 @@
-// Test page (test.html, UX-2026.10.06.03): the six places pour into one figure.
+// The wow moment (home UX-2026.10.06.04, test.html): the six places pour into one figure.
 // Each money tile, as it scrolls up to the sticky "In your accounts" card, shrinks into it and its amount
-// is added; scrolling back takes it out again. GSAP + ScrollTrigger, hosted here in js/vendor/.
-// It plays even with reduce motion on, so the owner can judge it; decide that rule before it goes live.
+// is added; scrolling back takes it out again. GSAP + ScrollTrigger, hosted here in js/vendor/ and fetched
+// only once the page has loaded, and only when it will play: never with reduce motion on (the test page,
+// <body data-wow-always>, plays it anyway). Without it, the card shows the total and the tiles stay still.
 (() => {
-  const {gsap, ScrollTrigger} = window;
   const stage = document.querySelector('.t-stage');
-  if (!gsap || !ScrollTrigger || !stage) return;
+  if (!stage || (matchMedia('(prefers-reduced-motion: reduce)').matches && !('wowAlways' in document.body.dataset))) return;
+  const load = src => new Promise((ok, fail) => {
+    const script = Object.assign(document.createElement('script'), {src, onload: ok, onerror: fail});
+    document.head.append(script);
+  });
+  const start = () => load('js/vendor/gsap.min.js?v=3.15.0')
+    .then(() => load('js/vendor/ScrollTrigger.min.js?v=3.15.0')).then(play, () => {});
+  if (document.readyState === 'complete') start(); else addEventListener('load', start, {once: true});
+
+  function play() {
+  const {gsap, ScrollTrigger} = window;
   gsap.registerPlugin(ScrollTrigger);
+  stage.classList.add('is-live');
   const counter = stage.querySelector('.t-count');
   const sumEl = counter.querySelector('[data-t-sum]'), line = counter.querySelector('[data-t-line]');
   const bar = document.querySelector('.d-bar');
@@ -51,4 +62,5 @@
     }, 0).to(t.el, {opacity: 0, ease: 'power3.in'}, 0);
   });
   paint();
+  }
 })();

@@ -678,13 +678,20 @@
       "id": "UX-2026.10.06.02",
       "name": "Lightning · Home · Small motion for everyone",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.02.html"
     },
     {
       "id": "UX-2026.10.06.03",
       "name": "Test · Six places pour into one figure",
       "page": "test.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.04",
+      "name": "Lightning · Home · Six places pour into one figure",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }

@@ -41,8 +41,9 @@ audit/              website audits against the guideline
 css/theme.css       light/dark switch
 css/motion.css      motion on the home page (see Motion below)
 js/motion.js        count-up figures, the rolling calculator answer and scroll reveal
-test.html           private test page, not indexed or linked: the home page with one wow moment (css/test.css, js/test.js)
-js/vendor/          GSAP 3.15 and ScrollTrigger, hosted here, used only by test.html
+test.html           private test page, not indexed or linked: the wow moment, playing even with reduce motion on
+css/wow.css, js/wow.js the wow moment on the home page and test.html (see Motion below)
+js/vendor/          GSAP 3.15 and ScrollTrigger, hosted here; js/wow.js fetches them after the page loads
 css/dev-dock.css    testing panel (page version + UX test)
 js/dev-dock.js      builds the testing panel on every version
 js/theme.js         picks and remembers the theme
@@ -207,7 +208,7 @@ The home page loads `css/motion.css` and `js/motion.js` (about 6 KB together, no
 - Without the script, every figure shows as written.
 - Every count ends on the page's own text, so a figure always matches its screen (B07).
 - To add it to another page, link both files after the page's own CSS; page fades need both pages to load `css/motion.css`.
-- **Test page** (`test.html`, `noindex`, not in the sitemap or any menu): the six money tiles pour into one *In Your Accounts* figure as you scroll, using GSAP + ScrollTrigger (about 46 KB compressed, in `js/vendor/`). It plays even with *reduce motion* on, so it can be judged; decide that before moving it to the home page.
+- **The wow moment** (`css/wow.css`, `js/wow.js`): in section 1 the six money tiles pour into one sticky *In Your Accounts* figure as you scroll, which adds them up to the first line of the breakdown. GSAP + ScrollTrigger (about 46 KB compressed, `js/vendor/`) are fetched only after the page has loaded and only when it will play; with *reduce motion* on it never plays, the card shows the total and nothing is downloaded. `test.html` (`noindex`, not in the sitemap or any menu, `<body data-wow-always>`) plays it regardless, for judging.
 
 ## Dark mode
 
