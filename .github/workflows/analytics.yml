@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/analytics.yml"
+      - "analytics/goatcounter_daily.py"
   schedule:
     - cron: "29 */8 * * *"
   workflow_dispatch:
