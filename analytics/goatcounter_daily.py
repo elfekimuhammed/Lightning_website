@@ -10,6 +10,7 @@ reads daily.csv with IMPORTDATA.
 """
 import csv
 import json
+import os
 import sys
 import urllib.request
 from datetime import date, datetime, time, timedelta, timezone
@@ -23,7 +24,11 @@ HEADER = ["date", "unique_visitors", "app_downloads", "sample_downloads", "downl
 
 
 def get(path: str) -> dict:
-    req = urllib.request.Request(API + path, headers={"Content-Type": "application/json", "Accept": "application/json"})
+    token = os.environ.get("GOATCOUNTER_API_KEY", "").strip()
+    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(API + path, headers=headers)
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
 
