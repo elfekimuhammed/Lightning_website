@@ -39,8 +39,8 @@ css/version-d.css   Version D's stylesheet, kept for the release log page
 js/analytics.js     GoatCounter page views and one event per download
 audit/              website audits against the guideline
 css/theme.css       light/dark switch
-css/motion.css      motion on the home page (see Motion below)
-js/motion.js        count-up figures, the rolling calculator answer and scroll reveal
+css/motion.css      small motion on the home page, Features, How It Works, Current Status and the guides (see Motion below)
+js/motion.js        count-up figures, the rolling calculator answer, lists arriving item by item and scroll reveal
 test.html           private test page, not indexed or linked: the wow moment, playing even with reduce motion on
 css/wow.css, js/wow.js the wow moment on the home page and test.html (see Motion below)
 js/vendor/          GSAP 3.15 and ScrollTrigger, hosted here; js/wow.js fetches them after the page loads
@@ -201,9 +201,9 @@ The website, survey, and Google Sheets receiver are connected. When changing the
 
 ## Motion
 
-The home page loads `css/motion.css` and `js/motion.js` (about 6 KB together, no library). Money figures count up from zero to their exact value as they scroll into view, the calculator answer rolls to each new figure, money tiles, breakdown lines and steps arrive in order, sections rise in once, real screens lift under the pointer, and pages fade into each other where the browser supports it.
+The home page, Features, How It Works, Current Status, Money Guides and every guide load `css/motion.css` and `js/motion.js` (about 6 KB together, no library). Money figures count up from zero to their exact value as they scroll into view, the calculator answer rolls to each new figure, the items of a list (tiles, breakdown lines, steps, cards side by side, feature bullets) arrive one after another, sections rise in once, real screens lift under the pointer, and pages fade into each other where the browser supports it. Only the home page has a big animation, the wow moment below; secondary pages keep to this small motion (owner's choice, 2026-10-06).
 
-- Only `transform` and `opacity` move; nothing on screen at load is hidden or animated, so the first paint is untouched.
+- Only position (`translate`, `transform`) and `opacity` move; nothing on screen at load is hidden or animated, so the first paint is untouched.
 - Small motion (counts, the calculator roll, tiles, lines and steps arriving in order) always plays, also with *reduce motion* on (owner's choice, 2026-10-06). Big motion (sections rising, screens lifting, page fades) switches off then.
 - Without the script, every figure shows as written.
 - Every count ends on the page's own text, so a figure always matches its screen (B07).

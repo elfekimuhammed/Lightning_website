@@ -566,15 +566,15 @@
       "id": "UX-2026.10.05.13",
       "name": "How It Works · One signup everywhere",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.13.html"
     },
     {
       "id": "UX-2026.10.05.14",
       "name": "Current Status · What my own numbers taught me",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.14.html"
     },
     {
       "id": "UX-2026.10.05.15",
@@ -594,57 +594,57 @@
       "id": "UX-2026.10.05.17",
       "name": "Money Guides · Money Questions. Plain Answers.",
       "page": "guides.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.17.html"
     },
     {
       "id": "UX-2026.10.05.18",
       "name": "Guide · Net worth tracker for Egypt",
       "page": "net-worth-tracker.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.18.html"
     },
     {
       "id": "UX-2026.10.05.19",
       "name": "Guide · Budget app for Egypt",
       "page": "budget-app-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.19.html"
     },
     {
       "id": "UX-2026.10.05.20",
       "name": "Guide · Expense tracker for Egypt",
       "page": "expense-tracker-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.20.html"
     },
     {
       "id": "UX-2026.10.05.21",
       "name": "Guide · Investment tracker for Egypt",
       "page": "investment-tracker-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.21.html"
     },
     {
       "id": "UX-2026.10.05.22",
       "name": "Guide · Cash flow planner",
       "page": "cash-flow-planner.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.22.html"
     },
     {
       "id": "UX-2026.10.05.23",
       "name": "Guide · Bank statement budgeting",
       "page": "bank-statement-budgeting.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.23.html"
     },
     {
       "id": "UX-2026.10.05.24",
       "name": "Guide · Private by design",
       "page": "offline-personal-finance-app.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.24.html"
     },
     {
       "id": "UX-2026.10.05.11",
@@ -664,8 +664,8 @@
       "id": "UX-2026.10.05.26",
       "name": "Features · Headers that say what each section is",
       "page": "features.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.26.html"
     },
     {
       "id": "UX-2026.10.06.01",
@@ -699,13 +699,104 @@
       "id": "UX-2026.10.06.05",
       "name": "Lightning · Home · Slower pour, car loan in EGP",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.05.html"
     },
     {
       "id": "UX-2026.10.06.06",
       "name": "Test · Slower pour, car loan in EGP",
       "page": "test.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.06.html"
+    },
+    {
+      "id": "UX-2026.10.06.07",
+      "name": "Lightning · Home · Small motion",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.08",
+      "name": "Test · Small motion",
+      "page": "test.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.09",
+      "name": "Features · Small motion",
+      "page": "features.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.10",
+      "name": "How It Works · Small motion",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.11",
+      "name": "Current Status · Small motion",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.12",
+      "name": "Money Guides · Small motion",
+      "page": "guides.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.13",
+      "name": "Guide · Net worth tracker for Egypt · Small motion",
+      "page": "net-worth-tracker.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.14",
+      "name": "Guide · Budget app for Egypt · Small motion",
+      "page": "budget-app-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.15",
+      "name": "Guide · Expense tracker for Egypt · Small motion",
+      "page": "expense-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.16",
+      "name": "Guide · Investment tracker for Egypt · Small motion",
+      "page": "investment-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.17",
+      "name": "Guide · Cash flow planner · Small motion",
+      "page": "cash-flow-planner.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.18",
+      "name": "Guide · Bank statement budgeting · Small motion",
+      "page": "bank-statement-budgeting.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.19",
+      "name": "Guide · Private by design · Small motion",
+      "page": "offline-personal-finance-app.html",
       "status": "current",
       "archive_url": null
     }

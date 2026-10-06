@@ -1,5 +1,5 @@
-// Motion (UX-2026.10.06.07): money figures count up to their real value, the calculator answer rolls
-// to each new value, sections rise in as they scroll into view and lists arrive item by item. Styles in css/motion.css.
+// Motion (UX-2026.10.06.02): money figures count up to their real value, the calculator answer rolls
+// to each new value, and sections rise in as they scroll into view. Styles in css/motion.css.
 // Every figure ends on the exact text the page was written with. The counts always play (they change
 // numbers, not places); css/motion.css turns the big movement off when the visitor asks for less motion.
 (() => {
@@ -28,32 +28,18 @@
   };
   // Only what is fully below the screen when the page loads moves, so nothing already seen flickers.
   const later = el => el.getBoundingClientRect().top > innerHeight;
-  // In view once its top is above the bottom eighth of the screen, or once it is wholly on screen
-  // (the last parts of a page may never scroll higher than that).
-  const steps = {threshold: [0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1]};
+  const margin = {rootMargin: '0px 0px -12% 0px'};
   const once = (els, act) => {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      if (entry.intersectionRatio > .99 || entry.boundingClientRect.top < innerHeight * .88) { observer.unobserve(entry.target); act(entry.target); }
-    }), steps);
+      if (entry.isIntersecting) { observer.unobserve(entry.target); act(entry.target); }
+    }), margin);
     els.forEach(el => observer.observe(el));
   };
 
-  // ---- sections rise in, header first; lists in them (tiles, lines, steps, cards) arrive item by item ----
-  const LISTS = '.d-tiles, .rows, .c-steps, .l-ahead, .f-list, .hw-time, .status-checklist ul, .status-checklist ol';
-  const isList = el => el.matches(LISTS) || [...el.children].filter(c => c.classList.contains('card')).length > 1;
-  const parts = [...document.querySelectorAll('main > section > *:not([data-mo-skip])')].filter(later);
-  parts.forEach(part => {
-    part.classList.add('mo-wait');
-    [part, ...part.querySelectorAll('*')].filter(isList).forEach(list => {
-      list.classList.add('mo-list');
-      [...list.children].forEach((item, i) => item.style.setProperty('--mo-i', Math.min(i, 8)));
-    });
-  });
-  once(parts, el => {
-    el.classList.replace('mo-wait', 'mo-in');
-    setTimeout(() => el.classList.remove('mo-in'), 1600); // every arrival is over by then
-  });
+  // ---- sections rise in: header first, then the one visual ----
+  const parts = [...document.querySelectorAll('main .d-section > *:not([data-mo-skip])')].filter(later);
+  parts.forEach(el => el.classList.add('mo-wait'));
+  once(parts, el => el.classList.replace('mo-wait', 'mo-in'));
 
   // ---- money figures count up from zero as they come into view, also in a newly chosen tab ----
   const figs = [...document.querySelectorAll('main .kpi .fig, main .lead-fig')].filter(el => {

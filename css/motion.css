@@ -1,46 +1,29 @@
-/* Motion (UX-2026.10.06.02): small, fast and only where it explains a number. Loads with js/motion.js.
+/* Motion (UX-2026.10.06.07): small, fast and only where it explains a number. Loads with js/motion.js on
+   the home page, Features, How It Works, Current Status, Money Guides and every guide.
    Only transform and opacity move, so nothing re-lays out. The script adds .mo-wait to parts below the fold
-   and .mo-in when they scroll into view; without the script, nothing is hidden.
-   Small motion (counts, tiles, lines and steps arriving in order) always plays.
+   and .mo-in when they scroll into view (taken off again once done, so each part's own hover effects return);
+   without the script, nothing is hidden. Moves use translate, never transform, so no part's own transform is lost.
+   Small motion (counts, and cards, tiles, lines and steps arriving in order) always plays.
    Big motion (sections rising, screens lifting, page fades) is off when the visitor asks for less motion. */
 
-/* money tiles arrive one after another, like the six places being counted */
-.mo-wait .kpi,.mo-wait .card-lead .rows .row,.mo-wait.c-steps>li{opacity:0}
-.mo-in .kpi{animation:mo-rise .45s cubic-bezier(.2,.7,.2,1) both!important}
-.mo-in .kpi:nth-child(2){animation-delay:.05s!important}
-.mo-in .kpi:nth-child(3){animation-delay:.1s!important}
-.mo-in .kpi:nth-child(4){animation-delay:.15s!important}
-.mo-in .kpi:nth-child(5){animation-delay:.2s!important}
-.mo-in .kpi:nth-child(6){animation-delay:.25s!important}
-
-/* the breakdown settles line by line, so the sum reads in order (A12) */
-.mo-in .card-lead .rows .row{animation:mo-rise .4s ease both!important}
-.mo-in .card-lead .rows .row:nth-child(1){animation-delay:.25s!important}
-.mo-in .card-lead .rows .row:nth-child(2){animation-delay:.35s!important}
-.mo-in .card-lead .rows .row:nth-child(3){animation-delay:.45s!important}
-.mo-in .card-lead .rows .row:nth-child(4){animation-delay:.55s!important}
-.mo-in .card-lead .rows .row:nth-child(5){animation-delay:.65s!important}
-
-/* steps in order: 1, 2, 3 */
-.mo-in.c-steps>li{animation:mo-rise .45s cubic-bezier(.2,.7,.2,1) both!important}
-.mo-in.c-steps>li:nth-child(2){animation-delay:.1s!important}
-.mo-in.c-steps>li:nth-child(3){animation-delay:.2s!important}
-
-@keyframes mo-rise{from{opacity:0;transform:translateY(10px)}}
+/* a list's items arrive one after another: the script marks the list .mo-list and numbers each item --mo-i */
+.mo-wait .mo-list>*{opacity:0}
+.mo-in .mo-list>*{animation:mo-rise .45s cubic-bezier(.2,.7,.2,1) both!important;animation-delay:calc(var(--mo-i,0) * 60ms)!important}
+@keyframes mo-rise{from{opacity:0;translate:0 10px}}
 
 @media (prefers-reduced-motion:no-preference){
-  /* each section's header, then its one visual, rise into place once */
-  .mo-wait{opacity:0;transform:translateY(18px)}
-  .mo-in{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
-  .d-head.mo-in~.mo-in{transition-delay:.08s}
+  /* each section's header, then what it shows, rise into place once */
+  .mo-wait{opacity:0;translate:0 18px}
+  .mo-in{transition:opacity .5s ease,translate .6s cubic-bezier(.2,.7,.2,1)}
+  .mo-in~.mo-in{transition-delay:.08s}
 
   /* real screens lift a little under the pointer, inviting a closer look */
   @media (hover:hover){
-    .d-frame{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-    .d-frame:has(.zoom:hover){transform:translateY(-4px)}
+    .d-frame,.frame{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+    .d-frame:has(.zoom:hover),.frame:has(.zoom:hover){transform:translateY(-4px)}
   }
 
   /* pages fade into each other, with the top bar held still, where the browser supports it */
   @view-transition{navigation:auto}
-  .d-bar{view-transition-name:top-bar}
+  .d-bar,.c-nav{view-transition-name:top-bar}
 }
