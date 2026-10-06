@@ -559,8 +559,8 @@
       "id": "UX-2026.10.05.12",
       "name": "Lightning · Home · Free personal finance for Egypt",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.12.html"
     },
     {
       "id": "UX-2026.10.05.13",
@@ -664,6 +664,13 @@
       "id": "UX-2026.10.05.26",
       "name": "Features · Headers that say what each section is",
       "page": "features.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.06.01",
+      "name": "Lightning · Home · Motion that explains the numbers",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }

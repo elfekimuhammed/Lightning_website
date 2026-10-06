@@ -39,6 +39,8 @@ css/version-d.css   Version D's stylesheet, kept for the release log page
 js/analytics.js     GoatCounter page views and one event per download
 audit/              website audits against the guideline
 css/theme.css       light/dark switch
+css/motion.css      motion on the home page (see Motion below)
+js/motion.js        count-up figures, the rolling calculator answer and scroll reveal
 css/dev-dock.css    testing panel (page version + UX test)
 js/dev-dock.js      builds the testing panel on every version
 js/theme.js         picks and remembers the theme
@@ -193,6 +195,15 @@ Windows app versions are separate from website experience IDs. The Current Statu
 ## Status
 
 The website, survey, and Google Sheets receiver are connected. When changing the receiver, update its URL in both landing pages and the survey page, then verify that a submission appears in the destination Sheet.
+
+## Motion
+
+The home page loads `css/motion.css` and `js/motion.js` (about 6 KB together, no library). Money figures count up from zero to their exact value as they scroll into view, the calculator answer rolls to each new figure, money tiles, breakdown lines and steps arrive in order, sections rise in once, real screens lift under the pointer, and pages fade into each other where the browser supports it.
+
+- Only `transform` and `opacity` move; nothing on screen at load is hidden or animated, so the first paint is untouched.
+- Without the script, or with *reduce motion* on, every figure shows as written.
+- Every count ends on the page's own text, so a figure always matches its screen (B07).
+- To add it to another page, link both files after the page's own CSS; page fades need both pages to load `css/motion.css`.
 
 ## Dark mode
 
