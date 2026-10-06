@@ -41,6 +41,8 @@ audit/              website audits against the guideline
 css/theme.css       light/dark switch
 css/motion.css      motion on the home page (see Motion below)
 js/motion.js        count-up figures, the rolling calculator answer and scroll reveal
+test.html           private test page, not indexed or linked: the home page with one wow moment (css/test.css, js/test.js)
+js/vendor/          GSAP 3.15 and ScrollTrigger, hosted here, used only by test.html
 css/dev-dock.css    testing panel (page version + UX test)
 js/dev-dock.js      builds the testing panel on every version
 js/theme.js         picks and remembers the theme
@@ -201,9 +203,11 @@ The website, survey, and Google Sheets receiver are connected. When changing the
 The home page loads `css/motion.css` and `js/motion.js` (about 6 KB together, no library). Money figures count up from zero to their exact value as they scroll into view, the calculator answer rolls to each new figure, money tiles, breakdown lines and steps arrive in order, sections rise in once, real screens lift under the pointer, and pages fade into each other where the browser supports it.
 
 - Only `transform` and `opacity` move; nothing on screen at load is hidden or animated, so the first paint is untouched.
-- Without the script, or with *reduce motion* on, every figure shows as written.
+- Small motion (counts, the calculator roll, tiles, lines and steps arriving in order) always plays, also with *reduce motion* on (owner's choice, 2026-10-06). Big motion (sections rising, screens lifting, page fades) switches off then.
+- Without the script, every figure shows as written.
 - Every count ends on the page's own text, so a figure always matches its screen (B07).
 - To add it to another page, link both files after the page's own CSS; page fades need both pages to load `css/motion.css`.
+- **Test page** (`test.html`, `noindex`, not in the sitemap or any menu): the six money tiles pour into one *In Your Accounts* figure as you scroll, using GSAP + ScrollTrigger (about 46 KB compressed, in `js/vendor/`). It plays even with *reduce motion* on, so it can be judged; decide that before moving it to the home page.
 
 ## Dark mode
 

@@ -1,9 +1,8 @@
-// Motion (UX-2026.10.06.02): money figures count up to their real value, the calculator answer rolls
+// Motion (UX-2026.10.06.01): money figures count up to their real value, the calculator answer rolls
 // to each new value, and sections rise in as they scroll into view. Styles in css/motion.css.
-// Every figure ends on the exact text the page was written with. The counts always play (they change
-// numbers, not places); css/motion.css turns the big movement off when the visitor asks for less motion.
+// Every figure ends on the exact text the page was written with. Off when the visitor asks for less motion.
 (() => {
-  if (!('IntersectionObserver' in window)) return;
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
   const ease = t => 1 - Math.pow(1 - t, 3);
   const parse = text => {
@@ -37,13 +36,12 @@
   };
 
   // ---- sections rise in: header first, then the one visual ----
-  const parts = [...document.querySelectorAll('main .d-section > *:not([data-mo-skip])')].filter(later);
+  const parts = [...document.querySelectorAll('main .d-section > *')].filter(later);
   parts.forEach(el => el.classList.add('mo-wait'));
   once(parts, el => el.classList.replace('mo-wait', 'mo-in'));
 
   // ---- money figures count up from zero as they come into view, also in a newly chosen tab ----
   const figs = [...document.querySelectorAll('main .kpi .fig, main .lead-fig')].filter(el => {
-    if (el.closest('[data-mo-skip]')) return false;
     const node = el.firstChild;
     return node && node.nodeType === Node.TEXT_NODE && parse(node.textContent) && (later(el) || !el.offsetParent);
   });
