@@ -923,15 +923,15 @@
       "id": "UX-2026.10.07.05",
       "name": "How It Works · Phone and PC, new screens",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.05.html"
     },
     {
       "id": "UX-2026.10.07.06",
       "name": "Features · Phone and PC, new screens",
       "page": "features.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.06.html"
     },
     {
       "id": "UX-2026.10.07.07",
@@ -965,8 +965,8 @@
       "id": "UX-2026.10.07.11",
       "name": "Guide · Expense tracker for Egypt · Phone and PC, new screens",
       "page": "expense-tracker-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.11.html"
     },
     {
       "id": "UX-2026.10.07.12",
@@ -986,15 +986,15 @@
       "id": "UX-2026.10.07.14",
       "name": "Guide · Bank statement budgeting · Phone and PC, new screens",
       "page": "bank-statement-budgeting.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.14.html"
     },
     {
       "id": "UX-2026.10.07.15",
       "name": "Guide · Private by design · Phone and PC, new screens",
       "page": "offline-personal-finance-app.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.15.html"
     },
     {
       "id": "UX-2026.10.07.16",
@@ -1021,8 +1021,8 @@
       "id": "UX-2026.10.07.19",
       "name": "Test · Phone and PC, connected · Months ahead that differ",
       "page": "test.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.19.html"
     },
     {
       "id": "UX-2026.10.07.20",
@@ -1056,13 +1056,62 @@
       "id": "UX-2026.10.07.24",
       "name": "Version Archive · Lightning 1.0 beta downloads",
       "page": "versions.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.24.html"
     },
     {
       "id": "UX-2026.10.07.25",
       "name": "Lightning · Home · Windows and Android beta",
       "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.26",
+      "name": "Features · Android beta available",
+      "page": "features.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.27",
+      "name": "How It Works · Android beta available",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.28",
+      "name": "Guide · Bank statement budgeting · Android beta",
+      "page": "bank-statement-budgeting.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.29",
+      "name": "Guide · Expense tracker · Android beta",
+      "page": "expense-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.30",
+      "name": "Guide · Private by design · Android beta",
+      "page": "offline-personal-finance-app.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.31",
+      "name": "Test · Android beta available",
+      "page": "test.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.32",
+      "name": "Version Archive · Android beta guide updates",
+      "page": "versions.html",
       "status": "current",
       "archive_url": null
     }
