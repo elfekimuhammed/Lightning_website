@@ -895,6 +895,13 @@
       "id": "UX-2026.10.07.01",
       "name": "Test · Phone and PC",
       "page": "test.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.01.html"
+    },
+    {
+      "id": "UX-2026.10.07.02",
+      "name": "Test · Phone and PC, connected",
+      "page": "test.html",
       "status": "current",
       "archive_url": null
     }

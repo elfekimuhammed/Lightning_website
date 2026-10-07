@@ -69,3 +69,43 @@
   .d-links a{display:inline-flex;align-items:center;min-height:44px}
   .d-foot nav a{display:inline-flex;align-items:center;min-height:44px}
 }
+
+/* test page (UX-2026.10.07.02): phone and PC, connected. Real screens only (B07): the PC in its browser frame,
+   the phone flat with rounded corners (no device mockup), and the link between them */
+.t-sync{display:grid;grid-template-columns:minmax(0,1fr) 132px 236px;align-items:center;gap:0}
+.t-sync figure{margin:0}
+.t-phone-shot{overflow:hidden;border:1px solid var(--line);border-radius:26px;background:var(--white);box-shadow:var(--shadow-screen)}
+.t-phone-shot img{display:block;width:100%;height:auto}
+.t-phone-shot .zoom{all:unset;display:block;cursor:zoom-in}
+.t-phone-shot .zoom:focus-visible{outline:3px solid var(--green);outline-offset:-3px}
+:root[data-theme="dark"] .t-phone-shot img{filter:brightness(.9)}
+.t-link{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 10px;text-align:center}
+.t-wire{position:relative;width:100%;height:2px;background:repeating-linear-gradient(90deg,var(--azure) 0 6px,transparent 6px 12px)}
+.t-wire i{position:absolute;top:-4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--azure)}
+.t-wire i+i{background:var(--green)}
+.t-lock{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--nile);color:var(--on-nile);box-shadow:var(--shadow)}
+.t-link p{color:var(--ink2);font:700 12.5px/1.35 var(--body)}
+.t-same{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;margin-top:22px;color:var(--ink2);font-size:15px;font-weight:600}
+.t-same b{color:var(--ink);font-weight:800}
+.t-same span{display:inline-flex;align-items:center;gap:8px}
+.t-same span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+@media (prefers-reduced-motion:no-preference){
+  .t-wire i{animation:t-to-phone 2.6s ease-in-out infinite}
+  .t-wire i+i{animation:t-to-pc 2.6s ease-in-out 1.3s infinite;opacity:0}
+}
+@keyframes t-to-phone{0%{transform:translateX(0);opacity:0}15%,85%{opacity:1}100%{transform:translateX(100px);opacity:0}}
+@keyframes t-to-pc{0%{transform:translateX(100px);opacity:0}15%,85%{opacity:1}100%{transform:translateX(0);opacity:0}}
+.t-phones{display:grid;grid-template-columns:repeat(3,minmax(0,250px));justify-content:center;gap:28px}
+.t-phones figure{margin:0}
+@media (max-width:900px){
+  .t-sync{grid-template-columns:1fr;justify-items:center;gap:6px}
+  .t-sync>figure:first-child{width:100%}
+  .t-sync>figure:last-child{width:min(240px,70%)}
+  .t-link{flex-direction:row;padding:14px 0}
+  .t-wire{width:2px;height:44px;background:repeating-linear-gradient(180deg,var(--azure) 0 6px,transparent 6px 12px)}
+  .t-wire i{display:none}
+}
+@media (max-width:640px){
+  .t-phones{grid-template-columns:minmax(0,260px)}
+  .t-phones figure+figure{display:none}
+}
