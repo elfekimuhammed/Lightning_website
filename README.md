@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](guideline/) (3.26, three documents in `guideline/`) for the complete system: [app.html](guideline/app.html) is Part A, the app, [website.html](guideline/website.html) is Part B, this site, and [phone.html](guideline/phone.html) is Part C, the app on a phone. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](guideline/) (3.27, three documents in `guideline/`) for the complete system: [app.html](guideline/app.html) is Part A, the app, [website.html](guideline/website.html) is Part B, this site, and [phone.html](guideline/phone.html) is Part C, the app on a phone. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
 
 ## Structure
 
@@ -54,7 +54,7 @@ js/current-status.js multi-ticket app feedback form behavior
 apps-script/        Apps Script receiver patches
 assets/samples/     fictional Mohab CSV files for safe beta imports
 assets/brand/       the two-leaf logo and icons (see Logo below); social-card.png is the 1200 × 630 link preview
-guideline/            Lightning guideline 3.26 in three documents: app.html (A, the PC app), website.html (B, this site) and phone.html (C, the phone); same folder as the app's guideline/
+guideline/            Lightning guideline 3.27 in three documents: app.html (A, the PC app), website.html (B, this site) and phone.html (C, the phone); same folder as the app's guideline/
 ```
 
 It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
