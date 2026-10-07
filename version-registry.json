@@ -804,8 +804,8 @@
       "id": "UX-2026.10.06.20",
       "name": "Lightning · Home · Calmer motion",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.20.html"
     },
     {
       "id": "UX-2026.10.06.21",
@@ -902,6 +902,13 @@
       "id": "UX-2026.10.07.02",
       "name": "Test · Phone and PC, connected",
       "page": "test.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.03",
+      "name": "Lightning · Home · Phone and PC, connected",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }

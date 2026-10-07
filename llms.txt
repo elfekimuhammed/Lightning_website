@@ -7,16 +7,16 @@ Lightning is a different product from anything else called "Lightning": it is th
 ## Key facts
 
 - Who it is for: salaried people in Egypt who want one clear picture of their money in EGP.
-- Platform: Windows. The current beta is 0.5.0 beta 1, a ZIP to unzip and open. A phone app that syncs straight to the computer, with no server in between, is being built; it is not available yet.
+- Platform: Windows. The current beta is 0.5.0 beta 1, a ZIP to unzip and open. The Android app is in testing: the phone holds the ledger, a paired Windows PC borrows it and hands it back over your own Wi-Fi, encrypted, with no server in between, and the phone can read bank SMS into review. It comes to beta testers next, then Google Play.
 - Price: free to download and use, and nothing is ever locked. After seven days, Lightning asks now and then for a one-time payment; you pay when it is worth it to you and own it forever.
 - Bank connection: none. Download a CSV from any bank or wallet, match its columns once, and review each row before it is saved.
-- Privacy: money data never goes online. It stays in an encrypted profile on your computer. The only online lookup is the latest price of listed shares, by ticker symbol. No account is needed.
+- Privacy: money data never goes online. It stays in an encrypted profile on your phone and computer, which talk to each other only over your own Wi-Fi. The only online lookup is the latest price of listed shares, by ticker symbol. No account is needed.
 - Figures on the site come from Mohab, a fictional 31-year-old salaried user in Cairo, and match the app screens shown beside them.
 - Status: a working beta you can use with your real numbers today. The release log lists what is still open.
 
 ## What it does
 
-- [Home](https://lightningeg.com/): net worth across six kinds of places, every number with its working, safe to spend, the next three months, and a calculator for what a small monthly saving is worth.
+- [Home](https://lightningeg.com/): all your money on your phone and PC: net worth across six kinds of places, one ledger kept in step between phone and PC, phone screens, every number with its working, safe to spend, the next three months, what Lightning does for you (bank SMS, rules, weekend-aware bills, goals, financial health, search) and a calculator for what a small monthly saving is worth.
 - [Features](https://lightningeg.com/features.html): 79 features in ten groups: the overview page, accounts and transactions, money held for others, bank statement CSV import, budget by category, safe to spend, bills and forecast, shares and funds, gold and bank certificates, privacy, backups and recovery, and typing shortcuts.
 - [How it works](https://lightningeg.com/how-it-works.html): a monthly routine of about 30 minutes: upload your statements (10 minutes), settle a few rows (5 minutes), then sit down with your numbers (15 minutes).
 - [Download and current status](https://lightningeg.com/current-status.html): the Windows beta downloads, a safe sample year of fictional CSV statements to learn on, and how to give feedback.
