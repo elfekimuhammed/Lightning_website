@@ -1033,10 +1033,10 @@
     },
     {
       "id": "UX-2026.10.07.21",
-      "name": "Current Status · Lightning 1.0 beta for Windows and Android",
+      "name": "Current Status · Lightning 1.0 beta downloads",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.21.html"
     },
     {
       "id": "UX-2026.10.07.22",
@@ -1112,6 +1112,13 @@
       "id": "UX-2026.10.07.32",
       "name": "Version Archive · Android beta guide updates",
       "page": "versions.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.33",
+      "name": "Current Status · APK installation guidance and focused downloads",
+      "page": "current-status.html",
       "status": "current",
       "archive_url": null
     }

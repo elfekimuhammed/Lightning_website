@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<base href="../">
+<meta name="robots" content="noindex,follow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
@@ -25,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="css/version-c.css?v=20261002-2">
-<link rel="stylesheet" href="css/current-status.css?v=20261007-33">
+<link rel="stylesheet" href="archive/UX-2026.10.07.21.css">
 <link rel="stylesheet" href="css/motion.css?v=20261006-4">
 <script src="js/motion.js?v=20261006-4" defer></script>
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
@@ -41,7 +43,7 @@
 {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://lightningeg.com/current-status.html#page","url":"https://lightningeg.com/current-status.html","name":"Download Lightning 1.0 Beta for Windows and Android · Current Status","description":"Download the matched Lightning 1.0 beta for Windows and Android, learn with a sample Egyptian financial year and see what remains in testing.","inLanguage":"en","isPartOf":{"@id":"https://lightningeg.com/#website"},"about":{"@id":"https://lightningeg.com/#app"}}]}
 </script>
 </head>
-<body data-ux-version="UX-2026.10.07.33" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.07.21" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <div class="c-nav">
   <div class="wrap">
     <a class="logo" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>
@@ -89,10 +91,9 @@
 
   <section class="status-downloads" id="downloads" aria-labelledby="downloads-title">
     <div class="status-downloads__head"><div><div class="eyebrow">Beta downloads</div><h2 id="downloads-title">Choose Your Lightning Version.</h2></div><p>1.0 beta 1 is the current matched Windows and Android release. Keep an independent backup if you test with real data. The Windows app requires Microsoft Edge WebView2; the Android APK is called Lightning Test and is debuggable. Older public builds remain in the <a class="status-inline-link" href="versions.html">version archive</a>.</p></div>
-    <aside class="status-apk-warning" role="note" aria-label="Android APK installation note"><strong>Installing the Android app</strong><p>This download is an APK installed outside Google Play. Android may show a verification warning or ask you to allow installation from your browser. Continue only if you trust Lightning and downloaded this file from our official release page. Never install an APK from a source you don’t know.</p></aside>
     <nav class="status-download-shortcuts" aria-label="Latest beta downloads">
       <a class="btn btn-primary" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/Lightning-v1.0.0-beta.1-Windows-x64.zip">Download for Windows</a>
-      <a class="btn btn-download-app" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/Lightning-Test-1.0.0-beta.1-476-b9cab0e7.apk">Download for Android</a>
+      <a class="btn btn-secondary" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/Lightning-Test-1.0.0-beta.1-476-b9cab0e7.apk">Download for Android</a>
       <a class="status-inline-link" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/SHA256SUMS">SHA-256 checksums</a>
       <a class="status-inline-link" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/BUILD.json">Build record</a>
     </nav>
@@ -101,8 +102,10 @@
         <thead><tr><th>Release</th><th>Platform</th><th>Status</th><th>Download</th><th>Release log</th></tr></thead>
         <tbody>
           <tr><th scope="row"><b>Lightning 1.0 beta 1</b><small>Newest public beta</small></th><td>Windows x64 · ZIP archive<br><small><a href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/SHA256SUMS">SHA-256 checksums</a> · <a href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/BUILD.json">Build record</a></small></td><td><span class="status-badge">Available now</span></td><td><a class="btn btn-primary status-table__button" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/Lightning-v1.0.0-beta.1-Windows-x64.zip" target="_blank" rel="noreferrer">Download for Windows</a></td><td><a class="btn btn-secondary status-table__button" href="release-log.html#v1.0.0-beta.1">Read the log</a><br><small>What changed in 1.0 beta 1.</small></td></tr>
-          <tr><th scope="row"><b>Lightning 1.0 beta 1</b><small>Same tested release</small></th><td>Android arm64 · APK<br><small>Lightning Test · shared checksums and build record above</small></td><td><span class="status-badge">Available now</span></td><td><a class="btn btn-download-app status-table__button" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/Lightning-Test-1.0.0-beta.1-476-b9cab0e7.apk" target="_blank" rel="noreferrer">Download for Android</a></td><td><a class="btn btn-secondary status-table__button" href="release-log.html#v1.0.0-beta.1">Read the log</a><br><small>Pair it with this Windows build.</small></td></tr>
-          </tbody>
+          <tr><th scope="row"><b>Lightning 1.0 beta 1</b><small>Same tested release</small></th><td>Android arm64 · APK<br><small>Lightning Test · shared checksums and build record above</small></td><td><span class="status-badge">Available now</span></td><td><a class="btn btn-secondary status-table__button" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v1.0.0-beta.1/Lightning-Test-1.0.0-beta.1-476-b9cab0e7.apk" target="_blank" rel="noreferrer">Download for Android</a></td><td><a class="btn btn-secondary status-table__button" href="release-log.html#v1.0.0-beta.1">Read the log</a><br><small>Pair it with this Windows build.</small></td></tr>
+          <tr><th scope="row"><b>Lightning 0.4.0 beta 1</b><small>Previous public beta</small></th><td>Windows x64 · ZIP archive<br><small>Checksum is available with the release.</small></td><td><span class="status-badge">Available now</span></td><td><a class="btn btn-secondary status-table__button" href="https://github.com/elfekimuhammed/Lightning-downloads/releases/download/v0.4.0-beta.1/Lightning-windows-x64.zip" target="_blank" rel="noreferrer">Download for Windows</a></td><td><a class="btn btn-secondary status-table__button" href="release-log.html#v0.4.0-beta.1">Read the log</a><br><small>Previous beta build.</small></td></tr>
+          <tr><th scope="row"><b>Lightning 0.5.0 beta 1</b><small>Development milestone</small></th><td>No public download was released.</td><td>Not released</td><td>—</td><td><a class="btn btn-secondary status-table__button" href="release-log.html#v0.5.0-beta.1">Read the log</a><br><small>Development history.</small></td></tr>
+        </tbody>
       </table>
     </div>
     <p class="status-table-hint">The Windows and Android files share one tested build record and source commit <span aria-hidden="true">→</span></p>
