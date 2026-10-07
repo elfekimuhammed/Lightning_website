@@ -1042,15 +1042,15 @@
       "id": "UX-2026.10.07.22",
       "name": "App Feedback · Lightning 1.0 beta build selection",
       "page": "app-feedback.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.22.html"
     },
     {
       "id": "UX-2026.10.07.23",
       "name": "Release Log · Lightning 1.0 beta 1",
       "page": "release-log.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.23.html"
     },
     {
       "id": "UX-2026.10.07.24",
@@ -1112,13 +1112,41 @@
       "id": "UX-2026.10.07.32",
       "name": "Version Archive · Android beta guide updates",
       "page": "versions.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.32.html"
     },
     {
       "id": "UX-2026.10.07.33",
       "name": "Current Status · APK installation guidance and focused downloads",
       "page": "current-status.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.33.html"
+    },
+    {
+      "id": "UX-2026.10.07.34",
+      "name": "Current Status · Lightning 1 Beta for Windows and Android",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.35",
+      "name": "Release Log · Lightning 1 Beta",
+      "page": "release-log.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.36",
+      "name": "Version Archive · Lightning 1 Beta",
+      "page": "versions.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.37",
+      "name": "App Feedback · Lightning 1 Beta build selection",
+      "page": "app-feedback.html",
       "status": "current",
       "archive_url": null
     }
