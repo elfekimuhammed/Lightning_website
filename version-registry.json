@@ -979,8 +979,8 @@
       "id": "UX-2026.10.07.13",
       "name": "Guide · Cash flow planner · Phone and PC, new screens",
       "page": "cash-flow-planner.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.13.html"
     },
     {
       "id": "UX-2026.10.07.14",
@@ -1000,13 +1000,34 @@
       "id": "UX-2026.10.07.16",
       "name": "Lightning · Home · One clear picture, always in sync · Full Cash planning screen",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.16.html"
     },
     {
       "id": "UX-2026.10.07.17",
       "name": "Test · Phone and PC, connected · Full Cash planning screen",
       "page": "test.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.17.html"
+    },
+    {
+      "id": "UX-2026.10.07.18",
+      "name": "Lightning · Home · One clear picture, always in sync · Months ahead that differ",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.19",
+      "name": "Test · Phone and PC, connected · Months ahead that differ",
+      "page": "test.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.20",
+      "name": "Guide · Cash flow planner · Phone and PC, new screens · Months ahead that differ",
+      "page": "cash-flow-planner.html",
       "status": "current",
       "archive_url": null
     }
