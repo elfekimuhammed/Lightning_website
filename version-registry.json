@@ -811,8 +811,8 @@
       "id": "UX-2026.10.06.21",
       "name": "Test · Calmer motion",
       "page": "test.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.21.html"
     },
     {
       "id": "UX-2026.10.06.22",
@@ -888,6 +888,13 @@
       "id": "UX-2026.10.06.32",
       "name": "Guide · Private by design · Calmer motion",
       "page": "offline-personal-finance-app.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.01",
+      "name": "Test · Phone and PC",
+      "page": "test.html",
       "status": "current",
       "archive_url": null
     }

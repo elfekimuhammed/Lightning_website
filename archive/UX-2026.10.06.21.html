@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<base href="../">
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Test · Lightning</title>
-<meta name="description" content="Free personal finance for Egypt, on your Android phone and Windows PC. Bank SMS read for you; spending, budgets, gold, shares, certificates and net worth in EGP. No bank login, no server.">
+<meta name="description" content="Free personal finance app for Egypt. Track spending, budgets, bank accounts, gold, shares, certificates and net worth in EGP—privately, with no bank login.">
 <meta name="theme-color" content="#E3F6EC">
 <link rel="icon" href="assets/brand/lightning-app-icon.svg?v=20261003-1" type="image/svg+xml">
 <link rel="icon" href="assets/brand/lightning-icon-64.png?v=20261003-1" type="image/png" sizes="64x64">
@@ -14,12 +15,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/landing.css?v=20261005-6">
-<link rel="stylesheet" href="css/home.css?v=20261005-1">
-<link rel="stylesheet" href="css/motion.css?v=20261006-4">
-<script src="js/motion.js?v=20261006-4" defer></script>
-<link rel="stylesheet" href="css/wow.css?v=20261006-1">
-<script src="js/wow.js?v=20261006-2" defer></script>
+<link rel="stylesheet" href="archive/UX-2026.10.06.21.css">
+<script src="archive/UX-2026.10.06.21.js" defer></script>
+<script src="archive/UX-2026.10.06.21.wow.js" defer></script>
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/ux-test.css?v=20260928-1">
@@ -28,7 +26,7 @@
 <script src="js/ux-test.js?v=20260928-1" defer></script>
 <link rel="stylesheet" href="css/signup-band.css?v=20261004-1">
 </head>
-<body data-wow-always data-ux-version="UX-2026.10.07.01" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-wow-always data-ux-version="UX-2026.10.06.21" data-ux-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <!-- Lucide icons, drawn at 20px with a 1.75 stroke (A15) -->
   <symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2l8 5H4z"/></symbol>
@@ -41,13 +39,6 @@
   <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
   <symbol id="i-checks" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4M3 7l2 2 4-4M13 6h8M13 12h8M13 18h8"/></symbol>
   <symbol id="i-table" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 3v18M3 9h18M3 15h18"/></symbol>
-  <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
-  <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
-  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 6h18M7 12h10M10 18h4"/></symbol>
-  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-  <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
 </svg>
 
 <div class="d-bar">
@@ -70,8 +61,8 @@
   <!-- Hero -->
   <header class="d-hero">
     <p class="label">Free personal finance for Egypt</p>
-    <h1 style="--fit:10.1">All Your Money. <span>On Your Phone and PC.</span></h1>
-    <p class="d-hero-line">Record the day on your phone, bank SMS included. See everything you own and owe on your PC, in EGP. No bank login, no server.</p>
+    <h1 style="--fit:8.3">All Your Money. <span>One Clear Picture.</span></h1>
+    <p class="d-hero-line">Everything you own and owe, counted in EGP, with nothing left out and nothing counted twice.</p>
     <div class="d-actions">
       <a class="btn btn-vivid" href="#join">Get early access</a>
       <a class="btn btn-secondary" href="how-it-works.html">See how it works</a>
@@ -107,21 +98,7 @@
     </div>
   </section>
 
-  <!-- 2 · Phone and PC: one ledger, a real sequence (pair, borrow, hand back) -->
-  <section class="d-section" id="devices">
-    <div class="d-head">
-      <p class="label">Your phone and your PC</p>
-      <h2>One Ledger. Your Phone Holds It.</h2>
-      <p>Your PC borrows it when you sit down, then hands it back. The two talk over your own Wi-Fi, encrypted, with no server in between.</p>
-    </div>
-    <ol class="c-steps">
-      <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">1</span><h3>Pair Once</h3><span class="mins">Once</span></div><p>Your phone shows a code; type it on your PC. Both screens show the same six digits, so you know it’s your phone.</p></li>
-      <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">2</span><h3>Borrow It</h3><span class="mins">Any time</span></div><p>Open it on your PC with the same password as on your phone. While you work, your phone says “Lent to Office PC · read only”.</p></li>
-      <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Hand It Back</h3><span class="mins">On close</span></div><p>Close Lightning near your phone and the ledger goes home. Away from it, your edits are sealed and wait for the next meeting.</p></li>
-    </ol>
-  </section>
-
-  <!-- 3 · Numbers you can trust: pick a figure, see its working and its screen -->
+  <!-- 2 · Numbers you can trust: pick a figure, see its working and its screen -->
   <section class="d-section" id="trust">
     <div class="d-head">
       <p class="label">Numbers you can trust</p>
@@ -158,7 +135,7 @@
       </div>
   </section>
 
-  <!-- 4 · The next three months -->
+  <!-- 3 · The next three months -->
   <section class="d-section c-ahead" id="ahead">
     <div class="d-head">
       <p class="label">The next three months</p>
@@ -173,24 +150,7 @@
     </div>
   </section>
 
-  <!-- 5 · It does the tedious part: what Lightning does today, one card each -->
-  <section class="d-section" id="tedious">
-    <div class="d-head">
-      <p class="label">Less typing</p>
-      <h2>It Does the Tedious Part.</h2>
-      <p>Say a thing once, and Lightning remembers it.</p>
-    </div>
-    <div class="c-promise">
-      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></span><h3>Bank SMS, Read for You</h3><p>On your phone, new messages from your banks wait in review with the amount filled in. CIB and NBE in Arabic today. Messages from people are never read.</p></article>
-      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-filter"/></svg></span><h3>Rules That File for You</h3><p>Say once where a name, an amount or a note belongs. Every import and every new row follows, split and tagged if you like.</p></article>
-      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><h3>Bills That Know the Weekend</h3><p>A bill due on a Friday moves to Thursday. When its payment arrives, the bill finds it and settles by itself.</p></article>
-      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span><h3>Goals Your Budget Knows</h3><p>Each dated goal says what it needs a month. When the plan can’t reach it, you see how much to cut, or the month it can.</p></article>
-      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-activity"/></svg></span><h3>Financial Health</h3><p>Savings rate, emergency fund in months and debt to net worth, each against a limit you set, with six months to compare.</p></article>
-      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></span><h3>Find Anything, Hide Everything</h3><p>Ctrl-K finds an account, a name or a #tag. Amounts take sums like 120+35*2. One click blurs every amount, for the café.</p></article>
-    </div>
-  </section>
-
-  <!-- 6 · Try it: the calculator (B08) -->
+  <!-- 4 · Try it: the calculator (B08) -->
   <section class="d-section" id="calculator">
     <div class="d-head">
       <p class="label">Try it</p>
@@ -215,22 +175,22 @@
     </div>
   </section>
 
-  <!-- 7 · How it works: a real sequence -->
+  <!-- 5 · How it works: a real sequence -->
   <section class="d-section" id="how">
     <div class="d-head">
       <p class="label">How it works</p>
-      <h2>A Minute a Day. Twenty Once a Month.</h2>
-      <p>Your phone keeps up as you spend. Your PC is where you look back and plan.</p>
+      <h2>Thirty Minutes. Once a Month.</h2>
+      <p>Bring in your statements, settle a few rows, then sit down with your numbers.</p>
     </div>
     <ol class="c-steps">
-      <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">1</span><h3>Add as You Go</h3><span class="mins">1 min a day</span></div><p>Tap + on your phone, or post the bank SMS waiting for you. A CSV from each bank at month end works too.</p></li>
-      <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">2</span><h3>Settle a Few Rows</h3><span class="mins">5 min</span></div><p>Answer once per name, or set a rule, and every row with that name follows. Nothing posts until you say so.</p></li>
+      <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">1</span><h3>Upload Your Statements</h3><span class="mins">10 min</span></div><p>A CSV from each bank and wallet. Match the columns once; next month they’re remembered.</p></li>
+      <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">2</span><h3>Settle a Few Rows</h3><span class="mins">5 min</span></div><p>Answer once per name, and every row with that name follows. Nothing posts until you say so.</p></li>
       <li class="card card-support"><div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Sit Down with Your Numbers</h3><span class="mins">15 min</span></div><p>See where you stand, where it went and what’s coming. End with one change for next month.</p></li>
     </ol>
     <div class="l-more"><a class="btn btn-secondary" href="how-it-works.html">See how it works</a></div>
   </section>
 
-  <!-- 8 · The promise: free, paid once if it helps, private -->
+  <!-- 6 · The promise: free, paid once if it helps, private -->
   <section class="d-section" id="promise">
     <div class="d-head">
       <p class="label">Our promise</p>
@@ -240,11 +200,11 @@
     <div class="c-promise">
       <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-checks"/></svg></span><h3>Every Feature, Free</h3><p>Use all of Lightning for as long as you like. No card, no account, nothing locked.</p></article>
       <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-coins"/></svg></span><h3>Pay Once, When It’s Worth It</h3><p>After a week, Lightning asks now and then for a one-time payment. Pay when it helps and you can afford it, and it’s yours for good.</p></article>
-      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><h3>Your Money Stays with You</h3><p>No bank login, no server. One encrypted ledger on your phone, borrowed by your PC, opened with one password.</p></article>
+      <article class="card card-support"><span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><h3>Your Money Stays with You</h3><p>Your money data never leaves your computer. One encrypted profile, opened with your password.</p></article>
     </div>
   </section>
 
-  <!-- 9 · Good questions -->
+  <!-- 7 · Good questions -->
   <section class="d-section" id="faq">
     <div class="d-head">
       <p class="label">Good questions</p>
@@ -256,10 +216,9 @@
       <details><summary>How do I start?</summary><p>Download the Windows beta from <a href="current-status.html">Current Status</a>, unzip it and open Lightning. Mohab’s sample year is there too, if you’d like to learn the steps before adding your own.</p></details>
       <details><summary>What will it cost?</summary><p>Nothing to start, and nothing is ever locked. After seven days, Lightning asks now and then for a one-time payment. Pay when it’s worth it to you, and you own it forever.</p></details>
       <details><summary>Which computers does it run on?</summary><p>Windows. The beta is a ZIP: unzip it and open Lightning. Other systems come later.</p></details>
-      <details><summary>Is there a phone app?</summary><p>Yes, for Android, in testing now; it comes to beta testers next, then Google Play. Your phone holds the ledger: add spending with one tap and let it read your bank SMS. Pair it once with your Windows PC to sit down with your numbers.</p></details>
-      <details><summary>Does it read all my messages?</summary><p>No. Only messages from your banks, and only after you allow it. Messages from people are never read, and each bank message waits in review: nothing posts until you say so.</p></details>
+      <details><summary>Is there a phone app?</summary><p>Not yet. We’re building one that syncs straight to your computer, with no server in between. Until then, add spending on your computer or import your bank’s CSV at the end of the month.</p></details>
       <details><summary>Does it connect to my bank?</summary><p>No. Lightning never asks for bank logins. Download a CSV from any bank or wallet, match its columns once, and review every row before it’s saved. <a href="bank-statement-budgeting.html">How importing a statement works</a>.</p></details>
-      <details><summary>What goes online?</summary><p>Your money data never does. It stays encrypted on your phone and your PC, which talk to each other over your own Wi-Fi. The only thing Lightning looks up online is the latest price of what you hold, such as listed shares by ticker symbol. <a href="offline-personal-finance-app.html">Where your data lives</a>.</p></details>
+      <details><summary>What goes online?</summary><p>Your money data never does. It stays in an encrypted profile on your computer. The only thing Lightning looks up online is the latest price of listed shares, by ticker symbol. <a href="offline-personal-finance-app.html">Where your data lives</a>.</p></details>
     </div>
   </section>
 
