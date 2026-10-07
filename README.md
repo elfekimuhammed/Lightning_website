@@ -144,7 +144,7 @@ Every landing page includes the same scroll-aware UX feedback rail. It sends an 
 - `UX-2026.10.04.16` — `how-it-works.html` (Mohab's year)
 - `UX-2026.10.03.04` — `current-status.html` (downloads table links to the release log)
 - `UX-2026.10.03.06` — `current-status.html` (separate permanent 0.5 and 0.4 downloads)
-- `UX-2026.10.03.07` — `release-log.html` (0.5.0 beta 1 available)
+- `UX-2026.10.03.07` — `release-log.html` (0.5.0 development milestone; no public download)
 - `UX-2026.10.03.08` — `app-feedback.html` (0.5 and 0.4 build selection)
 - `UX-2026.10.05.01` — `index.html` (the home page, the only live landing page)
 
@@ -171,7 +171,7 @@ The included `assets/samples/mohab-2026-full-year.zip` is Mohab’s full fiction
 
 `js/analytics.js` is loaded on every page (not the brand guideline). It sends page views to [GoatCounter](https://mohamedelfeki.goatcounter.com), which shows visits and unique visitors, and records one event per download:
 
-- `download-app-<version>-<platform>` for an app build, read from any link to the Lightning-downloads repository that ends in `.zip`, `.exe`, `.msi`, `.dmg` or `.AppImage` (for example `download-app-v0.5.0-beta.1-windows`). A new build is counted as soon as its link is on a page; nothing to tag.
+- `download-app-<version>-<platform>` for an app build, read from any link to the Lightning-downloads repository that ends in `.zip`, `.exe`, `.msi`, `.dmg` or `.AppImage`, or `.apk` (for example `download-app-v1.0.0-beta.1-android`). A new build is counted as soon as its link is on a page; nothing to tag.
 - `download-sample-<file>` for the sample pack.
 
 "Unique visitors" counts browsing sessions, not people: one person who visits in the morning and again after GoatCounter's session window has passed counts twice, so five people can show as up to ten. Read it as visits from distinct sessions or devices.
@@ -193,7 +193,7 @@ Lightning aims to be found first for **free personal finance for Egypt**, then f
 
 ## Version identity and archive
 
-Every testable web experience has one visible immutable release ID, in the form `UX-YYYY.MM.DD.NN`. Current IDs appear in the Testing panel and on [Version Archive](versions.html); feedback records that same ID. Before a live page changes, copy it to `archive/RELEASE-ID.html`, add its permanent link to `version-registry.json` and `versions.html`, then allocate a new ID to the changed page. Never reuse an ID or overwrite an archived snapshot.
+Every testable web experience has one visible immutable release ID, in the form `UX-YYYY.MM.DD.NN`. Current IDs appear in the Testing panel and on [Version Archive](versions.html); feedback records that same ID. Before a live page changes, copy it and its page-specific CSS/JS to `archive/RELEASE-ID.html` and matching resource snapshots, add the permanent link to `version-registry.json` and `versions.html`, then allocate a new ID to the changed page. Never reuse an ID or overwrite an archived snapshot.
 
 Windows app versions are separate from website experience IDs. The Current Status page and [Version Archive](versions.html) link to each app build independently. Keep at least the three newest app versions permanently, add a new row for every release, and never replace an older version's file or link. Published ZIPs and checksums live in the public [Lightning-downloads repository](https://github.com/elfekimuhammed/Lightning-downloads).
 

@@ -578,17 +578,17 @@
     },
     {
       "id": "UX-2026.10.05.15",
-      "name": "App Feedback · 0.5.0 and 0.4.0 build selection",
+      "name": "App Feedback · Lightning 1.0 beta build selection",
       "page": "app-feedback.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.15.html"
     },
     {
       "id": "UX-2026.10.05.16",
-      "name": "Release Log · One signup everywhere",
+      "name": "Release Log · Lightning 1.0 beta 1",
       "page": "release-log.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.05.16.html"
     },
     {
       "id": "UX-2026.10.05.17",
@@ -935,10 +935,10 @@
     },
     {
       "id": "UX-2026.10.07.07",
-      "name": "Current Status · Phone and PC, new screens",
+      "name": "Current Status · Lightning 1.0 beta for Windows and Android",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.07.html"
     },
     {
       "id": "UX-2026.10.07.08",
@@ -998,7 +998,7 @@
     },
     {
       "id": "UX-2026.10.07.16",
-      "name": "Lightning · Home · One clear picture, always in sync · Full Cash planning screen",
+      "name": "Lightning · Home · Windows and Android beta",
       "page": "index.html",
       "status": "archived",
       "archive_url": "archive/UX-2026.10.07.16.html"
@@ -1014,8 +1014,8 @@
       "id": "UX-2026.10.07.18",
       "name": "Lightning · Home · One clear picture, always in sync · Months ahead that differ",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.18.html"
     },
     {
       "id": "UX-2026.10.07.19",
@@ -1028,6 +1028,41 @@
       "id": "UX-2026.10.07.20",
       "name": "Guide · Cash flow planner · Phone and PC, new screens · Months ahead that differ",
       "page": "cash-flow-planner.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.21",
+      "name": "Current Status · Lightning 1.0 beta for Windows and Android",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.22",
+      "name": "App Feedback · Lightning 1.0 beta build selection",
+      "page": "app-feedback.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.23",
+      "name": "Release Log · Lightning 1.0 beta 1",
+      "page": "release-log.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.24",
+      "name": "Version Archive · Lightning 1.0 beta downloads",
+      "page": "versions.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.25",
+      "name": "Lightning · Home · Windows and Android beta",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }

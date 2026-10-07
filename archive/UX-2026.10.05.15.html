@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta name="robots" content="noindex,follow">
+<base href="../">
+<meta name="robots" content="noindex,follow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
@@ -14,16 +16,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="css/version-c.css?v=20261002-2">
-<link rel="stylesheet" href="css/current-status.css?v=20261007-1">
+<link rel="stylesheet" href="archive/UX-2026.10.05.15.css">
+
 <link rel="stylesheet" href="css/theme.css?v=20260930-1">
 <script src="js/theme.js?v=20260930-1"></script>
 <link rel="stylesheet" href="css/dev-dock.css?v=20261002-2">
 <script src="js/dev-dock.js?v=20261004-3" defer></script>
-<script src="js/current-status.js?v=20261005-15" defer></script>
-<script src="js/analytics.js?v=20261007-1" defer></script>
+<script src="archive/UX-2026.10.05.15.js" defer></script>
+<script src="js/analytics.js?v=20261003-1" defer></script>
 </head>
-<body data-ux-version="UX-2026.10.07.22" data-app-feedback-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
+<body data-ux-version="UX-2026.10.05.15" data-app-feedback-endpoint="https://script.google.com/macros/s/AKfycbzzlE-9gmeXb-D0DZMp6gg3dxNo-9ZBhgJED-y_ca26xevvtNnDb8Vqk6vs6Y_Aei0d/exec">
 <div class="c-nav">
   <div class="wrap">
     <a class="logo" href="index.html" data-home-link><img src="assets/brand/lightning-mark.svg?v=20261003-1" alt="">Lightning</a>
@@ -53,7 +55,7 @@
         <label class="status-field"><span>Email for a follow-up <em>(optional)</em></span><input type="email" name="reporter_email" maxlength="254" autocomplete="email" placeholder="you@example.com"></label>
       </div>
       <p class="feedback-privacy">Leave these blank to stay anonymous. If you share an email, we will only use it to clarify this feedback. We also group tickets from this browser tab under a private, non-identifying session ID.</p>
-      <label class="status-field"><span>Which build did you test?</span><select name="app_build" required><option value="" selected disabled>Choose the version</option><option value="1.0.0-beta.1-windows">Lightning 1.0 beta 1 · Windows</option><option value="1.0.0-beta.1-android">Lightning 1.0 beta 1 · Android</option><option value="0.5.0-beta.1">Lightning 0.5.0 beta 1 · development</option><option value="0.4.0-beta.1">Lightning 0.4.0 beta 1</option><option value="Not sure">I’m not sure</option></select></label>
+      <label class="status-field"><span>Which build did you test?</span><select name="app_build" required><option value="" selected disabled>Choose the version</option><option value="0.5.0-beta.1">Lightning 0.5.0 beta 1</option><option value="0.4.0-beta.1">Lightning 0.4.0 beta 1</option><option value="Not sure">I’m not sure</option></select></label>
       <div class="status-tickets" data-ticket-list></div>
       <div class="status-feedback__actions"><button class="btn btn-secondary" type="button" data-add-ticket>+ Add another ticket</button><button class="btn btn-primary" type="submit">Submit app feedback</button></div>
       <p class="status-feedback__status" role="status" aria-live="polite"></p>
