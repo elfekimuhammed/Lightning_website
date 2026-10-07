@@ -909,6 +909,13 @@
       "id": "UX-2026.10.07.03",
       "name": "Lightning · Home · Phone and PC, connected",
       "page": "index.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.03.html"
+    },
+    {
+      "id": "UX-2026.10.07.04",
+      "name": "Lightning · Home · One clear picture, always in sync",
+      "page": "index.html",
       "status": "current",
       "archive_url": null
     }
