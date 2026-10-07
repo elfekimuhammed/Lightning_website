@@ -818,78 +818,78 @@
       "id": "UX-2026.10.06.22",
       "name": "Features · Calmer motion",
       "page": "features.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.22.html"
     },
     {
       "id": "UX-2026.10.06.23",
       "name": "How It Works · Calmer motion",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.23.html"
     },
     {
       "id": "UX-2026.10.06.24",
       "name": "Current Status · Calmer motion",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.24.html"
     },
     {
       "id": "UX-2026.10.06.25",
       "name": "Money Guides · Calmer motion",
       "page": "guides.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.25.html"
     },
     {
       "id": "UX-2026.10.06.26",
       "name": "Guide · Net worth tracker for Egypt · Calmer motion",
       "page": "net-worth-tracker.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.26.html"
     },
     {
       "id": "UX-2026.10.06.27",
       "name": "Guide · Budget app for Egypt · Calmer motion",
       "page": "budget-app-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.27.html"
     },
     {
       "id": "UX-2026.10.06.28",
       "name": "Guide · Expense tracker for Egypt · Calmer motion",
       "page": "expense-tracker-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.28.html"
     },
     {
       "id": "UX-2026.10.06.29",
       "name": "Guide · Investment tracker for Egypt · Calmer motion",
       "page": "investment-tracker-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.29.html"
     },
     {
       "id": "UX-2026.10.06.30",
       "name": "Guide · Cash flow planner · Calmer motion",
       "page": "cash-flow-planner.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.30.html"
     },
     {
       "id": "UX-2026.10.06.31",
       "name": "Guide · Bank statement budgeting · Calmer motion",
       "page": "bank-statement-budgeting.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.31.html"
     },
     {
       "id": "UX-2026.10.06.32",
       "name": "Guide · Private by design · Calmer motion",
       "page": "offline-personal-finance-app.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.06.32.html"
     },
     {
       "id": "UX-2026.10.07.01",
@@ -902,8 +902,8 @@
       "id": "UX-2026.10.07.02",
       "name": "Test · Phone and PC, connected",
       "page": "test.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.02.html"
     },
     {
       "id": "UX-2026.10.07.03",
@@ -916,6 +916,97 @@
       "id": "UX-2026.10.07.04",
       "name": "Lightning · Home · One clear picture, always in sync",
       "page": "index.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.04.html"
+    },
+    {
+      "id": "UX-2026.10.07.05",
+      "name": "How It Works · Phone and PC, new screens",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.06",
+      "name": "Features · Phone and PC, new screens",
+      "page": "features.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.07",
+      "name": "Current Status · Phone and PC, new screens",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.08",
+      "name": "Money Guides · Phone and PC, new screens",
+      "page": "guides.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.09",
+      "name": "Guide · Net worth tracker for Egypt · Phone and PC, new screens",
+      "page": "net-worth-tracker.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.10",
+      "name": "Guide · Budget app for Egypt · Phone and PC, new screens",
+      "page": "budget-app-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.11",
+      "name": "Guide · Expense tracker for Egypt · Phone and PC, new screens",
+      "page": "expense-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.12",
+      "name": "Guide · Investment tracker for Egypt · Phone and PC, new screens",
+      "page": "investment-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.13",
+      "name": "Guide · Cash flow planner · Phone and PC, new screens",
+      "page": "cash-flow-planner.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.14",
+      "name": "Guide · Bank statement budgeting · Phone and PC, new screens",
+      "page": "bank-statement-budgeting.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.15",
+      "name": "Guide · Private by design · Phone and PC, new screens",
+      "page": "offline-personal-finance-app.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.16",
+      "name": "Lightning · Home · One clear picture, always in sync · Full Cash planning screen",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.07.17",
+      "name": "Test · Phone and PC, connected · Full Cash planning screen",
+      "page": "test.html",
       "status": "current",
       "archive_url": null
     }
