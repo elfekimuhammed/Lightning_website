@@ -1077,8 +1077,8 @@
       "id": "UX-2026.10.07.27",
       "name": "How It Works · Android beta available",
       "page": "how-it-works.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.27.html"
     },
     {
       "id": "UX-2026.10.07.28",
@@ -1189,6 +1189,13 @@
       "id": "UX-2026.10.08.06",
       "name": "Test · Tidier notes on phones",
       "page": "test.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.08.07",
+      "name": "How It Works · Money guides at the end",
+      "page": "how-it-works.html",
       "status": "current",
       "archive_url": null
     }

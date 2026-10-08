@@ -305,14 +305,6 @@ button,input{font:inherit}
 .hw-trust article{padding:28px;background:var(--paper)}
 .hw-trust h3{margin-top:16px;font-size:21px;line-height:1.2}
 .hw-trust p{margin-top:8px;color:var(--ink2);font-size:15px}
-.hw-guides{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.hw-guide{display:flex;flex-direction:column;gap:8px;padding:28px;background:var(--paper);color:inherit;text-decoration:none;transition:border-color .2s,transform .2s}
-.hw-guide:hover{border-color:var(--meadow);transform:translateY(-2px)}
-.hw-guide:focus-visible{outline:3px solid var(--meadow);outline-offset:3px}
-.hw-guide h3{font-size:19px;line-height:1.25;color:var(--ink)}
-.hw-guide p{color:var(--ink2);font-size:15px}
-.hw-guides-more{display:flex;justify-content:center;margin-top:28px}
-@media (prefers-reduced-motion:reduce){.hw-guide,.hw-guide:hover{transition:none;transform:none}}
 .hw-loop{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:8px}
 .hw-loop span{padding:12px 20px;border-radius:99px;background:var(--field);border:1px solid var(--border);font:800 16px/1 var(--display);letter-spacing:-.01em}
 .hw-loop span.hl{background:var(--action);border-color:var(--action);color:var(--action-ink)}
@@ -415,7 +407,7 @@ button,input{font:inherit}
 }
 @media (max-width:820px){
   .c-calc{grid-template-columns:1fr}.c-calc-input,.c-calc-result{padding:30px 24px}.c-calc-result{min-height:0}
-  .c-truths,.c-voices,.hw-trust,.hw-guides{grid-template-columns:1fr}
+  .c-truths,.c-voices,.hw-trust{grid-template-columns:1fr}
   .c-gap{grid-template-columns:1fr 1fr}
   .c-cta{grid-template-columns:1fr;padding:32px 24px}
   .c-chip{display:none}
@@ -449,3 +441,33 @@ button,input{font:inherit}
   .hw-media.has-pair{padding-bottom:0}.hw-media.has-pair .hw-cap{margin-top:14px;max-width:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+/* Motion (UX-2026.10.06.20): small, fast and only where it explains a number. Loads with js/motion.js on
+   the home page, Features, How It Works, Current Status, Money Guides and every guide.
+   Only transform and opacity move, so nothing re-lays out. The script adds .mo-wait to parts below the fold
+   and .mo-in when they scroll into view (taken off again once done, so each part's own hover effects return);
+   without the script, nothing is hidden. Moves use translate, never transform, so no part's own transform is lost.
+   Small motion (counts, and cards, tiles, lines and steps arriving in order) always plays.
+   Big motion (sections rising, screens lifting, page fades) is off when the visitor asks for less motion. */
+
+/* a list's items arrive one after another, slowly enough to follow (owner's request): 0.7 s each, 0.16 s apart.
+   The script marks the list .mo-list and numbers each item --mo-i (up to 8, so a long list ends within 2.1 s) */
+.mo-wait .mo-list>*,.mo-wait.mo-list>*{opacity:0!important}
+.mo-in .mo-list>*,.mo-in.mo-list>*{animation:mo-rise .7s cubic-bezier(.25,.6,.3,1) both!important;animation-delay:calc(.15s + var(--mo-i,0) * 160ms)!important}
+@keyframes mo-rise{from{opacity:0;translate:0 14px}}
+
+@media (prefers-reduced-motion:no-preference){
+  /* each section's header, then what it shows, rise into place once */
+  .mo-wait{opacity:0;translate:0 18px}
+  .mo-in{transition:opacity .8s ease,translate .9s cubic-bezier(.25,.6,.3,1)}
+  .mo-in~.mo-in{transition-delay:.15s}
+
+  /* real screens lift a little under the pointer, inviting a closer look */
+  @media (hover:hover){
+    .d-frame,.frame{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+    .d-frame:has(.zoom:hover),.frame:has(.zoom:hover){transform:translateY(-4px)}
+  }
+
+  /* pages fade into each other, with the top bar held still, where the browser supports it */
+  @view-transition{navigation:auto}
+  .d-bar,.c-nav{view-transition-name:top-bar}
+}
