@@ -1063,8 +1063,8 @@
       "id": "UX-2026.10.07.25",
       "name": "Lightning · Home · Windows and Android beta",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.25.html"
     },
     {
       "id": "UX-2026.10.07.26",
@@ -1168,13 +1168,27 @@
       "id": "UX-2026.10.08.03",
       "name": "Test · Ledger handoff preview",
       "page": "test.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.08.03.html"
     },
     {
       "id": "UX-2026.10.08.04",
       "name": "Version Archive · Test handoff preview",
       "page": "versions.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.08.05",
+      "name": "Lightning · Home · Tidier notes on phones",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.08.06",
+      "name": "Test · Tidier notes on phones",
+      "page": "test.html",
       "status": "current",
       "archive_url": null
     }
