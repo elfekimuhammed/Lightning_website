@@ -1140,13 +1140,27 @@
       "id": "UX-2026.10.07.36",
       "name": "Version Archive · Lightning 1 Beta",
       "page": "versions.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.36.html"
     },
     {
       "id": "UX-2026.10.07.37",
       "name": "App Feedback · Lightning 1 Beta build selection",
       "page": "app-feedback.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.37.html"
+    },
+    {
+      "id": "UX-2026.10.08.01",
+      "name": "App Feedback · Lossless screenshot attachments",
+      "page": "app-feedback.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.08.02",
+      "name": "Version Archive · Feedback screenshots",
+      "page": "versions.html",
       "status": "current",
       "archive_url": null
     }
