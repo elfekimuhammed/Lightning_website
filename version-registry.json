@@ -1105,8 +1105,8 @@
       "id": "UX-2026.10.07.31",
       "name": "Test · Android beta available",
       "page": "test.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.31.html"
     },
     {
       "id": "UX-2026.10.07.32",
@@ -1160,6 +1160,20 @@
     {
       "id": "UX-2026.10.08.02",
       "name": "Version Archive · Feedback screenshots",
+      "page": "versions.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.08.02.html"
+    },
+    {
+      "id": "UX-2026.10.08.03",
+      "name": "Test · Ledger handoff preview",
+      "page": "test.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.08.04",
+      "name": "Version Archive · Test handoff preview",
       "page": "versions.html",
       "status": "current",
       "archive_url": null
