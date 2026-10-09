@@ -944,22 +944,22 @@
       "id": "UX-2026.10.07.08",
       "name": "Money Guides · Phone and PC, new screens",
       "page": "guides.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.08.html"
     },
     {
       "id": "UX-2026.10.07.09",
       "name": "Guide · Net worth tracker for Egypt · Phone and PC, new screens",
       "page": "net-worth-tracker.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.09.html"
     },
     {
       "id": "UX-2026.10.07.10",
       "name": "Guide · Budget app for Egypt · Phone and PC, new screens",
       "page": "budget-app-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.10.html"
     },
     {
       "id": "UX-2026.10.07.11",
@@ -972,8 +972,8 @@
       "id": "UX-2026.10.07.12",
       "name": "Guide · Investment tracker for Egypt · Phone and PC, new screens",
       "page": "investment-tracker-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.12.html"
     },
     {
       "id": "UX-2026.10.07.13",
@@ -1028,8 +1028,8 @@
       "id": "UX-2026.10.07.20",
       "name": "Guide · Cash flow planner · Phone and PC, new screens · Months ahead that differ",
       "page": "cash-flow-planner.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.20.html"
     },
     {
       "id": "UX-2026.10.07.21",
@@ -1070,8 +1070,8 @@
       "id": "UX-2026.10.07.26",
       "name": "Features · Android beta available",
       "page": "features.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.26.html"
     },
     {
       "id": "UX-2026.10.07.27",
@@ -1084,22 +1084,22 @@
       "id": "UX-2026.10.07.28",
       "name": "Guide · Bank statement budgeting · Android beta",
       "page": "bank-statement-budgeting.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.28.html"
     },
     {
       "id": "UX-2026.10.07.29",
       "name": "Guide · Expense tracker · Android beta",
       "page": "expense-tracker-egypt.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.29.html"
     },
     {
       "id": "UX-2026.10.07.30",
       "name": "Guide · Private by design · Android beta",
       "page": "offline-personal-finance-app.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.30.html"
     },
     {
       "id": "UX-2026.10.07.31",
@@ -1126,15 +1126,15 @@
       "id": "UX-2026.10.07.34",
       "name": "Current Status · Lightning 1 Beta for Windows and Android",
       "page": "current-status.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.34.html"
     },
     {
       "id": "UX-2026.10.07.35",
       "name": "Release Log · Lightning 1 Beta",
       "page": "release-log.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.07.35.html"
     },
     {
       "id": "UX-2026.10.07.36",
@@ -1175,15 +1175,15 @@
       "id": "UX-2026.10.08.04",
       "name": "Version Archive · Test handoff preview",
       "page": "versions.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.08.04.html"
     },
     {
       "id": "UX-2026.10.08.05",
       "name": "Lightning · Home · Tidier notes on phones",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.08.05.html"
     },
     {
       "id": "UX-2026.10.08.06",
@@ -1196,6 +1196,104 @@
       "id": "UX-2026.10.08.07",
       "name": "How It Works · Money guides at the end",
       "page": "how-it-works.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.08.07.html"
+    },
+    {
+      "id": "UX-2026.10.09.08",
+      "name": "index.html · Arabic language switch",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.09",
+      "name": "features.html · Arabic language switch",
+      "page": "features.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.10",
+      "name": "how-it-works.html · Arabic language switch",
+      "page": "how-it-works.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.11",
+      "name": "current-status.html · Arabic language switch",
+      "page": "current-status.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.12",
+      "name": "guides.html · Arabic language switch",
+      "page": "guides.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.13",
+      "name": "net-worth-tracker.html · Arabic language switch",
+      "page": "net-worth-tracker.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.14",
+      "name": "budget-app-egypt.html · Arabic language switch",
+      "page": "budget-app-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.15",
+      "name": "expense-tracker-egypt.html · Arabic language switch",
+      "page": "expense-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.16",
+      "name": "investment-tracker-egypt.html · Arabic language switch",
+      "page": "investment-tracker-egypt.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.17",
+      "name": "cash-flow-planner.html · Arabic language switch",
+      "page": "cash-flow-planner.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.18",
+      "name": "bank-statement-budgeting.html · Arabic language switch",
+      "page": "bank-statement-budgeting.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.19",
+      "name": "offline-personal-finance-app.html · Arabic language switch",
+      "page": "offline-personal-finance-app.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.20",
+      "name": "release-log.html · Arabic language switch",
+      "page": "release-log.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.09.21",
+      "name": "Version Archive · Arabic edition and language switches",
+      "page": "versions.html",
       "status": "current",
       "archive_url": null
     }
