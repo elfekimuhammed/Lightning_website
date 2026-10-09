@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. Open the [Lightning guideline](guideline/) (3.27, three documents in `guideline/`) for the complete system: [app.html](guideline/app.html) is Part A, the app, [website.html](guideline/website.html) is Part B, this site, and [phone.html](guideline/phone.html) is Part C, the app on a phone. The same file lives in the app repository as `docs/BRAND_GUIDELINE.html`; change both together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. The Arabic website design authority is [guideline/website-ar.html](guideline/website-ar.html), which governs Arabic typography, Egyptian wording, Arabic-Indic numerals, and RTL layout; [guideline/website.html](guideline/website.html) remains authoritative for the English website. Both follow the shared logo and semantic color identity. Open the [Lightning guideline](guideline/) (3.27, three documents in `guideline/`) for the complete system: [app.html](guideline/app.html) is Part A, the app, [website.html](guideline/website.html) is Part B, this site, and [phone.html](guideline/phone.html) is Part C, the app on a phone. The Arabic website compass is mirrored in the app repository at `guideline/website-ar.html`; change both copies together.
 
 ## Structure
 
