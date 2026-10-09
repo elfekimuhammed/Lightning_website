@@ -24,6 +24,7 @@ guides.html         Money Guides: the seven guides below, one card each
                     the guides: one search question each, answered with Mohab's year (see Search below)
 ar/                  Egyptian Arabic RTL versions of the home page, Features, How It Works, Current Status, Money Guides, seven guides and Release Log; each keeps an English/Arabic switch to its matching page
 css/arabic.css       shared RTL layout and Arabic typography for ar/ pages
+assets/fonts/       locally hosted Alexandria variable font and its OFL license for the Arabic site and guideline
 robots.txt          crawl rules and the sitemap's address
 sitemap.xml         every page that should be in search, and nothing else
 css/styles.css      shared styles
@@ -59,7 +60,7 @@ assets/brand/       the two-leaf logo and icons (see Logo below); social-card.pn
 guideline/            Lightning guideline 3.27 in three documents: app.html (A, the PC app), website.html (B, this site) and phone.html (C, the phone); same folder as the app's guideline/
 ```
 
-It's a static site with no build step and no dependencies. The fonts load from Google Fonts.
+It's a static site with no build step and no dependencies. English fonts load from Google Fonts; the Arabic site and guideline use locally hosted Alexandria. Arabic copy is written in Egyptian Arabic, with Arabic-Indic numerals authored in the HTML and signed amounts isolated with `bdi`. Keep URLs, IDs, machine-readable values and technical color codes unchanged.
 
 ## Run it locally
 
