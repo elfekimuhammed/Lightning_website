@@ -22,6 +22,8 @@ features.html       Features: the five things it does best (each with a Mohab nu
 guides.html         Money Guides: the seven guides below, one card each
 *-egypt.html, net-worth-tracker.html, cash-flow-planner.html, bank-statement-budgeting.html, offline-personal-finance-app.html
                     the guides: one search question each, answered with Mohab's year (see Search below)
+ar/                  Egyptian Arabic RTL versions of the home page, Features, How It Works, Current Status, Money Guides, seven guides and Release Log; each keeps an English/Arabic switch to its matching page
+css/arabic.css       shared RTL layout and Arabic typography for ar/ pages
 robots.txt          crawl rules and the sitemap's address
 sitemap.xml         every page that should be in search, and nothing else
 css/styles.css      shared styles
@@ -183,6 +185,7 @@ Read them on the GoatCounter dashboard; events are listed with the pages, filter
 Lightning aims to be found first for **free personal finance for Egypt**, then for the wider terms. The home page owns that phrase; each guide owns one question.
 
 - **Every indexable page** has a title and description written for search, an absolute `<link rel="canonical" href="https://lightningeg.com/...">` (the home page is `https://lightningeg.com/`), Open Graph tags with `assets/brand/social-card.png`, and a line in `sitemap.xml`. Add all four to any new public page.
+- **Arabic pages** live under `/ar/`, use Egyptian Arabic (`lang="ar-EG"`, `dir="rtl"`), and have their own Arabic title, description, canonical, Open Graph metadata, structured data and sitemap entry. Add reciprocal `hreflang="ar-EG"` and `hreflang="en"` links on both language versions; each language switch opens the same page in the other language. Write for Egyptian search terms such as إدارة المصاريف في مصر and ميزانية شهرية, in natural Egyptian Arabic.
 - **Not in search:** survey, app feedback, the test page, the version archive, the brand guideline and every `archive/` snapshot carry `<meta name="robots" content="noindex,follow">` and stay out of the sitemap. Add the same line to each new snapshot (the one head change allowed on a snapshot besides brand-wide ones). `version-b.html` and `version-c.html` redirect to the home page and canonicalise to it. `robots.txt` blocks only files that are not pages (`audit/`, `analytics/`, `apps-script/`, the READMEs), because a blocked page can't show its noindex.
 - **Structured data:** the home page has `Organization`, `WebSite`, `SoftwareApplication` (free, Windows, FinanceApplication) and `FAQPage` (its seven visible questions); each guide has `WebPage` and `FAQPage` matching its visible questions; How It Works has `WebPage` and `HowTo` (its three steps); Features, Money Guides, Current Status and the Release Log have `WebPage`. Change the structured data whenever the visible text it repeats changes. Only true claims: no ratings, reviews or download counts until real ones exist. Update `softwareVersion` with each app release.
 - **The guides** (`guides.html` lists them): net worth, budget, expenses, investments, safe to spend, bank statements, privacy. Each is built from the landing building blocks only (hero, a worked example beside its real screen, three cards or steps, good questions, keep reading, the signup band). Every figure comes from Mohab's year on 2026-10-04 and matches the screen beside it, as on the home page; recapture them together. They never mention other apps (B10, B11), so comparison pages are not built.
@@ -194,6 +197,8 @@ Lightning aims to be found first for **free personal finance for Egypt**, then f
 ## Version identity and archive
 
 Every testable web experience has one visible immutable release ID, in the form `UX-YYYY.MM.DD.NN`. Current IDs appear in the Testing panel and on [Version Archive](versions.html); feedback records that same ID. Before a live page changes, copy it and its page-specific CSS/JS to `archive/RELEASE-ID.html` and matching resource snapshots, add the permanent link to `version-registry.json` and `versions.html`, then allocate a new ID to the changed page. Never reuse an ID or overwrite an archived snapshot.
+
+Arabic localized counterparts do not use English UX test release IDs.
 
 Windows and Android app versions are separate from website experience IDs. The Current Status page and [Version Archive](versions.html) link to each app build independently. Keep at least the three newest app versions permanently, add a new row for every release, and never replace an older version's file or link. Published ZIPs, APKs and checksums live in the public [Lightning-downloads repository](https://github.com/elfekimuhammed/Lightning-downloads).
 

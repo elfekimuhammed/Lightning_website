@@ -32,3 +32,20 @@ Lightning is a different product from anything else called "Lightning": it is th
 - [Budget from your bank statement CSV](https://lightningeg.com/bank-statement-budgeting.html): no bank login, just your statement.
 - [Offline personal finance app](https://lightningeg.com/offline-personal-finance-app.html): where your data lives and why it stays on your PC.
 - [All guides](https://lightningeg.com/guides.html)
+
+
+## Arabic pages (Egyptian Arabic)
+
+- [الرئيسية](https://lightningeg.com/ar/index.html): كل فلوسك في صورة واحدة واضحة، مع مزايا الهاتف والكمبيوتر والخصوصية.
+- [المزايا](https://lightningeg.com/ar/features.html)
+- [طريقة الاستخدام](https://lightningeg.com/ar/how-it-works.html)
+- [الحالة والتنزيلات](https://lightningeg.com/ar/current-status.html)
+- [أدلة الفلوس](https://lightningeg.com/ar/guides.html)
+- [صافي الثروة](https://lightningeg.com/ar/net-worth-tracker.html)
+- [الميزانية](https://lightningeg.com/ar/budget-app-egypt.html)
+- [تتبع المصاريف](https://lightningeg.com/ar/expense-tracker-egypt.html)
+- [متابعة الاستثمارات](https://lightningeg.com/ar/investment-tracker-egypt.html)
+- [التخطيط النقدي](https://lightningeg.com/ar/cash-flow-planner.html)
+- [استيراد كشف البنك](https://lightningeg.com/ar/bank-statement-budgeting.html)
+- [الخصوصية والعمل دون اتصال](https://lightningeg.com/ar/offline-personal-finance-app.html)
+- [سجل التغييرات](https://lightningeg.com/ar/release-log.html)
