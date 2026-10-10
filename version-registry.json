@@ -3,25 +3,46 @@
   "archive_rule": "Copy the live page to archive/<release-id>.html before changing it, add its direct archive URL here, then give the changed live page a new release ID.",
   "releases": [
     {
-      "id": "UX-2026.10.10.01",
-      "name": "Sample profiles · Four Egyptian money stories",
+      "id": "UX-2026.10.10.04",
+      "name": "Sample Profiles · Abdelrahman",
       "page": "sample-profiles.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.10.02",
-      "name": "Current Status · Sample profile guide link",
+      "id": "UX-2026.10.10.05",
+      "name": "Current Status · Abdelrahman sample profile",
       "page": "current-status.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.10.03",
-      "name": "Version Archive · Egyptian sample profiles",
+      "id": "UX-2026.10.10.06",
+      "name": "Version Archive · Abdelrahman sample profile",
       "page": "versions.html",
       "status": "current",
       "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.10.01",
+      "name": "Sample profiles · Four Egyptian money stories",
+      "page": "sample-profiles.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.10.01.html"
+    },
+    {
+      "id": "UX-2026.10.10.02",
+      "name": "Current Status · Sample profile guide link",
+      "page": "current-status.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.10.02.html"
+    },
+    {
+      "id": "UX-2026.10.10.03",
+      "name": "Version Archive · Egyptian sample profiles",
+      "page": "versions.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.10.03.html"
     },
     {
       "id": "UX-2026.10.01.06",
