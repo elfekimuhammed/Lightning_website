@@ -76,14 +76,16 @@ button,input{font:inherit}
 
 /* ---------- top bar (B02): sticky 70px, lockup left, three links, theme switch, one button ---------- */
 .d-bar{position:sticky;top:0;z-index:15;background:var(--bar-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.d-bar .wrap{display:flex;align-items:center;gap:20px;min-height:70px}
+.d-bar .wrap{display:flex;align-items:center;gap:18px;min-height:70px}
 .d-lockup{display:flex;align-items:center;gap:9px;color:var(--ink);font:800 21px/1 var(--display);text-decoration:none}
 .d-lockup img{width:auto;height:30px}
-.d-links{display:flex;gap:4px}
-.d-links a{padding:9px 12px;border-radius:999px;color:var(--ink2);font:700 15px/1 var(--body);text-decoration:none;white-space:nowrap}
-.d-links a:hover{color:var(--ink);background:var(--white)}
-.d-links a[aria-current="page"]{color:var(--ink);background:var(--white)}
-.d-bar-end{display:flex;align-items:center;gap:12px;margin-inline-start:auto}
+.d-links{display:flex;gap:4px;margin-inline-start:18px}
+.d-links a{padding:9px 13px;border-radius:99px;color:var(--ink2);font:700 14px/1 var(--body);text-decoration:none;white-space:nowrap}
+.d-links a:hover{color:var(--ink);background:var(--field)}
+.d-links a[aria-current="page"]{color:var(--ink);background:var(--field);box-shadow:0 6px 14px -12px rgba(10,36,66,.6)}
+.d-bar-end{display:flex;align-items:center;gap:18px;margin-inline-start:auto}
+.d-bar .nav-cta{height:auto;min-height:40px;margin-inline-start:6px;padding:0 18px;font-size:14px;box-shadow:0 12px 24px -14px rgba(10,36,66,.9);transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.d-bar .nav-cta:hover{background:var(--nile-2);transform:translateY(-1px)}
 .cta-short{display:none}
 
 /* ---------- page hero (B02): H1 46–78, one line, up to two buttons, one product visual ---------- */
@@ -343,13 +345,13 @@ button,input{font:inherit}
 @media (forced-colors:active){.l-sign span{background:none;color:CanvasText}}
 
 /* ---------- responsive: one column on phones, nothing scrolls sideways ---------- */
-@media (max-width:900px){.cta-long{display:none}.cta-short{display:inline}}
-@media (max-width:760px){
-  .d-bar .wrap{flex-wrap:wrap;gap:0 12px;min-height:0;padding:10px 0 6px}
+@media (max-width:640px){
+  .d-bar .wrap{justify-content:space-between;gap:8px;min-height:60px;padding:0}
   .d-lockup{font-size:19px}.d-lockup img{height:26px}
   .d-bar-end{gap:8px}
-  .d-links{order:3;width:100%;margin:6px -9px 0;gap:0}
-  .d-links a{padding:8px 7px;font-size:13px}
+  .d-links{display:none}
+  .d-bar .nav-cta{min-height:36px;margin-inline-start:0;padding:0 14px;font-size:13px}
+  .d-bar .cta-long{display:none}.d-bar .cta-short{display:inline}
 }
 @media (max-width:1000px){
   .d-money,.d-pair{grid-template-columns:1fr}

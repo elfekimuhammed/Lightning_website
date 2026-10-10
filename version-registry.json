@@ -3,18 +3,39 @@
   "archive_rule": "Copy the live page to archive/<release-id>.html before changing it, add its direct archive URL here, then give the changed live page a new release ID.",
   "releases": [
     {
-      "id": "UX-2026.10.10.11",
-      "name": "Version Archive · Home header action style",
+      "id": "UX-2026.10.10.14",
+      "name": "Version Archive · Unified navigation tabs",
       "page": "versions.html",
       "status": "current",
       "archive_url": null
     },
     {
-      "id": "UX-2026.10.10.10",
-      "name": "Lightning · Home · Header action matches Current Status",
+      "id": "UX-2026.10.10.13",
+      "name": "Features · Navigation matches Current Status",
+      "page": "features.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.10.12",
+      "name": "Lightning · Home · Navigation matches Current Status",
       "page": "index.html",
       "status": "current",
       "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.10.11",
+      "name": "Version Archive · Home header action style",
+      "page": "versions.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.10.11.html"
+    },
+    {
+      "id": "UX-2026.10.10.10",
+      "name": "Lightning · Home · Header action matches Current Status",
+      "page": "index.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.10.10.html"
     },
     {
       "id": "UX-2026.10.10.09",
@@ -1287,8 +1308,8 @@
       "id": "UX-2026.10.09.09",
       "name": "features.html · Arabic language switch",
       "page": "features.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.09.09.html"
     },
     {
       "id": "UX-2026.10.09.10",

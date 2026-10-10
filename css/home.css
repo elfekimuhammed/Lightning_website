@@ -7,12 +7,6 @@
 .l-sign span{background:none;color:var(--ink)}
 .c-free{margin-top:14px;color:var(--muted);font:700 14px/1.4 var(--body)}
 
-/* Header action matches Current Status (css/version-c.css, nav-cta). */
-.d-bar .nav-cta{height:40px;min-height:40px;margin-inline-start:6px;padding:0 18px;font-size:14px;box-shadow:0 12px 24px -14px rgba(10,36,66,.9)}
-.d-bar .nav-cta:hover{background:var(--nile-2);transform:translateY(-1px)}
-@media(max-width:640px){.d-bar .nav-cta{height:36px;min-height:36px;margin-inline-start:0;padding:0 14px;font-size:13px}}
-
-
 /* the trace: pick a number, see its working and its screen */
 .c-trace{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:start}
 .c-seg{display:flex;gap:4px;width:fit-content;max-width:100%;margin:0 auto 24px;padding:5px;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
