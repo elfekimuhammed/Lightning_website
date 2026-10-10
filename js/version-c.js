@@ -1,6 +1,9 @@
 // Lightning Version C: calculator, email signup, product tour, screenshot lightbox and step map.
 (() => {
-  const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
+  // Arabic pages (ar/, lang="ar-EG") write Arabic-Indic digits and read either kind.
+  const ar = document.documentElement.lang.startsWith('ar');
+  const latin = text => text.replace(/[\u200e\u200f\u061c]/g, '').replace(/[٠-٩]/g, d => d.charCodeAt(0) - 1632).replace(/٬/g, ',');
+  const format = new Intl.NumberFormat(ar ? 'ar-EG' : 'en-EG', {maximumFractionDigits: 0});
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---- calculator ----
@@ -15,7 +18,7 @@
     const monthlyRate = 0.20 / 12;
     const growth = (Math.pow(1 + monthlyRate, 120) - 1) / monthlyRate;
     const update = () => {
-      const digits = amount.value.replace(/[^0-9]/g, '').slice(0, 9);
+      const digits = latin(amount.value).replace(/[^0-9]/g, '').slice(0, 9);
       presets.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.amount === digits)));
       if (!digits) { amount.value = ''; [target, income, annual, tenYear].forEach(el => { el.textContent = '—'; }); return; }
       const monthly = Number(digits);
@@ -38,12 +41,12 @@
       event.preventDefault();
       if (!signup.reportValidity()) return;
       const button = signup.querySelector('button[type="submit"]');
-      button.disabled = true; status.textContent = 'Sending…';
+      button.disabled = true; status.textContent = (ar ? 'بنبعت…' : 'Sending…');
       try {
         signup.querySelector('[name="page_url"]').value = window.location.href;
         await fetch(signup.dataset.endpoint, {method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(signup))});
-        signup.reset(); status.textContent = 'You’re on the list. We’ll be in touch.';
-      } catch (_) { status.textContent = 'We could not save your email. Please try again.'; }
+        signup.reset(); status.textContent = (ar ? 'اتسجلت معانا. هنكلمك قريب.' : 'You’re on the list. We’ll be in touch.');
+      } catch (_) { status.textContent = (ar ? 'معرفناش نحفظ إيميلك. جرّب تاني.' : 'We could not save your email. Please try again.'); }
       finally { button.disabled = false; }
     });
   }

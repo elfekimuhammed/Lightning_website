@@ -5,6 +5,8 @@
 // test.html) plays it even with reduce motion on; any other page skips it then and downloads nothing.
 // Without it, the card shows the total and the tiles stay still.
 (() => {
+  const here = document.currentScript.src; // vendor/ sits beside this file, also for ar/ pages
+  const ar = document.documentElement.lang.startsWith('ar');
   const stage = document.querySelector('.t-stage');
   // Search and AI crawlers read the page as written: no counting from zero, nothing hidden, no library.
   if (/bot|crawl|spider|slurp|inspectiontool|bingpreview|facebookexternalhit/i.test(navigator.userAgent)) return;
@@ -13,8 +15,8 @@
     const script = Object.assign(document.createElement('script'), {src, onload: ok, onerror: fail});
     document.head.append(script);
   });
-  const start = () => load('js/vendor/gsap.min.js?v=3.15.0')
-    .then(() => load('js/vendor/ScrollTrigger.min.js?v=3.15.0')).then(play, () => {});
+  const start = () => load(new URL('vendor/gsap.min.js?v=3.15.0', here).href)
+    .then(() => load(new URL('vendor/ScrollTrigger.min.js?v=3.15.0', here).href)).then(play, () => {});
   if (document.readyState === 'complete') start(); else addEventListener('load', start, {once: true});
 
   function play() {
@@ -24,11 +26,11 @@
   const counter = stage.querySelector('.t-count');
   const sumEl = counter.querySelector('[data-t-sum]'), line = counter.querySelector('[data-t-line]');
   const bar = document.querySelector('.d-bar');
-  const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
+  const format = new Intl.NumberFormat(ar ? 'ar-EG' : 'en-EG', {maximumFractionDigits: 0});
   const tiles = [...stage.querySelectorAll('.kpi')].map(el => ({
     el, p: 0,
     name: el.querySelector('.lbl').textContent,
-    value: Number(el.querySelector('.fig').firstChild.textContent.replace(/[^0-9]/g, '')),
+    value: Number(el.querySelector('.fig').firstChild.textContent.replace(/[٠-٩]/g, d => d.charCodeAt(0) - 1632).replace(/[^0-9]/g, '')),
   }));
   const top = () => (bar ? bar.offsetHeight : 0) + 10;
   const land = () => top() + counter.offsetHeight; // the counter's lower edge once it sticks
@@ -36,14 +38,15 @@
   setTop();
   ScrollTrigger.addEventListener('refreshInit', setTop);
 
+  const first = line.textContent; // 'The six places, in EGP', as the page wrote it
   let landed = -1;
   const paint = () => {
     sumEl.textContent = format.format(Math.round(tiles.reduce((sum, t) => sum + t.value * t.p, 0)));
     const done = tiles.filter(t => t.p >= 1);
     if (done.length === landed) return;
     const last = done[done.length - 1];
-    line.textContent = !last ? 'The six places, in EGP'
-      : done.length === tiles.length ? 'All six places, counted as one'
+    line.textContent = !last ? first
+      : done.length === tiles.length ? (ar ? 'الست أماكن، محسوبين كأنهم واحد' : 'All six places, counted as one')
       : `+${format.format(last.value)} · ${last.name}`;
     if (done.length > landed && landed >= 0) gsap.fromTo(counter, {scale: 1.03}, {scale: 1, duration: .4, ease: 'back.out(3)'});
     landed = done.length;

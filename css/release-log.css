@@ -7,12 +7,12 @@
 .log-speed{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:16px;align-items:stretch}
 .log-speed .card-lead{display:flex;flex-direction:column;justify-content:center}
 .log-table{width:100%;border-collapse:collapse;margin-top:6px;font-size:15px}
-.log-table th,.log-table td{padding:10px 0;border-top:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.log-table th,.log-table td{padding:10px 0;border-top:1px solid var(--line);text-align:end;font-variant-numeric:tabular-nums;white-space:nowrap}
 .log-table thead th{border-top:0;color:var(--muted);font:700 12px/1.2 var(--body)}
-.log-table tbody th{color:var(--ink2);font-weight:600;text-align:left;white-space:normal}
+.log-table tbody th{color:var(--ink2);font-weight:600;text-align:start;white-space:normal}
 .log-table td{color:var(--ink);font-weight:700}
 .log-table td:last-child{color:var(--green-text);font-weight:800}
-.log-table tr>:first-child{text-align:left}
+.log-table tr>:first-child{text-align:start}
 .log-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
 .log-grid .card h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
 .log-grid .card>p{margin-top:6px;color:var(--ink2);font-size:16px;line-height:1.5}

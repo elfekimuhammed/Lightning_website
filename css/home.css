@@ -20,7 +20,7 @@
 .c-panel .lead-fig{margin-top:2px}
 .c-panel .c-pct{display:inline-block;margin-top:10px;padding:6px 12px;border-radius:999px;background:var(--t-green);color:var(--green-text);font:800 13px/1 var(--body)}
 .c-panel .c-pct.out{background:var(--t-rose);color:var(--ink)}
-.c-panel .row.sub span{padding-left:14px}
+.c-panel .row.sub span{padding-inline-start:14px}
 .c-panel figure{margin:0}
 .c-trace-shot{display:flex;flex-direction:column;gap:10px}
 .c-see{display:none}
@@ -43,7 +43,7 @@
 .c-steps .step-head{display:flex;align-items:center;gap:12px}
 .c-steps .num{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--nile);color:var(--on-nile);font:800 15px/1 var(--display)}
 .c-steps h3{font-size:21px;line-height:1.2;letter-spacing:-.02em}
-.c-steps .mins{margin-left:auto;color:var(--muted);font:700 13px/1 var(--body);white-space:nowrap}
+.c-steps .mins{margin-inline-start:auto;color:var(--muted);font:700 13px/1 var(--body);white-space:nowrap}
 .c-steps p{color:var(--ink2);font-size:16px;line-height:1.5}
 
 /* the promise: three cards */
@@ -81,14 +81,14 @@
 :root[data-theme="dark"] .t-phone-shot img{filter:brightness(.9)}
 .t-link{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 10px;text-align:center}
 .t-wire{position:relative;width:100%;height:2px;background:repeating-linear-gradient(90deg,var(--azure) 0 6px,transparent 6px 12px)}
-.t-wire i{position:absolute;top:-4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--azure)}
+.t-wire i{position:absolute;top:-4px;inset-inline-start:0;width:10px;height:10px;border-radius:50%;background:var(--azure)}
 .t-wire i+i{background:var(--green)}
 .t-lock{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--nile);color:var(--on-nile);box-shadow:var(--shadow)}
 .t-link p{color:var(--ink2);font:700 12.5px/1.35 var(--body)}
 .t-same{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;margin-top:22px;color:var(--ink2);font-size:15px;font-weight:600}
 .t-same b{color:var(--ink);font-weight:800}
-.t-same span{position:relative;padding-left:16px;line-height:1.45}
-.t-same span::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.t-same span{position:relative;padding-inline-start:16px;line-height:1.45}
+.t-same span::before{content:"";position:absolute;inset-inline-start:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--green)}
 @media (prefers-reduced-motion:no-preference){
   .t-wire i{animation:t-to-phone 2.6s ease-in-out infinite}
   .t-wire i+i{animation:t-to-pc 2.6s ease-in-out 1.3s infinite;opacity:0}
@@ -106,7 +106,7 @@
   .t-wire i{display:none}
 }
 @media (max-width:640px){
-  .t-same{flex-direction:column;align-items:flex-start;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;gap:10px;text-align:left}
+  .t-same{flex-direction:column;align-items:flex-start;width:fit-content;max-width:100%;margin-inline-start:auto;margin-inline-end:auto;gap:10px;text-align:start}
   .t-phones{grid-template-columns:minmax(0,260px)}
   .t-phones figure+figure{display:none}
 }
@@ -117,7 +117,7 @@
 .h-notes li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);flex:none}
 @media (max-width:640px){
   .h-notes{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:400px}
-  .h-notes li{min-height:48px;padding:8px 12px;border-radius:14px;font-size:13px;line-height:1.3;text-align:left}
+  .h-notes li{min-height:48px;padding:8px 12px;border-radius:14px;font-size:13px;line-height:1.3;text-align:start}
   .h-notes li::before{align-self:flex-start;margin-top:.4em}
   .h-notes li{align-items:flex-start;padding-top:10px}
 }

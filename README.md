@@ -4,7 +4,7 @@ The marketing site for **Lightning**, a personal wealth app made in Egypt.
 
 > Study Your Patterns. Control Your Future.
 
-Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope. The Arabic website design authority is [guideline/website-ar.html](guideline/website-ar.html), which governs Arabic typography, Egyptian wording, Arabic-Indic numerals, and RTL layout; [guideline/website.html](guideline/website.html) remains authoritative for the English website. Both follow the shared logo and semantic color identity. Open the [Lightning guideline](guideline/) (3.27, three documents in `guideline/`) for the complete system: [app.html](guideline/app.html) is Part A, the app, [website.html](guideline/website.html) is Part B, this site, and [phone.html](guideline/phone.html) is Part C, the app on a phone. The Arabic website compass is mirrored in the app repository at `guideline/website-ar.html`; change both copies together.
+Built in the **Meadow** identity: meadow green for growth, azure for clarity, and a deep Nile anchor for actions. Headings and big numbers use Bricolage Grotesque; text and figures use Manrope (Arabic letters and digits fall through to Alexandria). Open the [Lightning guideline](guideline/) (3.27, three documents in `guideline/`) for the complete system: [app.html](guideline/app.html) is Part A, the app, [website.html](guideline/website.html) is Part B, this site, and [phone.html](guideline/phone.html) is Part C, the app on a phone. `app-ar.html`, `website-ar.html` and `phone-ar.html` are the same three documents in Egyptian Arabic: same sections, layout and drawings, mirrored right to left. The English documents stay the authority; change the Arabic copy with them, and both copies in the app repository too.
 
 ## Structure
 
@@ -22,9 +22,9 @@ features.html       Features: the five things it does best (each with a Mohab nu
 guides.html         Money Guides: the seven guides below, one card each
 *-egypt.html, net-worth-tracker.html, cash-flow-planner.html, bank-statement-budgeting.html, offline-personal-finance-app.html
                     the guides: one search question each, answered with Mohab's year (see Search below)
-ar/                  Egyptian Arabic RTL versions of the home page, Features, How It Works, Current Status, Money Guides, seven guides and Release Log; each keeps an English/Arabic switch to its matching page
-css/arabic.css       shared RTL layout and Arabic typography for ar/ pages
-assets/fonts/       locally hosted Alexandria variable font and its OFL license for the Arabic site and guideline
+ar/                  Egyptian Arabic versions of the home page, Features, How It Works, Current Status, Money Guides, seven guides and Release Log: the English page's markup and stylesheets, translated and mirrored right to left; each language switch opens the matching page
+css/arabic.css       loaded last on ar/ pages: Arabic type and the few x-axis movements that dir="rtl" can't flip
+assets/fonts/       locally hosted Alexandria variable font and its OFL license for the Arabic pages
 robots.txt          crawl rules and the sitemap's address
 sitemap.xml         every page that should be in search, and nothing else
 css/styles.css      shared styles
@@ -60,7 +60,9 @@ assets/brand/       the two-leaf logo and icons (see Logo below); social-card.pn
 guideline/            Lightning guideline 3.27 in three documents: app.html (A, the PC app), website.html (B, this site) and phone.html (C, the phone); same folder as the app's guideline/
 ```
 
-It's a static site with no build step and no dependencies. English fonts load from Google Fonts; the Arabic site and guideline use locally hosted Alexandria. Arabic copy is written in Egyptian Arabic, with Arabic-Indic numerals authored in the HTML and signed amounts isolated with `bdi`. Keep URLs, IDs, machine-readable values and technical color codes unchanged.
+It's a static site with no build step and no dependencies. Fonts load from Google Fonts; the Arabic pages add locally hosted Alexandria.
+
+**Arabic pages mirror the English ones.** An `ar/` page is its English page with the same markup (elements, classes, IDs, order), the text in Egyptian Arabic, `lang="ar-EG" dir="rtl"`, `../` paths and `css/arabic.css` last; it leaves out the Testing panel. The shared stylesheets write left and right as logical properties (`margin-inline-start`, `inset-inline-end`, `text-align:start`), so the same CSS lays out both directions: keep it that way when you edit them. Change an English page and its `ar/` page together. Visible numbers use Arabic-Indic digits (٢١٥٬٦٥٧ جنيه); the scripts read and write them on `lang="ar-EG"` pages. Keep URLs, IDs, attribute values and technical color codes unchanged.
 
 ## Run it locally
 

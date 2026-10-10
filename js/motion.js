@@ -6,10 +6,13 @@
   // Search and AI crawlers read the page as written: no counting from zero, nothing hidden, no library.
   if (/bot|crawl|spider|slurp|inspectiontool|bingpreview|facebookexternalhit/i.test(navigator.userAgent)) return;
   if (!('IntersectionObserver' in window)) return;
-  const format = new Intl.NumberFormat('en-EG', {maximumFractionDigits: 0});
+  // Arabic pages (ar/, lang="ar-EG") write Arabic-Indic digits and read either kind.
+  const ar = document.documentElement.lang.startsWith('ar');
+  const latin = text => text.replace(/[\u200e\u200f\u061c]/g, '').replace(/[٠-٩]/g, d => d.charCodeAt(0) - 1632).replace(/٬/g, ',');
+  const format = new Intl.NumberFormat(ar ? 'ar-EG' : 'en-EG', {maximumFractionDigits: 0});
   const ease = t => 1 - Math.pow(1 - t, 3);
   const parse = text => {
-    const m = /^([+−-]?)([\d,]+)$/.exec(text.trim());
+    const m = /^([+−-]?)([0-9,]+)$/.exec(latin(text).trim());
     return m && {sign: m[1], value: Number(m[2].replace(/,/g, ''))};
   };
   // Count from `from` to the number in `final` through write(), then write `final` exactly.
