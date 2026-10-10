@@ -7,6 +7,13 @@
 .l-sign span{background:none;color:var(--ink)}
 .c-free{margin-top:14px;color:var(--muted);font:700 14px/1.4 var(--body)}
 
+/* Match the hero buttons on Current Status. */
+.d-actions .btn{min-height:48px;height:48px;padding:0 24px;gap:9px;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.d-actions .btn-primary{background:var(--action);color:var(--action-ink);box-shadow:0 12px 24px -14px rgba(10,36,66,.9)}
+.d-actions .btn-primary:hover{background:var(--action-hover);transform:translateY(-1px)}
+.d-actions .btn-secondary{background:var(--field);color:var(--ink);border-color:var(--border)}
+.d-actions .btn-secondary:hover{border-color:var(--meadow);color:var(--meadow-dark)}
+
 
 /* the trace: pick a number, see its working and its screen */
 .c-trace{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:start}

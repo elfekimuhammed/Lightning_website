@@ -3,6 +3,13 @@
   "archive_rule": "Copy the live page to archive/<release-id>.html before changing it, add its direct archive URL here, then give the changed live page a new release ID.",
   "releases": [
     {
+      "id": "UX-2026.10.10.09",
+      "name": "Lightning · Home · Matched hero button style",
+      "page": "index.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
       "id": "UX-2026.10.10.08",
       "name": "Version Archive · Amr profile update",
       "page": "versions.html",
@@ -1259,8 +1266,8 @@
       "id": "UX-2026.10.09.08",
       "name": "index.html · Arabic language switch",
       "page": "index.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.09.08.html"
     },
     {
       "id": "UX-2026.10.09.09",
