@@ -3,11 +3,25 @@
   "archive_rule": "Copy the live page to archive/<release-id>.html before changing it, add its direct archive URL here, then give the changed live page a new release ID.",
   "releases": [
     {
-      "id": "UX-2026.10.10.04",
-      "name": "Sample Profiles · Abdelrahman",
+      "id": "UX-2026.10.10.08",
+      "name": "Version Archive · Amr profile update",
+      "page": "versions.html",
+      "status": "current",
+      "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.10.07",
+      "name": "Sample Profiles · Amr's business support work",
       "page": "sample-profiles.html",
       "status": "current",
       "archive_url": null
+    },
+    {
+      "id": "UX-2026.10.10.04",
+      "name": "Sample Profiles · Abdelrahman",
+      "page": "sample-profiles.html",
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.10.04.html"
     },
     {
       "id": "UX-2026.10.10.05",
@@ -20,8 +34,8 @@
       "id": "UX-2026.10.10.06",
       "name": "Version Archive · Abdelrahman sample profile",
       "page": "versions.html",
-      "status": "current",
-      "archive_url": null
+      "status": "archived",
+      "archive_url": "archive/UX-2026.10.10.06.html"
     },
     {
       "id": "UX-2026.10.10.01",
