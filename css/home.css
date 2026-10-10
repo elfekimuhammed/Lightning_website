@@ -7,12 +7,10 @@
 .l-sign span{background:none;color:var(--ink)}
 .c-free{margin-top:14px;color:var(--muted);font:700 14px/1.4 var(--body)}
 
-/* Match the hero buttons on Current Status. */
-.d-actions .btn{min-height:48px;height:48px;padding:0 24px;gap:9px;transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}
-.d-actions .btn-primary{background:var(--action);color:var(--action-ink);box-shadow:0 12px 24px -14px rgba(10,36,66,.9)}
-.d-actions .btn-primary:hover{background:var(--action-hover);transform:translateY(-1px)}
-.d-actions .btn-secondary{background:var(--field);color:var(--ink);border-color:var(--border)}
-.d-actions .btn-secondary:hover{border-color:var(--meadow);color:var(--meadow-dark)}
+/* Header action matches Current Status (css/version-c.css, nav-cta). */
+.d-bar .nav-cta{height:40px;min-height:40px;margin-inline-start:6px;padding:0 18px;font-size:14px;box-shadow:0 12px 24px -14px rgba(10,36,66,.9)}
+.d-bar .nav-cta:hover{background:var(--nile-2);transform:translateY(-1px)}
+@media(max-width:640px){.d-bar .nav-cta{height:36px;min-height:36px;margin-inline-start:0;padding:0 14px;font-size:13px}}
 
 
 /* the trace: pick a number, see its working and its screen */
