@@ -71,7 +71,7 @@
     <loc>https://lightningeg.com/current-status.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://lightningeg.com/current-status.html" />
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://lightningeg.com/ar/current-status.html" />
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://lightningeg.com/ar/index.html</loc>
@@ -157,4 +157,3 @@
     <xhtml:link rel="alternate" hreflang="ar-EG" href="https://lightningeg.com/ar/release-log.html" />
     <lastmod>2026-10-09</lastmod>
   </url>
-</urlset>

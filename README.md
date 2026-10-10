@@ -15,6 +15,7 @@ version-c.html      redirect to index.html (the old Version C address; its desig
 how-it-works.html   the monthly 30-minute routine: upload, adjust, analyse
 release-log.html    release log: what changed build by build (Version D system; css/release-log.css)
 current-status.html shared beta hub: status, safe sample CSVs, builds and app feedback
+sample-profiles.html four fictional Egyptian 2026 sample ledgers and the financial question each explores
 versions.html       release registry and visible IDs for every testable experience
 version-registry.json machine-readable release IDs and archive locations
 survey.html         optional personal finance survey

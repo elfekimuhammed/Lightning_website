@@ -18,6 +18,3 @@
 .btn-download-app:hover{filter:brightness(1.06);transform:translateY(-1px)}
 .status-apk-warning{display:grid;gap:6px;margin:-12px 0 24px;padding:18px 22px;border:1px solid var(--card-line);border-radius:16px;background:var(--tint-blue);color:var(--ink2);font-size:14px;line-height:1.55}
 .status-apk-warning strong{color:var(--ink);font-weight:800}
-
-.status-sample-note{margin:8px 2px 0;color:var(--ink2);font-size:13px;line-height:1.55}.status-sample-note a{color:var(--meadow-dark);font-weight:800}
-.status-profile-link{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:17px 18px;border:1px solid var(--card-line);border-radius:16px;background:var(--card-solid);color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}.status-profile-link:hover{border-color:var(--meadow);transform:translateY(-2px)}.status-profile-link b{display:block;font:800 15px/1.25 var(--display)}.status-profile-link small{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.5}.status-profile-link em{color:var(--meadow-dark);font:800 12px/1.3 var(--body);font-style:normal;white-space:nowrap}@media(max-width:560px){.status-profile-link{grid-template-columns:1fr}.status-profile-link em{white-space:normal}}
