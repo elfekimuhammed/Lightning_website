@@ -20,10 +20,11 @@ versions.html       release registry and visible IDs for every testable experien
 version-registry.json machine-readable release IDs and archive locations
 survey.html         optional personal finance survey
 features.html       Features: the five things it does best (each with a Mohab number), then all 94 features in eleven groups, the phone and PC last, with a jump to each (css/features.css)
-guides.html         Money Guides: the seven guides below, one card each
+guides.html         Money Guides: the seven guides below, one card each; links to the Arabic blog library
 *-egypt.html, net-worth-tracker.html, cash-flow-planner.html, bank-statement-budgeting.html, offline-personal-finance-app.html
                     the guides: one search question each, answered with Mohab's year (see Search below)
 ar/                  Egyptian Arabic home page, Features, How It Works, Current Status («التنزيل»), Money Guides, seven guides and Release Log: the English design system, written for Egypt; each language switch opens the matching page
+ar/blog.html         Blog library for five Egyptian Arabic personal-finance articles; every article has its own canonical URL and structured data
 css/arabic.css       loaded last on ar/ pages: the Arabic type system (B04) and the few x-axis movements that dir="rtl" can't flip
 assets/fonts/       Readex Pro and IBM Plex Sans Arabic (Arabic subset only) and their OFL licenses, for the Arabic pages
 robots.txt          crawl rules and the sitemap's address
